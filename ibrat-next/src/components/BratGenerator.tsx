@@ -521,26 +521,6 @@ const BRAT_STYLES = `
 #brat-canvas.sticker-resize { cursor: nwse-resize; }
 #brat-canvas.sticker-rotate { cursor: grab; }
 
-#brat-sticker-delete-btn {
-  position: absolute;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border: none;
-  border-radius: 50%;
-  background: #ef4444;
-  color: #fff;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 1px 4px rgba(0,0,0,.2);
-  -webkit-tap-highlight-color: transparent;
-}
-@media (pointer: coarse) {
-  #brat-sticker-delete-btn { width: 32px; height: 32px; }
-}
-
 .brat-tab-panel { display: none; }
 .brat-tab-panel.active { display: block; }
 .brat-bottom-nav { display: none; }

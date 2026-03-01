@@ -132,17 +132,12 @@ export function initBratGenerator(): () => void {
 
   const isTouch = window.matchMedia("(pointer: coarse)").matches;
   const HANDLE_HIT_RADIUS = isTouch ? 28 : 12;
-  const DELETE_BTN_SIZE = isTouch ? 32 : 20;
-
-  const stage = c.parentElement;
-  const deleteBtn = document.createElement("button");
-  deleteBtn.id = "brat-sticker-delete-btn";
-  deleteBtn.type = "button";
-  deleteBtn.setAttribute("aria-label", "Delete sticker");
-  deleteBtn.innerHTML = "×";
-  if (stage) stage.appendChild(deleteBtn);
+  const DELETE_ICON_SIZE = 18;
+  const DELETE_ICON_RADIUS = 9;
+  const LONG_PRESS_MS = 600;
 
   let selectedSticker: number | null = null;
+  let longPressTimer: ReturnType<typeof setTimeout> | null = null;
   let handleAction: string | null = null;
   let capturedPointerId: number | null = null;
   const dragStart: Record<string, unknown> = {};
@@ -418,6 +413,27 @@ export function initBratGenerator(): () => void {
           ctx.fillRect(hx - handleSize / 2, hy - handleSize / 2, handleSize, handleSize);
           ctx.strokeRect(hx - handleSize / 2, hy - handleSize / 2, handleSize, handleSize);
         });
+        ctx.setLineDash([]);
+        const delX = half + DELETE_ICON_RADIUS;
+        const delY = -half - DELETE_ICON_RADIUS;
+        ctx.shadowColor = "rgba(0,0,0,0.15)";
+        ctx.shadowBlur = 4;
+        ctx.shadowOffsetY = 1;
+        ctx.beginPath();
+        ctx.arc(delX, delY, DELETE_ICON_RADIUS, 0, 2 * Math.PI);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+        ctx.strokeStyle = "rgba(0,0,0,0.08)";
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        ctx.shadowColor = "transparent";
+        ctx.shadowBlur = 0;
+        ctx.shadowOffsetY = 0;
+        ctx.fillStyle = "#000";
+        ctx.font = "bold 14px system-ui, sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("×", delX, delY);
       }
       ctx.restore();
     });
@@ -428,30 +444,13 @@ export function initBratGenerator(): () => void {
       contrastLabel!.textContent = `${formatContrast(contrastRatio(state.bg, state.fg))} — bg ${state.bg} / text ${state.fg}`;
   }
 
-  function updateDeleteButton() {
-    if (!deleteBtn || !stage) return;
-    if (selectedSticker === null || selectedSticker >= state.stickers.length) {
-      deleteBtn.style.display = "none";
-      return;
+  function deleteSelectedSticker() {
+    if (selectedSticker !== null && selectedSticker < state.stickers.length) {
+      state.stickers.splice(selectedSticker, 1);
+      selectedSticker = null;
+      handleAction = null;
+      requestDraw();
     }
-    const s = state.stickers[selectedSticker];
-    const hs = s.size / 2;
-    const angle = ((s.rotation || 0) * Math.PI) / 180;
-    const cos = Math.cos(angle);
-    const sin = Math.sin(angle);
-    const topRightCanvasX = s.centerX + hs * cos + hs * sin;
-    const topRightCanvasY = s.centerY + hs * sin - hs * cos;
-    const canvasRect = c.getBoundingClientRect();
-    const stageRect = stage.getBoundingClientRect();
-    const scaleX = canvasRect.width / c.width;
-    const scaleY = canvasRect.height / c.height;
-    const canvasOffsetX = canvasRect.left - stageRect.left;
-    const canvasOffsetY = canvasRect.top - stageRect.top;
-    const x = canvasOffsetX + topRightCanvasX * scaleX;
-    const y = canvasOffsetY + topRightCanvasY * scaleY;
-    deleteBtn.style.left = `${x - DELETE_BTN_SIZE}px`;
-    deleteBtn.style.top = `${y - DELETE_BTN_SIZE}px`;
-    deleteBtn.style.display = "flex";
   }
 
   function draw() {
@@ -463,7 +462,6 @@ export function initBratGenerator(): () => void {
     drawStickers();
     updateContrast();
     safeEl!.hidden = !state.safe;
-    updateDeleteButton();
   }
 
   let drawQueued = false;
@@ -513,6 +511,11 @@ export function initBratGenerator(): () => void {
       const sin = Math.sin(rad);
       const slx = lx * cos - ly * sin;
       const sly = lx * sin + ly * cos;
+      const delX = hs + DELETE_ICON_RADIUS;
+      const delY = -hs - DELETE_ICON_RADIUS;
+      const delHitR = isTouch ? DELETE_ICON_RADIUS + 4 : DELETE_ICON_RADIUS;
+      if (Math.hypot(slx - delX, sly - delY) <= delHitR)
+        return { i: selectedSticker, handle: "delete" };
       const rotOff = Math.max(30, s.size * 0.25);
       const rotY = -hs - rotOff;
       if (Math.hypot(slx, sly - rotY) <= HANDLE_HIT_RADIUS)
@@ -557,6 +560,10 @@ export function initBratGenerator(): () => void {
     const { x, y } = getCanvasXYFromClient(clientX, clientY);
     const info = findStickerHandle(x, y);
     if (info) {
+      if (info.handle === "delete") {
+        deleteSelectedSticker();
+        return;
+      }
       selectedSticker = info.i;
       handleAction = info.handle;
       const si = state.stickers[selectedSticker];
@@ -589,6 +596,12 @@ export function initBratGenerator(): () => void {
       }
       state.textTransform.selected = false;
       draggingText = false;
+      if (info.handle === "move" && isTouch) {
+        longPressTimer = setTimeout(() => {
+          longPressTimer = null;
+          deleteSelectedSticker();
+        }, LONG_PRESS_MS);
+      }
       requestDraw();
       return;
     }
@@ -691,6 +704,10 @@ export function initBratGenerator(): () => void {
     ) {
       const s = state.stickers[selectedSticker];
       if (handleAction === "move") {
+        if (longPressTimer) {
+          clearTimeout(longPressTimer);
+          longPressTimer = null;
+        }
         c.style.cursor = "move";
         const dx = x - ((dragStart as { x?: number }).x ?? 0);
         const dy = y - ((dragStart as { y?: number }).y ?? 0);
@@ -845,6 +862,10 @@ export function initBratGenerator(): () => void {
     if (selectedSticker !== null) {
       const hi = findStickerHandle(x, y);
       if (hi && hi.i === selectedSticker) {
+        if (hi.handle === "delete") {
+          c.style.cursor = "pointer";
+          return;
+        }
         if (hi.handle === "rotate") {
           c.style.cursor = "grab";
           return;
@@ -867,6 +888,10 @@ export function initBratGenerator(): () => void {
   }
 
   function pointerUp() {
+    if (longPressTimer) {
+      clearTimeout(longPressTimer);
+      longPressTimer = null;
+    }
     handleAction = null;
     draggingText = false;
     resizingText = false;
@@ -1219,17 +1244,6 @@ export function initBratGenerator(): () => void {
   outlineColorContainer!.style.display = state.outline ? "inline-flex" : "none";
   shadowColorContainer!.style.display = state.shadow ? "inline-flex" : "none";
 
-  deleteBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (selectedSticker !== null && selectedSticker < state.stickers.length) {
-      state.stickers.splice(selectedSticker, 1);
-      selectedSticker = null;
-      handleAction = null;
-      requestDraw();
-    }
-  });
-
   downloadBtn.addEventListener("click", () => {
     const wasSelected = state.textTransform.selected;
     state.textTransform.selected = false;
@@ -1394,7 +1408,7 @@ export function initBratGenerator(): () => void {
   window.addEventListener("resize", onResize);
 
   return () => {
-    deleteBtn.remove();
+    if (longPressTimer) clearTimeout(longPressTimer);
     window.removeEventListener("pointermove", onPointerMove);
     window.removeEventListener("pointerup", onPointerUp);
     window.removeEventListener("pointercancel", onPointerUp);
