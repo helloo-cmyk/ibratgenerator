@@ -1,8 +1,33 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "./globals.css";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Ibrat Generator",
+    url: "https://ibratgenerator.com",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Brat Generator",
+    applicationCategory: "MultimediaApplication",
+    operatingSystem: "Any",
+    url: "https://ibratgenerator.com",
+    description:
+      "Create brat-style text, images, memes, and profile pictures instantly with this free online generator.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  },
+];
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +57,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -41,6 +70,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          id="schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
       >

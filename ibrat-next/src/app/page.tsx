@@ -1,5 +1,37 @@
+import Script from "next/script";
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is the Brat Generator free to use?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, the Brat Generator is completely free and requires no login.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I download images created with the generator?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, you can download high-quality PNG images instantly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does the tool work on mobile devices?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, the generator works smoothly on phones, tablets, and desktops.",
+      },
+    },
+  ],
+};
 
 export const metadata = {
   title: {
@@ -15,6 +47,12 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="space-y-10">
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
