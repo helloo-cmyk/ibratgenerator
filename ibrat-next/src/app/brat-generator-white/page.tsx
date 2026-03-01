@@ -1,0 +1,253 @@
+import FAQAccordion from "@/components/FAQAccordion";
+
+export const metadata = {
+  title: {
+    absolute: "Brat White Generator | Ibrat Generator",
+  },
+  alternates: {
+    canonical: "https://ibratgenerator.com/brat-generator-white/",
+  },
+  description:
+    "The Brat White Generator is a minimalist tool designed for creating clean, white Brat-style text and visuals. Unlike bold neon or dark styles, this generator focuses on simplicity, clarity, and balance. It's built for users who want a softer, more neutral Brat aesthetic that works across modern layouts and platforms.",
+};
+
+export default function BratGeneratorWhitePage() {
+  return (
+    <main className="space-y-10">
+      <section>
+        <div className="text-center">
+          <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat White Generator</h1>
+            <p className="mb-5">
+              Create clean white Brat-style text and visuals instantly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What This Tool Does</h2>
+          <p className="mb-4">
+            The Brat White Generator is a minimalist tool designed for
+            creating clean, white Brat-style text and visuals. Unlike
+            bold neon or dark styles, this generator focuses on
+            simplicity, clarity, and balance. It&apos;s built for users
+            who want a softer, more neutral Brat aesthetic that works
+            across modern layouts and platforms.
+          </p>
+          <p className="mb-4">
+            With this tool, you can generate white Brat text, minimalist
+            captions, clean meme visuals, album-style typography, and
+            subtle graphic posts without using design software.
+            Everything happens in real time — you type, adjust, preview,
+            and download instantly.
+          </p>
+          <p>The result is clean, modern, and highly readable Brat-style content.</p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who This Tool Is For</h2>
+          <p className="mb-4">
+            The Brat White Generator is ideal for creators who prefer
+            clean and understated visuals. It works especially well for:
+          </p>
+          <ul className="mb-4 list-inside list-disc space-y-1">
+            <li>Users who like minimalist design</li>
+            <li>Creators making clean aesthetic posts</li>
+            <li>Designers working with neutral color palettes</li>
+            <li>Social media creators who want subtle Brat visuals</li>
+            <li>People creating profile graphics</li>
+            <li>Users designing album-style layouts</li>
+            <li>Anyone who wants Brat typography without heavy colors</li>
+          </ul>
+          <p>If green feels too loud and black feels too dark, white is the perfect middle ground.</p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Main Features of the Brat White Generator</h2>
+
+          <h3 className="text-xl font-semibold mt-6">1. Clean White Background Presets</h3>
+          <p className="mb-6">
+            The generator uses pure white and soft off-white backgrounds
+            to keep designs minimal and modern. This makes text easy to
+            read and visually balanced.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-6">2. Minimal Brat Typography</h3>
+          <p className="mb-4">
+            The text styling follows the Brat aesthetic but in a softer way:
+          </p>
+          <ul className="mb-4 list-inside list-disc space-y-1">
+            <li>bold yet clean</li>
+            <li>evenly spaced</li>
+            <li>highly readable</li>
+            <li>modern and neutral</li>
+          </ul>
+          <p className="mb-6">This makes it ideal for elegant designs and clean layouts.</p>
+
+          <h3 className="text-xl font-semibold mt-6">3. Full Text Customization</h3>
+          <p className="mb-4">You can adjust:</p>
+          <ul className="mb-4 list-inside list-disc space-y-1">
+            <li>use the square 1:1 ratio</li>
+            <li>type your name</li>
+            <li>adjust the layout</li>
+            <li>change letter spacing</li>
+            <li>add cute emoji stickers</li>
+            <li>choose bright or pastel colors</li>
+          </ul>
+          <p className="mb-6">
+            This allows you to create structured quotes or simple
+            captions with precision.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-6">4. White Text Generator Mode</h3>
+          <p className="mb-4">Use this tool to create:</p>
+          <ul className="mb-4 list-inside list-disc space-y-1">
+            <li>white Brat captions</li>
+            <li>minimalist meme text</li>
+            <li>album-style titles</li>
+            <li>clean lyric text</li>
+            <li>profile name graphics</li>
+          </ul>
+          <p className="mb-6">All optimized for white-based designs.</p>
+
+          <h3 className="text-xl font-semibold mt-6">5. Optional Background Upload</h3>
+          <p className="mb-6">
+            If you want more creativity, you can upload images or
+            textures and layer white Brat text on top for a refined look.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-6">6. Multiple Aspect Ratios</h3>
+          <p className="mb-4">Design visuals for any platform using:</p>
+          <ul className="mb-4 list-inside list-disc space-y-1">
+            <li>1:1 square</li>
+            <li>9:16 vertical</li>
+            <li>4:5 portrait</li>
+            <li>16:9 landscape</li>
+          </ul>
+          <p className="mb-6">This makes the tool flexible for posts, stories, banners, and thumbnails.</p>
+
+          <h3 className="text-xl font-semibold mt-6">7. High-Quality PNG Export</h3>
+          <p className="mb-6">All designs export as sharp, high-resolution PNG files. No watermark. No quality loss.</p>
+
+          <h3 className="text-xl font-semibold mt-6">8. Mobile-Friendly Editing</h3>
+          <p className="mb-6">
+            The generator works smoothly on mobile devices, allowing you
+            to create and download visuals directly from your phone.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How to Use the Brat White Generator</h2>
+
+          <h3 className="text-xl font-semibold mt-6">Step 1 — Enter Your Text</h3>
+          <p className="mb-4">Type your caption, lyric, meme line, or quote.</p>
+          <p className="mb-6">Common uses include:</p>
+          <ul className="mb-6 list-inside list-disc space-y-1">
+            <li>minimalist captions</li>
+            <li>clean aesthetic text</li>
+            <li>album-style wording</li>
+            <li>subtle statements</li>
+            <li>profile text</li>
+          </ul>
+
+          <h3 className="text-xl font-semibold mt-6">Step 2 — Apply the White Style</h3>
+          <p className="mb-6">
+            Choose white or off-white background presets depending on how
+            soft or bright you want the design to feel.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-6">Step 3 — Adjust Layout</h3>
+          <p className="mb-6">
+            Resize and position your text until it looks balanced and
+            visually clean.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-6">Step 4 — Add Background (Optional)</h3>
+          <p className="mb-6">
+            Upload an image if you want layered designs or keep it simple
+            with pure white.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-6">Step 5 — Download Your Visual</h3>
+          <p>Download your white Brat design as a PNG. No signup. No limits. No watermark.</p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Why This Tool Is Better</h2>
+          <p className="mb-4">
+            Most generators treat white backgrounds as an afterthought.
+            This tool is built specifically for clean, minimalist Brat visuals.
+          </p>
+          <p className="mb-4">It stands out because it offers:</p>
+          <ul className="mb-4 list-inside list-disc space-y-1">
+            <li>true white design focus</li>
+            <li>clean Brat typography</li>
+            <li>high-resolution exports</li>
+            <li>unlimited free usage</li>
+            <li>mobile optimization</li>
+            <li>no watermark</li>
+            <li>no account required</li>
+          </ul>
+          <p>It prioritizes clarity and design quality.</p>
+
+          <h3 className="text-xl font-semibold mt-6">Examples of What You Can Create</h3>
+          <p className="mb-4">With the Brat White Generator, you can design:</p>
+          <ul className="list-inside list-disc space-y-1">
+            <li>white Brat text graphics</li>
+            <li>minimalist meme captions</li>
+            <li>clean lyric visuals</li>
+            <li>album-style text layouts</li>
+            <li>profile name images</li>
+            <li>neutral aesthetic posts</li>
+            <li>modern typography graphics</li>
+            <li>subtle Brat edits</li>
+          </ul>
+          <p className="mt-4">
+            These visuals work well across modern platforms and clean
+            design feeds.
+          </p>
+        </div>
+      </section>
+
+      <FAQAccordion
+        title="Frequently Asked Questions"
+        intro="Here are some common questions about our Brat Generator"
+        items={[
+          { question: "Is the Brat White Generator free?", answer: <p>Yes. You can create unlimited white Brat visuals for free.</p> },
+          { question: "Do I need an account?", answer: <p>No signup is required.</p> },
+          { question: "What file format are designs saved in?", answer: <p>All exports are high-quality PNG files.</p> },
+          { question: "Can I upload my own images?", answer: <p>Yes. You can use your own backgrounds if you want layered designs.</p> },
+          { question: "Does it work on mobile?", answer: <p>Yes. The editor is fully optimized for mobile devices.</p> },
+          { question: "Can I use the designs commercially?", answer: <p>Yes. You can use your creations for personal or commercial purposes.</p> },
+        ]}
+      />
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Conclusion</h2>
+          <p className="mb-4">
+            The Brat White Generator is the ideal tool for creating clean,
+            minimalist Brat-style text and visuals. With subtle
+            typography, flexible layouts, and high-quality exports,
+            it&apos;s perfect for creators who want a softer and more
+            modern Brat aesthetic.
+          </p>
+          <p>
+            If you&apos;re looking for simple, elegant Brat designs without
+            distractions, this generator delivers exactly what you need.
+          </p>
+        </div>
+      </section>
+    </main>
+  );
+}
