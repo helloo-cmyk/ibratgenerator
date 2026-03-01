@@ -130,6 +130,18 @@ export function initBratGenerator(): () => void {
     textTransform: { x: 0, y: 0, rotation: 0, scale: 1, selected: false },
   };
 
+  const isTouch = window.matchMedia("(pointer: coarse)").matches;
+  const HANDLE_HIT_RADIUS = isTouch ? 28 : 12;
+  const DELETE_BTN_SIZE = isTouch ? 32 : 20;
+
+  const stage = c.parentElement;
+  const deleteBtn = document.createElement("button");
+  deleteBtn.id = "brat-sticker-delete-btn";
+  deleteBtn.type = "button";
+  deleteBtn.setAttribute("aria-label", "Delete sticker");
+  deleteBtn.innerHTML = "×";
+  if (stage) stage.appendChild(deleteBtn);
+
   let selectedSticker: number | null = null;
   let handleAction: string | null = null;
   let capturedPointerId: number | null = null;
@@ -416,6 +428,32 @@ export function initBratGenerator(): () => void {
       contrastLabel!.textContent = `${formatContrast(contrastRatio(state.bg, state.fg))} — bg ${state.bg} / text ${state.fg}`;
   }
 
+  function updateDeleteButton() {
+    if (!deleteBtn || !stage) return;
+    if (selectedSticker === null || selectedSticker >= state.stickers.length) {
+      deleteBtn.style.display = "none";
+      return;
+    }
+    const s = state.stickers[selectedSticker];
+    const hs = s.size / 2;
+    const angle = ((s.rotation || 0) * Math.PI) / 180;
+    const cos = Math.cos(angle);
+    const sin = Math.sin(angle);
+    const topRightCanvasX = s.centerX + hs * cos + hs * sin;
+    const topRightCanvasY = s.centerY + hs * sin - hs * cos;
+    const canvasRect = c.getBoundingClientRect();
+    const stageRect = stage.getBoundingClientRect();
+    const scaleX = canvasRect.width / c.width;
+    const scaleY = canvasRect.height / c.height;
+    const canvasOffsetX = canvasRect.left - stageRect.left;
+    const canvasOffsetY = canvasRect.top - stageRect.top;
+    const x = canvasOffsetX + topRightCanvasX * scaleX;
+    const y = canvasOffsetY + topRightCanvasY * scaleY;
+    deleteBtn.style.left = `${x - DELETE_BTN_SIZE}px`;
+    deleteBtn.style.top = `${y - DELETE_BTN_SIZE}px`;
+    deleteBtn.style.display = "flex";
+  }
+
   function draw() {
     console.log("draw called");
     ctx.clearRect(0, 0, c.width, c.height);
@@ -425,6 +463,7 @@ export function initBratGenerator(): () => void {
     drawStickers();
     updateContrast();
     safeEl!.hidden = !state.safe;
+    updateDeleteButton();
   }
 
   let drawQueued = false;
@@ -474,12 +513,9 @@ export function initBratGenerator(): () => void {
       const sin = Math.sin(rad);
       const slx = lx * cos - ly * sin;
       const sly = lx * sin + ly * cos;
-      const handleSize = 10;
-      const handleHit = handleSize / 2;
       const rotOff = Math.max(30, s.size * 0.25);
       const rotY = -hs - rotOff;
-      const rotR = Math.max(8, s.size * 0.06);
-      if (Math.hypot(slx, sly - rotY) <= rotR * 1.5)
+      if (Math.hypot(slx, sly - rotY) <= HANDLE_HIT_RADIUS)
         return { i: selectedSticker, handle: "rotate" };
       const cns = [
         { hx: -hs, hy: -hs, handle: "resize-tl" },
@@ -489,8 +525,8 @@ export function initBratGenerator(): () => void {
       ];
       for (const cn of cns) {
         if (
-          Math.abs(slx - cn.hx) <= handleHit &&
-          Math.abs(sly - cn.hy) <= handleHit
+          Math.abs(slx - cn.hx) <= HANDLE_HIT_RADIUS &&
+          Math.abs(sly - cn.hy) <= HANDLE_HIT_RADIUS
         )
           return { i: selectedSticker, handle: cn.handle };
       }
@@ -507,7 +543,8 @@ export function initBratGenerator(): () => void {
       const sin = Math.sin(rad);
       const slx = lx * cos - ly * sin;
       const sly = lx * sin + ly * cos;
-      if (slx >= -hs && slx <= hs && sly >= -hs && sly <= hs)
+      const movePadding = isTouch ? HANDLE_HIT_RADIUS : 0;
+      if (slx >= -hs - movePadding && slx <= hs + movePadding && sly >= -hs - movePadding && sly <= hs + movePadding)
         return { i, handle: "move" };
     }
     return null;
@@ -1182,6 +1219,17 @@ export function initBratGenerator(): () => void {
   outlineColorContainer!.style.display = state.outline ? "inline-flex" : "none";
   shadowColorContainer!.style.display = state.shadow ? "inline-flex" : "none";
 
+  deleteBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (selectedSticker !== null && selectedSticker < state.stickers.length) {
+      state.stickers.splice(selectedSticker, 1);
+      selectedSticker = null;
+      handleAction = null;
+      requestDraw();
+    }
+  });
+
   downloadBtn.addEventListener("click", () => {
     const wasSelected = state.textTransform.selected;
     state.textTransform.selected = false;
@@ -1346,6 +1394,7 @@ export function initBratGenerator(): () => void {
   window.addEventListener("resize", onResize);
 
   return () => {
+    deleteBtn.remove();
     window.removeEventListener("pointermove", onPointerMove);
     window.removeEventListener("pointerup", onPointerUp);
     window.removeEventListener("pointercancel", onPointerUp);

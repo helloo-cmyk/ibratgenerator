@@ -191,6 +191,14 @@ const BRAT_STYLES = `
   border-color: var(--border-soft);
 }
 
+@media (pointer: coarse) {
+  #brat-embed-root input[type="color"] {
+    min-height: 44px;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+}
+
 /* ===== RANGE SLIDER ===== */
 #brat-embed-root input[type="range"] {
   -webkit-appearance: none;
@@ -236,6 +244,17 @@ const BRAT_STYLES = `
   height: 6px;
   border-radius: 3px;
   background: #e2e8f0;
+}
+
+@media (pointer: coarse) {
+  #brat-embed-root input[type="range"]::-webkit-slider-thumb {
+    width: 32px;
+    height: 32px;
+  }
+  #brat-embed-root input[type="range"]::-moz-range-thumb {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 #brat-embed-root input,
@@ -450,6 +469,12 @@ const BRAT_STYLES = `
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+@media (max-width: 999px) {
+  .brat-toast {
+    bottom: 110px;
+  }
+}
+
 .brat-kbd {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   background: rgba(0, 0, 0, .05);
@@ -495,6 +520,26 @@ const BRAT_STYLES = `
 #brat-canvas.sticker-move { cursor: move; }
 #brat-canvas.sticker-resize { cursor: nwse-resize; }
 #brat-canvas.sticker-rotate { cursor: grab; }
+
+#brat-sticker-delete-btn {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  -webkit-tap-highlight-color: transparent;
+}
+@media (pointer: coarse) {
+  #brat-sticker-delete-btn { width: 32px; height: 32px; }
+}
 
 .brat-tab-panel { display: none; }
 .brat-tab-panel.active { display: block; }
