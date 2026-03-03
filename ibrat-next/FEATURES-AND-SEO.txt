@@ -1,0 +1,231 @@
+================================================================================
+IBRAT GENERATOR – FEATURE FLOWS, SEO IMPLEMENTATION & TAGS
+================================================================================
+Project: ibrat-next (Next.js App Router)
+Domain: https://ibratgenerator.com
+Generated: Documentation of all feature flows, SEO, and text/accessibility tags
+================================================================================
+
+--------------------------------------------------------------------------------
+1. FEATURE FLOWS
+--------------------------------------------------------------------------------
+
+1.1 SITE NAVIGATION FLOW
+------------------------
+• Header (sticky): Logo (left) → Main nav (desktop: inline) / Hamburger (mobile)
+• Nav links: Home (/), About (/about-us), Brat Maker (/brat-maker), Brat Text (/brat-text-generator), Brat Name (/brat-name-generator), Contact (/contact-us)
+• Mobile: Hamburger toggles dropdown; tap link → navigate and close menu
+• Footer: Privacy Policy, Terms & Conditions, Disclaimer, Contact
+
+1.2 BRAT GENERATOR FLOW
+------------------------
+• Entry: Lazy-loaded BratGenerator on homepage and generator pages
+• Tabs (desktop + mobile bottom nav): Text | Style | Stickers | Export
+• Text tab: Textarea, force lowercase, smart line breaks, font size, line spacing, letter spacing, align, font select, outline/shadow toggles
+• Style tab: Color pills (brat, deluxe, crash, white), background/text color pickers, contrast label; Canvas (aspect ratio, resolution, safe margins); Selfie mode (upload image, remove)
+• Stickers tab: Category tabs (love, faces, sparkles, cute, symbols), emoji grid; tap to add sticker to canvas
+• Export tab: Download PNG, Copy to Clipboard; Batch (ZIP) textarea + Generate ZIP; Share (Copy ALT text, Random brat phrase)
+• Canvas: Live preview; text drag/resize/rotate when selected; sticker select → resize handles (corners), rotate (top), delete (top-right circle); long-press on sticker (mobile 600ms) → delete
+• Keyboard: Escape clears selection; Delete/Backspace removes selected sticker or resets text; Arrow keys nudge sticker; Ctrl/Cmd+D duplicates text offset
+• Double-click on sticker → delete (legacy)
+
+1.3 STICKER INTERACTION FLOW
+-----------------------------
+• Add: Stickers tab → pick category → tap emoji → sticker appears on canvas, selected
+• Select: Tap sticker body → selected (bounding box + corner handles + rotate handle + delete icon)
+• Move: Drag sticker body
+• Resize: Drag corner handles
+• Rotate: Drag top handle
+• Delete: Tap top-right delete icon (18px circle) OR long-press 600ms on sticker (mobile) OR double-click sticker
+
+1.4 EXPORT FLOW
+---------------
+• Download PNG: Renders canvas (hides selection UI), toBlob PNG, triggers download with filename from text + resolution
+• Copy to Clipboard: Same render, writes image to clipboard (or opens in new tab if unsupported)
+• Batch ZIP: Multi-line textarea → Generate ZIP → one PNG per line, zipped and downloaded
+• Copy ALT text: Copies generated accessibility-style description
+• Random phrase: Fills text input with random brat phrase
+
+1.5 PAGE ROUTES (ALL STATIC)
+----------------------------
+/ (Home)
+/about-us/
+/brat-maker/
+/brat-creator/
+/brat-text-generator/
+/brat-name-generator/
+/brat-green-generator/
+/brat-font-generator/
+/brat-summer-meme-generator/
+/brat-album-cover-generator/
+/brat-black-generator/
+/brat-generator-white/
+/brat-generator-pink/
+/contact-us/
+/privacy-policy/
+/terms-conditions/
+/disclaimer/
+
+--------------------------------------------------------------------------------
+2. SEO IMPLEMENTATION
+--------------------------------------------------------------------------------
+
+2.1 ROOT LAYOUT METADATA (src/app/layout.tsx)
+----------------------------------------------
+• metadataBase: https://ibratgenerator.com
+• title.default: "Ibrat Generator"
+• title.template: "%s | Ibrat Generator"
+• description: "Create Brat-style text, images, and graphics online. Free Brat generator for memes, captions, and social media."
+• openGraph.siteName: "Ibrat Generator"
+• openGraph.title: "Ibrat Generator"
+• openGraph.description: (same as description)
+• robots.index: true, robots.follow: true
+• icons: /favicon/favicon.ico (sizes any), /favicon/favicon-32x32.png (32x32), /favicon/favicon-16x16.png (16x16), apple: /favicon/apple-touch-icon.png
+
+2.2 PER-PAGE METADATA (title, description, canonical)
+----------------------------------------------------
+Each page exports metadata with:
+• title.absolute: Page-specific title (e.g. "Free Brat Generator - Create Brat Text, Images & Stickers Online")
+• alternates.canonical: Full URL with trailing slash (e.g. https://ibratgenerator.com/about-us/)
+• description: Page-specific meta description
+
+Pages and their canonical URLs:
+• Home: canonical https://ibratgenerator.com/
+• About Us: https://ibratgenerator.com/about-us/
+• Brat Maker: https://ibratgenerator.com/brat-maker/
+• Brat Creator: https://ibratgenerator.com/brat-creator/
+• Brat Text Generator: https://ibratgenerator.com/brat-text-generator/
+• Brat Name Generator: https://ibratgenerator.com/brat-name-generator/
+• Brat Green Generator: https://ibratgenerator.com/brat-green-generator/
+• Brat Font Generator: https://ibratgenerator.com/brat-font-generator/
+• Brat Summer Meme Generator: https://ibratgenerator.com/brat-summer-meme-generator/
+• Brat Album Cover Generator: https://ibratgenerator.com/brat-album-cover-generator/
+• Brat Black Generator: https://ibratgenerator.com/brat-black-generator/
+• Brat Generator White: https://ibratgenerator.com/brat-generator-white/
+• Brat Generator Pink: https://ibratgenerator.com/brat-generator-pink/
+• Contact Us: https://ibratgenerator.com/contact-us/
+• Privacy Policy: https://ibratgenerator.com/privacy-policy/
+• Terms & Conditions: https://ibratgenerator.com/terms-conditions/
+• Disclaimer: https://ibratgenerator.com/disclaimer/
+
+2.3 STRUCTURED DATA (JSON-LD)
+-----------------------------
+• Layout (global): WebSite schema (name, url) + SoftwareApplication schema (name, applicationCategory, operatingSystem, url, description, offers price 0 USD)
+• Homepage: FAQPage schema with 3 questions: free to use, download images, works on mobile
+
+2.4 SITEMAP & ROBOTS
+--------------------
+• public/sitemap.xml: urlset with 18 URLs (all routes above), loc only
+• public/robots.txt:
+  User-agent: *
+  Allow: /
+  Sitemap: https://ibratgenerator.com/sitemap.xml
+
+2.5 FAVICON & PWA MANIFEST
+--------------------------
+• public/favicon/: favicon.ico, favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png, android-chrome-192x192.png, android-chrome-512x512.png, site.webmanifest
+• site.webmanifest: name "Ibrat Generator", short_name "Ibrat", icons (192, 512), theme_color #ffffff, background_color #ffffff, display standalone
+• Layout <head>: <link rel="manifest" href="/favicon/site.webmanifest" />
+
+--------------------------------------------------------------------------------
+3. TEXT TAGS & HEADING STRUCTURE
+--------------------------------------------------------------------------------
+
+3.1 ROOT HTML
+-------------
+• <html lang="en" suppressHydrationWarning>
+
+3.2 HOMEPAGE (page.tsx)
+-----------------------
+• <h1> Brat Generator
+• <h2> What This Tool Does
+• <h2> Who This Tool Is For
+• <h2> Main Features of the Tool
+  • <h3> 1. Word-Based Brat Creator … 9. Easy Download Button
+• <h2> How to Use the Tool (Step-by-Step)
+  • <h3> Step 1 — Type your text … Step 6 — Download
+• <h2> Why This Generator Is Better
+• <h2> Examples of What You Can Make
+• <h2> Frequently Asked Questions About Our Brat Generator Tool
+• <h2> Conclusion
+• FAQ section: FAQAccordion with title + intro + items (question/answer)
+
+3.3 OTHER PAGES
+---------------
+• Each generator/legal page: one <h1> (page title), multiple <h2>/<h3> for sections, plus optional FAQAccordion with title/intro/items
+• Contact/About: standard h1 + sections
+
+--------------------------------------------------------------------------------
+4. ACCESSIBILITY & ARIA TAGS
+--------------------------------------------------------------------------------
+
+4.1 HEADER
+----------
+• <header> (no role; landmark by element)
+• <nav aria-label="Main navigation"> (desktop)
+• <button aria-label="Close menu" | "Open menu" aria-expanded aria-controls="mobile-nav"> (hamburger)
+• <div id="mobile-nav" role="navigation" aria-label="Mobile navigation"> (mobile menu)
+
+4.2 FOOTER
+----------
+• <footer>
+• <nav aria-label="Footer navigation">
+
+4.3 BRAT GENERATOR
+------------------
+• <div id="brat-widget" aria-live="polite">
+• <aside id="brat-controls" aria-hidden="false">
+• <canvas id="brat-canvas" aria-label="brat canvas">
+
+4.4 FAQ ACCORDION
+-----------------
+• <button aria-expanded aria-controls="faq-answer-{index}" id="faq-question-{index}">
+• <div id="faq-answer-{index}" role="region" aria-labelledby="faq-question-{index}">
+• Chevron icon: aria-hidden
+
+4.5 IMAGES
+----------
+• Logo: <Image alt="Ibrat Generator" … />
+
+--------------------------------------------------------------------------------
+5. META TAGS (GENERATED BY NEXT.JS FROM METADATA)
+--------------------------------------------------------------------------------
+Next.js emits from metadata:
+• <title> (from title.default / title.template / page title.absolute)
+• <meta name="description" content="…">
+• <meta property="og:site_name" content="…">
+• <meta property="og:title" content="…">
+• <meta property="og:description" content="…">
+• <link rel="canonical" href="…"> (from alternates.canonical)
+• <meta name="robots" content="index, follow"> (from robots)
+• <link rel="icon" …> and <link rel="apple-touch-icon" …> (from icons)
+
+--------------------------------------------------------------------------------
+6. SCRIPTS IN <HEAD>
+--------------------------------------------------------------------------------
+• <link rel="manifest" href="/favicon/site.webmanifest" />
+• <Script id="schema" type="application/ld+json" strategy="beforeInteractive"> (WebSite + SoftwareApplication JSON-LD)
+• Homepage only: <Script id="faq-schema" type="application/ld+json" strategy="beforeInteractive"> (FAQPage JSON-LD)
+
+--------------------------------------------------------------------------------
+7. SUMMARY CHECKLIST
+--------------------------------------------------------------------------------
+[✓] metadataBase + per-page title/description/canonical
+[✓] Open Graph (site name, title, description)
+[✓] robots index, follow
+[✓] Favicon set (ico, 16, 32, apple-touch, android 192/512)
+[✓] Web manifest (site.webmanifest)
+[✓] Sitemap (sitemap.xml)
+[✓] robots.txt (Allow /, Sitemap URL)
+[✓] WebSite + SoftwareApplication JSON-LD (layout)
+[✓] FAQPage JSON-LD (homepage)
+[✓] Semantic headings (h1, h2, h3) on all pages
+[✓] Nav aria-labels (Main navigation, Footer navigation, Mobile navigation)
+[✓] Hamburger aria-label, aria-expanded, aria-controls
+[✓] FAQ accordion aria-expanded, aria-controls, role="region", aria-labelledby
+[✓] Canvas aria-label; widget aria-live
+[✓] Logo alt text
+
+================================================================================
+END OF DOCUMENT
+================================================================================

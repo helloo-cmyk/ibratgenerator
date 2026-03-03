@@ -1,7 +1,7 @@
 import Script from "next/script";
-import Image from "next/image";
 import Link from "next/link";
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
+import ExampleGallery from "@/components/ExampleGallery";
 import FAQAccordion from "@/components/FAQAccordion";
 
 const faqSchema = {
@@ -115,25 +115,18 @@ export default function Home() {
       />
       <section>
         <div className="text-center">
-          <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">
-              Free Brat Generator – Create Brat Text, Memes & Stickers Online
+          <div className="mx-auto max-w-2xl px-4 pt-6 pb-2 sm:pt-8 sm:pb-4 sm:px-6 text-base leading-relaxed text-foreground/90">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-foreground mt-0 mb-2 mx-auto">
+              Free Brat Generator
             </h1>
-            <p className="mb-4 text-lg">
-              Create brat-style text, memes, and sticker graphics instantly. No signup required. 100% free and works on mobile.
+            <p className="text-base sm:text-lg text-foreground/90 mb-0 max-w-xl mx-auto">
+              Create brat text, memes and sticker-style graphics online instantly. 100% free and mobile friendly.
             </p>
-            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-foreground/85 mb-0" aria-label="Trust indicators">
-              <li>✓ 100% Free</li>
-              <li>✓ No signup required</li>
-              <li>✓ Works on mobile & desktop</li>
-              <li>✓ Instant download</li>
-              <li>✓ High-quality PNG export</li>
-            </ul>
           </div>
         </div>
       </section>
 
-      <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
+      <section className="mt-2 sm:mt-4 mb-8 sm:mb-12">
         <BratGeneratorLazy />
       </section>
 
@@ -142,7 +135,7 @@ export default function Home() {
           <div className="max-w-none text-base leading-relaxed text-foreground/90">
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Is a Brat Generator?</h2>
             <p className="mb-4">
-              A brat generator is an online tool that creates Charli XCX–inspired Brat-style text and images in your browser. You don&apos;t need design experience or editing software. Type your text, choose colors, adjust spacing, add stickers, and the free brat generator instantly creates a clean Brat-style visual. The Brat look is bold, colorful, and minimal—perfect for memes, aesthetic edits, profile pictures, and brat captions for Instagram. Whether you want a brat text generator result, a sticker, or a music-inspired graphic, you can create brat-style text online in seconds.
+              A brat generator is an online tool that creates Charli XCX–inspired Brat-style text and images in your browser. You don&apos;t need design experience or editing software. Type your text, choose colors, adjust spacing, add stickers, and the free brat generator online instantly creates a clean Brat-style visual. The Brat look is bold, colorful, and minimal—perfect for memes, aesthetic edits, profile pictures, and brat captions for Instagram. Whether you need a brat text generator, brat meme generator, or brat sticker generator, you can create brat-style text online in seconds.
             </p>
           </div>
         </div>
@@ -209,78 +202,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-          <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-6">Brat Generator Examples</h2>
-            <p className="mb-6">
-              Here are sample outputs you can create with our free brat generator: brat meme text, captions, and sticker-style graphics.
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-muted/30">
-                <Image
-                  src="https://placehold.co/400x400/22c55e/ffffff?text=Brat+text"
-                  alt="brat meme text example"
-                  fill
-                  sizes="(max-width: 640px) 50vw, 33vw"
-                  loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-muted/30">
-                <Image
-                  src="https://placehold.co/400x400/22c55e/ffffff?text=Meme+sample"
-                  alt="free brat generator output sample"
-                  fill
-                  sizes="(max-width: 640px) 50vw, 33vw"
-                  loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-muted/30">
-                <Image
-                  src="https://placehold.co/400x400/22c55e/ffffff?text=Sticker+style"
-                  alt="brat sticker generator example output"
-                  fill
-                  sizes="(max-width: 640px) 50vw, 33vw"
-                  loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-muted/30">
-                <Image
-                  src="https://placehold.co/400x400/22c55e/ffffff?text=Caption+edit"
-                  alt="brat text generator sample for Instagram"
-                  fill
-                  sizes="(max-width: 640px) 50vw, 33vw"
-                  loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-muted/30">
-                <Image
-                  src="https://placehold.co/400x400/22c55e/ffffff?text=Green+brat"
-                  alt="brat image generator example in green style"
-                  fill
-                  sizes="(max-width: 640px) 50vw, 33vw"
-                  loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-muted/30">
-                <Image
-                  src="https://placehold.co/400x400/22c55e/ffffff?text=PNG+export"
-                  alt="download brat text image example PNG"
-                  fill
-                  sizes="(max-width: 640px) 50vw, 33vw"
-                  loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ExampleGallery />
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
