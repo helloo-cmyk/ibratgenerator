@@ -1,6 +1,28 @@
 const EMOJI_FONT = "bold 128px Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif";
 const emojiBitmapCache = new Map<string, HTMLCanvasElement>();
 
+/** State snapshot for undo/redo history */
+type GeneratorState = {
+  text: string;
+  textTransform: { x: number; y: number; rotation: number; scale: number; selected: boolean };
+  stickers: { char: string; centerX: number; centerY: number; size: number; rotation: number }[];
+  bg: string;
+  bgImage: HTMLImageElement | null;
+  fontSize: number;
+  lineHeight: number;
+  letterSpacing: number;
+  fontFamily: string;
+  outline: boolean;
+  outlineColor: string;
+  shadow: boolean;
+  shadowColor: string;
+  res: number;
+  ratio: string;
+  align: string;
+  fg: string;
+  safe: boolean;
+};
+
 function getOrCreateEmojiBitmap(char: string): HTMLCanvasElement | null {
   let canvas = emojiBitmapCache.get(char);
   if (canvas) return canvas;
@@ -68,6 +90,8 @@ export function initBratGenerator(): () => void {
   const randomBtn = document.getElementById("brat-randomBtn");
   const batchBtn = document.getElementById("brat-batchBtn");
   const controlsEl = document.getElementById("brat-controls");
+  const undoBtn = document.getElementById("brat-undo") as HTMLButtonElement | null;
+  const redoBtn = document.getElementById("brat-redo") as HTMLButtonElement | null;
 
   if (
     !textEl ||
@@ -130,15 +154,121 @@ export function initBratGenerator(): () => void {
     textTransform: { x: 0, y: 0, rotation: 0, scale: 1, selected: false },
   };
 
+  const historyStack: GeneratorState[] = [];
+  const redoStack: GeneratorState[] = [];
+  const MAX_HISTORY = 50;
+
+  function deepCloneState(s: typeof state): GeneratorState {
+    return {
+      text: s.text,
+      textTransform: {
+        x: s.textTransform.x,
+        y: s.textTransform.y,
+        rotation: s.textTransform.rotation,
+        scale: s.textTransform.scale,
+        selected: s.textTransform.selected,
+      },
+      stickers: s.stickers.map((st) => ({
+        char: st.char,
+        centerX: st.centerX,
+        centerY: st.centerY,
+        size: st.size,
+        rotation: st.rotation,
+      })),
+      bg: s.bg,
+      bgImage: s.bgImage
+        ? (() => {
+            const img = new Image();
+            img.src = s.bgImage!.src;
+            return img;
+          })()
+        : null,
+      fontSize: s.fontSize,
+      lineHeight: s.lineHeight,
+      letterSpacing: s.letterSpacing,
+      fontFamily: s.fontFamily,
+      outline: s.outline,
+      outlineColor: s.outlineColor,
+      shadow: s.shadow,
+      shadowColor: s.shadowColor,
+      res: s.res,
+      ratio: s.ratio,
+      align: s.align,
+      fg: s.fg,
+      safe: s.safe,
+    };
+  }
+
+  function pushHistory() {
+    historyStack.push(deepCloneState(state));
+    if (historyStack.length > MAX_HISTORY) historyStack.shift();
+    redoStack.length = 0;
+    updateUndoRedoButtons();
+  }
+
+  function pushHistoryState(snap: GeneratorState) {
+    historyStack.push(snap);
+    if (historyStack.length > MAX_HISTORY) historyStack.shift();
+    redoStack.length = 0;
+    updateUndoRedoButtons();
+  }
+
+  function updateUndoRedoButtons() {
+    if (undoBtn) undoBtn.disabled = historyStack.length === 0;
+    if (redoBtn) redoBtn.disabled = redoStack.length === 0;
+  }
+
+  function syncInputsFromState() {
+    textEl.value = state.text;
+    fontSizeEl.value = String(state.fontSize);
+    lineHeightEl.value = String(state.lineHeight);
+    letterSpacingEl.value = String(state.letterSpacing);
+    alignEl.value = state.align;
+    outlineEl.checked = state.outline;
+    outlineColorEl.value = state.outlineColor;
+    shadowEl.checked = state.shadow;
+    shadowColorEl.value = state.shadowColor;
+    bgColorEl.value = state.bg;
+    fgColorEl.value = state.fg;
+    ratioEl.value = state.ratio;
+    resEl.value = String(state.res);
+    safeToggle.checked = state.safe;
+    fontSelectEl.value = state.fontFamily;
+    outlineColorContainer!.style.display = state.outline ? "inline-flex" : "none";
+    shadowColorContainer!.style.display = state.shadow ? "inline-flex" : "none";
+  }
+
+  function undo() {
+    if (historyStack.length === 0) return;
+    redoStack.push(deepCloneState(state));
+    const prev = historyStack.pop()!;
+    Object.assign(state, prev);
+    updateUndoRedoButtons();
+    syncInputsFromState();
+    requestDraw();
+  }
+
+  function redo() {
+    if (redoStack.length === 0) return;
+    historyStack.push(deepCloneState(state));
+    const next = redoStack.pop()!;
+    Object.assign(state, next);
+    updateUndoRedoButtons();
+    syncInputsFromState();
+    requestDraw();
+  }
+
   const isTouch = window.matchMedia("(pointer: coarse)").matches;
   const HANDLE_HIT_RADIUS = isTouch ? 28 : 12;
   const DELETE_ICON_SIZE = 18;
   const DELETE_ICON_RADIUS = 9;
-  const LONG_PRESS_MS = 600;
+  const LONG_PRESS_MS = 900;
+  const LONG_PRESS_MOVE_THRESHOLD = 5;
 
   let selectedSticker: number | null = null;
   let longPressTimer: ReturnType<typeof setTimeout> | null = null;
   let handleAction: string | null = null;
+  let pendingHistoryOnPointerUp: GeneratorState | null = null;
   let capturedPointerId: number | null = null;
   const dragStart: Record<string, unknown> = {};
   let draggingText = false;
@@ -148,6 +278,7 @@ export function initBratGenerator(): () => void {
   let rotatingText = false;
   const rotateStart: Record<string, number> = {};
   let hoveredTextHandle: string | null = null;
+  let currentBgUrl: string | null = null;
 
   function ratioToSize(ratio: string, base: number): [number, number] {
     switch (ratio) {
@@ -446,6 +577,7 @@ export function initBratGenerator(): () => void {
 
   function deleteSelectedSticker() {
     if (selectedSticker !== null && selectedSticker < state.stickers.length) {
+      pushHistory();
       state.stickers.splice(selectedSticker, 1);
       selectedSticker = null;
       handleAction = null;
@@ -454,7 +586,6 @@ export function initBratGenerator(): () => void {
   }
 
   function draw() {
-    console.log("draw called");
     ctx.clearRect(0, 0, c.width, c.height);
     drawBg();
     drawText();
@@ -480,7 +611,6 @@ export function initBratGenerator(): () => void {
     const [w, h] = ratioToSize(state.ratio, state.res);
     c.width = w;
     c.height = h;
-    console.log("Canvas resized:", oldWidth, oldHeight, "→", c.width, c.height);
     const scaleX = c.width / oldWidth;
     const scaleY = c.height / oldHeight;
     state.stickers.forEach((s) => {
@@ -513,9 +643,18 @@ export function initBratGenerator(): () => void {
       const sly = lx * sin + ly * cos;
       const delX = hs + DELETE_ICON_RADIUS;
       const delY = -hs - DELETE_ICON_RADIUS;
-      const delHitR = isTouch ? DELETE_ICON_RADIUS + 4 : DELETE_ICON_RADIUS;
-      if (Math.hypot(slx - delX, sly - delY) <= delHitR)
-        return { i: selectedSticker, handle: "delete" };
+      const delHitR = isTouch ? 22 : DELETE_ICON_RADIUS;
+      if (Math.hypot(slx - delX, sly - delY) <= delHitR) {
+        const trCornerX = hs;
+        const trCornerY = -hs;
+        const inTrBox =
+          Math.abs(slx - trCornerX) <= HANDLE_HIT_RADIUS &&
+          Math.abs(sly - trCornerY) <= HANDLE_HIT_RADIUS;
+        const distToDel = Math.hypot(slx - delX, sly - delY);
+        const distToCorner = Math.hypot(slx - trCornerX, sly - trCornerY);
+        if (!(inTrBox && distToCorner < distToDel))
+          return { i: selectedSticker, handle: "delete" };
+      }
       const rotOff = Math.max(30, s.size * 0.25);
       const rotY = -hs - rotOff;
       if (Math.hypot(slx, sly - rotY) <= HANDLE_HIT_RADIUS)
@@ -566,6 +705,7 @@ export function initBratGenerator(): () => void {
       }
       selectedSticker = info.i;
       handleAction = info.handle;
+      pendingHistoryOnPointerUp = deepCloneState(state);
       const si = state.stickers[selectedSticker];
       (dragStart as { x?: number }).x = x;
       (dragStart as { y?: number }).y = y;
@@ -597,6 +737,8 @@ export function initBratGenerator(): () => void {
       state.textTransform.selected = false;
       draggingText = false;
       if (info.handle === "move" && isTouch) {
+        (dragStart as { initialX?: number }).initialX = x;
+        (dragStart as { initialY?: number }).initialY = y;
         longPressTimer = setTimeout(() => {
           longPressTimer = null;
           deleteSelectedSticker();
@@ -639,11 +781,12 @@ export function initBratGenerator(): () => void {
       const rotHandleOffset = Math.max(30, 40 / tt.scale);
       const rotHandleY = -halfH - pad + pad - rotHandleOffset;
       const rotHandleR = Math.max(6, 8 / tt.scale);
-      const rotHitR = rotHandleR * 2;
+      const rotHitR = isTouch ? Math.max(22, rotHandleR * 2) : rotHandleR * 2;
       if (Math.abs(slx) <= rotHitR && Math.abs(sly - rotHandleY) <= rotHitR) {
         rotatingText = true;
         draggingText = false;
         resizingText = false;
+        pendingHistoryOnPointerUp = deepCloneState(state);
         const angle = Math.atan2(y - centerY, x - centerX);
         rotateStart.initialAngle = angle;
         rotateStart.initialRotation = tt.rotation;
@@ -654,7 +797,7 @@ export function initBratGenerator(): () => void {
 
     if (tt.selected) {
       const handleSize = Math.max(8, 10 / tt.scale);
-      const handleHit = handleSize * 1.5;
+      const handleHit = isTouch ? Math.max(22, handleSize * 1.5) : handleSize * 1.5;
       const corners: [number, number][] = [
         [-halfW, -halfH],
         [halfW, -halfH],
@@ -666,6 +809,7 @@ export function initBratGenerator(): () => void {
           resizingText = true;
           draggingText = false;
           rotatingText = false;
+          pendingHistoryOnPointerUp = deepCloneState(state);
           const dist = Math.hypot(x - centerX, y - centerY);
           resizeStart.initialDist = dist;
           resizeStart.initialScale = tt.scale;
@@ -679,6 +823,7 @@ export function initBratGenerator(): () => void {
       draggingText = true;
       resizingText = false;
       rotatingText = false;
+      pendingHistoryOnPointerUp = deepCloneState(state);
       state.textTransform.selected = true;
       dragTextStart.x = x;
       dragTextStart.y = y;
@@ -705,14 +850,22 @@ export function initBratGenerator(): () => void {
       const s = state.stickers[selectedSticker];
       if (handleAction === "move") {
         if (longPressTimer) {
-          clearTimeout(longPressTimer);
-          longPressTimer = null;
+          const initX = (dragStart as { initialX?: number }).initialX ?? (dragStart as { x?: number }).x ?? 0;
+          const initY = (dragStart as { initialY?: number }).initialY ?? (dragStart as { y?: number }).y ?? 0;
+          const moveDist = Math.hypot(x - initX, y - initY);
+          if (moveDist > LONG_PRESS_MOVE_THRESHOLD) {
+            clearTimeout(longPressTimer);
+            longPressTimer = null;
+          }
         }
         c.style.cursor = "move";
         const dx = x - ((dragStart as { x?: number }).x ?? 0);
         const dy = y - ((dragStart as { y?: number }).y ?? 0);
         s.centerX += dx;
         s.centerY += dy;
+        const half = s.size / 2;
+        s.centerX = Math.max(half, Math.min(c.width - half, s.centerX));
+        s.centerY = Math.max(half, Math.min(c.height - half, s.centerY));
         (dragStart as { x?: number }).x = x;
         (dragStart as { y?: number }).y = y;
       } else if (handleAction.startsWith("resize")) {
@@ -822,7 +975,7 @@ export function initBratGenerator(): () => void {
       const rotHandleOffset = Math.max(30, 40 / tt.scale);
       const rotHandleY = -halfH - rotHandleOffset;
       const rotHandleR = Math.max(6, 8 / tt.scale);
-      const rotHitR = rotHandleR * 2;
+      const rotHitR = isTouch ? Math.max(22, rotHandleR * 2) : rotHandleR * 2;
       if (Math.abs(slx) <= rotHitR && Math.abs(sly - rotHandleY) <= rotHitR) {
         c.style.cursor = "grab";
         if (hoveredTextHandle !== "rotate") {
@@ -832,7 +985,7 @@ export function initBratGenerator(): () => void {
         return;
       }
       const handleSize = Math.max(8, 10 / tt.scale);
-      const handleHit = handleSize * 1.5;
+      const handleHit = isTouch ? Math.max(22, handleSize * 1.5) : handleSize * 1.5;
       const corners: [number, number][] = [
         [-halfW, -halfH],
         [halfW, -halfH],
@@ -892,6 +1045,12 @@ export function initBratGenerator(): () => void {
       clearTimeout(longPressTimer);
       longPressTimer = null;
     }
+    if (handleAction !== null || draggingText || resizingText || rotatingText) {
+      if (pendingHistoryOnPointerUp) {
+        pushHistoryState(pendingHistoryOnPointerUp);
+      }
+    }
+    pendingHistoryOnPointerUp = null;
     handleAction = null;
     draggingText = false;
     resizingText = false;
@@ -907,7 +1066,12 @@ export function initBratGenerator(): () => void {
     }
   }
 
-  const onPointerMove = (e: PointerEvent) => pointerMove(e.clientX, e.clientY);
+  const onPointerMove = (e: PointerEvent) => {
+    if (handleAction !== null || draggingText || resizingText || rotatingText) {
+      e.preventDefault();
+    }
+    pointerMove(e.clientX, e.clientY);
+  };
   const onPointerUp = (e: PointerEvent) => {
     if (capturedPointerId === e.pointerId) {
       try {
@@ -938,6 +1102,7 @@ export function initBratGenerator(): () => void {
       const sk = state.stickers[selectedSticker];
       if (e.key === "Delete" || e.key === "Backspace") {
         e.preventDefault();
+        pushHistory();
         state.stickers.splice(selectedSticker, 1);
         selectedSticker = null;
         requestDraw();
@@ -972,6 +1137,7 @@ export function initBratGenerator(): () => void {
     if (!tt.selected) return;
     if (e.key === "Delete" || e.key === "Backspace") {
       e.preventDefault();
+      pushHistory();
       tt.x = 0;
       tt.y = 0;
       tt.rotation = 0;
@@ -1010,9 +1176,11 @@ export function initBratGenerator(): () => void {
   window.addEventListener("pointercancel", onPointerUp);
   window.addEventListener("keydown", onKeyDown);
   c.addEventListener("dblclick", (e) => {
+    if (isTouch) return;
     const { x, y } = getCanvasXYFromClient(e.clientX, e.clientY);
     const hit = findStickerHandle(x, y);
     if (hit) {
+      pushHistory();
       state.stickers.splice(hit.i, 1);
       selectedSticker = null;
       requestDraw();
@@ -1023,6 +1191,7 @@ export function initBratGenerator(): () => void {
     (e) => {
       if (e.shiftKey) {
         e.preventDefault();
+        pushHistory();
         state.fontSize = Math.min(
           300,
           Math.max(24, state.fontSize - Math.sign(e.deltaY) * 4)
@@ -1035,6 +1204,7 @@ export function initBratGenerator(): () => void {
   );
 
   function addSticker(char: string) {
+    pushHistory();
     getOrCreateEmojiBitmap(char);
     const size = 120;
     const pad = 80;
@@ -1046,7 +1216,6 @@ export function initBratGenerator(): () => void {
     selectedSticker = state.stickers.length - 1;
     hoveredTextHandle = null;
     state.textTransform.selected = false;
-    console.log("Sticker added", state.stickers.length);
     requestDraw();
   }
 
@@ -1158,27 +1327,33 @@ export function initBratGenerator(): () => void {
     requestDraw();
   });
   fontSizeEl.addEventListener("input", () => {
+    pushHistory();
     state.fontSize = Number(fontSizeEl.value);
     requestDraw();
   });
   lineHeightEl.addEventListener("input", () => {
+    pushHistory();
     state.lineHeight = Number(lineHeightEl.value);
     requestDraw();
   });
   letterSpacingEl.addEventListener("input", () => {
+    pushHistory();
     state.letterSpacing = Number(letterSpacingEl.value);
     requestDraw();
   });
   alignEl.addEventListener("change", () => {
+    pushHistory();
     state.align = alignEl.value;
     requestDraw();
   });
   outlineEl.addEventListener("change", () => {
+    pushHistory();
     state.outline = outlineEl.checked;
     outlineColorContainer!.style.display = outlineEl.checked ? "inline-flex" : "none";
     requestDraw();
   });
   outlineColorEl.addEventListener("input", () => {
+    pushHistory();
     state.outlineColor = outlineColorEl.value;
     if (state.outline) requestDraw();
   });
@@ -1191,19 +1366,29 @@ export function initBratGenerator(): () => void {
     state.shadowColor = shadowColorEl.value;
     if (state.shadow) requestDraw();
   });
+  let bgColorInputActive = false;
   bgColorEl.addEventListener("input", () => {
+    if (!bgColorInputActive) {
+      bgColorInputActive = true;
+      pushHistory();
+    }
     state.bg = bgColorEl.value;
     requestDraw();
+  });
+  bgColorEl.addEventListener("change", () => {
+    bgColorInputActive = false;
   });
   fgColorEl.addEventListener("input", () => {
     state.fg = fgColorEl.value;
     requestDraw();
   });
   ratioEl.addEventListener("change", () => {
+    pushHistory();
     state.ratio = ratioEl.value;
     setCanvasSize();
   });
   resEl.addEventListener("change", () => {
+    pushHistory();
     state.res = Number(resEl.value);
     setCanvasSize();
   });
@@ -1212,26 +1397,39 @@ export function initBratGenerator(): () => void {
     requestDraw();
   });
   bgUpload.addEventListener("change", (e) => {
+    pushHistory();
     const file = (e.target as HTMLInputElement).files?.[0];
     if (!file) return;
+    if (currentBgUrl) {
+      URL.revokeObjectURL(currentBgUrl);
+      currentBgUrl = null;
+    }
+    currentBgUrl = URL.createObjectURL(file);
     const img = new Image();
     img.onload = () => {
       state.bgImage = img;
       requestDraw();
     };
-    img.src = URL.createObjectURL(file);
+    img.src = currentBgUrl;
   });
   clearBg.addEventListener("click", () => {
+    pushHistory();
+    if (currentBgUrl) {
+      URL.revokeObjectURL(currentBgUrl);
+      currentBgUrl = null;
+    }
     state.bgImage = null;
     requestDraw();
   });
   fontSelectEl.addEventListener("change", () => {
+    pushHistory();
     state.fontFamily = fontSelectEl.value;
     requestDraw();
   });
 
   document.querySelectorAll(".brat-pill").forEach((p) => {
     p.addEventListener("click", () => {
+      pushHistory();
       const el = p as HTMLElement;
       state.bg = el.dataset.bg || "#c1ff00";
       state.fg = el.dataset.fg || "#0a0a0a";
@@ -1244,12 +1442,20 @@ export function initBratGenerator(): () => void {
   outlineColorContainer!.style.display = state.outline ? "inline-flex" : "none";
   shadowColorContainer!.style.display = state.shadow ? "inline-flex" : "none";
 
+  if (undoBtn) undoBtn.addEventListener("click", () => undo());
+  if (redoBtn) redoBtn.addEventListener("click", () => redo());
+
   downloadBtn.addEventListener("click", () => {
     const wasSelected = state.textTransform.selected;
     state.textTransform.selected = false;
     draw();
     c.toBlob((b) => {
-      if (!b) return;
+      if (!b) {
+        showToast("Download failed. Please try again.");
+        state.textTransform.selected = wasSelected;
+        requestDraw();
+        return;
+      }
       const a = document.createElement("a");
       a.href = URL.createObjectURL(b);
       const base =
@@ -1398,6 +1604,7 @@ export function initBratGenerator(): () => void {
 
   setCanvasSize();
   switchTab("text");
+  updateUndoRedoButtons();
 
   const onResize = () => {
     const isMobile = window.matchMedia("(max-width: 999px)").matches;
@@ -1409,6 +1616,10 @@ export function initBratGenerator(): () => void {
 
   return () => {
     if (longPressTimer) clearTimeout(longPressTimer);
+    if (currentBgUrl) {
+      URL.revokeObjectURL(currentBgUrl);
+      currentBgUrl = null;
+    }
     window.removeEventListener("pointermove", onPointerMove);
     window.removeEventListener("pointerup", onPointerUp);
     window.removeEventListener("pointercancel", onPointerUp);

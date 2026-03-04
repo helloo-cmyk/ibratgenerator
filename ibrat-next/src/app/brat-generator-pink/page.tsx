@@ -1,3 +1,4 @@
+import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
@@ -24,6 +25,10 @@ export default function BratGeneratorPinkPage() {
             </p>
           </div>
         </div>
+      </section>
+
+      <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
+        <BratGeneratorLazy />
       </section>
 
       <section>

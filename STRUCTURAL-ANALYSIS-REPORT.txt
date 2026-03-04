@@ -1,0 +1,153 @@
+================================================================================
+Full Structural Analysis Report — Ibrat Generator
+================================================================================
+
+Scope: Entire repository (ibrat-next), with focus on app routes, Brat Generator
+integration, and architecture.
+
+Date: Analysis performed without code modifications.
+
+================================================================================
+1. ROUTE STRUCTURE
+================================================================================
+
+All public routes are implemented via the App Router in ibrat-next/src/app/.
+Each route corresponds to a folder with a page.tsx file.
+
+Route URL                     | File path                          | BratGenerator? | Dynamic?
+--------------------------------------------------------------------------------
+/                             | src/app/page.tsx                   | Yes (Lazy)     | Yes
+/brat-maker/                  | src/app/brat-maker/page.tsx        | Yes (Lazy)     | Yes
+/brat-creator/                | src/app/brat-creator/page.tsx      | Yes (Lazy)     | Yes
+/brat-text-generator/         | src/app/brat-text-generator/       | Yes (Lazy)     | Yes
+/brat-name-generator/         | src/app/brat-name-generator/       | Yes (Lazy)     | Yes
+/brat-black-generator/        | src/app/brat-black-generator/      | No             | N/A
+/brat-green-generator/        | src/app/brat-green-generator/      | No             | N/A
+/brat-font-generator/         | src/app/brat-font-generator/       | No             | N/A
+/brat-album-cover-generator/  | src/app/brat-album-cover-generator/| No             | N/A
+/brat-summer-meme-generator/  | src/app/brat-summer-meme-generator/| No             | N/A
+/brat-generator-pink/         | src/app/brat-generator-pink/       | No             | N/A
+/brat-generator-white/        | src/app/brat-generator-white/      | No             | N/A
+/about-us/                    | src/app/about-us/page.tsx          | No             | N/A
+/contact-us/                  | src/app/contact-us/page.tsx        | No             | N/A
+/privacy-policy/              | src/app/privacy-policy/page.tsx    | No             | N/A
+/terms-conditions/            | src/app/terms-conditions/page.tsx  | No             | N/A
+/disclaimer/                  | src/app/disclaimer/page.tsx        | No             | N/A
+
+Summary:
+- 5 routes load the generator: /, /brat-maker/, /brat-creator/, /brat-text-generator/, /brat-name-generator/
+- BratGeneratorLazy uses next/dynamic with ssr: false and "Loading generator..." placeholder
+- 7 "generator" routes are content/SEO-only and do NOT mount the generator
+- One root layout only: src/app/layout.tsx
+
+================================================================================
+2. GENERATOR LOCATION
+================================================================================
+
+Where the generator lives:
+- UI shell: src/components/BratGenerator.tsx — renders full widget DOM, styles, triggers init
+- Logic: src/components/brat-generator-init.ts — wires DOM, canvas, event listeners
+
+Which pages load it: page.tsx (home), brat-maker, brat-creator, brat-text-generator, brat-name-generator
+
+Call chain:
+  page.tsx
+    -> BratGeneratorLazy (dynamic, ssr: false)
+      -> BratGenerator
+        -> useEffect: loadScript(JSZip), loadScript(FileSaver)
+        -> initBratGenerator() from brat-generator-init.ts
+          -> getElementById for canvas and controls
+          -> state, historyStack, redoStack
+          -> draw(), requestDraw(), setCanvasSize()
+          -> addEventListener on canvas and window
+          -> return cleanup
+
+================================================================================
+3. GENERATOR USAGE ACROSS PAGES
+================================================================================
+
+All 5 generator routes: /, /brat-maker/, /brat-creator/, /brat-text-generator/, /brat-name-generator/
+- Generator loaded: Yes
+- State: Independent per page (no sharing)
+- Props: None. <BratGeneratorLazy /> with no props.
+
+================================================================================
+4. GENERATOR INITIALIZATION FLOW
+================================================================================
+
+1. Page loads -> Next.js serves route
+2. BratGeneratorLazy renders -> dynamic import BratGenerator (ssr: false), shows "Loading generator..."
+3. BratGenerator mounts -> renders #brat-embed-root, controls, canvas
+4. useEffect: load JSZip and FileSaver from CDN, then initBratGenerator()
+5. initBratGenerator: resolve DOM by ID, create state, setCanvasSize(), switchTab("text"), attach listeners
+6. Event listeners: canvas (pointerdown, dblclick, wheel), window (pointermove, pointerup, keydown, resize), controls (input/change/click)
+
+Important functions: initBratGenerator(), requestDraw(), draw(), setCanvasSize(), undo(), redo(), pushHistory()
+No applyTemplate() in codebase.
+
+================================================================================
+5. UI STRUCTURE
+================================================================================
+
+All UI is in src/components/BratGenerator.tsx:
+
+Text controls:   #brat-text, #brat-fontSize, #brat-lineHeight, #brat-align, #brat-fontSelect, outline/shadow
+Style controls:  .brat-pill, #brat-bgColor, #brat-fgColor, #brat-ratio, #brat-res, #brat-safeToggle, #brat-bgUpload
+Sticker controls:#brat-sticker-cats, #brat-sticker-grid
+Export controls: #brat-download, #brat-copy, #brat-batchBtn, #brat-altBtn, #brat-randomBtn
+Canvas preview:  #brat-canvas, #brat-safe
+Undo/Redo:       #brat-undo, #brat-redo
+Tabs:            .brat-desktop-tabs, .brat-bottom-nav (mobile)
+
+================================================================================
+6. SEO STRUCTURE
+================================================================================
+
+Layout: metadataBase, title template, description, openGraph, robots, icons, JSON-LD
+Per page: title, description, alternates.canonical
+Sitemap: public/sitemap.xml (static, 18 URLs)
+robots.txt: public/robots.txt (Allow: /, Sitemap URL)
+
+All generator pages use same BratGeneratorLazy/BratGenerator component.
+
+================================================================================
+7. COMPONENT TREE
+================================================================================
+
+RootLayout
+  Header
+  main
+    Page (Home etc.)
+      BratGeneratorLazy
+        BratGenerator
+          #brat-embed-root
+            #brat-controls (tabs, Text/Style/Stickers/Export panels)
+            #brat-preview (undo/redo, toolbar, canvas)
+      ExampleGallery (homepage)
+      FAQAccordion
+  Footer
+
+================================================================================
+8. DEPENDENCIES
+================================================================================
+
+Project: next, react, react-dom, canvas (not used by client generator), Tailwind
+Generator (CDN): JSZip (batch ZIP), FileSaver (batch download)
+Browser APIs: Canvas 2D, Pointer events, Clipboard, URL.createObjectURL, toBlob
+
+================================================================================
+9. FINAL SUMMARY
+================================================================================
+
+Main generator page: Homepage (/) plus brat-maker, brat-creator, brat-text-generator, brat-name-generator
+Pages that reuse generator: Same 5 routes, same component, no props
+Structure: React mounts DOM, brat-generator-init.ts holds state and behavior in closure
+
+Architectural limitations for templates:
+- No template/preset API or props for initial theme
+- Single global DOM, fixed IDs
+- No shared state across routes
+- Color presets only via 4 pills; templates would need props or URL params
+
+--------------------------------------------------------------------------------
+End of report. No code was modified; analysis only.

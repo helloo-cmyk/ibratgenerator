@@ -308,6 +308,13 @@ const BRAT_STYLES = `
   outline-offset: 2px;
 }
 
+.brat-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  pointer-events: none;
+}
+
 .brat-btn.primary {
   background: #111;
   color: white;
@@ -337,6 +344,16 @@ const BRAT_STYLES = `
 }
 
 /* ===== TOOLBAR ===== */
+.brat-undo-redo {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.brat-undo-redo .brat-btn {
+  min-height: 44px;
+}
+
 .brat-toolbar {
   display: flex;
   align-items: center;
@@ -378,6 +395,12 @@ const BRAT_STYLES = `
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
   object-fit: contain;
+  touch-action: none;
+}
+
+#brat-canvas,
+.brat-stage canvas {
+  touch-action: none;
 }
 
 .brat-safe {
@@ -1283,6 +1306,14 @@ export default function BratGenerator() {
               </div>
             </aside>
             <main className="brat-card" id="brat-preview">
+              <div className="brat-undo-redo">
+                <button type="button" id="brat-undo" className="brat-btn" disabled>
+                  Undo
+                </button>
+                <button type="button" id="brat-redo" className="brat-btn" disabled>
+                  Redo
+                </button>
+              </div>
               <div className="brat-toolbar">
                 <span>Canvas preview</span>
                 <span style={{ marginLeft: "auto", color: "#6b7280" }}>
