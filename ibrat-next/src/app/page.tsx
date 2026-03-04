@@ -10,7 +10,7 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Is this brat generator completely free?",
+      name: "Is this brat generator free?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes. Our brat generator is 100% free with no hidden fees, no signup, and no watermarks.",
@@ -21,7 +21,31 @@ const faqSchema = {
       name: "Can I download brat images?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. You can download high-quality PNG images instantly. No login required.",
+        text: "Yes. You can download high-quality PNG images instantly. Use the Download PNG button and choose resolution up to 3000 px. No login required and no watermark.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I create a brat profile picture?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Set the aspect ratio to square (1:1), type your name or phrase, choose colors and font, then click Download PNG. The result works as a profile picture on any platform.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I make my own brat design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Use the generator to type your text, pick fonts and colors, add stickers, and download. You can fully customize and make your own brat design in seconds.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What format does the brat generator export?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The brat generator exports PNG images. You can choose 1024, 1500, 2048, or 3000 px resolution.",
       },
     },
     {
@@ -30,30 +54,6 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes. The brat generator works on mobile and desktop. The editor is mobile friendly.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What font does brat generator use?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The tool offers several brat-style fonts. You can choose from the font selector in the Text tab.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I create brat memes for Instagram?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Enter your text, pick a style, add stickers if you like, then download the image. Use the square or 4:5 ratio for Instagram.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I add stickers to brat text?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Use the Stickers tab to add emojis and stickers to your brat text design. Drag, resize, and rotate them on the canvas.",
       },
     },
   ],
@@ -83,10 +83,10 @@ const breadcrumbSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Free Brat Generator Online – Create Brat Text, Memes & Stickers",
+    absolute: "Free Brat Generator – Create Brat Text, Images & Charli XCX Style Memes",
   },
   description:
-    "Create brat-style text, memes, and sticker graphics instantly with our free brat generator. Customize fonts, colors, and download high-quality images in seconds.",
+    "Create brat-style text, images, and memes with our free brat generator. Make your own Charli XCX brat graphics, profile pictures, stickers, and downloadable PNG images instantly.",
   alternates: {
     canonical: "https://ibratgenerator.com/",
   },
@@ -113,6 +113,7 @@ export default function Home() {
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {/* SECTION 1 — HERO */}
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 pt-6 pb-2 sm:pt-8 sm:pb-4 sm:px-6 text-base leading-relaxed text-foreground/90">
@@ -120,7 +121,7 @@ export default function Home() {
               Free Brat Generator
             </h1>
             <p className="text-base sm:text-lg text-foreground/90 mb-0 max-w-xl mx-auto">
-              Create brat text, memes and sticker-style graphics online instantly. 100% free and mobile friendly.
+              Create brat-style text, images, and profile pictures instantly with our free brat generator. Make your own brat graphics, memes, and downloadable PNG designs in seconds.
             </p>
           </div>
         </div>
@@ -130,136 +131,130 @@ export default function Home() {
         <BratGeneratorLazy />
       </section>
 
+      {/* SECTION 2 — FEATURES */}
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
           <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Is a Brat Generator?</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Create Brat Text, Images, and Profile Pictures</h2>
             <p className="mb-4">
-              A brat generator is an online tool that creates Charli XCX–inspired Brat-style text and images in your browser. You don&apos;t need design experience or editing software. Type your text, choose colors, adjust spacing, add stickers, and the free brat generator online instantly creates a clean Brat-style visual. The Brat look is bold, colorful, and minimal—perfect for memes, aesthetic edits, profile pictures, and brat captions for Instagram. Whether you need a brat text generator, brat meme generator, or brat sticker generator, you can create brat-style text online in seconds.
+              The tool works as a brat word generator for single phrases and a brat words generator for longer captions. Use the brat image generator to create shareable graphics, and export every design as a brat generator png. Need an avatar? The brat pfp generator lets you make profile pictures in seconds.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-          <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Create Brat Text & Memes in Seconds</h2>
-            <p className="mb-4">
-              Use our brat text generator to create brat meme generator–style graphics and brat sticker generator outputs without signing up. The brat image generator runs entirely in your browser: enter text, customize style, add stickers, and download brat text image files as high-quality PNGs. Create brat text online for social posts, profile pics, or brat png generator exports—all free and mobile friendly.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-          <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Features of Our Free Brat Generator</h2>
-
-            <h3 className="text-xl font-semibold mt-6">Custom Fonts & Styling</h3>
-            <p className="mb-4">
-              Choose from multiple brat-style fonts and adjust size, weight, spacing, and alignment. The brat style text maker supports English, symbols, and emojis so you can match any aesthetic.
-            </p>
-
-            <h3 className="text-xl font-semibold mt-6">Sticker & Emoji Support</h3>
-            <p className="mb-4">
-              Add stickers and emojis to your design from the Stickers tab. Drag, resize, and rotate them on the canvas for a personalized brat sticker generator–style result.
-            </p>
-
-            <h3 className="text-xl font-semibold mt-6">Download PNG Instantly</h3>
-            <p className="mb-4">
-              Download brat text image files as PNG in one click. Export at 1000×1000, 1500×1500, or 2000×2000—no watermark, no signup. Perfect for download brat text image use on social media.
-            </p>
-
-            <h3 className="text-xl font-semibold mt-6">Mobile Friendly Editor</h3>
-            <p className="mb-4">
-              The free brat generator works on phones, tablets, and desktops. The editor is responsive so you can create brat text online from any device.
-            </p>
-
-            <h3 className="text-xl font-semibold mt-6">High Resolution Export</h3>
-            <p className="mb-4">
-              Get sharp, high-resolution PNGs suitable for Instagram, TikTok, and print. No quality loss—our brat generator online delivers professional results.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-          <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How to Use the Brat Generator</h2>
-            <p className="mb-4">Using our free brat generator is simple:</p>
-            <ol className="list-decimal list-inside space-y-3 mb-4">
-              <li><strong>Enter text</strong> — Type your phrase in the text area.</li>
-              <li><strong>Customize style</strong> — Pick fonts, colors, and background in the Style tab.</li>
-              <li><strong>Add stickers</strong> — Use the Stickers tab to add emojis and stickers to the canvas.</li>
-              <li><strong>Preview design</strong> — Check your layout on the live canvas.</li>
-              <li><strong>Download image</strong> — Click Download PNG to save your high-quality image.</li>
-            </ol>
-            <p>No account needed. The brat generator online works instantly in your browser.</p>
-          </div>
-        </div>
-      </section>
-
-      <ExampleGallery />
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-          <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Why Use Our Free Brat Generator?</h2>
-            <p className="mb-4">
-              Most brat generator online tools are limited, ad-heavy, or poor resolution. Ours is 100% free, no signup, no watermark. You get full customization, mobile support, high-resolution export, and stickers—so you can create brat text online and download brat text image files in seconds. It&apos;s the best free brat generator for memes, captions, and social graphics.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-          <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who Uses Brat Generators?</h2>
-            <p className="mb-4">Our free brat generator is used by:</p>
-            <ul className="list-inside list-disc space-y-1">
-              <li>TikTok and Instagram creators</li>
-              <li>Brat-style meme pages and fans</li>
-              <li>Anyone creating brat captions for Instagram</li>
-              <li>People who want a quick brat text generator or brat meme generator</li>
-              <li>Designers needing a brat sticker generator or brat png generator</li>
+            <p className="mb-4">You can:</p>
+            <ul className="list-inside list-disc space-y-1 mb-4">
+              <li>Generate brat words and captions</li>
+              <li>Create brat images and graphics</li>
+              <li>Make brat profile pictures</li>
+              <li>Download PNG graphics in high resolution</li>
+              <li>Add stickers and emojis to your design</li>
             </ul>
-            <p className="mt-4">The interface is simple and works on mobile and desktop.</p>
           </div>
         </div>
       </section>
 
+      {/* SECTION 3 — HOW IT WORKS */}
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
           <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Explore More Brat Generators</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How to Use the Free Brat Generator</h2>
+            <h3 className="text-xl font-semibold mt-6">Step 1 — Enter your text</h3>
+            <p className="mb-4">
+              Type your phrase or caption in the text area. The canvas updates in real time as you type.
+            </p>
+            <h3 className="text-xl font-semibold mt-6">Step 2 — Customize the brat style</h3>
+            <p className="mb-4">
+              Pick a font, background color, and text color in the Style tab. Adjust size and spacing to match the look you want.
+            </p>
+            <h3 className="text-xl font-semibold mt-6">Step 3 — Add stickers or adjust colors</h3>
+            <p className="mb-4">
+              Use the Stickers tab to add emojis or stickers. Drag, resize, and rotate them on the canvas. Tweak colors anytime in the Style tab.
+            </p>
+            <h3 className="text-xl font-semibold mt-6">Step 4 — Download your brat image</h3>
+            <p className="mb-4">
+              Click Download PNG to save your design. Choose resolution up to 3000 px. No watermark and no signup required.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4 — EXAMPLES */}
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+          <div className="max-w-none text-base leading-relaxed text-foreground/90">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Examples From Our Brat Generator</h2>
             <p className="mb-6">
-              Try our other tools to create brat-style content:
+              Sample outputs created with the tool. Each is exportable as a brat generator png. Try the generator above to create your own.
+            </p>
+            <ExampleGallery />
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5 — USE CASES */}
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+          <div className="max-w-none text-base leading-relaxed text-foreground/90">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What You Can Create With This Brat Generator</h2>
+            <p className="mb-4">
+              Use the tool as a brat pfp maker for profile pictures, or create memes and social media captions. The brat type generator is ideal for aesthetic graphics—bold text on solid or custom backgrounds. Make your own brat design for Instagram, TikTok, or any platform.
+            </p>
+            <p className="mb-4">Common uses include:</p>
+            <ul className="list-inside list-disc space-y-1">
+              <li>Brat profile pictures and avatars</li>
+              <li>Memes and captions</li>
+              <li>Social media posts and stories</li>
+              <li>Aesthetic graphics and mood boards</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6 — WHY USE */}
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+          <div className="max-w-none text-base leading-relaxed text-foreground/90">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Why Use Our Free Brat Generator</h2>
+            <p className="mb-4">
+              The tool is completely free with no hidden costs. You get an instant preview as you type and edit—no signup required. It runs in your browser and works on mobile and desktop. Export high quality brat generator png files at up to 3000 px with no watermark.
+            </p>
+            <ul className="list-inside list-disc space-y-1">
+              <li>Completely free</li>
+              <li>Instant preview</li>
+              <li>No signup required</li>
+              <li>Mobile friendly</li>
+              <li>High quality PNG export</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 7 — INTERNAL LINKS */}
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+          <div className="max-w-none text-base leading-relaxed text-foreground/90">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">More Brat Generators</h2>
+            <p className="mb-6">
+              Explore our other tools for brat-style content:
             </p>
             <ul className="grid sm:grid-cols-2 gap-3 list-none pl-0">
-              <li><Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link></li>
-              <li><Link href="/brat-name-generator/" className="text-primary underline hover:no-underline">brat name generator</Link></li>
-              <li><Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">brat font generator</Link></li>
-              <li><Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">brat album cover generator</Link></li>
-              <li><Link href="/brat-summer-meme-generator/" className="text-primary underline hover:no-underline">brat meme generator</Link></li>
-              <li><Link href="/brat-green-generator/" className="text-primary underline hover:no-underline">green brat generator</Link></li>
+              <li><Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">Brat Text Generator</Link></li>
+              <li><Link href="/brat-name-generator/" className="text-primary underline hover:no-underline">Brat Name Generator</Link></li>
+              <li><Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">Brat Font Generator</Link></li>
+              <li><Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">Brat Album Cover Generator</Link></li>
             </ul>
           </div>
         </div>
       </section>
 
+      {/* SECTION 8 — FAQ */}
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Common questions about our free brat generator."
         items={[
           {
-            question: "Is this brat generator completely free?",
+            question: "Is this brat generator free?",
             answer: (
               <p>
-                Yes. Our brat generator is 100% free with no hidden fees, no signup, and no watermarks. Create and download as many brat text images as you want.
+                Yes. Our brat generator is 100% free with no hidden fees, no signup, and no watermarks. Create and download as many images as you want.
               </p>
             ),
           },
@@ -267,7 +262,31 @@ export default function Home() {
             question: "Can I download brat images?",
             answer: (
               <p>
-                Yes. You can download high-quality PNG images instantly. No login required. Use the Download PNG button to save your design.
+                Yes. You can download high-quality PNG images instantly. Use the Download PNG button and choose resolution up to 3000 px. No login required and no watermark.
+              </p>
+            ),
+          },
+          {
+            question: "How do I create a brat profile picture?",
+            answer: (
+              <p>
+                Set the aspect ratio to square (1:1), type your name or phrase, choose colors and font, then click Download PNG. The result works as a profile picture on any platform.
+              </p>
+            ),
+          },
+          {
+            question: "Can I make my own brat design?",
+            answer: (
+              <p>
+                Yes. Use the generator above to type your text, pick fonts and colors, add stickers, and download. You can fully customize and make your own brat design in seconds.
+              </p>
+            ),
+          },
+          {
+            question: "What format does the brat generator export?",
+            answer: (
+              <p>
+                The brat generator exports PNG images. You can choose 1024, 1500, 2048, or 3000 px resolution. No other format is required for social media or profile pictures.
               </p>
             ),
           },
@@ -275,36 +294,24 @@ export default function Home() {
             question: "Does it work on mobile devices?",
             answer: (
               <p>
-                Yes. The brat generator works on mobile and desktop. The editor is mobile friendly so you can create brat text online from your phone or tablet.
-              </p>
-            ),
-          },
-          {
-            question: "What font does brat generator use?",
-            answer: (
-              <p>
-                The tool offers several brat-style fonts. You can choose from the font selector in the Text tab to match the classic Brat look or try other styles.
-              </p>
-            ),
-          },
-          {
-            question: "How do I create brat memes for Instagram?",
-            answer: (
-              <p>
-                Enter your text, pick a style and colors, add stickers if you like, then download the image. Use the square or 4:5 aspect ratio for Instagram posts or stories.
-              </p>
-            ),
-          },
-          {
-            question: "Can I add stickers to brat text?",
-            answer: (
-              <p>
-                Yes. Use the Stickers tab to add emojis and stickers to your brat text design. You can drag, resize, and rotate them on the canvas.
+                Yes. The brat generator works on mobile and desktop. The editor is mobile friendly so you can create from your phone or tablet.
               </p>
             ),
           },
         ]}
       />
+
+      {/* SECTION 9 — CLOSING */}
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+          <div className="max-w-none text-base leading-relaxed text-foreground/90 text-center">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Start Creating Your Brat Design</h2>
+            <p className="mb-4 mt-4">
+              Use the free brat generator at the top of this page to create your own brat text, images, and profile pictures. No signup, no download—just type, customize, and download.
+            </p>
+          </div>
+        </div>
+      </section>
       </main>
   );
 }
