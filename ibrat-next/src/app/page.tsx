@@ -227,19 +227,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 7 — INTERNAL LINKS */}
+      {/* SECTION 7 — POPULAR BRAT GENERATOR TOOLS */}
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
           <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">More Brat Generators</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Popular Brat Generator Tools</h2>
             <p className="mb-6">
               Explore our other tools for brat-style content:
             </p>
             <ul className="grid sm:grid-cols-2 gap-3 list-none pl-0">
-              <li><Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">Brat Text Generator</Link></li>
-              <li><Link href="/brat-name-generator/" className="text-primary underline hover:no-underline">Brat Name Generator</Link></li>
+              <li><Link href="/brat-creator/" className="text-primary underline hover:no-underline">Brat Creator</Link></li>
               <li><Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">Brat Font Generator</Link></li>
               <li><Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">Brat Album Cover Generator</Link></li>
+              <li><Link href="/brat-summer-meme-generator/" className="text-primary underline hover:no-underline">Brat Summer Meme Generator</Link></li>
+              <li><Link href="/brat-black-generator/" className="text-primary underline hover:no-underline">Brat Black Generator</Link></li>
+              <li><Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">Brat Text Generator</Link></li>
+              <li><Link href="/brat-name-generator/" className="text-primary underline hover:no-underline">Brat Name Generator</Link></li>
             </ul>
           </div>
         </div>

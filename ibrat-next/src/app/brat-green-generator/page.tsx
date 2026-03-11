@@ -1,9 +1,10 @@
+import Link from "next/link";
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
   title: {
-    absolute: "Brat Green Generator – Create Neon Green Brat Text & Memes",
+    absolute: "Brat Green Generator – Create Neon Green Brat Text & Images",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-green-generator/",
@@ -20,8 +21,10 @@ export default function BratGreenGeneratorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Green Generator</h1>
             <p className="mb-5">
-              Create bold neon green Brat-style text and visuals instantly
-              with this free online tool.
+              The brat green generator recreates the iconic neon green Brat
+              aesthetic and lets you generate green Brat text and graphics
+              instantly. Use this green brat generator as a brat green text
+              generator — no software to download, no signup required.
             </p>
           </div>
         </div>
@@ -33,9 +36,9 @@ export default function BratGreenGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What This Tool Does</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Is the Brat Green Generator</h2>
           <p className="mb-4">
-            The brat green generator is a dedicated tool built specifically
+            It is a dedicated tool built specifically
             for creating neon green Brat-style text, captions, memes, and
             image overlays. It focuses on the iconic bright green aesthetic
             that became instantly recognizable across social media.
@@ -63,7 +66,7 @@ export default function BratGreenGeneratorPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who This Tool Is For</h2>
           <p className="mb-4">
-            The brat green generator is made for creators who want the
+            This generator is made for creators who want the
             original neon green Brat look.
           </p>
           <p className="mb-4">It is especially useful for:</p>
@@ -86,7 +89,12 @@ export default function BratGreenGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Core Features of the Brat Green Generator</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Features of the Brat Green Generator</h2>
+          <p className="mb-6">
+            With this brat generator green tool, you can create neon green Brat
+            text graphics, meme captions, profile overlays, and aesthetic posts
+            in seconds.
+          </p>
 
           <h3 className="text-xl font-semibold mt-6">1. Authentic Neon Green Presets</h3>
           <p className="mb-4">
@@ -168,7 +176,7 @@ export default function BratGreenGeneratorPage() {
             <li>4:5 — Portrait feed posts</li>
             <li>16:9 — Thumbnails &amp; banners</li>
           </ul>
-          <p className="mb-6">This makes the brat green generator versatile for any platform.</p>
+          <p className="mb-6">This makes the tool versatile for any platform.</p>
 
           <h3 className="text-xl font-semibold mt-6">6. High-Quality PNG Export</h3>
           <p className="mb-4">Every design downloads as a crisp PNG file.</p>
@@ -239,6 +247,18 @@ export default function BratGreenGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Brat Green Generator Examples</h2>
+          <p className="mb-4">
+            The brat green generator lets you create neon green Brat graphics,
+            captions, and text overlays for social posts, profile pictures, and
+            memes. Try bold one-word statements, lyric-style edits, or meme
+            captions over your own photos — all with the classic neon green look.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Why This Brat Green Generator Is Better</h2>
           <p className="mb-4">
             Many tools claim to recreate the green Brat style but fail to
@@ -274,6 +294,30 @@ export default function BratGreenGeneratorPage() {
         </div>
       </section>
 
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why Neon Green Became The Brat Aesthetic</h2>
+          <p className="mb-4">
+            Neon green emerged as the defining color of the Brat aesthetic through a combination of album artwork, tour visuals, and social media branding. The shade—bright, acidic, and impossible to ignore—quickly became a visual shorthand for the Brat era and its cultural moment. Unlike softer greens or muted tones, neon green demands attention and reads as bold, playful, and slightly rebellious.
+          </p>
+          <p className="mb-4">
+            Culturally, the color connects to club and rave aesthetics, digital interfaces, and early 2000s nostalgia, which all feed into the Brat visual identity. On social media, neon green stands out in feeds dominated by warm filters and pastel palettes. When paired with bold typography and minimal design, it creates instant recognizability—a single glance is enough to associate the image with Brat-style content.
+          </p>
+          <p>
+            Creators and fans adopted neon green not just because of its official use, but because it translates well across platforms: it remains vivid on phone screens, works in both light and dark contexts, and pairs easily with black, white, or simple backgrounds. The color has become inseparable from the Brat aesthetic, functioning as a visual badge that signals participation in a shared cultural language.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Other Brat Color Generators</h2>
+          <p>
+            Try other color styles using our <Link href="/brat-generator-pink/" className="text-primary underline hover:no-underline">brat generator pink</Link>, <Link href="/brat-black-generator/" className="text-primary underline hover:no-underline">brat black generator</Link>, or the <Link href="/brat-generator-white/" className="text-primary underline hover:no-underline">brat generator white</Link>.
+          </p>
+        </div>
+      </section>
+
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Here are some common questions about our Brat Generator"
@@ -302,6 +346,23 @@ export default function BratGreenGeneratorPage() {
             If you want a focused tool that recreates the original neon
             green Brat style with clarity and precision, this generator
             provides everything you need in seconds.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Other Brat Generator Tools</h2>
+          <p className="mb-4">
+            Try the <Link href="/brat-creator/" className="text-primary underline hover:no-underline">Brat Creator</Link> for all-in-one brat graphics, the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> to generate brat text, the <Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">brat font tool</Link> for typography, the <Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">brat album maker</Link>, or the <Link href="/brat-summer-meme-generator/" className="text-primary underline hover:no-underline">Brat Summer Meme Generator</Link> for memes.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <p>
+            To generate brat text as PNG, use our <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link>. For other brat visuals, try the <Link href="/" className="text-primary underline hover:no-underline">online brat generator</Link>.
           </p>
         </div>
       </section>

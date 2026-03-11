@@ -1,15 +1,17 @@
+import Link from "next/link";
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
+import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 
 export const metadata = {
   title: {
-    absolute: "Free Brat Album Cover Generator – Create Brat Cover Art Online",
+    absolute: "Free Brat Album Cover Generator – Make Your Own Brat Cover Art",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-album-cover-generator/",
   },
   description:
-    "The Brat Album Cover Generator is a dedicated tool that lets you design Brat-inspired album covers in seconds. It's built for users who want to recreate the bold, minimal, high-contrast visual style associated with the Brat aesthetic — without needing advanced design software or editing skills.",
+    "Make your own Brat album covers instantly with our free brat album cover generator. Create Brat-style cover art online — no design skills required.",
 };
 
 export default function BratAlbumCoverGeneratorPage() {
@@ -20,7 +22,7 @@ export default function BratAlbumCoverGeneratorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Album Cover Generator</h1>
             <p className="mb-5">
-              Create Brat-style album covers instantly with this free generator.
+              Use this brat album cover generator and brat album cover maker to make your own brat album cover in seconds. Create Brat-style album covers instantly — no design software needed.
             </p>
           </div>
         </div>
@@ -32,7 +34,7 @@ export default function BratAlbumCoverGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">What This Tool Does</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">What Is a Brat Album Cover Generator</h2>
           <p className="mb-4">
             The Brat Album Cover Generator is a dedicated tool that lets you
             design Brat-inspired album covers in seconds. It&apos;s built for
@@ -55,7 +57,7 @@ export default function BratAlbumCoverGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Who This Tool Is For</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Who Uses the Brat Album Cover Generator</h2>
           <p className="mb-4">
             The Brat Album Cover Generator is made for creators who want fast,
             clean, and expressive album-style visuals. It works well for:
@@ -79,7 +81,11 @@ export default function BratAlbumCoverGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Main Features of the Brat Album Cover Generator</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Features of the Brat Album Cover Generator</h2>
+
+          <p className="mb-6">
+            This brat cover generator and brat album generator lets you customize everything: text, background images, and layout. Choose from album-style presets or design from scratch — all updates happen in real time.
+          </p>
 
           <h3 className="text-xl font-semibold mt-6">1. Album-Style Layout Presets</h3>
           <p className="mb-4">
@@ -250,7 +256,7 @@ export default function BratAlbumCoverGeneratorPage() {
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Examples of What You Can Create</h2>
-          <p className="mb-4">With this tool, you can design:</p>
+          <p className="mb-4">Use this tool to make brat album cover art or custom visuals. You can create:</p>
           <ul className="mb-4 list-inside list-disc space-y-1">
             <li>Brat-inspired album covers</li>
             <li>Fan-made concept albums</li>
@@ -262,7 +268,34 @@ export default function BratAlbumCoverGeneratorPage() {
             <li>High-contrast album art</li>
             <li>Aesthetic music thumbnails</li>
           </ul>
-          <p>The generator gives you the structure — your creativity defines the final result.</p>
+          <p>Make brat album cover designs for playlists, social posts, or your next release — the generator gives you the structure, and your creativity defines the result.</p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Create Charli XCX Style Brat Album Covers</h2>
+          <p className="mb-4">
+            Fans of Charli XCX&apos;s Brat era can use this tool to recreate that bold, minimal, high-contrast aesthetic. As a charli xcx album cover generator alternative, it lets you craft cover art in the same visual language — neon greens, clean typography, and striking layouts — without any design experience.
+          </p>
+          <p>
+            Whether you&apos;re making fan art, playlist covers, or original music visuals, you get full control over text, colors, backgrounds, and layout. Create Charli-inspired Brat album covers in minutes.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">How Brat Album Cover Designs Work</h2>
+          <p className="mb-4">
+            Brat-inspired album covers share a clear design language: minimal, bold, and type-driven. Layouts tend to favor a single focal point—usually the album title or artist name—placed centrally or in a deliberate off-center position. Backgrounds are often flat color blocks (neon green, black, white, or pink) rather than busy imagery, which keeps attention on the typography.
+          </p>
+          <p className="mb-4">
+            Typography placement follows strict hierarchy. The main title appears in large, heavy sans-serif letters with generous spacing. Secondary text, if present, is smaller and often aligned to create balance without clutter. The approach borrows from Swiss design and modernist posters: clarity over decoration, and strong contrast between text and background. Color choices are intentional—neon green signals the classic Brat identity, while black and white add drama and simplicity. Pink and other accent colors offer softer variations without breaking the minimal aesthetic.
+          </p>
+          <p>
+            This minimal design works because it creates instant recognizability. A Brat-style cover can be understood in a split second, even at thumbnail size. The lack of decorative elements means every choice—font weight, placement, color—carries more weight. Designers recreate this look by resisting the urge to add gradients, patterns, or busy imagery, and instead focusing on a few strong typographic decisions.
+          </p>
         </div>
       </section>
 
@@ -296,6 +329,14 @@ export default function BratAlbumCoverGeneratorPage() {
           <p>
             If you want to create striking Brat album covers quickly and
             freely, this generator delivers everything you need in one simple tool.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <p>
+            Use our <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text maker</Link> to generate brat text only, or the <Link href="/" className="text-primary underline hover:no-underline">free brat generator</Link> for memes and full graphics.
           </p>
         </div>
       </section>

@@ -1,15 +1,17 @@
+import Link from "next/link";
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
+import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 
 export const metadata = {
   title: {
-    absolute: "Free Brat Font Generator – Create Brat Style Text Online",
+    absolute: "Free Brat Font Generator – Create Charli XCX Brat Style Text",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-font-generator/",
   },
   description:
-    "The brat font generator is an online tool designed to recreate the bold, minimal, and instantly recognizable typography associated with the Brat aesthetic. Many users search for what font is brat or what is the brat font because they want to recreate the same clean and powerful text style seen across social media.",
+    "The brat font generator recreates the bold, minimal typography of the Brat aesthetic and Charli XCX brat font style. Create brat font text online—no download. Answers: what font is brat, what is the brat font, brat font name.",
 };
 
 export default function BratFontGeneratorPage() {
@@ -20,7 +22,7 @@ export default function BratFontGeneratorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Font Generator</h1>
             <p className="mb-5">
-              Create bold Brat-style typography instantly with this free brat font generator.
+              Use this free brat font generator to create the same bold typography you see in the Brat aesthetic. The tool recreates the charli xcx brat font style—clean, minimal, and instantly recognizable—so you can type your text and get Brat-style graphics in seconds, no font download required.
             </p>
           </div>
         </div>
@@ -32,25 +34,18 @@ export default function BratFontGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">What This Tool Does</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">What Is the Brat Font Generator</h2>
           <p className="mb-4">
-            The brat font generator is an online tool designed to recreate
-            the bold, minimal, and instantly recognizable typography
-            associated with the Brat aesthetic. Many users search for what
-            font is brat or what is the brat font because they want to
-            recreate the same clean and powerful text style seen across
-            social media.
-          </p>
-          <p className="mb-4">
-            Instead of downloading fonts or editing manually, this generator
-            allows you to type your text and instantly transform it into
-            Brat-style typography. It works directly in your browser and
-            requires no design experience.
+            The brat font generator is an online tool that recreates the
+            bold, minimal typography used in the Brat aesthetic. Instead of
+            downloading fonts or editing manually, you type your text and
+            instantly get Brat-style typography. It runs in your browser and
+            needs no design experience.
           </p>
           <p>
             If you have ever searched for the brat font name or wondered
-            what font is brat charli xcx inspired by, this tool provides a
-            simple way to recreate that look without installing anything.
+            what font is brat charli xcx, this tool gives you that look
+            without installing anything.
           </p>
         </div>
       </section>
@@ -59,28 +54,23 @@ export default function BratFontGeneratorPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">What Is the Brat Font?</h2>
           <p className="mb-4">
-            One of the most common questions online is: what is brat font?
+            People often ask: what font is brat? or what is the brat font?
+            There is no single official font file called the &quot;Brat font.&quot;
+            The brat aesthetic uses bold, minimalist typography inspired by
+            modern sans-serif fonts—clean lines, strong spacing, and little
+            or no decoration.
           </p>
           <p className="mb-4">
-            There is no officially released standalone font file labeled as
-            the &quot;Brat font.&quot; The visual style commonly referred to
-            as the brat charli xcx font is based on bold, clean, sans-serif
-            typography with strong spacing and minimal decoration.
+            When people search for the brat font name, what font is brat
+            charli xcx, or charli xcx brat font, they are usually trying to
+            match the exact typography used in Brat-themed visuals and
+            Charli XCX branding.
           </p>
-          <p className="mb-4">When people search for:</p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>charli xcx brat font name</li>
-            <li>brat font name</li>
-            <li>what is the brat font</li>
-            <li>what font is brat</li>
-          </ul>
           <p>
-            They are usually trying to identify the exact typography style
-            used in Brat-themed visuals.
-          </p>
-          <p className="mt-4">
-            This generator recreates that clean and minimal brat album font
-            style by focusing on spacing, weight, alignment, and high contrast.
+            This brat font generator recreates that look—including the
+            brat album font style—by focusing on spacing, weight,
+            alignment, and high contrast, so your text reads as authentic
+            Brat-style typography.
           </p>
         </div>
       </section>
@@ -278,6 +268,46 @@ export default function BratFontGeneratorPage() {
         </div>
       </section>
 
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Brat Font Generator Examples</h2>
+          <p className="mb-4">
+            With the brat font generator you can create a wide range of
+            sample outputs. Typical examples include single words or short
+            phrases in bold green on a bright background—the classic brat
+            font look—or the same brat album font style in pink, white, or
+            black for contrast.
+          </p>
+          <p className="mb-4">
+            Sample outputs might be minimalist one-line statements like
+            &quot;brat summer&quot; or &quot;hot girl music,&quot; album-style
+            headings, meme captions, or profile name graphics. You can
+            adjust size, spacing, and alignment so each design matches the
+            charli xcx brat font vibe while staying readable on social
+            feeds and stories.
+          </p>
+          <p>
+            All of these are exported as high-quality PNGs with no
+            watermark, so you can use them anywhere.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">What Font Is Used In The Brat Album Style</h2>
+          <p className="mb-4">
+            The Brat album style does not rely on a single named commercial font. Instead, it draws from a lineage of modern geometric sans-serif typefaces that prioritize clarity, weight, and minimal ornamentation. The visual identity comes from bold strokes, tight letter spacing, and generous use of uppercase or title case—all arranged in a way that feels both contemporary and deliberately stripped down.
+          </p>
+          <p className="mb-4">
+            Designers and fans often compare the Brat aesthetic to fonts like Helvetica Neue Bold, Avenir Heavy, or Gotham—typefaces that share clean geometric forms and strong x-heights. The key is not letter-by-letter mimicry but the overall impression: heavy weight, minimal serifs, and a sense of confidence. The style works because it puts typography at the center of the design, with little or no decorative elements competing for attention.
+          </p>
+          <p>
+            Whether applied to album artwork, social media captions, or memes, the Brat typography style succeeds by being instantly legible and visually assertive. The design approach favors high contrast between text and background, centered or intentionally asymmetric layouts, and a confident use of negative space. Understanding these principles helps you recreate the Brat look even without access to the exact font files used in official branding.
+          </p>
+        </div>
+      </section>
+
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Here are some common questions about our Brat Generator"
@@ -289,6 +319,8 @@ export default function BratFontGeneratorPage() {
           { question: "Does it work on mobile?", answer: <p>Yes. You can pick any color, including custom hex codes.</p> },
         ]}
       />
+
+      <MoreBratGeneratorTools />
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
@@ -305,6 +337,14 @@ export default function BratFontGeneratorPage() {
             high-quality PNG exports, you can create clean Brat-style
             typography in seconds without downloading any fonts or using
             design software.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <p>
+            To <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">generate brat text</Link> as PNG, use our <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link>. For full visuals, try the <Link href="/" className="text-primary underline hover:no-underline">online brat generator</Link> for memes and graphics.
           </p>
         </div>
       </section>

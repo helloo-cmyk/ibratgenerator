@@ -1,15 +1,17 @@
+import Link from "next/link";
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
+import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 
 export const metadata = {
   title: {
-    absolute: "Brat Black Generator – Create Black Brat Text & Images Online",
+    absolute: "Brat Generator Black – Create Black Brat Text & Images Online",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-black-generator/",
   },
   description:
-    "The brat black generator is a specialized tool for creating dark, high-contrast Brat-style text and visuals using black backgrounds. It is built for users who want a bold, minimal, and modern version of the Brat aesthetic with strong contrast and clean typography.",
+    "The brat generator black is a specialized tool for creating high-contrast brat text and graphics on black backgrounds. Create dark aesthetic Brat-style visuals with customizable text, layout, and dark themes—no design software required.",
 };
 
 export default function BratBlackGeneratorPage() {
@@ -18,9 +20,9 @@ export default function BratBlackGeneratorPage() {
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Black Generator</h1>
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Generator Black</h1>
             <p className="mb-5">
-              Generate clean black Brat designs for social posts and graphics.
+              The brat generator black lets you create high-contrast brat text and graphics on black backgrounds. Use this brat black generator as a brat text generator black for social posts, memes, and dark aesthetic visuals—no design software needed.
             </p>
           </div>
         </div>
@@ -32,33 +34,24 @@ export default function BratBlackGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What This Tool Does</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Is the Brat Generator Black</h2>
           <p className="mb-4">
-            The brat black generator is a specialized tool for creating dark,
-            high-contrast Brat-style text and visuals using black backgrounds.
-            It is built for users who want a bold, minimal, and modern version
-            of the Brat aesthetic with strong contrast and clean typography.
+            The brat generator black is a specialized tool for creating high-contrast brat text and graphics using black backgrounds. It lets you produce bold, minimal Brat-style visuals with strong contrast and clean typography—ideal for dark aesthetics and modern social content.
           </p>
           <p className="mb-4">
-            This tool allows you to create black Brat text, dark meme captions,
-            album-style visuals, profile graphics, and minimalist posts without
-            using any design software. Everything works instantly — type your
-            text, customize the layout, and download a high-quality image.
+            This brat black generator lets you create black Brat text, dark meme captions, album-style visuals, profile graphics, and minimalist posts without design software. Type your text, customize the layout and dark themes, and download high-quality images instantly.
           </p>
           <p>
-            Whether you need a brat generator black background, a dark
-            aesthetic caption, or a black-themed profile image, everything can
-            be created inside this generator.
+            Whether you need a brat generator black background, a dark aesthetic caption, or a black-themed profile image, everything can be created inside this generator.
           </p>
         </div>
       </section>
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who This Tool Is For</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who Uses the Brat Generator Black</h2>
           <p className="mb-4">
-            The black brat generator is ideal for creators who prefer darker
-            visuals with strong contrast.
+            The black brat generator is ideal for creators who prefer darker visuals with strong contrast.
           </p>
           <ul className="mb-4 list-inside list-disc space-y-1">
             <li>Users who like minimalist designs</li>
@@ -78,12 +71,14 @@ export default function BratBlackGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Main Features of the Brat Black Generator</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Features of the Brat Generator Black</h2>
+          <p className="mb-6">
+            The brat generator black offers customization of text, layout, and dark themes. Use it as a brat generator black background tool or a brat text generator black for captions, memes, and graphics.
+          </p>
 
           <h3 className="text-xl font-semibold mt-6">1. Deep Black Background Presets</h3>
           <p className="mb-6">
-            The generator uses true black and near-black backgrounds to give
-            your designs a clean, professional look with maximum contrast.
+            The generator uses true black and near-black backgrounds to give your designs a clean, professional look with maximum contrast.
           </p>
 
           <h3 className="text-xl font-semibold mt-6">2. Clean Brat Typography</h3>
@@ -140,7 +135,7 @@ export default function BratBlackGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How to Use the Brat Black Generator</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How to Use the Brat Generator Black</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1 — Enter Your Text</h3>
           <p className="mb-6">Type your caption, lyric, meme line, or quote.</p>
@@ -187,7 +182,10 @@ export default function BratBlackGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Examples of What You Can Create</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Brat Generator Black Examples</h2>
+          <p className="mb-4">
+            With the brat generator black, users can create dark aesthetic brat graphics for a variety of uses.
+          </p>
           <ul className="list-inside list-disc space-y-1">
             <li>black Brat text graphics</li>
             <li>high-contrast memes</li>
@@ -201,11 +199,35 @@ export default function BratBlackGeneratorPage() {
         </div>
       </section>
 
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why Black Background Works For Brat Typography</h2>
+          <p className="mb-4">
+            Black backgrounds create maximum contrast with light text, making Brat-style typography sharper and more readable than on most other surfaces. When bold sans-serif letters sit on pure black, the edges appear crisper and the message lands with more impact. This high contrast is especially effective on mobile screens and social feeds, where viewers scroll quickly and clarity matters.
+          </p>
+          <p className="mb-4">
+            Beyond readability, black conveys a distinct aesthetic. It feels serious, confident, and uncluttered—qualities that align with the Brat visual identity. Neon green on black pops even more than on white, and white or light gray text on black creates a sleek, modern look that works well for memes, captions, and profile graphics. The dark canvas also reduces visual noise, so the typography becomes the sole focus.
+          </p>
+          <p>
+            Creators choose black backgrounds when they want their Brat edits to feel more dramatic or refined. The combination of minimal design and high contrast makes the content stand out in crowded feeds without relying on bright colors. Whether used for album-style titles, lyric overlays, or meme captions, black backgrounds give Brat typography a premium, editorial feel that many users prefer over lighter alternatives.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Other Brat Color Generators</h2>
+          <p>
+            Try other color styles using our <Link href="/brat-green-generator/" className="text-primary underline hover:no-underline">brat green generator</Link>, <Link href="/brat-generator-pink/" className="text-primary underline hover:no-underline">brat generator pink</Link>, or the <Link href="/brat-generator-white/" className="text-primary underline hover:no-underline">brat generator white</Link>.
+          </p>
+        </div>
+      </section>
+
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Here are some common questions about our Brat Generator"
         items={[
-          { question: "Is the Brat Black Generator free?", answer: <p>Yes. You can create unlimited black Brat visuals for free.</p> },
+          { question: "Is the Brat Generator Black free?", answer: <p>Yes. You can create unlimited black Brat visuals for free.</p> },
           { question: "Do I need an account?", answer: <p>No signup is required.</p> },
           { question: "What file format are designs saved in?", answer: <p>All exports are high-quality PNG files.</p> },
           { question: "Can I upload my own images?", answer: <p>Yes. You can upload any image as a background.</p> },
@@ -218,14 +240,19 @@ export default function BratBlackGeneratorPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Conclusion</h2>
           <p className="mb-4">
-            The brat black generator is the perfect tool for creating dark,
-            clean, high-contrast Brat-style visuals. With bold typography,
-            flexible layouts, and high-quality exports, it gives creators a
-            modern way to explore the Brat aesthetic.
+            The brat generator black is the perfect tool for creating dark, clean, high-contrast Brat-style visuals. With bold typography, flexible layouts, and high-quality exports, it gives creators a modern way to explore the Brat aesthetic.
           </p>
           <p>
             If you want strong, minimalist black Brat designs without design
             software, this generator delivers exactly what you need.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <p>
+            To generate brat text only, use our <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link>. For other brat visuals, try the <Link href="/" className="text-primary underline hover:no-underline">online brat generator</Link>.
           </p>
         </div>
       </section>

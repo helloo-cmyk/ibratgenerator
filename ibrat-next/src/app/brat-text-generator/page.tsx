@@ -1,15 +1,26 @@
+import Link from "next/link";
+import Image from "next/image";
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
 
+const BRAT_TEXT_EXAMPLES = [
+  { src: "/examples/brat2.png", phrase: "stay toxic", alt: "brat text generator example stay toxic" },
+  { src: "/examples/brat1.png", phrase: "brat summer", alt: "brat text png example brat summer" },
+  { src: "/examples/brat3.png", phrase: "main character energy", alt: "brat text generator example main character energy" },
+  { src: "/examples/brat5.png", phrase: "delulu mode activated", alt: "brat text png example delulu mode activated" },
+  { src: "/examples/brat6.png", phrase: "hot girl music", alt: "brat text generator example hot girl music" },
+  { src: "/examples/brat4.png", phrase: "chaotic good", alt: "brat text png example chaotic good" },
+];
+
 export const metadata = {
   title: {
-    absolute: "Brat Text Generator | Ibrat Generator",
+    absolute: "Brat Text Generator – Create Brat Text PNG Free Online",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-text-generator/",
   },
   description:
-    "The Brat Text Generator is a fast and simple tool that lets you create Brat-style text images in seconds. It transforms your words into bold, clean, minimal typography inspired by the Brat aesthetic popularized by Charli XCX. You can use this tool to generate text-only Brat visuals for memes, captions, album-style designs, and aesthetic social media posts.",
+    "Free brat text generator and brat text maker. Create brat text PNG images with brat-style captions, meme text, and album-style typography. Charli XCX–inspired brat text generator free online—no signup.",
 };
 
 export default function BratTextGeneratorPage() {
@@ -20,7 +31,7 @@ export default function BratTextGeneratorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Text Generator</h1>
             <p className="mb-5">
-              Create bold Brat-style text instantly with this free generator.
+              Use this brat text generator to create bold Brat-style captions, meme text, and album-style typography in seconds. Simply type your text, customize the layout, and download a brat text PNG instantly. The tool works online, is completely free, and requires no signup.
             </p>
           </div>
         </div>
@@ -28,6 +39,21 @@ export default function BratTextGeneratorPage() {
 
       <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
         <BratGeneratorLazy />
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">What Is Brat Text Style</h2>
+          <p className="mb-4">
+            Brat text style is the minimalist typography tied to the brat aesthetic—bold sans-serif type, clean spacing, and little or no decoration. It became widely recognized through the Charli XCX–inspired text style: album art, merch, and social visuals that put strong, simple text front and center. Use it for <strong>brat album text</strong>, <strong>brat captions</strong>, and meme-style phrases.
+          </p>
+          <p className="mb-4">
+            The look is intentionally stripped-down: no script fonts, no heavy effects—just clear, confident letterforms that read well at any size. This brat text generator recreates that style so you can make brat captions, brat album text, and album-style typography that match the brat look without design software.
+          </p>
+          <p>
+            Whether you want a single word or a short phrase, the generator gives you the same bold, minimal brat text style in seconds, with control over color, size, and layout.
+          </p>
+        </div>
       </section>
 
       <section>
@@ -220,6 +246,31 @@ export default function BratTextGeneratorPage() {
         </div>
       </section>
 
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Brat Text Generator Examples</h2>
+          <p className="mb-6">
+            The images below are example outputs created using this brat text generator. Each one shows the bold, minimal brat text style you can make with the tool—type your own phrase above to get similar results.
+          </p>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6 list-none pl-0">
+            {BRAT_TEXT_EXAMPLES.map(({ src, phrase, alt }) => (
+              <li key={phrase} className="rounded-lg overflow-hidden bg-muted/30">
+                <Image
+                  src={src}
+                  alt={alt}
+                  width={400}
+                  height={400}
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                  loading="lazy"
+                  className="w-full aspect-square object-cover"
+                />
+                <p className="mt-2 text-sm font-medium text-foreground/90">{phrase}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Here are some common questions about our Brat Generator"
@@ -248,6 +299,23 @@ export default function BratTextGeneratorPage() {
           <p>
             If you want fast, free, and accurate Brat text creation, this
             generator delivers exactly what you need.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Other Brat Generator Tools</h2>
+          <p className="mb-4">
+            Try the <Link href="/brat-creator/" className="text-primary underline hover:no-underline">brat creator</Link> for full brat graphics, the <Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">brat font generator</Link> for typography, the <Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">brat album cover generator</Link> for cover art, or the <Link href="/brat-summer-meme-generator/" className="text-primary underline hover:no-underline">brat summer meme generator</Link> for viral memes.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <p>
+            If you want to create different styles of brat visuals, you can also try the <Link href="/" className="text-primary underline hover:no-underline">online brat generator</Link> which lets you generate brat text, memes, and graphics instantly.
           </p>
         </div>
       </section>

@@ -1,9 +1,11 @@
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
+import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
+import Link from "next/link";
 
 export const metadata = {
   title: {
-    absolute: "Brat Summer Meme Generator – Create Viral Brat Memes Instantly",
+    absolute: "Brat Summer Meme Generator – Create Viral Brat Summer Memes Instantly",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-summer-meme-generator/",
@@ -20,7 +22,9 @@ export default function BratSummerMemeGeneratorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Summer Meme Generator</h1>
             <p className="mb-5">
-              Make Brat Summer memes in seconds with this free online generator.
+              Create viral brat summer memes in seconds with this free online brat summer meme generator. 
+              Whether you&apos;re looking for a quick brat summer meme maker or a simple way to design 
+              brat summer memes, this tool captures the popular aesthetic so your content stands out.
             </p>
           </div>
         </div>
@@ -32,7 +36,7 @@ export default function BratSummerMemeGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What This Tool Does</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Is a Brat Summer Meme Generator</h2>
           <p className="mb-4">
             The Brat Summer Meme Generator is a simple, fast, and flexible
             tool designed to help you create Brat-style Summer memes without
@@ -53,7 +57,7 @@ export default function BratSummerMemeGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who This Tool Is For</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who Uses the Brat Summer Meme Generator</h2>
           <p className="mb-4">
             This generator is designed for anyone who wants fast,
             eye-catching Brat Summer memes.
@@ -77,7 +81,12 @@ export default function BratSummerMemeGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Main Features of the Brat Summer Meme Generator</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Features of the Brat Summer Meme Generator</h2>
+
+          <p className="mb-6">
+            As a brat summer generator, it gives you full control: customize text, colors, 
+            layouts, and stickers to create memes that match your vibe.
+          </p>
 
           <h3 className="text-xl font-semibold mt-6">1. Clean Brat Summer Typography</h3>
           <p className="mb-6">
@@ -205,17 +214,18 @@ export default function BratSummerMemeGeneratorPage() {
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Examples of What You Can Create</h2>
-          <h3 className="text-xl font-semibold mt-6">Using this generator, you can design:</h3>
+          <p className="mb-4">
+            You can design many styles of brat summer meme — from quick one-liners to 
+            layered edits. Use a brat summer template as your starting point or start from 
+            scratch. Here&apos;s what you can make:
+          </p>
           <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>Summer-themed Brat memes</li>
-            <li>Funny captions with neon green backgrounds</li>
-            <li>Sarcastic one-liners</li>
+            <li>Summer-themed brat summer memes with neon green backgrounds</li>
+            <li>Funny captions and sarcastic one-liners</li>
             <li>TikTok Summer edits</li>
-            <li>Vacation memes</li>
-            <li>Beach-day jokes</li>
+            <li>Vacation and beach-day jokes</li>
             <li>Brat-style quotes</li>
-            <li>Friendship memes</li>
-            <li>Summer mood posts</li>
+            <li>Friendship memes and Summer mood posts</li>
             <li>Minimalistic social graphics</li>
           </ul>
           <p>Your creativity decides the vibe. The tool handles the visuals.</p>
@@ -237,6 +247,8 @@ export default function BratSummerMemeGeneratorPage() {
         ]}
       />
 
+      <MoreBratGeneratorTools />
+
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Conclusion</h2>
@@ -248,16 +260,19 @@ export default function BratSummerMemeGeneratorPage() {
             or aesthetic Summer content without the hassle of traditional
             editing apps.
           </p>
-          <p className="mb-4">
-            If you want a fast and free way to bring the Brat Summer
-            aesthetic into your memes, this generator makes the entire
-            process effortless.
-          </p>
           <p>
             With no watermark, no login, and no restrictions, you can
             design as many Brat visuals as you want. Fast, simple, and
             beginner-friendly — it&apos;s the easiest way to bring the Brat
             aesthetic into your social media content.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <p>
+            Use our <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> to generate brat text only, or the <Link href="/" className="text-primary underline hover:no-underline">brat generator</Link> for memes and full graphics.
           </p>
         </div>
       </section>
