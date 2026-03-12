@@ -232,10 +232,11 @@ export default function Home() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
           <div className="max-w-none text-base leading-relaxed text-foreground/90">
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Popular Brat Generator Tools</h2>
-            <p className="mb-6">
-              Explore our other tools for brat-style content:
+            <p className="mb-4">
+              Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> to create custom brat-style visuals. Explore our other tools for brat-style content:
             </p>
-            <ul className="grid sm:grid-cols-2 gap-3 list-none pl-0">
+            <ul className="grid sm:grid-cols-2 gap-3 list-none pl-0 mb-4">
+              <li><Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link></li>
               <li><Link href="/brat-creator/" className="text-primary underline hover:no-underline">Brat Creator</Link></li>
               <li><Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">Brat Font Generator</Link></li>
               <li><Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">Brat Album Cover Generator</Link></li>

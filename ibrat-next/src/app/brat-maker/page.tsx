@@ -4,7 +4,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
   title: {
-    absolute: "Brat Maker – Quick Text, Memes & Profile Graphics",
+    absolute: "Brat Maker – Create Brat Text, Memes & Profile Pictures",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-maker/",
@@ -21,7 +21,7 @@ export default function BratMakerPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Maker</h1>
             <p className="mb-5">
-              This brat maker lets you create bold brat-style text, memes, and captions instantly. Just type your text, customize the style, and download your design.
+              The brat maker lets you create brat-style captions, profile pictures, memes, and album-style text instantly. Use the brat maker to design bold visuals with no design software—just type, customize, and download.
             </p>
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function BratMakerPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Is the Brat Maker</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Is a Brat Maker</h2>
           <p className="mb-4">
             The brat maker is a quick and simple online tool designed for
             creating Brat-style text, captions, memes, and profile graphics in
@@ -60,7 +60,7 @@ export default function BratMakerPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who This Tool Is For</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who the Brat Maker Is For</h2>
           <p className="mb-4">
             The brat maker is built for creators who want fast, clean,
             aesthetic visuals.
@@ -85,7 +85,7 @@ export default function BratMakerPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Features of the Brat Maker</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Core Features of the Brat Maker</h2>
 
           <h3 className="text-xl font-semibold mt-6">1. Brat Text Maker</h3>
           <p className="mb-4">

@@ -7,11 +7,15 @@ export default function MoreBratGeneratorTools() {
         <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">
           More Brat Generator Tools
         </h2>
-        <p className="mb-6">
-          You can also try other tools from our brat generator collection to
-          create different styles of brat visuals.
+        <p className="mb-4">
+          Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> to create custom brat-style visuals. You can also try other tools from our brat generator collection.
         </p>
         <ul className="grid sm:grid-cols-2 gap-3 list-none pl-0">
+          <li>
+            <Link href="/brat-maker/" className="text-primary underline hover:no-underline">
+              brat maker
+            </Link>
+          </li>
           <li>
             <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">
               brat text generator

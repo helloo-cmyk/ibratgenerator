@@ -307,7 +307,7 @@ export default function BratTextGeneratorPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Other Brat Generator Tools</h2>
           <p className="mb-4">
-            Try the <Link href="/brat-creator/" className="text-primary underline hover:no-underline">brat creator</Link> for full brat graphics, the <Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">brat font generator</Link> for typography, the <Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">brat album cover generator</Link> for cover art, or the <Link href="/brat-summer-meme-generator/" className="text-primary underline hover:no-underline">brat summer meme generator</Link> for viral memes.
+            Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> to create custom brat-style visuals. Try the <Link href="/brat-creator/" className="text-primary underline hover:no-underline">brat creator</Link> for full brat graphics, the <Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">brat font generator</Link> for typography, the <Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">brat album cover generator</Link> for cover art, or the <Link href="/brat-summer-meme-generator/" className="text-primary underline hover:no-underline">brat summer meme generator</Link> for viral memes.
           </p>
         </div>
       </section>

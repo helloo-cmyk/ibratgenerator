@@ -228,7 +228,7 @@ export default function BratCreatorPage() {
           </ul>
           <p className="mb-0">It adapts to your style — minimal or bold.</p>
           <p className="mt-6">
-            If you just want to generate quick captions or memes, use the <Link href="/brat-maker" className="text-primary underline hover:no-underline">Brat Maker</Link>.
+            Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> to create custom brat-style visuals, or to generate quick captions and memes.
           </p>
         </div>
       </section>
