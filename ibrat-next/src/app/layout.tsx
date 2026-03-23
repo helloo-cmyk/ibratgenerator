@@ -41,6 +41,8 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+const GA_MEASUREMENT_ID = "G-XEV70REQ21";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://ibratgenerator.com"),
   title: {
@@ -84,6 +86,24 @@ export default function RootLayout({
           type="application/ld+json"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <Script
+          id="ga-loader"
+          async
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        <Script
+          id="ga-inline"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: true });
+            `,
+          }}
         />
       </head>
       <body
