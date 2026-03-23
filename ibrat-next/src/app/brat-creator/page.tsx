@@ -22,7 +22,7 @@ export default function BratCreatorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Creator</h1>
             <p className="mb-5">
-              The Brat Creator is a flexible design tool that lets you build custom brat-style graphics, layouts, and visual edits.
+              This tool is designed specifically for advanced Brat editing—customization, layout control, and full creative control. Build custom Brat-style graphics and make detailed edits in real time with the Brat Creator.
             </p>
           </div>
         </div>
@@ -36,11 +36,7 @@ export default function BratCreatorPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Is the Brat Creator</h2>
           <p className="mb-4">
-            The Brat Creator is a flexible design tool designed to help
-            you build custom brat-style graphics with full creative control. As a
-            brat design creator, it lets you design
-            text-based graphics, image edits, profile visuals, album-style
-            layouts, and aesthetic posts — all with advanced editing options.
+            The Brat Creator is built to give you full creative control over every element. Customize your Brat graphics, manage layout and spacing, and perform detailed edits to typography and visuals—so your final PNG matches the design you had in mind.
           </p>
           <p className="mb-4">
             It combines the most useful Brat creation features into one
@@ -228,7 +224,7 @@ export default function BratCreatorPage() {
           </ul>
           <p className="mb-0">It adapts to your style — minimal or bold.</p>
           <p className="mt-6">
-            Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> to create custom brat-style visuals, or to generate quick captions and memes.
+            For quick and simple designs, use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link>.
           </p>
         </div>
       </section>
@@ -267,7 +263,7 @@ export default function BratCreatorPage() {
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <p>
-            If you want to create different styles of brat visuals, you can also try the <Link href="/" className="text-primary underline hover:no-underline">brat generator</Link> which lets you generate brat text, memes, and graphics instantly.
+            If you want to create all types of brat visuals, use the <Link href="/" className="text-primary underline hover:no-underline">free brat generator</Link>.
           </p>
         </div>
       </section>

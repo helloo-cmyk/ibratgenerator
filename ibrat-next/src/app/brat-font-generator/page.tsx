@@ -344,7 +344,7 @@ export default function BratFontGeneratorPage() {
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <p>
-            To <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">generate brat text</Link> as PNG, use our <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link>. For full visuals, try the <Link href="/" className="text-primary underline hover:no-underline">online brat generator</Link> for memes and graphics.
+            To <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">generate brat text</Link> as PNG, use our <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link>. If you want to create all types of brat visuals, use the <Link href="/" className="text-primary underline hover:no-underline">free brat generator</Link>.
           </p>
         </div>
       </section>
