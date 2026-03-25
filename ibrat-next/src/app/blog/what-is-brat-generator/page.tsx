@@ -6,7 +6,7 @@ export const metadata = {
     absolute: "What is Brat Generator? – How It Works & What You Can Create",
   },
   alternates: {
-    canonical: "https://ibratgenerator.com/what-is-brat-generator/",
+    canonical: "https://ibratgenerator.com/blog/what-is-brat-generator/",
   },
   description:
     "Learn what a brat generator is, how it works, and what you can create with it. Discover why millions use brat generators to make text, memes, and images.",
