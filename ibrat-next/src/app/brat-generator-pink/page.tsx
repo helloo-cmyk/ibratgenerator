@@ -186,6 +186,9 @@ export default function BratGeneratorPinkPage() {
             pink Brat text directly from your phone without losing
             editing precision.
           </p>
+          <p>
+            For a focused text-only workflow without color-specific presets, the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> is built specifically for creating clean brat text PNG images in any color.
+          </p>
         </div>
       </section>
 

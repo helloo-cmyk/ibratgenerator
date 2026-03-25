@@ -195,6 +195,9 @@ export default function BratGreenGeneratorPage() {
             move elements, upload images, and export designs directly from
             your phone without performance issues.
           </p>
+          <p>
+            If you want to <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">create brat text png</Link> images without being tied to a specific color theme, the dedicated text generator gives you full color freedom with a simplified text-first interface.
+          </p>
         </div>
       </section>
 

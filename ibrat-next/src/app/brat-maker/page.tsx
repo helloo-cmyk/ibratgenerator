@@ -251,7 +251,10 @@ export default function BratMakerPage() {
           <p className="mb-6">Select the canvas size based on your platform.</p>
 
           <h3 className="text-xl font-semibold mt-6">Step 5 - Download</h3>
-          <p>Click download and get your final PNG instantly. No signup. No watermark. No delay.</p>
+          <p className="mb-4">Click download and get your final PNG instantly. No signup. No watermark. No delay.</p>
+          <p>
+            If you want to skip image editing and just <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">create brat text png</Link> designs, the dedicated text tool handles that with a simpler, text-focused interface.
+          </p>
         </div>
       </section>
 

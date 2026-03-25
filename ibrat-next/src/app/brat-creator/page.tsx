@@ -147,6 +147,9 @@ export default function BratCreatorPage() {
             The creator works smoothly on mobile devices, allowing you to
             create and export visuals directly from your phone.
           </p>
+          <p>
+            When your project only requires typography without images or complex layouts, the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text maker</Link> provides a streamlined experience for generating text-only brat designs.
+          </p>
         </div>
       </section>
 

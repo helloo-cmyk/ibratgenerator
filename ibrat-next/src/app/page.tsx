@@ -172,6 +172,9 @@ export default function Home() {
             <p className="mb-4">
               Click Download PNG to save your design. Choose resolution up to 3000 px. No watermark and no signup required.
             </p>
+            <p className="mb-4">
+              If you only need clean text-based designs without images or stickers, the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> lets you create brat text PNG images quickly with a focused, text-only workflow.
+            </p>
           </div>
         </div>
       </section>

@@ -176,7 +176,10 @@ export default function BratFontGeneratorPage() {
             elements, adjust spacing, and export designs directly from your
             device.
           </p>
-          <p>No apps are required.</p>
+          <p className="mb-6">No apps are required.</p>
+          <p>
+            If you are looking for a faster way to produce text-only brat visuals, the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> focuses entirely on turning your words into downloadable brat text PNG images.
+          </p>
         </div>
       </section>
 

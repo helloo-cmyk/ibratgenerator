@@ -156,6 +156,9 @@ export default function BratGeneratorWhitePage() {
             The generator works smoothly on mobile devices, allowing you
             to create and download visuals directly from your phone.
           </p>
+          <p>
+            For pure text designs without any color-specific presets, the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text maker</Link> offers a streamlined way to generate brat-style typography in any shade you choose.
+          </p>
         </div>
       </section>
 
