@@ -5,13 +5,13 @@ import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 
 export const metadata = {
   title: {
-    absolute: "Brat Creator – Full Design Tool for Custom Brat Graphics",
+    absolute: "Brat Creator (Free) – Advanced Brat Image & Text Editor",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-creator/",
   },
   description:
-    "The Brat Creator is a flexible design tool that lets you build custom brat-style graphics, layouts, and visual edits. A full creative control brat design creator. No signup, no watermark.",
+    "Use the brat creator to design custom brat visuals with full control. Create text, images, and layouts in one tool. Free and no signup required.",
 };
 
 export default function BratCreatorPage() {
@@ -22,7 +22,7 @@ export default function BratCreatorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Creator</h1>
             <p className="mb-5">
-              This tool is designed specifically for advanced Brat editing—customization, layout control, and full creative control. Build custom Brat-style graphics and make detailed edits in real time with the Brat Creator.
+              This tool is designed for advanced brat editing with full customization.
             </p>
           </div>
         </div>
@@ -36,15 +36,12 @@ export default function BratCreatorPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Is the Brat Creator</h2>
           <p className="mb-4">
-            The Brat Creator is built to give you full creative control over every element. Customize your Brat graphics, manage layout and spacing, and perform detailed edits to typography and visuals—so your final PNG matches the design you had in mind.
+            The Brat Creator is built for users who need deeper control over their designs. It goes beyond quick meme generation or simple text overlays — this tool lets you fine-tune typography, manage precise layout spacing, and perform detailed visual edits so your final PNG matches the exact design you had in mind.
           </p>
           <p className="mb-4">
-            It combines the most useful Brat creation features into one
-            place. You can type text, customize fonts, adjust colors,
-            upload images, change layouts, and export high-quality designs
-            without needing professional design software.
+            Unlike the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> which focuses on fast image and meme output, the brat creator is designed for projects that need more precision. Adjust every element independently, experiment with compositions, and iterate until the result is exactly right.
           </p>
-          <p>Everything works in real time. There&apos;s no signup, no watermark, and no learning curve.</p>
+          <p>Everything works in real time. There&apos;s no signup and no watermark. If you need advanced editing depth instead of a quick output tool, the brat creator is the right choice.</p>
         </div>
       </section>
 
@@ -66,8 +63,7 @@ export default function BratCreatorPage() {
             <li>Anyone who wants one tool instead of multiple generators</li>
           </ul>
           <p>
-            If you want to create more than just text or memes, this creator
-            gives you everything in one place.
+            If you want advanced editing beyond basic text or quick meme output, this creator gives you everything in one place.
           </p>
         </div>
       </section>
@@ -196,7 +192,7 @@ export default function BratCreatorPage() {
           </p>
           <p className="mb-4">It stands out because it offers:</p>
           <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>all-in-one Brat creation</li>
+            <li>comprehensive Brat editing</li>
             <li>no watermark</li>
             <li>unlimited free use</li>
             <li>clean, modern interface</li>

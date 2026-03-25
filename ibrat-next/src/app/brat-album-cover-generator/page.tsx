@@ -5,13 +5,13 @@ import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 
 export const metadata = {
   title: {
-    absolute: "Free Brat Album Cover Generator – Make Your Own Brat Cover Art",
+    absolute: "Brat Album Cover Generator (Free) – Create Brat Cover Art Fast",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-album-cover-generator/",
   },
   description:
-    "Make your own Brat album covers instantly with our free brat album cover generator. Create Brat-style cover art online — no design skills required.",
+    "Create brat-style album covers in seconds with this free generator. Design bold, minimal cover art and download high-quality images instantly.",
 };
 
 export default function BratAlbumCoverGeneratorPage() {

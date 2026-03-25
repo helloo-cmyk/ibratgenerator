@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 const toolLinks = [
-  { href: "/brat-maker", label: "Brat Maker" },
-  { href: "/brat-text-generator", label: "Brat Text Generator" },
+  { href: "/brat-maker/", label: "brat maker" },
+  { href: "/brat-text-generator/", label: "brat text generator" },
   { href: "/brat-name-generator", label: "Brat Name Generator" },
 ];
 

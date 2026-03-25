@@ -7,10 +7,10 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about-us", label: "About" },
-  { href: "/brat-maker", label: "Brat Maker" },
-  { href: "/brat-text-generator", label: "Brat Text" },
+  { href: "/brat-maker/", label: "Brat Maker" },
+  { href: "/brat-text-generator/", label: "Brat Text Generator" },
   { href: "/brat-name-generator", label: "Brat Name" },
+  { href: "/about-us", label: "About" },
   { href: "/contact-us", label: "Contact" },
 ];
 
@@ -19,6 +19,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);
+  const normalizePath = (path: string) =>
+    path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
 
   return (
     <header
@@ -34,7 +36,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center" aria-label="Main navigation">
           <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 sm:gap-x-8 sm:gap-y-4">
             {navLinks.map(({ href, label }) => {
-              const isActive = pathname === href;
+              const isActive = normalizePath(pathname) === normalizePath(href);
               return (
                 <li key={href} className="border-b border-black/5">
                   <Link
@@ -86,7 +88,7 @@ export default function Header() {
       >
         <ul className="flex flex-col px-4 sm:px-6 pb-4 pt-2 gap-1">
           {navLinks.map(({ href, label }) => {
-            const isActive = pathname === href;
+            const isActive = normalizePath(pathname) === normalizePath(href);
             return (
               <li key={href} className="border-b border-black/5">
                 <Link

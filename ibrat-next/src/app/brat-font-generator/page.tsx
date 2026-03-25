@@ -5,13 +5,13 @@ import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 
 export const metadata = {
   title: {
-    absolute: "Free Brat Font Generator – Create Charli XCX Brat Style Text",
+    absolute: "Brat Font Generator (Free) – Create Brat Style Text Instantly",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-font-generator/",
   },
   description:
-    "The brat font generator recreates the bold, minimal typography of the Brat aesthetic and Charli XCX brat font style. Create brat font text online—no download. Answers: what font is brat, what is the brat font, brat font name.",
+    "Generate brat-style typography instantly with this brat font generator. Create bold, minimal text images and download PNG files. No signup needed.",
 };
 
 export default function BratFontGeneratorPage() {

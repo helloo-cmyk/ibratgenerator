@@ -83,10 +83,10 @@ const breadcrumbSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Free Brat Generator – Create Brat Text, Images & Charli XCX Style Memes",
+    absolute: "Brat Generator (Free) – Create Brat Text, Images & Memes",
   },
   description:
-    "Create brat-style text, images, and memes with our free brat generator. Make your own Charli XCX brat graphics, profile pictures, stickers, and downloadable PNG images instantly.",
+    "Create brat text, images, memes, and profile graphics instantly with this free brat generator. Download high-quality PNGs. No signup required.",
   alternates: {
     canonical: "https://ibratgenerator.com/",
   },
@@ -121,7 +121,7 @@ export default function Home() {
               Free Brat Generator
             </h1>
             <p className="text-base sm:text-lg text-foreground/90 mb-0 max-w-xl mx-auto">
-              This tool is designed specifically as an all-in-one free brat generator. Create brat-style text, images, memes, and profile pictures in seconds, then download clean PNGs instantly.
+              This is an all-in-one brat generator that lets you create text, images, memes, and profile graphics from a single tool.
             </p>
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function Home() {
           <div className="max-w-none text-base leading-relaxed text-foreground/90">
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What You Can Create With This Brat Generator</h2>
             <p className="mb-4">
-              Use the tool as a brat pfp maker for profile pictures, or create memes and social media captions. The brat type generator is ideal for aesthetic graphics—bold text on solid or custom backgrounds. Make your own brat design for Instagram, TikTok, or any platform.
+              Use this brat generator to create profile pictures, memes, and social media captions. For profile-ready graphics, try the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link>. For text-only PNG images, use the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link>. This tool is ideal for aesthetic graphics—bold text on solid or custom backgrounds for Instagram, TikTok, or any platform.
             </p>
             <p className="mb-4">Common uses include:</p>
             <ul className="list-inside list-disc space-y-1">
@@ -223,43 +223,6 @@ export default function Home() {
               <li>Mobile friendly</li>
               <li>High quality PNG export</li>
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7 — POPULAR BRAT GENERATOR TOOLS */}
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-          <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Popular Brat Generator Tools</h2>
-            <p className="mb-4">
-              Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> to create custom brat-style visuals. Explore our other tools for brat-style content:
-            </p>
-            <ul className="grid sm:grid-cols-2 gap-3 list-none pl-0 mb-4">
-              <li><Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link></li>
-              <li><Link href="/brat-creator/" className="text-primary underline hover:no-underline">Brat Creator</Link></li>
-              <li><Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">Brat Font Generator</Link></li>
-              <li><Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">Brat Album Cover Generator</Link></li>
-              <li><Link href="/brat-summer-meme-generator/" className="text-primary underline hover:no-underline">Brat Summer Meme Generator</Link></li>
-              <li><Link href="/brat-black-generator/" className="text-primary underline hover:no-underline">Brat Black Generator</Link></li>
-              <li><Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">Brat Text Generator</Link></li>
-              <li><Link href="/brat-name-generator/" className="text-primary underline hover:no-underline">Brat Name Generator</Link></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-          <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Explore Brat Generator Tools</h2>
-            <p className="mb-4">
-              Explore focused tools including the{" "}
-              <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link>,{" "}
-              <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link>,{" "}
-              <Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">brat font generator</Link>, and{" "}
-              <Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">brat album cover generator</Link>.
-            </p>
           </div>
         </div>
       </section>
@@ -326,7 +289,7 @@ export default function Home() {
           <div className="max-w-none text-base leading-relaxed text-foreground/90 text-center">
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Start Creating Your Brat Design</h2>
             <p className="mb-4 mt-4">
-              If you want to create all types of brat visuals, use the <Link href="/" className="text-primary underline hover:no-underline">free brat generator</Link>.
+              This <Link href="/" className="text-primary underline hover:no-underline">free brat generator</Link> is the fastest way to create brat-style visuals. Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> for images, memes, and profile pictures. Try the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> for text-only PNG designs. Or use the <Link href="/brat-creator/" className="text-primary underline hover:no-underline">brat creator</Link> for advanced editing with full customization.
             </p>
           </div>
         </div>

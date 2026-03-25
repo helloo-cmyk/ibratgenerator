@@ -4,13 +4,13 @@ import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
   title: {
-    absolute: "Brat Maker – Create Brat Text, Memes & Profile Pictures",
+    absolute: "Brat Maker (Free) – Create Brat Images, Memes & Profile Pictures",
   },
+  description:
+    "Create brat images, memes, and profile pictures instantly with this free brat maker. Customize text, layout, and colors. No signup required.",
   alternates: {
     canonical: "https://ibratgenerator.com/brat-maker/",
   },
-  description:
-    "This brat maker lets you create bold brat-style text, memes, and captions instantly. Use it as a brat text maker and brat meme maker—no design software needed. Free brat image maker, brat photo maker, and brat profile maker.",
 };
 
 export default function BratMakerPage() {
@@ -21,7 +21,7 @@ export default function BratMakerPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Maker</h1>
             <p className="mb-5">
-              This tool is designed specifically for creating Brat-style image memes and profile pictures—fast. Use the Brat Maker to build eye-catching meme images, add captions, and download share-ready PNGs with no design software—just type and customize.
+              This tool is designed for creating brat-style images, memes, and profile graphics.
             </p>
           </div>
         </div>
@@ -33,10 +33,11 @@ export default function BratMakerPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Is a Brat Maker</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What is a Brat Meme?</h2>
           <p className="mb-4">
-            The brat maker is a quick and simple online tool designed for
-            generating Brat-style meme visuals and profile-picture graphics in
+            A brat meme is a bold, minimal visual that combines short text with
+            strong color contrast and clean composition. This brat maker is built for
+            generating Brat-style meme visuals and share-ready graphics in
             seconds. Inspired by the bold, minimal look popularized by Charli
             XCX&apos;s Brat era, it helps you create clean, eye-catching images without
             needing any design experience.
@@ -47,9 +48,8 @@ export default function BratMakerPage() {
             customize the layout, choose your colors, and download instantly.
           </p>
           <p className="mb-4">
-            Whether you want to make brat text, create a meme, design a
-            profile picture, or build album-style typography, this tool
-            gives you full control in seconds.
+            Whether you want to create a meme, design a post graphic, or build
+            album-inspired visuals, this tool gives you full control in seconds.
           </p>
           <p>
             It works smoothly on desktop and mobile, updates in real time,
@@ -71,14 +71,14 @@ export default function BratMakerPage() {
             <li>Meme pages</li>
             <li>Users creating a brat profile picture</li>
             <li>People designing Brat-style captions</li>
-            <li>Anyone who wants to make brat text quickly</li>
-            <li>Users creating album-style typography</li>
+            <li>Anyone who wants to make brat memes and images quickly</li>
+            <li>Users creating album-style text layouts</li>
             <li>People building aesthetic text-based edits</li>
             <li>Anyone looking for a free brat image maker</li>
           </ul>
           <p>
-            If you want a tool that handles text, photos, and layouts in
-            one place, this editor covers everything.
+            If you want a tool that handles images, memes, and profile pictures in
+            one place, this brat maker covers everything.
           </p>
         </div>
       </section>
@@ -87,10 +87,9 @@ export default function BratMakerPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Core Features of the Brat Maker</h2>
 
-          <h3 className="text-xl font-semibold mt-6">1. Brat Text Maker</h3>
+          <h3 className="text-xl font-semibold mt-6">1. Bold Text on Images</h3>
           <p className="mb-4">
-            At its core, this brat maker works as a powerful brat text maker.
-            You can make brat text and create bold, minimal typography with full control over:
+            Add bold, clean text directly onto your brat images. The brat maker gives you full control over how text appears on your designs:
           </p>
           <ul className="mb-4 list-inside list-disc space-y-1">
             <li>Font size</li>
@@ -101,21 +100,18 @@ export default function BratMakerPage() {
             <li>Background color</li>
           </ul>
           <p className="mb-6">
-            It also works as a brat album text maker for creating large,
-            centered, album-style typography inspired by modern minimal
-            layouts.
+            Place text over uploaded photos, solid backgrounds, or album-style layouts. The result is a finished image with integrated typography.
           </p>
           <p className="mb-6">
-            You can build clean captions, bold headers, meme text, or
-            expressive quotes.
+            For standalone text-only designs without images, use the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> instead.
           </p>
 
-          <h3 className="text-xl font-semibold mt-6">2. Brat Photo &amp; Image Editing</h3>
+          <h3 className="text-xl font-semibold mt-6">2. Brat Image Generator</h3>
           <p className="mb-4">
-            The brat maker also functions as a complete brat photo maker and
-            brat image maker. Upload your own photos and add Brat-style text
-            on top to generate profile pictures, memes, aesthetic edits, and
-            album-inspired visuals.
+            The brat maker also works as a complete brat image generator.
+            Upload your own photos and add Brat-style text on top to create
+            profile pictures, meme images, aesthetic edits, and album-inspired
+            visuals.
           </p>
           <p className="mb-4">Perfect for:</p>
           <ul className="mb-4 list-inside list-disc space-y-1">
@@ -132,7 +128,7 @@ export default function BratMakerPage() {
 
           <h3 className="text-xl font-semibold mt-6">3. Brat Profile Picture Maker</h3>
           <p className="mb-4">
-            Use this brat maker as a brat profile maker to create square
+            Use this brat maker as a profile picture maker to create square
             profile graphics for social platforms.
           </p>
           <p className="mb-4">
@@ -152,9 +148,9 @@ export default function BratMakerPage() {
             profile image stays sharp and clean.
           </p>
 
-          <h3 className="text-xl font-semibold mt-6">4. Brat Meme Maker</h3>
+          <h3 className="text-xl font-semibold mt-6">4. Brat Meme Creator</h3>
           <p className="mb-4">
-            The brat maker also works as a brat meme maker. Create text-based
+            The brat maker also works as a brat meme creator. Create text-based
             memes or combine uploaded photos with bold captions to generate
             brat-style meme visuals.
           </p>
@@ -219,7 +215,7 @@ export default function BratMakerPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How to Use the Brat Maker</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How to Create Brat Images</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1 - Add Your Text</h3>
           <p className="mb-4">
