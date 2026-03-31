@@ -81,6 +81,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/favicon/site.webmanifest" />
+        <meta name="p:domain_verify" content="a5fad79f5206533009b21255aa5b5b60" />
         <Script
           id="schema"
           type="application/ld+json"
