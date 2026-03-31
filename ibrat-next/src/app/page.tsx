@@ -76,17 +76,16 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://ibratgenerator.com/" },
-    { "@type": "ListItem", position: 2, name: "Brat Generator", item: "https://ibratgenerator.com/" },
+    { "@type": "ListItem", position: 1, name: "Free Brat Generator", item: "https://ibratgenerator.com/" },
   ],
 };
 
 export const metadata = {
   title: {
-    absolute: "Brat Generator (Free) – Create Brat Text, Images & Memes",
+    absolute: "Free Brat Generator – Create Brat Text, Images & Memes Online",
   },
   description:
-    "Create brat text, images, memes, and profile graphics instantly with this free brat generator. Download high-quality PNGs. No signup required.",
+    "Use our free brat generator to create brat text, memes, and profile pictures instantly. No signup required. Download high-quality PNG. Made for US creators.",
   alternates: {
     canonical: "https://ibratgenerator.com/",
   },
@@ -113,6 +112,12 @@ export default function Home() {
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <p className="intro-text">
+        Our free brat generator is the fastest way to create brat-style text, images, and memes online. Whether you
+        need a brat meme, a profile picture, or a caption for TikTok or Instagram, this free brat generator runs
+        entirely in your browser with no download or signup required. Trusted by creators across the United States.
+        Start creating your brat design instantly below.
+      </p>
       {/* SECTION 1 — HERO */}
       <section>
         <div className="text-center">

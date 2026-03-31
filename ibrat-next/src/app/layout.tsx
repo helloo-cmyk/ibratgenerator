@@ -46,14 +46,14 @@ const GA_MEASUREMENT_ID = "G-XEV70REQ21";
 export const metadata: Metadata = {
   metadataBase: new URL("https://ibratgenerator.com"),
   title: {
-    default: "Ibrat Generator",
+    default: "Free Brat Generator",
     template: "%s | Ibrat Generator",
   },
   description: "Create Brat-style text, images, and graphics online. Free Brat generator for memes, captions, and social media.",
   openGraph: {
-    siteName: "Ibrat Generator",
-    title: "Ibrat Generator",
-    description: "Create Brat-style text, images, and graphics online. Free Brat generator for memes, captions, and social media.",
+    siteName: "Free Brat Generator",
+    title: "Free Brat Generator",
+    description: "Free brat generator to create brat text, memes, images, and profile pictures. No signup. No watermark. Works on mobile and desktop.",
   },
   robots: {
     index: true,
