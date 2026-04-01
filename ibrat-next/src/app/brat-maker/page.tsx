@@ -213,6 +213,15 @@ export default function BratMakerPage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
+          Brat Creator Tool
+        </h2>
+        <p className="mt-4 text-base leading-relaxed text-foreground/90">
+          This brat maker also works as a brat creator, allowing you to design custom brat-style images, memes, profile pictures, and text visuals in one place.
+        </p>
+      </section>
+
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How to Create Brat Images</h2>
@@ -309,7 +318,7 @@ export default function BratMakerPage() {
             profile pictures—all in the minimal Brat aesthetic.
           </p>
           <p className="mt-6">
-            If you want more advanced editing options and full design customization, try the <Link href="/brat-creator" className="text-primary underline hover:no-underline">Brat Creator</Link>.
+            If you want more advanced editing options and full design customization, try the <Link href="/brat-maker" className="text-primary underline hover:no-underline">Brat Creator</Link>.
           </p>
         </div>
       </section>

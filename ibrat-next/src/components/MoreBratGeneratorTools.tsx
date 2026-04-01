@@ -22,7 +22,7 @@ export default function MoreBratGeneratorTools() {
             </Link>
           </li>
           <li>
-            <Link href="/brat-creator/" className="text-primary underline hover:no-underline">
+            <Link href="/brat-maker/" className="text-primary underline hover:no-underline">
               Brat Creator
             </Link>
           </li>
