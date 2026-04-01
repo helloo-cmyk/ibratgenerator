@@ -361,6 +361,9 @@ export default function BratMakerPage() {
             graphics. It combines text editing, layout control, image
             upload, and high-quality export in one simple interface.
           </p>
+          <p className="mt-4 text-base leading-relaxed text-foreground/90">
+            Use our <a href="/" className="text-primary underline">free brat generator</a> to create brat-style images instantly.
+          </p>
           <p className="mb-4">
             If you want a fast, flexible way to design Brat visuals
             without installing software, this tool gives you everything

@@ -127,6 +127,9 @@ export default function Home() {
         <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-10">
           <div className="max-w-none text-base leading-relaxed text-foreground/90">
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why Use Our Free Brat Generator</h2>
+            <p className="mt-4 text-base leading-relaxed text-foreground/90">
+              This free brat generator is used to create brat text, memes, profile images, and album-style visuals instantly.
+            </p>
             <p className="mb-4">
               Use this free brat generator to create brat text, memes, profile pictures, and images instantly. No signup required. Download high-quality PNG in seconds. This is the fastest brat generator online for creators in the United States.
             </p>

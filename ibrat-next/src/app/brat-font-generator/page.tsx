@@ -335,6 +335,9 @@ export default function BratFontGeneratorPage() {
             trying to identify the brat font name, or simply want to
             generate album-style text, this tool offers a practical solution.
           </p>
+          <p className="mt-4 text-base leading-relaxed text-foreground/90">
+            Use our <a href="/" className="text-primary underline">free brat generator</a> to create brat-style images instantly.
+          </p>
           <p>
             With customizable controls, mobile-friendly editing, and
             high-quality PNG exports, you can create clean Brat-style

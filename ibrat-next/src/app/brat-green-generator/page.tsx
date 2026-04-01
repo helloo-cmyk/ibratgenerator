@@ -348,6 +348,9 @@ export default function BratGreenGeneratorPage() {
             high-quality PNG exports, it delivers the bold aesthetic
             many creators are looking for.
           </p>
+          <p className="mt-4 text-base leading-relaxed text-foreground/90">
+            Use our <a href="/" className="text-primary underline">free brat generator</a> to create brat-style images instantly.
+          </p>
           <p>
             If you want a focused tool that recreates the original neon
             green Brat style with clarity and precision, this generator

@@ -323,6 +323,9 @@ export default function BratGeneratorPinkPage() {
             tones, clean typography, and fast PNG export, it is one of
             the simplest ways to create pink Brat text online.
           </p>
+          <p className="mt-4 text-base leading-relaxed text-foreground/90">
+            Use our <a href="/" className="text-primary underline">free brat generator</a> to create brat-style images instantly.
+          </p>
           <p>
             If you are looking for a reliable pink brat generator or want
             to create soft brat pink visuals quickly, this tool provides

@@ -350,6 +350,9 @@ export default function BratTextGeneratorPage() {
             exports, it&apos;s perfect for captions, album-style text, and
             minimalist visuals.
           </p>
+          <p className="mt-4 text-base leading-relaxed text-foreground/90">
+            Use our <a href="/" className="text-primary underline">free brat generator</a> to create brat-style images instantly.
+          </p>
           <p>
             If you want fast, free, and accurate Brat text creation, this
             generator delivers exactly what you need.

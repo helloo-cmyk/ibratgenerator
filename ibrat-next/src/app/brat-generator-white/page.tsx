@@ -298,6 +298,9 @@ export default function BratGeneratorWhitePage() {
             it&apos;s perfect for creators who want a softer and more
             modern Brat aesthetic.
           </p>
+          <p className="mt-4 text-base leading-relaxed text-foreground/90">
+            Use our <a href="/" className="text-primary underline">free brat generator</a> to create brat-style images instantly.
+          </p>
           <p>
             If you&apos;re looking for simple, elegant Brat designs without
             distractions, this generator delivers exactly what you need.
