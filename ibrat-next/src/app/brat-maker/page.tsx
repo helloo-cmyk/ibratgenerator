@@ -19,9 +19,9 @@ export default function BratMakerPage() {
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Maker</h1>
-            <p className="mb-5">
-              This tool is designed for creating brat-style images, memes, and profile graphics.
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground">Brat Maker</h1>
+            <p className="mt-4 text-base leading-relaxed text-foreground/90 text-center max-w-2xl mx-auto">
+              Use this free brat maker to create brat images, memes, and profile pictures instantly. No signup required.
             </p>
           </div>
         </div>
