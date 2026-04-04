@@ -28,10 +28,7 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-6xl justify-between items-center px-4 sm:px-6 py-4 sm:py-5">
         <Link href="/" className="flex items-center flex-shrink-0 gap-2" style={{ textDecoration: "none" }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "40px", height: "40px", background: "#CCFF00", color: "#1a1a1a", fontWeight: "700", fontSize: "24px" }}>
-            b
-          </div>
-          <span style={{ fontSize: "18px", fontWeight: "700", color: "#1a1a1a", letterSpacing: "-0.02em" }}>ibrat.</span>
+          <img src="/logo.png" alt="ibrat logo" style={{ height: "40px", width: "auto" }} />
         </Link>
 
         {/* Desktop nav: inline on md and above */}
