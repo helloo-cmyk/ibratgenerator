@@ -27,26 +27,26 @@ export default function Footer() {
   return (
     <footer className="w-full border-t border-border-soft bg-slate-50/50">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block">
-              <span className="text-lg font-semibold text-foreground">Ibrat Generator</span>
+              <img src="/logo.png" alt="ibrat logo" style={{ height: "32px", width: "auto" }} />
             </Link>
-            <p className="mt-3 text-sm text-foreground/70 max-w-xs">
+            <p className="mt-4 text-sm text-foreground/70 max-w-xs leading-relaxed">
               Create brat-style text, images, and profile pictures for free. No signup required.
             </p>
           </div>
 
           {/* Tools column */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground/60">Tools</h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-foreground/90">Tools</h3>
             <ul className="mt-4 space-y-3">
               {toolLinks.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-foreground/80 transition-colors hover:text-foreground hover:underline underline-offset-2"
+                    className="text-sm text-foreground/70 transition-colors hover:text-foreground hover:underline underline-offset-4 decoration-2 decoration-[#CCFF00]"
                   >
                     {label}
                   </Link>
@@ -57,13 +57,13 @@ export default function Footer() {
 
           {/* Styles column */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground/60">Styles</h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-foreground/90">Styles</h3>
             <ul className="mt-4 space-y-3">
               {styleLinks.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-foreground/80 transition-colors hover:text-foreground hover:underline underline-offset-2"
+                    className="text-sm text-foreground/70 transition-colors hover:text-foreground hover:underline underline-offset-4 decoration-2 decoration-[#CCFF00]"
                   >
                     {label}
                   </Link>
@@ -74,13 +74,13 @@ export default function Footer() {
 
           {/* Legal column */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground/60">Legal</h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-foreground/90">Legal</h3>
             <ul className="mt-4 space-y-3">
               {legalLinks.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-foreground/80 transition-colors hover:text-foreground hover:underline underline-offset-2"
+                    className="text-sm text-foreground/70 transition-colors hover:text-foreground hover:underline underline-offset-4 decoration-2 decoration-[#CCFF00]"
                   >
                     {label}
                   </Link>
