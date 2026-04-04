@@ -4,6 +4,15 @@ const toolLinks = [
   { href: "/brat-maker/", label: "brat maker" },
   { href: "/brat-text-generator/", label: "brat text generator" },
   { href: "/brat-name-generator", label: "Brat Name Generator" },
+  { href: "/brat-font-generator/", label: "Brat Font Generator" },
+  { href: "/brat-creator/", label: "Brat Creator" },
+  { href: "/brat-album-cover-generator/", label: "Brat Album Cover Generator" },
+  { href: "/brat-green-generator/", label: "Brat Green Generator" },
+  { href: "/brat-summer-meme-generator/", label: "Brat Summer Meme Generator" },
+];
+
+const styleLinks = [
+  { href: "/brat-generator-pink/", label: "Pink Brat Generator" },
 ];
 
 const legalLinks = [
@@ -34,6 +43,23 @@ export default function Footer() {
             <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground/60">Tools</h3>
             <ul className="mt-4 space-y-3">
               {toolLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-sm text-foreground/80 transition-colors hover:text-foreground hover:underline underline-offset-2"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Styles column */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground/60">Styles</h3>
+            <ul className="mt-4 space-y-3">
+              {styleLinks.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
