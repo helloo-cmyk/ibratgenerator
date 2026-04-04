@@ -91,7 +91,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="space-y-10">
+    <main className="space-y-10" style={{ background: "#FAFAF7" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -117,14 +117,31 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mb-8 sm:mb-12">
+        <div 
+          className="mb-8 sm:mb-12"
+          style={{
+            background: "#ffffff",
+            borderRadius: "16px",
+            border: "1px solid #E8E6E0",
+            overflow: "hidden",
+            boxShadow: "none"
+          }}
+        >
           <BratGeneratorLazy />
         </div>
       </section>
 
       {/* 1. WHY USE THIS BRAT GENERATOR */}
       <section>
-        <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-10">
+        <div 
+          className="mx-auto max-w-3xl"
+          style={{
+            background: "#F3F2ED",
+            borderRadius: "12px",
+            padding: "32px",
+            marginTop: "32px"
+          }}
+        >
           <div className="max-w-none text-base leading-relaxed text-foreground/90">
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why Use Our Free Brat Generator</h2>
             <p className="mt-4 text-base leading-relaxed text-foreground/90">

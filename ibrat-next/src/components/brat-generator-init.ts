@@ -230,6 +230,16 @@ export function initBratGenerator(): () => void {
     shadowColorEl.value = state.shadowColor;
     bgColorEl.value = state.bg;
     fgColorEl.value = state.fg;
+    
+    document.querySelectorAll(".brat-pill").forEach((p) => {
+      const el = p as HTMLElement;
+      if (el.dataset.bg === state.bg && el.dataset.fg === state.fg) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    });
+
     ratioEl.value = state.ratio;
     resEl.value = String(state.res);
     safeToggle.checked = state.safe;
@@ -1296,11 +1306,6 @@ export function initBratGenerator(): () => void {
   function switchTab(tab: string) {
     const isMobile = window.matchMedia("(max-width: 999px)").matches;
     if (activeTab === tab) {
-      if (isMobile) {
-        controlsEl!.classList.remove("sheet-open");
-        tabBtns.forEach((b) => b.classList.remove("active"));
-        activeTab = null;
-      }
       return;
     }
     activeTab = tab;
@@ -1433,14 +1438,20 @@ export function initBratGenerator(): () => void {
       const el = p as HTMLElement;
       state.bg = el.dataset.bg || "#c1ff00";
       state.fg = el.dataset.fg || "#0a0a0a";
-      bgColorEl.value = state.bg;
-      fgColorEl.value = state.fg;
+      syncInputsFromState();
       requestDraw();
     });
   });
 
   outlineColorContainer!.style.display = state.outline ? "inline-flex" : "none";
   shadowColorContainer!.style.display = state.shadow ? "inline-flex" : "none";
+
+  const downloadNavBtn = document.getElementById("brat-download-nav");
+  if (downloadNavBtn) {
+    downloadNavBtn.addEventListener("click", () => {
+      downloadBtn.click();
+    });
+  }
 
   if (undoBtn) undoBtn.addEventListener("click", () => undo());
   if (redoBtn) redoBtn.addEventListener("click", () => redo());
@@ -1613,6 +1624,11 @@ export function initBratGenerator(): () => void {
     }
   };
   window.addEventListener("resize", onResize);
+
+  const isMobileInit = window.matchMedia("(max-width: 999px)").matches;
+  if (isMobileInit && controlsEl) {
+    switchTab("text");
+  }
 
   return () => {
     if (longPressTimer) clearTimeout(longPressTimer);

@@ -116,6 +116,30 @@ const BRAT_STYLES = `
   .brat-grid {
     flex-direction: row;
     gap: 24px;
+    min-height: 600px;
+  }
+  #brat-controls {
+    width: 320px;
+    flex-shrink: 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+  #brat-preview {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .brat-stage {
+    flex: 1 1 auto;
+    min-height: 500px;
+  }
+  .brat-canvas {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 }
 
@@ -548,7 +572,35 @@ const BRAT_STYLES = `
 .brat-tab-panel.active { display: block; }
 .brat-bottom-nav { display: none; }
 .brat-sheet-handle { display: none; }
-.brat-desktop-tabs { display: none; }
+
+.brat-desktop-tabs {
+  background: #F3F2ED;
+  border-bottom: 1px solid #E8E6E0;
+  display: flex;
+}
+.brat-desktop-tabs .brat-tab-btn {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #888880;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  min-height: unset;
+  border-radius: 0;
+  margin: 0;
+}
+.brat-desktop-tabs .brat-tab-btn.active {
+  color: #1a1a1a;
+  font-weight: 600;
+  border-bottom: 2px solid #CCFF00;
+  background: #ffffff;
+}
+.brat-desktop-tabs .brat-tab-btn.active::after {
+  display: none;
+}
 
 .brat-export-sticky {
   display: flex;
@@ -563,6 +615,39 @@ const BRAT_STYLES = `
   flex: 1;
   text-align: center;
   justify-content: center;
+}
+
+#brat-download {
+  background: #1a1a1a;
+  color: #CCFF00;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.15s;
+}
+
+#brat-download:hover {
+  background: #2d2d2d;
+}
+
+#brat-copy {
+  background: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #E8E6E0;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+#brat-copy:hover {
+  background: #F3F2ED;
 }
 
 .brat-tab-btn {
@@ -714,6 +799,7 @@ const BRAT_STYLES = `
 }
 
 @media(max-width:999px) {
+  .brat-desktop-tabs { display: none !important; }
   #brat-topbar { display: none; }
   #brat-widget {
     padding: 0;
@@ -736,18 +822,20 @@ const BRAT_STYLES = `
   #brat-preview {
     order: 0;
     display: block;
-    margin: 8px 8px 12px;
-    border-radius: 0.75rem;
+    margin: 0;
+    border-radius: 0;
     border: none;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    padding: 12px;
+    padding: 8px;
     background: #ffffff;
     overflow: visible;
   }
   .brat-stage {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: unset;
+    height: 90vw;
+    max-height: 90vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1348,9 +1436,9 @@ export default function BratGenerator() {
           <span className="brat-tab-icon">⭐</span>
           <span>Stickers</span>
         </button>
-        <button type="button" className="brat-tab-btn" data-tab="export">
-          <span className="brat-tab-icon">📥</span>
-          <span>Export</span>
+        <button type="button" id="brat-download-nav" className="brat-tab-btn" style={{background: "#CCFF00", borderRadius: 8, margin: "4px 2px"}}>
+          <span className="brat-tab-icon">💾</span>
+          <span style={{fontSize: 11, fontWeight: 700, color: "#1a1a1a"}}>Save</span>
         </button>
       </nav>
     </div>

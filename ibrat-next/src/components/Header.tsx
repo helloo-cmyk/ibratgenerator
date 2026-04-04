@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -24,12 +23,15 @@ export default function Header() {
 
   return (
     <header
-      className="sticky top-0 z-50 w-full bg-white"
-      style={{ background: "#ffffff", borderBottom: "1px solid rgba(0,0,0,0.06)" }}
+      className="sticky top-0 z-50 w-full"
+      style={{ background: "#ffffff", borderBottom: "1px solid #E8E6E0" }}
     >
       <div className="mx-auto flex max-w-6xl justify-between items-center px-4 sm:px-6 py-4 sm:py-5">
-        <Link href="/" className="flex items-center flex-shrink-0">
-          <Image src="/logo.png" alt="Ibrat Generator" width={120} height={44} className="h-8 md:h-10 lg:h-12 w-auto object-contain" priority />
+        <Link href="/" className="flex items-center flex-shrink-0 gap-2" style={{ textDecoration: "none" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "40px", height: "40px", background: "#CCFF00", color: "#1a1a1a", fontWeight: "700", fontSize: "24px" }}>
+            b
+          </div>
+          <span style={{ fontSize: "18px", fontWeight: "700", color: "#1a1a1a", letterSpacing: "-0.02em" }}>ibrat.</span>
         </Link>
 
         {/* Desktop nav: inline on md and above */}
@@ -38,14 +40,22 @@ export default function Header() {
             {navLinks.map(({ href, label }) => {
               const isActive = normalizePath(pathname) === normalizePath(href);
               return (
-                <li key={href} className="border-b border-black/5">
+                <li key={href} style={{ listStyle: "none" }}>
                   <Link
                     href={href}
-                    className={`flex min-h-[44px] items-center py-3 text-base font-medium sm:text-sm transition-all duration-200 ease-in-out hover:opacity-70 ${
-                      isActive
-                        ? "font-semibold underline underline-offset-4 text-foreground"
-                        : "no-underline text-foreground"
-                    }`}
+                    style={{
+                      display: "flex",
+                      minHeight: "44px",
+                      alignItems: "center",
+                      padding: "12px 0",
+                      fontSize: "14px",
+                      fontWeight: isActive ? 600 : 500,
+                      color: isActive ? "#1a1a1a" : "#3d3d3a",
+                      borderBottom: isActive ? "2px solid #CCFF00" : "2px solid transparent",
+                      transition: "all 0.15s",
+                      textDecoration: "none"
+                    }}
+                    className="hover:opacity-70"
                   >
                     {label}
                   </Link>
@@ -90,15 +100,21 @@ export default function Header() {
           {navLinks.map(({ href, label }) => {
             const isActive = normalizePath(pathname) === normalizePath(href);
             return (
-              <li key={href} className="border-b border-black/5">
+              <li key={href} style={{ listStyle: "none" }}>
                 <Link
                   href={href}
                   onClick={closeMenu}
-                  className={`block py-4 text-base font-medium transition-all duration-200 ease-in-out hover:opacity-70 ${
-                    isActive
-                      ? "font-semibold underline underline-offset-4 text-foreground"
-                      : "no-underline text-foreground"
-                  }`}
+                  style={{
+                    display: "block",
+                    padding: "16px 0",
+                    fontSize: "14px",
+                    fontWeight: isActive ? 600 : 500,
+                    color: isActive ? "#1a1a1a" : "#3d3d3a",
+                    borderBottom: isActive ? "2px solid #CCFF00" : "2px solid transparent",
+                    transition: "all 0.15s",
+                    textDecoration: "none"
+                  }}
+                  className="hover:opacity-70"
                 >
                   {label}
                 </Link>

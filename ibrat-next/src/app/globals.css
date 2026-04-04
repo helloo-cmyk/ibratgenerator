@@ -6,6 +6,19 @@
   --text-main: #111;
   --text-soft: #444;
   --border-soft: rgba(0, 0, 0, 0.08);
+  --brat-lime: #CCFF00;
+  --brat-lime-dark: #B8E600;
+  --brat-black: #1a1a1a;
+  --brat-black-hover: #2d2d2d;
+  --page-bg: #FAFAF7;
+  --surface: #F3F2ED;
+  --border-color: #E8E6E0;
+  --text-heading: #1a1a1a;
+  --text-body: #3d3d3a;
+  --text-muted: #888880;
+  --radius-tool: 16px;
+  --radius-card: 12px;
+  --radius-btn: 8px;
 }
 
 @theme inline {
@@ -18,7 +31,7 @@
 
 body {
   background: var(--background);
-  background-color: #ffffff;
+  background-color: var(--page-bg);
   color: var(--text-main);
   font-family: Arial, Helvetica, sans-serif;
 }
