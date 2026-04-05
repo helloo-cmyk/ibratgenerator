@@ -10,13 +10,19 @@ export const metadata = {
   alternates: {
     canonical: "https://ibratgenerator.com/brat-summer-meme-generator/",
   },
-  description:
-    "The Brat Summer Meme Generator is a simple, fast, and flexible tool designed to help you create Brat-style Summer memes without downloading any apps or learning editing software. It converts your text, captions, jokes, or short lines into clean, bold, bright-green Brat visuals inspired by the viral Charli XCX aesthetic.",
+  description: "Use this free brat summer meme generator to create summer memes instantly. Join the trend with no app download or signup required.",
 };
 
 export default function BratSummerMemeGeneratorPage() {
   return (
     <main className="space-y-10">
+      {/* HOMEPAGE AUTHORITY SIGNAL */}
+      <section className="bg-primary/5 border-b border-primary/10">
+        <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6 text-center text-sm font-medium text-foreground/80">
+          Use the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to create text, images, memes, and album covers in one place.
+        </div>
+      </section>
+
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">

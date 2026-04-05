@@ -79,7 +79,7 @@ sitemap.xml (ibrat-next/public/sitemap.xml):
 - https://ibratgenerator.com/
 - https://ibratgenerator.com/about-us/
 - https://ibratgenerator.com/brat-maker/
-- https://ibratgenerator.com/brat-creator/
+- https://ibratgenerator.com/brat-maker/
 - https://ibratgenerator.com/brat-text-generator/
 - https://ibratgenerator.com/brat-name-generator/
 - https://ibratgenerator.com/brat-green-generator/
@@ -224,12 +224,12 @@ Additional note:
 If you want to skip image editing and just create brat text png designs, the dedicated text tool handles that with a simpler, text-focused interface.
 
 ============================================================
-BRAT CREATOR (Route: /brat-creator/)
+BRAT CREATOR (Route: /brat-maker/)
 
 SEO metadata:
 title.absolute: Brat Creator (Free) – Advanced Brat Image & Text Editor
 description: Use the brat creator to design custom brat visuals with full control. Create text, images, and layouts in one tool. Free and no signup required.
-alternates.canonical: https://ibratgenerator.com/brat-creator/
+alternates.canonical: https://ibratgenerator.com/brat-maker/
 
 Feature flow / step-by-step text:
 How to Use the Brat Creator

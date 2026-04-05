@@ -5,7 +5,7 @@ const toolLinks = [
   { href: "/brat-text-generator/", label: "brat text generator" },
   { href: "/brat-name-generator", label: "Brat Name Generator" },
   { href: "/brat-font-generator/", label: "Brat Font Generator" },
-  { href: "/brat-creator/", label: "Brat Creator" },
+
   { href: "/brat-album-cover-generator/", label: "Brat Album Cover Generator" },
   { href: "/brat-green-generator/", label: "Brat Green Generator" },
   { href: "/brat-summer-meme-generator/", label: "Brat Summer Meme Generator" },

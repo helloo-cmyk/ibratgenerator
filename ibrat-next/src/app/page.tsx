@@ -81,9 +81,9 @@ const breadcrumbSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Free Brat Generator – Create Brat Text, Memes & PNG Images"
+    absolute: "Free Brat Generator – Create Brat Text, Images & Memes Online"
   },
-  description: "Use this free brat generator to create brat text, memes, and PNG images instantly. No signup required. Fast, simple, and mobile-friendly.",
+  description: "Use this free brat generator to create brat text, images, and memes instantly. No signup required.",
   alternates: {
     canonical: "https://ibratgenerator.com/",
   },
@@ -108,11 +108,9 @@ export default function Home() {
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 pt-4 pb-2 sm:pt-6 sm:pb-4 sm:px-6 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-foreground mt-0 mb-4 mx-auto">
-              Free Brat Generator
-            </h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-foreground mt-0 mb-4 mx-auto">Free Brat Generator</h1>
             <p className="text-base sm:text-lg text-foreground/90 mb-6 max-w-xl mx-auto">
-              Create brat text, memes, and images instantly. No signup required.
+              This is the main brat generator tool for creating text, images, memes, and album covers. Easily build aesthetic graphics instantly with no signup required.
             </p>
           </div>
         </div>
@@ -131,53 +129,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 1. WHY USE THIS BRAT GENERATOR */}
+      {/* INFORMATIONAL SECTIONS */}
       <section>
-        <div 
-          className="mx-auto max-w-3xl"
-          style={{
-            background: "#F3F2ED",
-            borderRadius: "12px",
-            padding: "32px",
-            marginTop: "32px"
-          }}
-        >
-          <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why Use Our Free Brat Generator</h2>
-            <p className="mt-4 text-base leading-relaxed text-foreground/90">
-              This free brat generator is used to create brat text, memes, profile images, and album-style visuals instantly.
-            </p>
-            <p className="mb-4">
-              Use this free brat generator to create brat text, memes, profile pictures, and images instantly. No signup required. Download high-quality PNG in seconds. This is the fastest brat generator online for creators in the United States.
-            </p>
-            <p className="mb-6">
-              Whether you need a dedicated brat maker, a quick brat text generator for simple captions, or a full-featured brat image generator, our free tool has you covered. Everything runs directly in your browser.
-            </p>
-            <ul className="list-inside list-disc space-y-1 mb-4">
-              <li>Completely free with no hidden costs</li>
-              <li>Instant preview as you type and edit</li>
-              <li>No signup or download required</li>
-              <li>Mobile-friendly editing experience</li>
-              <li>High-quality PNG export (up to 3000px) with no watermark</li>
-            </ul>
+        <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-10">
+          <div className="max-w-none text-base leading-relaxed text-foreground/90 space-y-10">
+            
+            {/* What is a Brat Generator? */}
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">What is a Brat Generator?</h2>
+              <p className="mb-4">
+                A brat generator is an intuitive online tool that helps you recreate the bold, viral aesthetic made famous across social media. Characterized by striking lowercase typography set against vibrant, solid backgrounds, this minimalist format has quickly become a defining staple of modern digital pop culture.
+              </p>
+              <p className="mb-4">
+                Our free platform eliminates the steep learning curve of traditional editing software. You don't have to worry about tweaking layout dimensions, downloading custom typefaces, or struggling with exports. Instead, type your phrase, tweak the colors, and instantly save a polished graphic.
+              </p>
+              <p>
+                From utilizing our seamless <Link href="/brat-text-generator/" className="text-primary hover:underline font-medium">brat text generator</Link> for crisp typographic quotes, to using the advanced <Link href="/brat-maker/" className="text-primary hover:underline font-medium">brat maker</Link> for detailed meme building, this free brat generator empowers total creative control right inside your browser.
+              </p>
+            </div>
+
+            {/* Create Brat Text, Images & Memes Instantly */}
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Create Brat Text, Images & Memes Instantly</h2>
+              <p>
+                Gone are the days of downloading heavy photo editors. With this platform, generating personalized images is incredibly fast. Overlay your funny quotes, design custom social media banners, or produce relatable memes in a matter of seconds. Every edit updates live on your screen, letting you perfectly craft your message before saving it.
+              </p>
+            </div>
+            
+            {/* Why This is the Best Free Brat Generator */}
+            <div 
+              style={{
+                background: "#F3F2ED",
+                borderRadius: "12px",
+                padding: "32px"
+              }}
+            >
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why This is the Best Free Brat Generator</h2>
+              <ul className="list-inside list-disc space-y-2">
+                <li><strong>No Signup Needed:</strong> There are no paywalls or accounts required. Jump in immediately.</li>
+                <li><strong>100% Free:</strong> A completely free experience without restricted premium features.</li>
+                <li><strong>High Output Quality:</strong> Export crisp, uncompressed PNG files perfectly sized for TikTok, Instagram, and X.</li>
+                <li><strong>Mobile Friendly:</strong> The editor works seamlessly across all your devices.</li>
+              </ul>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* 2. WHAT YOU CAN CREATE */}
+      {/* GALLERY SECTION */}
       <section>
-        <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-10">
+        <div className="mx-auto max-w-3xl px-4 py-4 sm:px-6 sm:py-6">
           <div className="max-w-none text-base leading-relaxed text-foreground/90">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">What You Can Create</h2>
-            <p className="mb-4">
-              This tool is ideal for aesthetic graphics—bold text on solid or custom backgrounds for Instagram, TikTok, or any platform. Common uses include:
-            </p>
-            <ul className="list-inside list-disc space-y-1 mb-10">
-              <li>Brat profile pictures and avatars</li>
-              <li>Memes and social media captions</li>
-              <li>Aesthetic graphics and mood boards</li>
-            </ul>
-            <h3 className="text-xl font-semibold mt-6 mb-6">Examples From Our Generator</h3>
+            <h3 className="text-xl font-semibold mb-6">Examples From Our Generator</h3>
             <ExampleGallery />
           </div>
         </div>

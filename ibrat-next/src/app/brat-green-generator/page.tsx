@@ -4,22 +4,28 @@ import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
   title: {
-    absolute: "Brat Green Generator – Create Neon Green Brat Text & Images",
+    absolute: "Green Brat Generator – Create Green Brat Text & Images Instantly",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-green-generator/",
   },
-  description:
-    "The brat green generator is a dedicated tool built specifically for creating neon green Brat-style text, captions, memes, and image overlays. It focuses on the iconic bright green aesthetic that became instantly recognizable across social media.",
+  description: "Use the classic free green brat generator to create neon green brat text instantly. Get the iconic look with no signup required.",
 };
 
 export default function BratGreenGeneratorPage() {
   return (
     <main className="space-y-10">
+      {/* HOMEPAGE AUTHORITY SIGNAL */}
+      <section className="bg-primary/5 border-b border-primary/10">
+        <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6 text-center text-sm font-medium text-foreground/80">
+          Use the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to create text, images, memes, and album covers in one place.
+        </div>
+      </section>
+
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Green Generator</h1>
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Green Brat Generator</h1>
             <p className="mb-5">
               The brat green generator recreates the iconic neon green Brat
               aesthetic and lets you generate green Brat text and graphics

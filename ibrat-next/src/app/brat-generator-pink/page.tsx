@@ -5,22 +5,28 @@ import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 
 export const metadata = {
   title: {
-    absolute: "Brat Generator Pink – Create Pink Brat Text & Images Online",
+    absolute: "Pink Brat Generator – Create Pink Brat Text & Images Instantly",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-generator-pink/",
   },
-  description:
-    "The brat generator pink is an online creation tool built for users who want the Brat visual style with a softer pink color theme instead of the classic neon green. It allows you to instantly turn text into pink Brat-style visuals that match modern aesthetic social media trends.",
+  description: "Use this free pink brat generator to create pink brat text and images instantly. Customize your look with no signup required.",
 };
 
 export default function BratGeneratorPinkPage() {
   return (
     <main className="space-y-10">
+      {/* HOMEPAGE AUTHORITY SIGNAL */}
+      <section className="bg-primary/5 border-b border-primary/10">
+        <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6 text-center text-sm font-medium text-foreground/80">
+          Use the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to create text, images, memes, and album covers in one place.
+        </div>
+      </section>
+
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Generator Pink</h1>
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Pink Brat Generator</h1>
             <p className="mb-5">
               The brat generator pink lets you create pink brat-style text
               and graphics instantly—no app downloads required. Whether you

@@ -5,22 +5,28 @@ import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 
 export const metadata = {
   title: {
-    absolute: "Brat Generator Black – Create Black Brat Text & Images Online",
+    absolute: "Black Brat Generator – Create Black Brat Text & Images Instantly",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-black-generator/",
   },
-  description:
-    "The brat generator black is a specialized tool for creating high-contrast brat text and graphics on black backgrounds. Create dark aesthetic Brat-style visuals with customizable text, layout, and dark themes—no design software required.",
+  description: "Use our free black brat generator to create dark brat text and graphics instantly. High contrast aesthetic with no signup required.",
 };
 
 export default function BratBlackGeneratorPage() {
   return (
     <main className="space-y-10">
+      {/* HOMEPAGE AUTHORITY SIGNAL */}
+      <section className="bg-primary/5 border-b border-primary/10">
+        <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6 text-center text-sm font-medium text-foreground/80">
+          Use the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to create text, images, memes, and album covers in one place.
+        </div>
+      </section>
+
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Generator Black</h1>
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Black Brat Generator</h1>
             <p className="mb-5">
               The brat generator black lets you create high-contrast brat text and graphics on black backgrounds. Use this brat black generator as a brat text generator black for social posts, memes, and dark aesthetic visuals—no design software needed.
             </p>

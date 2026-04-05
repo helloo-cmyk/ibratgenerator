@@ -4,10 +4,9 @@ import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
   title: {
-    absolute: "Brat Maker (Free) – Create Brat Images, Memes & Profile Pictures",
+    absolute: "Brat Maker – Create Brat Images & Memes Instantly",
   },
-  description:
-    "Create brat images, memes, and profile pictures instantly with this free brat maker. Customize text, layout, and colors. No signup required.",
+  description: "Try our free brat maker to create brat images and memes instantly. Customize text and colors. No signup required.",
   alternates: {
     canonical: "https://ibratgenerator.com/brat-maker/",
   },
@@ -16,6 +15,13 @@ export const metadata = {
 export default function BratMakerPage() {
   return (
     <main className="space-y-10">
+      {/* HOMEPAGE AUTHORITY SIGNAL */}
+      <section className="bg-primary/5 border-b border-primary/10">
+        <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6 text-center text-sm font-medium text-foreground/80">
+          Use the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to create text, images, memes, and album covers in one place.
+        </div>
+      </section>
+
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">

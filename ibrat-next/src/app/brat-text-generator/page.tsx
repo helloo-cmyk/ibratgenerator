@@ -14,18 +14,24 @@ const BRAT_TEXT_EXAMPLES = [
 
 export const metadata = {
   title: {
-    absolute: "Brat Text Generator (Free) – Create Brat Text PNG in Seconds",
+    absolute: "Brat Text Generator – Create Brat Text PNG Instantly",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-text-generator/",
   },
-  description:
-    "Create brat text PNG images instantly with this free brat text generator. Generate captions, album-style text, and meme text. No signup required.",
+  description: "Use our free brat text generator to create custom PNG text instantly. Perfect for memes and social media. No signup required.",
 };
 
 export default function BratTextGeneratorPage() {
   return (
     <main className="space-y-10">
+      {/* HOMEPAGE AUTHORITY SIGNAL */}
+      <section className="bg-primary/5 border-b border-primary/10">
+        <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6 text-center text-sm font-medium text-foreground/80">
+          Use the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to create text, images, memes, and album covers in one place.
+        </div>
+      </section>
+
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">

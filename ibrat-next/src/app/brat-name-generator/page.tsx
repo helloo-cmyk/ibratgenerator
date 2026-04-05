@@ -9,13 +9,19 @@ export const metadata = {
   alternates: {
     canonical: "https://ibratgenerator.com/brat-name-generator/",
   },
-  description:
-    "The Brat Name Generator is a simple tool that helps you create unique, Brat-style names instantly. It's designed for users who want short, bold, aesthetic names inspired by the Brat era and Charli XCX's visual and musical identity.",
+  description: "Use our free brat name generator to create unique brat names and text instantly. Generate your brat identity with no signup required.",
 };
 
 export default function BratNameGeneratorPage() {
   return (
     <main className="space-y-10">
+      {/* HOMEPAGE AUTHORITY SIGNAL */}
+      <section className="bg-primary/5 border-b border-primary/10">
+        <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6 text-center text-sm font-medium text-foreground/80">
+          Use the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to create text, images, memes, and album covers in one place.
+        </div>
+      </section>
+
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">

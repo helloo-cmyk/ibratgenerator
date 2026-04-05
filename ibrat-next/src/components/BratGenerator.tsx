@@ -572,6 +572,15 @@ const BRAT_STYLES = `
 .brat-tab-panel.active { display: block; }
 .brat-bottom-nav { display: none; }
 .brat-sheet-handle { display: none; }
+.brat-fab { display: none; }
+.brat-nav-save .brat-save-icon {
+  background: #CCFF00 !important;
+  box-shadow: 0 2px 8px rgba(204,255,0,0.4) !important;
+}
+.brat-nav-save {
+  color: #111 !important;
+  font-weight: 700 !important;
+}
 
 .brat-desktop-tabs {
   background: #F3F2ED;
@@ -893,36 +902,122 @@ const BRAT_STYLES = `
   }
   .brat-tab-panel { display: none !important; }
   .brat-tab-panel.active { display: block !important; }
+  /* ===== APP-LIKE BOTTOM NAV ===== */
   .brat-bottom-nav {
     display: flex;
-    position: relative;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    height: 52px;
+    height: 64px;
     margin-top: 8px;
-    background: #ffffff;
-    border-top: 1px solid rgba(0, 0, 0, .06);
-    box-shadow: none;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-top: 1px solid rgba(0, 0, 0, .07);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, .06);
     z-index: 1002;
-    padding: 0 4px;
+    padding: 0 8px;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    align-items: center;
+    justify-content: space-around;
   }
+
+  /* Tab buttons — icon + label stacked */
   .brat-tab-btn {
-    min-height: 52px;
+    flex: 1;
+    min-height: 56px;
     margin: 0;
     border-radius: 0;
-  }
-  .brat-tab-btn.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 6px 4px;
     background: transparent;
-    font-weight: 600;
-    color: #020617;
+    border: none;
+    cursor: pointer;
+    transition: all 0.18s cubic-bezier(.4,0,.2,1);
+    color: #9ca3af;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0;
+    position: relative;
   }
+
+  /* Active tab — label bold + dark */
+  .brat-tab-btn.active {
+    color: #111;
+    font-weight: 700;
+  }
+
+  /* Remove old underline indicator */
   .brat-tab-btn.active::after {
-    bottom: 0;
-    left: 20%;
-    right: 20%;
-    height: 3.5px;
-    background: #020617;
-    border-radius: 2px;
+    display: none;
   }
+
+  /* Icon wrapper — pill effect on active */
+  .brat-tab-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 28px;
+    border-radius: 14px;
+    font-size: 18px;
+    transition: all 0.18s cubic-bezier(.4,0,.2,1);
+    background: transparent;
+  }
+
+  .brat-tab-btn.active .brat-tab-icon {
+    background: #CCFF00;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(204,255,0,0.35);
+  }
+
+  .brat-tab-btn:active .brat-tab-icon {
+    transform: scale(0.92);
+  }
+
+  /* ===== FLOATING ACTION BUTTON ===== */
+  .brat-fab {
+    display: flex;
+    position: sticky;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1003;
+    width: fit-content;
+    margin: 0 auto;
+    background: #1a1a1a;
+    color: #CCFF00;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.22), 0 1px 4px rgba(0,0,0,0.12);
+    transition: all 0.18s cubic-bezier(.4,0,.2,1);
+    margin-bottom: 4px;
+  }
+
+  .brat-fab:active {
+    transform: translateX(-50%) scale(0.96);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  }
+
+  .brat-fab-icon {
+    font-size: 16px;
+    line-height: 1;
+  }
+
   .brat-btn { min-height: 44px; }
   .brat-acc-h { min-height: 48px; }
   .brat-pill { min-height: 44px; }
@@ -1097,9 +1192,6 @@ export default function BratGenerator() {
                 </button>
                 <button type="button" className="brat-tab-btn" data-tab="stickers">
                   Stickers
-                </button>
-                <button type="button" className="brat-tab-btn" data-tab="export">
-                  Export
                 </button>
               </div>
               <div className="brat-tab-panel active" data-tab="text">
@@ -1342,55 +1434,14 @@ export default function BratGenerator() {
                   </div>
                 </section>
               </div>
-              <div className="brat-tab-panel" data-tab="export">
-                <div className="brat-export-sticky">
-                  <button type="button" id="brat-download" className="brat-btn primary">
-                    Download PNG
-                  </button>
-                  <button type="button" id="brat-copy" className="brat-btn">
-                    Copy to Clipboard
-                  </button>
-                </div>
-                <section className="brat-acc" id="brat-acc-batch">
-                  <button type="button" className="brat-acc-h" data-acc="batch">
-                    Batch (ZIP)
-                  </button>
-                  <div className="brat-acc-b">
-                    <div className="brat-controls-inner" style={{ padding: 10 }}>
-                      <textarea
-                        id="brat-batch"
-                        rows={4}
-                        placeholder="one caption per line to batch generate"
-                      />
-                      <div className="brat-row">
-                        <button type="button" id="brat-batchBtn" className="brat-btn green">
-                          Generate ZIP
-                        </button>
-                        <span style={{ fontSize: 13, color: "#6b7280" }}>Creates images for all lines above.</span>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <section className="brat-acc" id="brat-acc-share">
-                  <button type="button" className="brat-acc-h" data-acc="share">
-                    Share / Meta
-                  </button>
-                  <div className="brat-acc-b">
-                    <div className="brat-controls-inner" style={{ padding: 10 }}>
-                      <div className="brat-row">
-                        <button type="button" id="brat-altBtn" className="brat-btn">
-                          Copy ALT text
-                        </button>
-                        <button type="button" id="brat-randomBtn" className="brat-btn">
-                          Random brat phrase
-                        </button>
-                      </div>
-                      <div style={{ fontSize: 13, color: "#6b7280", marginTop: 6 }}>
-                        ALT text is generated from your caption + colors + ratio.
-                      </div>
-                    </div>
-                  </div>
-                </section>
+              {/* Hidden utility buttons — required by init.ts for download/copy/batch/random logic */}
+              <div style={{ display: "none" }} aria-hidden="true">
+                <button type="button" id="brat-download" />
+                <button type="button" id="brat-copy" />
+                <button type="button" id="brat-altBtn" />
+                <button type="button" id="brat-randomBtn" />
+                <button type="button" id="brat-batchBtn" />
+                <textarea id="brat-batch" />
               </div>
             </aside>
             <main className="brat-card" id="brat-preview">
@@ -1425,7 +1476,7 @@ export default function BratGenerator() {
       </div>
       <nav className="brat-bottom-nav" id="brat-bottom-nav">
         <button type="button" className="brat-tab-btn" data-tab="text">
-          <span className="brat-tab-icon">Aa</span>
+          <span className="brat-tab-icon">✏️</span>
           <span>Text</span>
         </button>
         <button type="button" className="brat-tab-btn" data-tab="style">
@@ -1433,12 +1484,12 @@ export default function BratGenerator() {
           <span>Style</span>
         </button>
         <button type="button" className="brat-tab-btn" data-tab="stickers">
-          <span className="brat-tab-icon">⭐</span>
+          <span className="brat-tab-icon">✨</span>
           <span>Stickers</span>
         </button>
-        <button type="button" id="brat-download-nav" className="brat-tab-btn" style={{background: "#CCFF00", borderRadius: 8, margin: "4px 2px"}}>
-          <span className="brat-tab-icon">💾</span>
-          <span style={{fontSize: 11, fontWeight: 700, color: "#1a1a1a"}}>Save</span>
+        <button type="button" id="brat-download-nav" className="brat-tab-btn brat-nav-save">
+          <span className="brat-tab-icon brat-save-icon">⬇️</span>
+          <span>Save PNG</span>
         </button>
       </nav>
     </div>

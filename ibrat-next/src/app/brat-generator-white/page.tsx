@@ -14,22 +14,28 @@ const WHITE_BRAT_EXAMPLES = [
 
 export const metadata = {
   title: {
-    absolute: "Brat Generator White – Create White Brat Text & Images Online",
+    absolute: "White Brat Generator – Create White Brat Text & Images Instantly",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-generator-white/",
   },
-  description:
-    "The Brat White Generator is a minimalist tool designed for creating clean, white Brat-style text and visuals. Unlike bold neon or dark styles, this generator focuses on simplicity, clarity, and balance. It's built for users who want a softer, more neutral Brat aesthetic that works across modern layouts and platforms.",
+  description: "Use our free white brat generator to create clean white brat text instantly. Perfect for aesthetic memes. No signup required.",
 };
 
 export default function BratGeneratorWhitePage() {
   return (
     <main className="space-y-10">
+      {/* HOMEPAGE AUTHORITY SIGNAL */}
+      <section className="bg-primary/5 border-b border-primary/10">
+        <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6 text-center text-sm font-medium text-foreground/80">
+          Use the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to create text, images, memes, and album covers in one place.
+        </div>
+      </section>
+
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Generator White</h1>
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">White Brat Generator</h1>
             <p className="mb-5">
               Use this brat generator white to create clean, minimalist Brat-style captions, meme text, and typography instantly. The white brat generator lets you design subtle Brat visuals with balanced spacing and modern layouts. Type your text, customize the style, and download your design in seconds.
             </p>

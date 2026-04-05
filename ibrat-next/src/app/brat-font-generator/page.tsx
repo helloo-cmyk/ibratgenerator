@@ -5,18 +5,24 @@ import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 
 export const metadata = {
   title: {
-    absolute: "Brat Font Generator (Free) – Create Brat Style Text Instantly",
+    absolute: "Brat Font Generator – Create Brat Font Text Instantly",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-font-generator/",
   },
-  description:
-    "Generate brat-style typography instantly with this brat font generator. Create bold, minimal text images and download PNG files. No signup needed.",
+  description: "Use our free brat font generator to create brat style typography instantly. Perfect for edits and memes. No signup required.",
 };
 
 export default function BratFontGeneratorPage() {
   return (
     <main className="space-y-10">
+      {/* HOMEPAGE AUTHORITY SIGNAL */}
+      <section className="bg-primary/5 border-b border-primary/10">
+        <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6 text-center text-sm font-medium text-foreground/80">
+          Use the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to create text, images, memes, and album covers in one place.
+        </div>
+      </section>
+
       <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">

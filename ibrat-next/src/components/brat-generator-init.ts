@@ -48,6 +48,10 @@ export function initBratGenerator(): () => void {
   const widget = document.getElementById("brat-widget");
   if (!root || !widget) return () => {};
 
+  // Guard against React StrictMode double-invoke (prevents duplicate listeners → 4x downloads)
+  if ((root as HTMLElement & { __bratInit?: boolean }).__bratInit) return () => {};
+  (root as HTMLElement & { __bratInit?: boolean }).__bratInit = true;
+
   const c = document.getElementById("brat-canvas") as HTMLCanvasElement;
   if (!c) return () => {};
 
@@ -1641,5 +1645,7 @@ export function initBratGenerator(): () => void {
     window.removeEventListener("pointercancel", onPointerUp);
     window.removeEventListener("keydown", onKeyDown);
     window.removeEventListener("resize", onResize);
+    // Reset guard so re-mount works correctly (e.g. HMR)
+    (root as HTMLElement & { __bratInit?: boolean }).__bratInit = false;
   };
 }
