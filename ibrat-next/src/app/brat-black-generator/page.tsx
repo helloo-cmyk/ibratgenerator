@@ -16,12 +16,6 @@ export const metadata = {
 export default function BratBlackGeneratorPage() {
   return (
     <main className="space-y-10">
-      {/* HOMEPAGE AUTHORITY SIGNAL */}
-      <section className="bg-primary/5 border-b border-primary/10">
-        <div className="mx-auto max-w-3xl px-4 py-3 sm:px-6 text-center text-sm font-medium text-foreground/80">
-          Use the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to create text, images, memes, and album covers in one place.
-        </div>
-      </section>
 
       <section>
         <div className="text-center">

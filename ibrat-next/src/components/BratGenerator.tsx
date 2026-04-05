@@ -1044,6 +1044,8 @@ const BRAT_STYLES = `
   }
 }
 
+#brat-download-desktop, #brat-copy-desktop { display: none; }
+
 @media(min-width:1000px) {
   .brat-tab-panel.active { display: block; }
   .brat-export-sticky { padding: 4px 0 16px; }
@@ -1095,6 +1097,40 @@ const BRAT_STYLES = `
     color: #0f172a;
     background: rgba(255, 255, 255, .5);
   }
+  #brat-download-desktop, #brat-copy-desktop {
+    background: #CCFF00;
+    color: #000;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.15s;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #brat-copy-desktop {
+    background: #F3F2ED;
+  }
+  #brat-download-desktop:hover {
+    background: #b8e600;
+  }
+  #brat-copy-desktop:hover {
+    background: #E8E6E0;
+  }
+  .brat-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .brat-preview-actions {
+    display: flex;
+    gap: 8px;
+  }
   .brat-tab-panel.active .brat-acc .brat-acc-b { max-height: 1200px; }
   .brat-tab-panel.active .brat-acc {
     border: none;
@@ -1118,6 +1154,7 @@ const BRAT_STYLES = `
   .brat-tab-panel.active .brat-acc-h::after { display: none; }
   .brat-tab-panel .brat-acc:only-child .brat-acc-h { display: none; }
 }
+
 `;
 
 function loadScript(src: string): Promise<void> {
@@ -1445,13 +1482,23 @@ export default function BratGenerator() {
               </div>
             </aside>
             <main className="brat-card" id="brat-preview">
-              <div className="brat-undo-redo">
-                <button type="button" id="brat-undo" className="brat-btn" disabled>
-                  Undo
-                </button>
-                <button type="button" id="brat-redo" className="brat-btn" disabled>
-                  Redo
-                </button>
+              <div className="brat-preview-header">
+                <div className="brat-undo-redo">
+                  <button type="button" id="brat-undo" className="brat-btn" disabled>
+                    Undo
+                  </button>
+                  <button type="button" id="brat-redo" className="brat-btn" disabled>
+                    Redo
+                  </button>
+                </div>
+                <div className="brat-preview-actions">
+                  <button type="button" id="brat-copy-desktop" className="brat-btn">
+                    Copy Image
+                  </button>
+                  <button type="button" id="brat-download-desktop" className="brat-btn">
+                    Save PNG
+                  </button>
+                </div>
               </div>
               <div className="brat-toolbar">
                 <span>Canvas preview</span>

@@ -1451,9 +1451,22 @@ export function initBratGenerator(): () => void {
   shadowColorContainer!.style.display = state.shadow ? "inline-flex" : "none";
 
   const downloadNavBtn = document.getElementById("brat-download-nav");
+  const downloadDesktopBtn = document.getElementById("brat-download-desktop");
+  const copyDesktopBtn = document.getElementById("brat-copy-desktop");
+
   if (downloadNavBtn) {
     downloadNavBtn.addEventListener("click", () => {
       downloadBtn.click();
+    });
+  }
+  if (downloadDesktopBtn) {
+    downloadDesktopBtn.addEventListener("click", () => {
+      downloadBtn.click();
+    });
+  }
+  if (copyDesktopBtn) {
+    copyDesktopBtn.addEventListener("click", () => {
+      copyBtn.click();
     });
   }
 
@@ -1645,7 +1658,7 @@ export function initBratGenerator(): () => void {
     window.removeEventListener("pointercancel", onPointerUp);
     window.removeEventListener("keydown", onKeyDown);
     window.removeEventListener("resize", onResize);
-    // Reset guard so re-mount works correctly (e.g. HMR)
-    (root as HTMLElement & { __bratInit?: boolean }).__bratInit = false;
+    // Left empty deliberately to prevent duplicate listeners during Strict Mode unmount/remount
+
   };
 }

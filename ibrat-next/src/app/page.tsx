@@ -110,7 +110,7 @@ export default function Home() {
           <div className="mx-auto max-w-2xl px-4 pt-4 pb-2 sm:pt-6 sm:pb-4 sm:px-6 text-base leading-relaxed text-foreground/90">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-foreground mt-0 mb-4 mx-auto">Free Brat Generator</h1>
             <p className="text-base sm:text-lg text-foreground/90 mb-6 max-w-xl mx-auto">
-              This is the main brat generator tool for creating text, images, memes, and album covers. Easily build aesthetic graphics instantly with no signup required.
+              Create brat text, images, memes, and album covers instantly — no signup needed.
             </p>
           </div>
         </div>
