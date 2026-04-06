@@ -23,6 +23,9 @@ export default function BratMakerPage() {
             <p className="mt-4 text-base leading-relaxed text-foreground/90 text-center max-w-2xl mx-auto">
               Use this free brat maker to create brat images, memes, and profile pictures instantly. No signup required.
             </p>
+            <p className="mb-5">
+              This page is for creating brat images and memes. For full features including text and album covers, use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link>.
+            </p>
           </div>
         </div>
       </section>
@@ -103,12 +106,12 @@ export default function BratMakerPage() {
             Place text over uploaded photos, solid backgrounds, or album-style layouts. The result is a finished image with integrated typography.
           </p>
           <p className="mb-6">
-            For standalone text-only designs without images, use the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> instead.
+            For standalone text-only designs without images, use the brat text generator instead.
           </p>
 
-          <h3 className="text-xl font-semibold mt-6">2. Brat Image Generator</h3>
+          <h3 className="text-xl font-semibold mt-6">2. Brat Image Maker</h3>
           <p className="mb-4">
-            The brat maker also works as a complete brat image generator.
+            The brat maker also works as a complete brat image maker.
             Upload your own photos and add Brat-style text on top to create
             profile pictures, meme images, aesthetic edits, and album-inspired
             visuals.
@@ -262,7 +265,7 @@ export default function BratMakerPage() {
           <h3 className="text-xl font-semibold mt-6">Step 5 - Download</h3>
           <p className="mb-4">Click download and get your final PNG instantly. No signup. No watermark. No delay.</p>
           <p>
-            If you want to skip image editing and just <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">create brat text png</Link> designs, the dedicated text tool handles that with a simpler, text-focused interface.
+            If you want to skip image editing and just brat text generator designs, the dedicated text tool handles that with a simpler, text-focused interface.
           </p>
         </div>
       </section>
@@ -318,18 +321,12 @@ export default function BratMakerPage() {
             profile pictures—all in the minimal Brat aesthetic.
           </p>
           <p className="mt-6">
-            If you want more advanced editing options and full design customization, try the <Link href="/brat-maker" className="text-primary underline hover:no-underline">Brat Creator</Link>.
+            If you want more advanced editing options and full design customization, try the brat maker.
           </p>
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <p>
-            If you only need text-based brat designs, use the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link>.
-          </p>
-        </div>
-      </section>
+      
 
       <FAQAccordion
         title="Frequently Asked Questions"
@@ -346,23 +343,12 @@ export default function BratMakerPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <p>
-            If you want to create all types of brat visuals, use the <Link href="/" className="text-primary underline hover:no-underline">free brat generator</Link>.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Conclusion</h2>
           <p className="mb-4">
             The brat maker is a complete online editor for creating
             Brat-style text, memes, profile pictures, and image-based
             graphics. It combines text editing, layout control, image
             upload, and high-quality export in one simple interface.
-          </p>
-          <p className="mt-4 text-base leading-relaxed text-foreground/90">
-            Use our <a href="/" className="text-primary underline">free brat generator</a> to create brat-style images instantly.
           </p>
           <p className="mb-4">
             If you want a fast, flexible way to design Brat visuals

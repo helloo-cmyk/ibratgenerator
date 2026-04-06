@@ -194,10 +194,10 @@ export default function HowToMakeBratTextPage() {
           </p>
           <ul className="mb-4 list-inside list-disc space-y-1">
             <li>
-              Use <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> when you want to add brat text on images, create memes, or build profile graphics with extra control.
+              Use brat maker when you want to add brat text on images, create memes, or build profile graphics with extra control.
             </li>
             <li>
-              Use <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> for text-first designs and fast exports of brat text PNGs.
+              Use brat text generator for text-first designs and fast exports of brat text PNGs.
             </li>
           </ul>
           <p>
@@ -206,13 +206,10 @@ export default function HowToMakeBratTextPage() {
 
           <ul className="mb-4 list-inside list-disc space-y-1">
             <li>
-              Try the <Link href="/" className="text-primary underline hover:no-underline">free brat generator</Link> to create brat text, memes, and images in one place.
+              Use the brat maker for image-based brat designs and profile graphics.
             </li>
             <li>
-              Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> for image-based brat designs and profile graphics.
-            </li>
-            <li>
-              Use the <Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">brat font generator</Link> to focus on typography and font styling.
+              Use the brat font generator to focus on typography and font styling.
             </li>
           </ul>
         </div>

@@ -88,7 +88,7 @@ export default function BratFontBlogPage() {
             The easiest way to get the exact look without the hassle is to use an online tool that has the typography rules already built in. You don't need to hunt for a font download or open Photoshop.
           </p>
           <p className="mb-4">
-            By using a dedicated <Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">brat font generator</Link>, you can type your phrase and immediately see it formatted with the correct boldness, spacing, and alignment. These tools run directly in your web browser, removing the need for any software installation. They apply the strict typographic rules required for the aesthetic so that your text looks authentic right away.
+            By using a dedicated brat font generator, you can type your phrase and immediately see it formatted with the correct boldness, spacing, and alignment. These tools run directly in your web browser, removing the need for any software installation. They apply the strict typographic rules required for the aesthetic so that your text looks authentic right away.
           </p>
           <p>
             This approach is faster, completely free, and ensures that the final image looks intentional and polished, rather than like a poorly edited knockoff.
@@ -103,7 +103,7 @@ export default function BratFontBlogPage() {
             If your only goal is to turn words into a clean graphic, using a specialized tool is the most efficient method. These generators are designed specifically for the Brat trend, meaning the layout engine handles the complicated parts of the typography automatically.
           </p>
           <p className="mb-4">
-            For pure typography outputs without the complexity of layering images or adding stickers, the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> is the ideal solution. It allows you to create high-resolution PNG images featuring nothing but your text, styled perfectly to match the aesthetic.
+            For pure typography outputs without the complexity of layering images or adding stickers, the brat text generator is the ideal solution. It allows you to create high-resolution PNG images featuring nothing but your text, styled perfectly to match the aesthetic.
           </p>
           <p className="mb-4">
             All you do is enter your text, adjust the size if necessary, pick your background color (from classic neon green to pink, black, or white), and hit download. The result is a sharp, instantly shareable visual that is ready for any platform.

@@ -1,6 +1,5 @@
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
-import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 import Link from "next/link";
 
 export const metadata = {
@@ -17,7 +16,7 @@ export default function BratSummerMemeGeneratorPage() {
   return (
     <main className="space-y-10">
 
-      <section>
+<section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Summer Meme Generator</h1>
@@ -25,6 +24,9 @@ export default function BratSummerMemeGeneratorPage() {
               Create viral brat summer memes in seconds with this free online brat summer meme generator. 
               Whether you&apos;re looking for a quick brat summer meme maker or a simple way to design 
               brat summer memes, this tool captures the popular aesthetic so your content stands out.
+            </p>
+            <p className="mb-5">
+              Looking for the full tool? Use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create images, memes, and more in one place.
             </p>
           </div>
         </div>
@@ -247,8 +249,7 @@ export default function BratSummerMemeGeneratorPage() {
         ]}
       />
 
-      <MoreBratGeneratorTools />
-
+      
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Conclusion</h2>
@@ -269,13 +270,7 @@ export default function BratSummerMemeGeneratorPage() {
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <p>
-            Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> to create custom brat-style visuals. Use our <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> to generate brat text only, or the <Link href="/" className="text-primary underline hover:no-underline">brat generator</Link> for memes and full graphics.
-          </p>
-        </div>
-      </section>
+      
     </main>
   );
 }

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
-import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 
 export const metadata = {
   title: {
@@ -17,7 +16,7 @@ export default function BratGeneratorPinkPage() {
   return (
     <main className="space-y-10">
 
-      <section>
+<section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Pink Brat Generator</h1>
@@ -27,6 +26,9 @@ export default function BratGeneratorPinkPage() {
               need a pink brat generator for memes or a brat text generator
               pink for captions and profile designs, this tool delivers
               in seconds right in your browser.
+            </p>
+            <p className="mb-5">
+              Looking for the full tool? Use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create images, memes, and more in one place.
             </p>
           </div>
         </div>
@@ -187,7 +189,7 @@ export default function BratGeneratorPinkPage() {
             editing precision.
           </p>
           <p>
-            For a focused text-only workflow without color-specific presets, the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> is built specifically for creating clean brat text PNG images in any color.
+            For a focused text-only workflow without color-specific presets, the brat text generator is built specifically for creating clean brat text PNG images in any color.
           </p>
         </div>
       </section>
@@ -288,17 +290,7 @@ export default function BratGeneratorPinkPage() {
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Other Brat Color Generators</h2>
-          <p>
-            Try other color styles using our <Link href="/brat-green-generator/" className="text-primary underline hover:no-underline">brat green generator</Link>, <Link href="/brat-black-generator/" className="text-primary underline hover:no-underline">brat black generator</Link>, or the <Link href="/brat-generator-white/" className="text-primary underline hover:no-underline">brat generator white</Link>.
-          </p>
-          <p className="mt-4">
-            You can also use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> for full visual layouts or the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> for text-focused designs.
-          </p>
-        </div>
-      </section>
+      
 
       <FAQAccordion
         title="Frequently Asked Questions"
@@ -323,9 +315,6 @@ export default function BratGeneratorPinkPage() {
             tones, clean typography, and fast PNG export, it is one of
             the simplest ways to create pink Brat text online.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-foreground/90">
-            Use our <a href="/" className="text-primary underline">free brat generator</a> to create brat-style images instantly.
-          </p>
           <p>
             If you are looking for a reliable pink brat generator or want
             to create soft brat pink visuals quickly, this tool provides
@@ -334,13 +323,7 @@ export default function BratGeneratorPinkPage() {
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <p>
-            Use our <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> to generate brat text as PNG. If you want to create all types of brat visuals, use the <Link href="/" className="text-primary underline hover:no-underline">free brat generator</Link>.
-          </p>
-        </div>
-      </section>
+      
     </main>
   );
 }

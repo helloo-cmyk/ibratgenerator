@@ -6,7 +6,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 const BRAT_TEXT_EXAMPLES = [
   { src: "/examples/brat2.png", phrase: "stay toxic", alt: "brat text generator example stay toxic" },
   { src: "/examples/brat1.png", phrase: "brat summer", alt: "brat text png example brat summer" },
-  { src: "/examples/brat3.png", phrase: "main character energy", alt: "brat text generator example main character energy" },
+  { src: "/examples/brat3.png", phrase: "main character energy", alt: "brat text maker example main character energy" },
   { src: "/examples/brat5.png", phrase: "delulu mode activated", alt: "brat text png example delulu mode activated" },
   { src: "/examples/brat6.png", phrase: "hot girl music", alt: "brat text generator example hot girl music" },
   { src: "/examples/brat4.png", phrase: "chaotic good", alt: "brat text png example chaotic good" },
@@ -31,7 +31,7 @@ export default function BratTextGeneratorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Text Generator</h1>
             <p className="mb-5">
-              This tool is designed specifically for creating brat text PNG images.
+              This tool is focused on text only. For full features like images, memes, and covers, use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link>.
             </p>
           </div>
         </div>
@@ -48,10 +48,10 @@ export default function BratTextGeneratorPage() {
             Brat text style is the minimalist typography tied to the Brat aesthetic—bold sans-serif type, clean spacing, and little or no decoration. It became iconic through the Charli XCX–inspired Brat era and is used for brat captions, album-style titles, and short statement one-liners that keep text front and center.
           </p>
           <p className="mb-4">
-            The look is intentionally stripped-down: no script fonts, no heavy effects—just clear, confident letterforms that read well at any size. This brat text generator recreates that style so you can make brat captions, brat album text, and album-style typography that match the brat look without design software.
+            The look is intentionally stripped-down: no script fonts, no heavy effects—just clear, confident letterforms that read well at any size. This brat text maker recreates that style so you can make brat captions, brat album text, and album-style typography that match the brat look without design software.
           </p>
           <p>
-            Whether you want a single word or a short phrase, the generator gives you the same bold, minimal brat text style in seconds, with control over color, size, and layout.
+            Whether you want a single word or a short phrase, the brat text generator gives you the same bold, minimal brat text style in seconds, with control over color, size, and layout to export as a brat text png.
           </p>
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function BratTextGeneratorPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What This Tool Does</h2>
           <p className="mb-4">
-            The Brat Text Generator is a fast and simple tool that lets you
+            The Brat Text Maker is a fast and simple tool that lets you
             create Brat-style text images in seconds. It transforms your
             words into bold, clean, minimal typography inspired by the Brat
             aesthetic popularized by Charli XCX. You can use this tool to
@@ -69,9 +69,9 @@ export default function BratTextGeneratorPage() {
           </p>
           <p className="mb-4">
             Instead of manually editing fonts or struggling with design
-            software, this generator does everything automatically. You
+            software, this brat text maker does everything automatically. You
             type your text, choose a color style, adjust spacing and
-            layout, and download a high-quality image instantly.
+            layout, and download a high-quality brat text png instantly.
           </p>
           <p>The tool works entirely online, updates in real time, and requires no signup.</p>
         </div>
@@ -81,7 +81,7 @@ export default function BratTextGeneratorPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who This Tool Is For</h2>
           <p className="mb-4">
-            This Brat Text Generator is made for anyone who wants clean
+            This Brat Text Maker is made for anyone who wants clean
             Brat-style text without complexity.
           </p>
           <p className="mb-4">It&apos;s ideal for:</p>
@@ -93,7 +93,7 @@ export default function BratTextGeneratorPage() {
             <li>Designers who want fast Brat typography</li>
             <li>People making album-style text graphics</li>
             <li>Users who want Brat text without photo editing</li>
-            <li>Anyone looking for a simple text-based generator</li>
+            <li>Anyone looking for a simple text maker</li>
           </ul>
           <p>If your focus is text — not images or photo edits — this tool is built specifically for that purpose.</p>
         </div>
@@ -101,11 +101,11 @@ export default function BratTextGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Main Features of the Brat Text Generator</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Main Features of the Brat Text Maker</h2>
 
-          <h3 className="text-xl font-semibold mt-6">1. Clean Brat Typography</h3>
+          <h3 className="text-xl font-semibold mt-6">1. Clean Typography</h3>
           <p className="mb-4">
-            The generator applies bold, minimal text styling that matches
+            The tool applies bold, minimal text styling that matches
             the Brat look. Characters are clean, evenly spaced, and
             visually balanced.
           </p>
@@ -152,15 +152,15 @@ export default function BratTextGeneratorPage() {
 
           <h3 className="text-xl font-semibold mt-6">5. High-Quality PNG Export</h3>
           <p className="mb-6">
-            Every text design downloads as a sharp PNG file. The output
+            Every design downloads as a sharp brat text png file. The output
             stays clean on all platforms, including Instagram, TikTok,
             Twitter (X), and Discord.
           </p>
 
           <h3 className="text-xl font-semibold mt-6">6. Mobile-Friendly Editing</h3>
           <p className="mb-6">
-            The generator allows you to place emojis anywhere on the canvas.
-            You can:
+            The text maker allows you to place emojis anywhere on the canvas.
+            You can edit easily from your phone.
           </p>
 
           <h3 className="text-xl font-semibold mt-6">7. Instant Rendering</h3>
@@ -173,7 +173,7 @@ export default function BratTextGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How Brat Text Generator Works</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How Brat Text Maker Works</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1 — Enter Your Text</h3>
           <p className="mb-4">Type your caption, lyric, quote, or short statement into the editor.</p>
@@ -203,7 +203,7 @@ export default function BratTextGeneratorPage() {
           </p>
 
           <h3 className="text-xl font-semibold mt-6">Step 4 — Download Your Text Image</h3>
-          <p>Once finished, download your Brat text as a PNG. No watermark. No limits. No signup.</p>
+          <p>Once finished, download your brat text png. No watermark. No limits. No signup.</p>
         </div>
       </section>
 
@@ -211,9 +211,9 @@ export default function BratTextGeneratorPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Why Use the Brat Text Generator</h2>
           <p className="mb-4">
-            Other text generators try to do everything — image editing, collages, stickers — which makes them slow and cluttered. This brat text generator is built for one purpose: creating clean brat text PNG images, fast.
+            Other tools try to do everything — image editing, collages, stickers — which makes them slow and cluttered. This brat text generator is built for one purpose: creating clean brat text png output, fast.
           </p>
-          <p className="mb-4">Compared to general-purpose tools, this brat text generator offers:</p>
+          <p className="mb-4">Compared to general-purpose design apps, this brat text maker offers:</p>
           <ul className="mb-4 list-inside list-disc space-y-1">
             <li>typography-first design — no image editing clutter</li>
             <li>instant text-to-PNG conversion</li>
@@ -222,7 +222,7 @@ export default function BratTextGeneratorPage() {
             <li>zero signup — open and start typing</li>
             <li>mobile-optimized text editing</li>
           </ul>
-          <p>If you need images, memes, or profile pictures, the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> is the right tool. If your goal is text, this is the faster, focused alternative.</p>
+          <p>If your goal is text, this is the faster, focused alternative to complex design software.</p>
 
           <h3 className="text-xl font-semibold mt-6">Examples of What You Can Create</h3>
           <p className="mb-4">Using this Brat Text Generator, you can make:</p>
@@ -247,7 +247,7 @@ export default function BratTextGeneratorPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Brat Text Generator Examples</h2>
           <p className="mb-6">
-            The images below are example outputs created using this brat text generator. Each one shows the bold, minimal brat text style you can make with the tool—type your own phrase above to get similar results.
+            The images below are example outputs created using this brat text generator. Each one shows the bold, minimal brat text style you can make with the tool—type your own phrase above to get similar results as a brat text png.
           </p>
           <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6 list-none pl-0">
             {BRAT_TEXT_EXAMPLES.map(({ src, phrase, alt }) => (
@@ -298,7 +298,7 @@ export default function BratTextGeneratorPage() {
           </ul>
 
           <h3 className="text-xl font-semibold mt-6">Album-Style Text</h3>
-          <p className="mb-4">Longer phrases and lyric fragments styled as album-inspired brat text typography.</p>
+          <p className="mb-4">Longer phrases and lyric fragments styled as album-inspired typography.</p>
           <ul className="mb-6 list-inside list-disc space-y-1">
             <li>brat summer</li>
             <li>365 party girl</li>
@@ -320,14 +320,14 @@ export default function BratTextGeneratorPage() {
           </ul>
 
           <p>
-            Type any of these phrases into the brat text generator above to create your own brat text PNG instantly.
+            Type any of these phrases into the brat text generator above to create your own brat text png instantly.
           </p>
         </div>
       </section>
 
       <FAQAccordion
         title="Frequently Asked Questions"
-        intro="Here are some common questions about our Brat Generator"
+        intro="Here are some common questions about our Brat Text Generator"
         items={[
           { question: "Is the Brat Text Generator free?", answer: <p>Yes. You can generate unlimited Brat-style text for free.</p> },
           { question: "Do I need to sign up?", answer: <p>No account is required.</p> },
@@ -336,7 +336,7 @@ export default function BratTextGeneratorPage() {
           { question: "Can I use custom colors?", answer: <p>Yes. You can select any color, including custom hex codes.</p> },
           { question: "Does it work on mobile?", answer: <p>Yes. The tool is fully optimized for mobile devices.</p> },
           { question: "Can I use the text commercially?", answer: <p>Yes. You can use your generated text for personal or commercial projects.</p> },
-          { question: "Is this an official Charli XCX tool?", answer: <p>No. This is a fan-made generator inspired by the Brat aesthetic. It is not officially connected to Charli XCX.</p> },
+          { question: "Is this officially connected to Charli XCX?", answer: <p>No. This is a fan-made text tool inspired by the Brat aesthetic.</p> },
         ]}
       />
 
@@ -344,38 +344,15 @@ export default function BratTextGeneratorPage() {
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Conclusion</h2>
           <p className="mb-4">
-            The Brat Text Generator is the easiest way to create bold,
+            The Brat Text Maker is the easiest way to create bold,
             clean Brat-style text images without design software. With
             simple controls, real-time editing, and high-quality PNG
             exports, it&apos;s perfect for captions, album-style text, and
             minimalist visuals.
           </p>
           <p className="mt-4 text-base leading-relaxed text-foreground/90">
-            Use our <a href="/" className="text-primary underline">free brat generator</a> to create brat-style images instantly.
-          </p>
-          <p>
-            If you want fast, free, and accurate Brat text creation, this
-            generator delivers exactly what you need.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Other Brat Generator Tools</h2>
-          <p className="mb-4">
-            Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> for brat images, memes, and profile pictures. Try the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat creator</Link> for advanced editing with full customization. Explore the <Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">brat font generator</Link> for typography, the <Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">brat album cover generator</Link> for cover art, or the <Link href="/brat-summer-meme-generator/" className="text-primary underline hover:no-underline">brat summer generator</Link> for viral text posts.
-          </p>
-          <p>
-            If you want to create full images instead of text-only designs, try the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link>.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <p>
-            If you want to create all types of brat visuals, use the <Link href="/" className="text-primary underline hover:no-underline">free brat generator</Link>.
+            If you want fast and accurate typography creation, this
+            text maker delivers exactly what you need.
           </p>
         </div>
       </section>

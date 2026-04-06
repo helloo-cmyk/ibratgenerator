@@ -1,7 +1,6 @@
 import Link from "next/link";
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
-import MoreBratGeneratorTools from "@/components/MoreBratGeneratorTools";
 
 export const metadata = {
   title: {
@@ -17,12 +16,15 @@ export default function BratAlbumCoverGeneratorPage() {
   return (
     <main className="space-y-10">
 
-      <section>
+<section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Album Cover Generator</h1>
             <p className="mb-5">
               Use this brat album cover generator and brat album cover maker to make your own brat album cover in seconds. Create Brat-style album covers instantly — no design software needed.
+            </p>
+            <p className="mb-5">
+              Looking for the full tool? Use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create images, memes, and more in one place.
             </p>
           </div>
         </div>
@@ -333,13 +335,7 @@ export default function BratAlbumCoverGeneratorPage() {
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <p>
-            Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> to create custom brat-style visuals. Use our <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> to generate brat text only. If you want to create all types of brat visuals, use the <Link href="/" className="text-primary underline hover:no-underline">free brat generator</Link>.
-          </p>
-        </div>
-      </section>
+      
     </main>
   );
 }

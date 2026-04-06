@@ -26,12 +26,15 @@ export default function BratGeneratorWhitePage() {
   return (
     <main className="space-y-10">
 
-      <section>
+<section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">White Brat Generator</h1>
             <p className="mb-5">
               Use this brat generator white to create clean, minimalist Brat-style captions, meme text, and typography instantly. The white brat generator lets you design subtle Brat visuals with balanced spacing and modern layouts. Type your text, customize the style, and download your design in seconds.
+            </p>
+            <p className="mb-5">
+              Looking for the full tool? Use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create images, memes, and more in one place.
             </p>
           </div>
         </div>
@@ -157,7 +160,7 @@ export default function BratGeneratorWhitePage() {
             to create and download visuals directly from your phone.
           </p>
           <p>
-            For pure text designs without any color-specific presets, the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text maker</Link> offers a streamlined way to generate brat-style typography in any shade you choose.
+            For pure text designs without any color-specific presets, the brat text generator offers a streamlined way to generate brat-style typography in any shade you choose.
           </p>
         </div>
       </section>
@@ -263,17 +266,7 @@ export default function BratGeneratorWhitePage() {
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Other Brat Color Generators</h2>
-          <p>
-            Try other color styles using our <Link href="/brat-green-generator/" className="text-primary underline hover:no-underline">brat green generator</Link>, <Link href="/brat-generator-pink/" className="text-primary underline hover:no-underline">brat generator pink</Link>, or the <Link href="/brat-black-generator/" className="text-primary underline hover:no-underline">brat black generator</Link>.
-          </p>
-          <p className="mt-4">
-            You can also use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">brat maker</Link> for full visual layouts or the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> for text-focused designs.
-          </p>
-        </div>
-      </section>
+      
 
       <FAQAccordion
         title="Frequently Asked Questions"
@@ -298,9 +291,6 @@ export default function BratGeneratorWhitePage() {
             it&apos;s perfect for creators who want a softer and more
             modern Brat aesthetic.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-foreground/90">
-            Use our <a href="/" className="text-primary underline">free brat generator</a> to create brat-style images instantly.
-          </p>
           <p>
             If you&apos;re looking for simple, elegant Brat designs without
             distractions, this generator delivers exactly what you need.
@@ -308,22 +298,9 @@ export default function BratGeneratorWhitePage() {
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Other Brat Generator Tools</h2>
-          <p className="mb-4">
-            Use the <Link href="/brat-maker/" className="text-primary underline hover:no-underline">Brat Creator</Link> for all-in-one brat graphics, the <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link> to generate brat text, the <Link href="/brat-font-generator/" className="text-primary underline hover:no-underline">brat font tool</Link> for typography, the <Link href="/brat-album-cover-generator/" className="text-primary underline hover:no-underline">brat album maker</Link>, or the <Link href="/brat-summer-meme-generator/" className="text-primary underline hover:no-underline">Brat Summer Meme Generator</Link> for viral memes. For other colors, try the <Link href="/brat-generator-pink/" className="text-primary underline hover:no-underline">brat generator pink</Link>, <Link href="/brat-green-generator/" className="text-primary underline hover:no-underline">brat green generator</Link>, or <Link href="/brat-black-generator/" className="text-primary underline hover:no-underline">brat black generator</Link>.
-          </p>
-        </div>
-      </section>
+      
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <p>
-            To generate brat text only, use our <Link href="/brat-text-generator/" className="text-primary underline hover:no-underline">brat text generator</Link>. If you want to create all types of brat visuals, use the <Link href="/" className="text-primary underline hover:no-underline">free brat generator</Link>.
-          </p>
-        </div>
-      </section>
+      
     </main>
   );
 }
