@@ -67,6 +67,20 @@ export default function BratGreenGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Explore More Color Styles</h2>
+          <p className="mb-4">
+            Want to try a different color theme? These generators use the same brat style with different palettes.
+          </p>
+          <ul className="space-y-2 list-none pl-0">
+            <li><Link href="/brat-generator-pink" className="text-primary hover:underline">Pink Brat Generator</Link> — Softer tones with the same bold typography.</li>
+            <li><Link href="/brat-black-generator" className="text-primary hover:underline">Black Brat Generator</Link> — High-contrast dark visuals for a sharper look.</li>
+            <li><Link href="/brat-text-generator" className="text-primary hover:underline">Brat Text Generator</Link> — Quick text-only designs with fast PNG export.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who This Tool Is For</h2>
           <p className="mb-4">
             This generator is made for creators who want the

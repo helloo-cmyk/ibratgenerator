@@ -31,7 +31,7 @@ export default function BratTextGeneratorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Text Generator</h1>
             <p className="mb-5">
-              This tool is focused on text only. For full features like images, memes, and covers, use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link>.
+              Focus entirely on typography with this dedicated text styling suite. Easily create crisp, minimal quotes and captions ready to drop smoothly into any post.
             </p>
           </div>
         </div>
@@ -39,6 +39,12 @@ export default function BratTextGeneratorPage() {
 
       <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
         <BratGeneratorLazy />
+      </section>
+
+      <section className="-mt-4 mb-10 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base text-foreground/80">
+          For full features like images, memes, and album covers, try the <Link href="/" className="text-primary hover:underline">free brat generator</Link>.
+        </div>
       </section>
 
       <section>
@@ -53,6 +59,19 @@ export default function BratTextGeneratorPage() {
           <p>
             Whether you want a single word or a short phrase, the brat text generator gives you the same bold, minimal brat text style in seconds, with control over color, size, and layout to export as a brat text png.
           </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Related Brat Tools</h2>
+          <p className="mb-4">
+            If you want to explore more ways to create brat-style designs, these tools can help depending on what you&apos;re trying to make.
+          </p>
+          <ul className="space-y-2 list-none pl-0">
+            <li><Link href="/brat-maker" className="text-primary hover:underline">Brat Maker</Link> — Use this if you want to create images, memes, or layered designs.</li>
+            <li><Link href="/brat-font-generator" className="text-primary hover:underline">Brat Font Generator</Link> — Ideal for adjusting typography, spacing, and font styling.</li>
+          </ul>
         </div>
       </section>
 

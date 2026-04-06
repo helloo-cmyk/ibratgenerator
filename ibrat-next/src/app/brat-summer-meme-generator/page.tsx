@@ -59,6 +59,20 @@ export default function BratSummerMemeGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Related Brat Tools</h2>
+          <p className="mb-4">
+            If you want to explore more ways to create brat-style designs, these tools can help depending on what you&apos;re trying to make.
+          </p>
+          <ul className="space-y-2 list-none pl-0">
+            <li><Link href="/brat-text-generator" className="text-primary hover:underline">Brat Text Generator</Link> — Best for quick text-only designs and fast PNG downloads.</li>
+            <li><Link href="/brat-maker" className="text-primary hover:underline">Brat Maker</Link> — Use this if you want to create images, memes, or layered designs.</li>
+            <li><Link href="/brat-font-generator" className="text-primary hover:underline">Brat Font Generator</Link> — Ideal for adjusting typography, spacing, and font styling.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who Uses the Brat Summer Meme Generator</h2>
           <p className="mb-4">
             This generator is designed for anyone who wants fast,

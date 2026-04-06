@@ -186,15 +186,38 @@ export default function Home() {
               </p>
             </div>
 
-            {/* WHAT YOU CAN CREATE */}
+            {/* CREATE BRAT DESIGNS */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">What You Can Create</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Create Brat Designs Instantly</h2>
+              <p className="mb-4">Start with the main tools depending on what you want to create. If you want to create brat memes or viral posts, you can use the <Link href="/brat-summer-meme-generator" className="text-primary hover:underline">meme creator</Link>. For album-style visuals, try the <Link href="/brat-album-cover-generator" className="text-primary hover:underline">album cover generator</Link>.</p>
               <ul className="list-inside list-disc space-y-2">
-                <li><strong>Brat text images</strong> — minimal quotes and captions on solid backgrounds</li>
-                <li><strong>Memes</strong> — viral one-liners in the brat style. See the <Link href="/brat-summer-meme-generator/" className="text-primary hover:underline font-medium">brat summer meme generator</Link> for trending formats.</li>
-                <li><strong>Profile pictures</strong> — square graphics with your name, sized for TikTok, Instagram, Discord, and X</li>
-                <li><strong>Album covers</strong> — Charli XCX–inspired artwork via the <Link href="/brat-album-cover-generator/" className="text-primary hover:underline font-medium">brat album cover generator</Link></li>
-                <li><strong>Social media graphics</strong> — posts, stories, and banners across every standard ratio</li>
+                <li><Link href="/brat-text-generator" className="text-primary hover:underline font-medium">Brat Text Generator</Link> — create text-only designs quickly</li>
+                <li><Link href="/brat-maker" className="text-primary hover:underline font-medium">Brat Maker</Link> — create images, memes, and visuals</li>
+                <li><Link href="/brat-font-generator" className="text-primary hover:underline font-medium">Brat Font Generator</Link> — adjust typography and spacing</li>
+                <li><Link href="/brat-summer-meme-generator" className="text-primary hover:underline font-medium">Brat Summer Meme Generator</Link> — create viral brat memes and trending posts</li>
+                <li><Link href="/brat-album-cover-generator" className="text-primary hover:underline font-medium">Brat Album Cover Generator</Link> — design album-style brat visuals</li>
+              </ul>
+            </div>
+
+            {/* EXPLORE COLOR STYLES */}
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Explore Color Styles</h2>
+              <p className="mb-4">Try different variations of the brat aesthetic. If you want to generate bold visuals quickly, you can also use the <Link href="/brat-text-generator" className="text-primary hover:underline">text tool</Link> as a starting point before applying colors.</p>
+              <ul className="list-inside list-disc space-y-2">
+                <li><Link href="/brat-green-generator" className="text-primary hover:underline font-medium">Green Brat Generator</Link> — classic neon style</li>
+                <li><Link href="/brat-generator-pink" className="text-primary hover:underline font-medium">Pink Brat Generator</Link> — softer aesthetic</li>
+                <li><Link href="/brat-black-generator" className="text-primary hover:underline font-medium">Black Brat Generator</Link> — high contrast dark style</li>
+                <li><Link href="/brat-generator-white" className="text-primary hover:underline font-medium">White Brat Generator</Link> — clean minimalist look</li>
+              </ul>
+            </div>
+
+            {/* LEARN HOW BRAT STYLE WORKS */}
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Learn How Brat Style Works</h2>
+              <p className="mb-4">If you want to understand the design style before creating, start here. Once you understand the basics, you can use the <Link href="/brat-text-generator" className="text-primary hover:underline">text generator tool</Link> to create your own designs instantly.</p>
+              <ul className="list-inside list-disc space-y-2">
+                <li><Link href="/blog/what-is-brat-font" className="text-primary hover:underline font-medium">what is the brat font</Link> — typography explained</li>
+                <li><Link href="/blog/how-to-make-brat-text" className="text-primary hover:underline font-medium">how to make brat text</Link> — step-by-step guide</li>
               </ul>
             </div>
 

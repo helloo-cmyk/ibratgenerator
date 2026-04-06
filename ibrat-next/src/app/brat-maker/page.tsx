@@ -21,17 +21,21 @@ export default function BratMakerPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground">Brat Maker</h1>
             <p className="mt-4 text-base leading-relaxed text-foreground/90 text-center max-w-2xl mx-auto">
-              Use this free brat maker to create brat images, memes, and profile pictures instantly. No signup required.
+              A complete editing suite to craft bold typography images, viral memes, and aesthetic profile pictures. Start creating instantly without needing to create an account.
             </p>
-            <p className="mb-5">
-              This page is for creating brat images and memes. For full features including text and album covers, use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link>.
-            </p>
+            
           </div>
         </div>
       </section>
 
       <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
         <BratGeneratorLazy />
+      </section>
+
+      <section className="-mt-4 mb-10 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base text-foreground/80">
+          For full features like images, memes, and album covers, try the <Link href="/" className="text-primary hover:underline">free brat generator</Link>.
+        </div>
       </section>
 
       <section>
@@ -58,6 +62,19 @@ export default function BratMakerPage() {
             It works smoothly on desktop and mobile, updates in real time,
             and exports high-quality PNG files with no watermark.
           </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Related Brat Tools</h2>
+          <p className="mb-4">
+            If you want to explore more ways to create brat-style designs, these tools can help depending on what you&apos;re trying to make.
+          </p>
+          <ul className="space-y-2 list-none pl-0">
+            <li><Link href="/brat-text-generator" className="text-primary hover:underline">Brat Text Generator</Link> — Best for quick text-only designs and fast PNG downloads.</li>
+            <li><Link href="/brat-font-generator" className="text-primary hover:underline">Brat Font Generator</Link> — Ideal for adjusting typography, spacing, and font styling.</li>
+          </ul>
         </div>
       </section>
 

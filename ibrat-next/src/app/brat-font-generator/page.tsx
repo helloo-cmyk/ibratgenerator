@@ -21,13 +21,16 @@ export default function BratFontGeneratorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Font Generator</h1>
             <p className="mb-5">
-              Explore the typography behind the Brat aesthetic. Learn what makes the brat font style iconic, then use the tool below to create your own brat-style text.
+              Dive into the minimal typography that defines the aesthetic. Learn exactly what makes the narrow Arial font style so iconic, and use the tool below to style your own text.
             </p>
-            <p className="mb-5">
-              Looking for the full tool? Use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create images, memes, and more in one place.
-            </p>
+            
           </div>
         </div>
+      </section>
+
+      {/* Tool — placed directly below hero for best UX */}
+      <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
+        <BratGeneratorLazy />
       </section>
 
       {/* Educational section — primary focus of the page */}
@@ -36,7 +39,8 @@ export default function BratFontGeneratorPage() {
           What Is the Brat Font?
         </h2>
         <p className="mt-4 text-base leading-relaxed text-foreground/90">
-          The brat font is not a single official typeface, but a style inspired by bold, clean, and minimal sans-serif typography. It focuses on strong letter spacing, simple alignment, and high contrast visuals that became popular with the brat aesthetic.
+          The brat font is not a single official typeface, but a style inspired by bold, clean, and minimal sans-serif typography. It focuses on strong letter spacing, simple alignment, and high contrast visuals that became popular with the brat aesthetic. If you want a deeper breakdown, you can read our guide on{" "}
+          <Link href="/blog/what-is-brat-font" className="text-primary hover:underline">what the brat font actually is</Link>.
         </p>
       </section>
 
@@ -78,16 +82,20 @@ export default function BratFontGeneratorPage() {
         </div>
       </section>
 
-      {/* Tool — secondary to the informational content */}
-      <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center mb-6">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-2">Try the Brat Font Generator</h2>
-          <p className="text-base text-foreground/90">Type your text below to preview and download brat-style typography.</p>
-        </div>
-        <BratGeneratorLazy />
-      </section>
+
 
       {/* Differentiation section — clearly separates this page from brat-text-generator */}
+      <section className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Related Brat Tools</h2>
+        <p className="mt-4 text-base leading-relaxed text-foreground/90 mb-4">
+          If you want to explore more ways to create brat-style designs, these tools can help depending on what you&apos;re trying to make.
+        </p>
+        <ul className="space-y-2 list-none pl-0 text-base leading-relaxed text-foreground/90">
+          <li><Link href="/brat-text-generator" className="text-primary hover:underline">Brat Text Generator</Link> — Best for quick text-only designs and fast PNG downloads.</li>
+        </ul>
+      </section>
+
+      {/* Differentiation section */}
       <section className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
         <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
           Brat Font Generator vs Brat Text Generator
@@ -102,7 +110,9 @@ export default function BratFontGeneratorPage() {
         </ul>
 
         <p className="mt-4">
-          If you want to quickly create text images, use the brat text generator.
+          If your goal is to generate text quickly instead of adjusting typography manually, the{" "}
+          <Link href="/brat-text-generator" className="text-primary hover:underline">text tool</Link>{" "}
+          is usually faster.
         </p>
       </section>
 
@@ -226,8 +236,11 @@ export default function BratFontGeneratorPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Learn More About Brat Typography</h2>
           <p>
-            To brat text generator as PNG, use our brat text generator.
+            If you want to understand the font style in more detail, read our{" "}
+            <Link href="/blog/what-is-brat-font" className="text-primary hover:underline">full breakdown of the brat font</Link>{" "}
+            and how it is used.
           </p>
         </div>
       </section>

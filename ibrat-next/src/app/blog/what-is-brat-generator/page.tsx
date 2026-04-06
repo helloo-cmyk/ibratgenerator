@@ -100,6 +100,26 @@ export default function WhatIsBratGeneratorPage() {
           <p className="mb-4">
             Furthermore, the minimalist nature of the image forces the viewer to focus entirely on the text itself. Whether the text is a sincere quote, a corporate brand hopping on a trend, or an ironic one-liner, the visual framing makes the message feel confident and unapologetic.
           </p>
+          <p>
+            If you want to try it yourself, you can use the{" "}
+            <Link href="/brat-text-generator" className="text-primary hover:underline">brat text tool</Link>{" "}
+            to quickly create and download your design.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">
+            Try These Tools
+          </h2>
+          <p className="mb-4">
+            If you want to go beyond basic text, here are a few useful tools:
+          </p>
+          <ul className="space-y-2 list-none pl-0">
+            <li><Link href="/brat-maker" className="text-primary hover:underline">Brat Maker</Link> — create full images and memes</li>
+            <li><Link href="/brat-font-generator" className="text-primary hover:underline">Brat Font Generator</Link> — control typography and spacing</li>
+          </ul>
         </div>
       </section>
 

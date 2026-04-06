@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: {
     absolute: "About Us | Ibrat Generator",
@@ -193,6 +195,23 @@ export default function AboutUsPage() {
             Brat-inspired text content in seconds! Try the generator on the
             homepage — no signup required. We hope you enjoy using it as much
             as we enjoyed building it.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Start Creating</h2>
+          <p className="mb-4">
+            If you want to try the tools, you can start with the{" "}
+            <Link href="/brat-maker" className="text-primary hover:underline">image editor</Link>{" "}
+            for full image creation, or use the{" "}
+            <Link href="/brat-text-generator" className="text-primary hover:underline">text generator tool</Link>{" "}
+            for quick text designs.
+          </p>
+          <p>
+            You can also explore how the typography works using the{" "}
+            <Link href="/brat-font-generator" className="text-primary hover:underline">font styling tool</Link>.
           </p>
         </div>
       </section>

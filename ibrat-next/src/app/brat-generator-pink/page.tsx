@@ -70,6 +70,20 @@ export default function BratGeneratorPinkPage() {
 
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Explore More Color Styles</h2>
+          <p className="mb-4">
+            Want to try a different color theme? These generators use the same brat style with different palettes.
+          </p>
+          <ul className="space-y-2 list-none pl-0">
+            <li><Link href="/brat-green-generator" className="text-primary hover:underline">Green Brat Generator</Link> — The classic neon green brat aesthetic.</li>
+            <li><Link href="/brat-generator-white" className="text-primary hover:underline">White Brat Generator</Link> — Clean, minimal visuals with a neutral palette.</li>
+            <li><Link href="/brat-text-generator" className="text-primary hover:underline">Brat Text Generator</Link> — Quick text-only designs with fast PNG export.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Who This Tool Is For</h2>
           <p className="mb-4">
             The brat generator pink is designed for creators who want

@@ -112,9 +112,14 @@ export default function HowToMakeBratTextPage() {
             </li>
           </ol>
 
-          <p>
+          <p className="mb-4">
             If you follow these steps in order, you'll usually get brat text that looks clean right away.
             You'll also spend less time fixing avoidable issues like low contrast or poor scaling.
+          </p>
+          <p>
+            If you want to try it yourself, you can use the{" "}
+            <Link href="/brat-text-generator" className="text-primary hover:underline">brat text tool</Link>{" "}
+            to quickly create and download your design.
           </p>
         </div>
       </section>
@@ -187,30 +192,14 @@ export default function HowToMakeBratTextPage() {
       <section>
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">
-            Tools you can use
+            Try These Tools
           </h2>
           <p className="mb-4">
-            If you want more than text-only exports, choose the tool that matches your goal.
+            If you want to go beyond basic text, here are a few useful tools:
           </p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>
-              Use brat maker when you want to add brat text on images, create memes, or build profile graphics with extra control.
-            </li>
-            <li>
-              Use brat text generator for text-first designs and fast exports of brat text PNGs.
-            </li>
-          </ul>
-          <p>
-            If your only goal is typographic brat style, the text-focused approach usually saves the most time.
-          </p>
-
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>
-              Use the brat maker for image-based brat designs and profile graphics.
-            </li>
-            <li>
-              Use the brat font generator to focus on typography and font styling.
-            </li>
+          <ul className="space-y-2 list-none pl-0">
+            <li><Link href="/brat-maker" className="text-primary hover:underline">Brat Maker</Link> — create full images and memes</li>
+            <li><Link href="/brat-font-generator" className="text-primary hover:underline">Brat Font Generator</Link> — control typography and spacing</li>
           </ul>
         </div>
       </section>

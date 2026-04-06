@@ -90,8 +90,13 @@ export default function BratFontBlogPage() {
           <p className="mb-4">
             By using a dedicated brat font generator, you can type your phrase and immediately see it formatted with the correct boldness, spacing, and alignment. These tools run directly in your web browser, removing the need for any software installation. They apply the strict typographic rules required for the aesthetic so that your text looks authentic right away.
           </p>
-          <p>
+          <p className="mb-4">
             This approach is faster, completely free, and ensures that the final image looks intentional and polished, rather than like a poorly edited knockoff.
+          </p>
+          <p>
+            If you want to try it yourself, you can use the{" "}
+            <Link href="/brat-text-generator" className="text-primary hover:underline">text generator tool</Link>{" "}
+            to quickly create and download your design.
           </p>
         </div>
       </section>
@@ -123,6 +128,21 @@ export default function BratFontBlogPage() {
           <p>
             Stop wasting time looking for font downloads and start creating bold, minimal text visuals that demand attention.
           </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">
+            Try These Tools
+          </h2>
+          <p className="mb-4">
+            If you want to go beyond basic text, here are a few useful tools:
+          </p>
+          <ul className="space-y-2 list-none pl-0">
+            <li><Link href="/brat-maker" className="text-primary hover:underline">Brat Maker</Link> — create full images and memes</li>
+            <li><Link href="/brat-font-generator" className="text-primary hover:underline">Brat Font Generator</Link> — control typography and spacing</li>
+          </ul>
         </div>
       </section>
 
