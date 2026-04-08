@@ -26,15 +26,19 @@ export default function BratGreenGeneratorPage() {
               instantly. Use this green brat generator as a brat green text
               generator — no software to download, no signup required.
             </p>
-            <p className="mb-5">
-              Looking for the full tool? Use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create images, memes, and more in one place.
-            </p>
+
           </div>
         </div>
       </section>
 
       <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
         <BratGeneratorLazy />
+      </section>
+
+      <section className="-mt-4 mb-10 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base text-foreground/80">
+          Looking for all features? Try the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create memes, images, and more in one place.
+        </div>
       </section>
 
       <section>

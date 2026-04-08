@@ -33,6 +33,12 @@ export default function BratFontGeneratorPage() {
         <BratGeneratorLazy />
       </section>
 
+      <section className="-mt-4 mb-10 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base text-foreground/80">
+          Looking for all features? Try the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create memes, images, and more in one place.
+        </div>
+      </section>
+
       {/* Educational section — primary focus of the page */}
       <section className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
         <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">

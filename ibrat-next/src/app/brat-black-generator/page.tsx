@@ -23,15 +23,19 @@ export default function BratBlackGeneratorPage() {
             <p className="mb-5">
               The brat generator black lets you create high-contrast brat text and graphics on black backgrounds. Use this brat black generator as a brat text generator black for social posts, memes, and dark aesthetic visuals—no design software needed.
             </p>
-            <p className="mb-5">
-              Looking for the full tool? Use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create images, memes, and more in one place.
-            </p>
+
           </div>
         </div>
       </section>
 
       <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
         <BratGeneratorLazy />
+      </section>
+
+      <section className="-mt-4 mb-10 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base text-foreground/80">
+          Looking for all features? Try the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create memes, images, and more in one place.
+        </div>
       </section>
 
       <section>
@@ -230,7 +234,48 @@ export default function BratBlackGeneratorPage() {
         </div>
       </section>
 
-      
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why Use the Black Brat Generator?</h2>
+          <p className="mb-4">
+            Black brat visuals hit differently. While the original brat style is known for neon green, the black version creates a stronger, more dramatic look that stands out on dark interfaces. If you're posting on TikTok at night, creating edgy captions, or designing bold graphics, black brat text feels more intense and attention-grabbing.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">When Black Brat Works Best</h2>
+          <ul className="list-inside list-disc space-y-1">
+            <li>Night-mode social media posts (TikTok, X, Instagram)</li>
+            <li>Edgy meme captions with strong contrast</li>
+            <li>Dark aesthetic profile pictures</li>
+            <li>Minimal but bold statement graphics</li>
+            <li>Album-style visuals with a serious tone</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">How to Get Better Results</h2>
+          <p className="mb-4">
+            Keep your text short — ideally 1 to 4 words. Black brat designs work best when they stay minimal. Use high contrast colors like white or neon text on a pure black background. Avoid clutter. The power of this style comes from simplicity.
+          </p>
+          <p>
+            For best quality, export your image at 2048px or higher. This keeps the text sharp across all platforms.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Try Other Styles</h2>
+          <p>
+            If you want something brighter, try the <Link href="/brat-green-generator/" className="text-primary underline hover:no-underline font-semibold">green brat generator</Link> for the classic look, or go back to the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to access all styles in one place.
+          </p>
+        </div>
+      </section>
 
       <FAQAccordion
         title="Frequently Asked Questions"

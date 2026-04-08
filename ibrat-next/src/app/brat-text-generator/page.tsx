@@ -43,7 +43,7 @@ export default function BratTextGeneratorPage() {
 
       <section className="-mt-4 mb-10 text-center">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base text-foreground/80">
-          For full features like images, memes, and album covers, try the <Link href="/" className="text-primary hover:underline">free brat generator</Link>.
+          Looking for all features? Try the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create memes, images, and more in one place.
         </div>
       </section>
 
