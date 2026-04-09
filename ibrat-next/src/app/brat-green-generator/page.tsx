@@ -4,7 +4,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
   title: {
-    absolute: "Green Brat Generator – Create Green Brat Text & Images Instantly",
+    absolute: "Brat Green Generator – Create Green Brat Text & Images Instantly",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-green-generator/",
@@ -19,7 +19,7 @@ export default function BratGreenGeneratorPage() {
 <section>
         <div className="text-center">
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Green Brat Generator</h1>
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Green Generator</h1>
             <p className="mb-5">
               The brat green generator recreates the iconic neon green Brat
               aesthetic and lets you generate green Brat text and graphics
@@ -333,7 +333,48 @@ export default function BratGreenGeneratorPage() {
         </div>
       </section>
 
-      
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why the Green Brat Style Is the Original</h2>
+          <p className="mb-4">
+            The green brat aesthetic is the version most people recognize instantly. It became popular during the Charli XCX brat era and quickly spread across TikTok, Instagram, and meme culture. If you want your design to look authentic, this is the style you should start with.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Where Green Brat Works Best</h2>
+          <ul className="mb-4 list-inside list-disc space-y-1">
+            <li>Classic brat memes and viral captions</li>
+            <li>TikTok text overlays and edits</li>
+            <li>Fan edits inspired by Charli XCX</li>
+            <li>Profile pictures with recognizable style</li>
+            <li>Bold one-word or short phrase graphics</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">How to Make It Look Authentic</h2>
+          <p className="mb-4">
+            Keep your text lowercase and minimal. Most brat-style designs use short phrases — usually 1 to 3 words. The bright green background should stay clean, without too many extra elements.
+          </p>
+          <p>
+            Use square format for Instagram or vertical format for TikTok. Export at 2048px or higher so your image stays sharp when uploaded.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Try Other Styles</h2>
+          <p>
+            If you want a darker version, try the <Link href="/brat-black-generator" className="text-primary underline hover:no-underline font-semibold">black brat generator</Link>. You can also go back to the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to access all styles and features in one place.
+          </p>
+        </div>
+      </section>
 
       <FAQAccordion
         title="Frequently Asked Questions"
