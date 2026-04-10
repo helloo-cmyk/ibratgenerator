@@ -308,7 +308,49 @@ export default function BratGeneratorPinkPage() {
         </div>
       </section>
 
-      
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why Pink Brat Feels Different</h2>
+          <p className="mb-4">
+            Pink brat visuals have a softer, more aesthetic vibe compared to the original green style. Instead of looking bold and aggressive, pink feels more personal and styled. This makes it a better fit for Instagram posts, mood boards, and content where visuals matter more than shock value.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Where Pink Brat Works Best</h2>
+          <ul className="list-inside list-disc space-y-1">
+            <li>Instagram posts and story graphics</li>
+            <li>Aesthetic TikTok captions</li>
+            <li>Pinterest mood boards</li>
+            <li>Soft profile pictures and personal branding</li>
+            <li>Creative content with a balanced tone</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">How to Make It Look Better</h2>
+          <p className="mb-4">
+            Use soft pink or pastel shades instead of very bright tones. Pair the background with white or dark text for better readability. Keep your text centered and avoid long sentences — short phrases always perform better visually.
+          </p>
+          <p>
+            For Instagram, try 4:5 format to take more screen space. Export at 2048px or higher to keep the image sharp.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Try Other Styles</h2>
+          <p>
+            If you want a cleaner minimal look, try the <Link href="/brat-generator-white/" className="text-primary underline hover:no-underline font-semibold">white brat generator</Link>. For a more bold version, go with the <Link href="/brat-black-generator/" className="text-primary underline hover:no-underline font-semibold">black brat generator</Link>. You can also use the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to access all styles in one place.
+          </p>
+        </div>
+      </section>
 
       <FAQAccordion
         title="Frequently Asked Questions"
