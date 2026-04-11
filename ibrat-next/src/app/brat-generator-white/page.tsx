@@ -284,7 +284,36 @@ export default function BratGeneratorWhitePage() {
         </div>
       </section>
 
-      
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why White Brat Feels Clean and Minimal</h2>
+          <p className="mb-6">
+            White brat visuals are all about simplicity. Unlike bold green or dark black styles, white creates a clean and neutral look that works across different platforms. It feels less aggressive and more refined, which makes it perfect for minimal designs and personal branding.
+          </p>
+
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">When to Use White Brat</h2>
+          <ul className="mb-6 list-inside list-disc space-y-1">
+            <li>Minimalist Instagram profiles and posts</li>
+            <li>Clean captions for light-themed content</li>
+            <li>Personal branding visuals</li>
+            <li>Website graphics and headers</li>
+            <li>Subtle meme formats without strong colors</li>
+          </ul>
+
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">How to Get the Best Result</h2>
+          <p className="mb-4">
+            Use a pure white or slightly off-white background with dark text for clear contrast. Keep spacing balanced &mdash; white designs need more breathing room to look good. Avoid adding too many elements, as the strength of this style comes from its simplicity.
+          </p>
+          <p className="mb-6">
+            Export your design at 2048px or higher to maintain sharpness across all devices.
+          </p>
+
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Try Other Styles</h2>
+          <p>
+            If you want stronger contrast, try the <Link href="/brat-black-generator/" className="text-primary hover:underline">black brat generator</Link>. For a softer aesthetic look, use the <Link href="/brat-generator-pink/" className="text-primary hover:underline">pink brat generator</Link>. You can also go back to the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to access all styles in one place.
+          </p>
+        </div>
+      </section>
 
       <FAQAccordion
         title="Frequently Asked Questions"
