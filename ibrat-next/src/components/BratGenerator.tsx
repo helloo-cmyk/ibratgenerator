@@ -115,6 +115,7 @@ const BRAT_STYLES = `
 @media(min-width:1000px) {
   .brat-grid {
     flex-direction: row;
+    align-items: flex-start;
     gap: 24px;
     min-height: 600px;
   }
@@ -133,13 +134,17 @@ const BRAT_STYLES = `
   .brat-stage {
     flex: 1 1 auto;
     min-height: 500px;
+    position: relative;
   }
   .brat-canvas {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100% - 24px);
+    max-height: calc(100% - 24px);
+    width: auto;
+    height: auto;
   }
 }
 
@@ -418,7 +423,6 @@ const BRAT_STYLES = `
   display: block;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
-  object-fit: contain;
   touch-action: none;
 }
 

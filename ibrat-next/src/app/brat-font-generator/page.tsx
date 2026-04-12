@@ -21,7 +21,7 @@ export default function BratFontGeneratorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Font Generator</h1>
             <p className="mb-5">
-              Dive into the minimal typography that defines the aesthetic. Learn exactly what makes the narrow Arial font style so iconic, and use the tool below to style your own text.
+              This tool is designed for adjusting brat-style typography, including spacing and visual style. If you just want to generate text or captions, use the <Link href="/brat-text-generator/" className="text-primary hover:underline">brat text generator</Link> instead.
             </p>
             
           </div>

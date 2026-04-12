@@ -31,7 +31,7 @@ export default function BratTextGeneratorPage() {
           <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Text Generator</h1>
             <p className="mb-5">
-              Focus entirely on typography with this dedicated text styling suite. Easily create crisp, minimal quotes and captions ready to drop smoothly into any post.
+              This tool focuses on creating brat-style text and captions. If you want to adjust typography or font styling, use the <Link href="/brat-font-generator/" className="text-primary hover:underline">brat font generator</Link> instead.
             </p>
           </div>
         </div>

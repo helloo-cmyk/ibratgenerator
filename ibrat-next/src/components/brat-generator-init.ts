@@ -1220,12 +1220,9 @@ export function initBratGenerator(): () => void {
   function addSticker(char: string) {
     pushHistory();
     getOrCreateEmojiBitmap(char);
-    const size = 120;
-    const pad = 80;
-    const w = Math.max(pad * 2 + 100, c.width);
-    const h = Math.max(pad * 2 + 100, c.height);
-    const centerX = pad + Math.random() * (w - pad * 2);
-    const centerY = pad + Math.random() * (h - pad * 2);
+    const size = 250; 
+    const centerX = c.width / 2;
+    const centerY = c.height / 2;
     state.stickers.push(makeSticker(char, centerX, centerY, size, 0));
     selectedSticker = state.stickers.length - 1;
     hoveredTextHandle = null;
