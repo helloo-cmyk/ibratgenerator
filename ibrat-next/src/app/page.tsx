@@ -235,6 +235,13 @@ export default function Home() {
         </div>
       </section>
 
+      <section>
+        <div className="mx-auto max-w-3xl px-4 pb-8 sm:px-6 sm:pb-10">
+          <p className="text-base leading-relaxed text-foreground/90">
+            The free brat generator is designed to make creating brat-style visuals simple and fast. Instead of switching between multiple tools, you can generate text, images, and memes all in one place.
+          </p>
+        </div>
+      </section>
 
       {/* FAQ */}
       <FAQAccordion
