@@ -19,7 +19,7 @@ export const metadata = {
   alternates: {
     canonical: "https://ibratgenerator.com/brat-text-generator/",
   },
-  description: "Use our free brat text generator to create custom PNG text instantly. Perfect for memes and social media. No signup required.",
+  description: "Generate brat-style text and download PNG images instantly. Perfect for captions, memes, and aesthetic posts.",
 };
 
 export default function BratTextGeneratorPage() {

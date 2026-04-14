@@ -80,9 +80,9 @@ const breadcrumbSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Free Brat Generator – Create Brat Text, Images & Memes Online"
+    absolute: "Free Brat Generator – Create Brat Text, Images & Memes Instantly"
   },
-  description: "Use this free brat generator to create brat text, images, and memes instantly. No signup required.",
+  description: "Create brat text, memes, images, and album covers instantly using the free brat generator. No signup required — fast, simple, and easy to use.",
   alternates: {
     canonical: "https://ibratgenerator.com/",
   },

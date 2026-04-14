@@ -4,12 +4,12 @@ import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
   title: {
-    absolute: "Black Brat Generator – Create Black Brat Text & Images Instantly",
+    absolute: "Black Brat Generator – Create Dark Brat Text & Images Instantly",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-black-generator/",
   },
-  description: "Use our free black brat generator to create dark brat text and graphics instantly. High contrast aesthetic with no signup required.",
+  description: "Create bold black brat text and images with high contrast style. Perfect for dark themes, memes, and strong visuals.",
 };
 
 export default function BratBlackGeneratorPage() {
