@@ -42,6 +42,7 @@ const geistMono = Geist_Mono({
 });
 
 const GA_MEASUREMENT_ID = "G-XEV70REQ21";
+const ADSENSE_CLIENT_ID = "ca-pub-6288382637996752";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ibratgenerator.com"),
@@ -105,6 +106,13 @@ export default function RootLayout({
               gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: true });
             `,
           }}
+        />
+        <Script
+          id="adsense-loader"
+          async
+          strategy="afterInteractive"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+          crossOrigin="anonymous"
         />
         <script
           type="text/javascript"

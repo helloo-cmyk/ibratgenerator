@@ -352,6 +352,26 @@ export default function BratGeneratorPinkPage() {
         </div>
       </section>
 
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Related Tools</h2>
+          <p className="mb-4">
+            Looking to do more with your designs? These tools cover different parts of the brat workflow.
+          </p>
+          <ul className="space-y-3 list-none pl-0">
+            <li>
+              Use the <Link href="/brat-text-generator/" className="text-primary hover:underline">brat text generator</Link> to create captions and text-focused content.
+            </li>
+            <li>
+              Try the <Link href="/brat-maker/" className="text-primary hover:underline">brat maker</Link> for creating full images and shareable meme graphics.
+            </li>
+            <li>
+              Go with the <Link href="/brat-green-generator/" className="text-primary hover:underline">green brat generator</Link> if you want the classic neon look instead.
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Here are some common questions about our Brat Generator"

@@ -344,6 +344,26 @@ export default function BratTextGeneratorPage() {
         </div>
       </section>
 
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Related Tools</h2>
+          <p className="mb-4">
+            If you want to go beyond simple text, you can also explore other variations depending on your use case.
+          </p>
+          <ul className="space-y-3 list-none pl-0">
+            <li>
+              Try the <Link href="/brat-maker/" className="text-primary hover:underline">brat maker</Link> to create full images and meme-style designs.
+            </li>
+            <li>
+              Use the <Link href="/brat-font-generator/" className="text-primary hover:underline">brat font generator</Link> to adjust typography and spacing.
+            </li>
+            <li>
+              Explore the <Link href="/brat-green-generator/" className="text-primary hover:underline">green brat generator</Link> for the original style.
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Here are some common questions about our Brat Text Generator"

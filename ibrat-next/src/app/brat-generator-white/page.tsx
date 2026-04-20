@@ -315,6 +315,26 @@ export default function BratGeneratorWhitePage() {
         </div>
       </section>
 
+      <section>
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Related Tools</h2>
+          <p className="mb-4">
+            Want to explore other directions? These tools let you create different types of brat content.
+          </p>
+          <ul className="space-y-3 list-none pl-0">
+            <li>
+              Use the <Link href="/brat-text-generator/" className="text-primary hover:underline">brat text generator</Link> for quick captions and text-only exports.
+            </li>
+            <li>
+              Try the <Link href="/brat-maker/" className="text-primary hover:underline">brat maker</Link> to design full images and meme-style visuals.
+            </li>
+            <li>
+              For a bolder look, switch to the <Link href="/brat-black-generator/" className="text-primary hover:underline">black brat generator</Link> for high contrast designs.
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Here are some common questions about our Brat Generator"
