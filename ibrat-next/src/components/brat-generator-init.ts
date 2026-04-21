@@ -1590,6 +1590,26 @@ export function initBratGenerator(): () => void {
     textEl.dispatchEvent(new Event("input"));
   });
 
+  function loadScript(src: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      if (typeof document === "undefined") {
+        reject(new Error("Document not available"));
+        return;
+      }
+      const existing = document.querySelector(`script[src="${src}"]`);
+      if (existing) {
+        resolve();
+        return;
+      }
+      const script = document.createElement("script");
+      script.src = src;
+      script.async = true;
+      script.onload = () => resolve();
+      script.onerror = () => reject(new Error(`Failed to load ${src}`));
+      document.head.appendChild(script);
+    });
+  }
+
   batchBtn.addEventListener("click", async () => {
     const batchEl = document.getElementById("brat-batch") as HTMLTextAreaElement;
     const lines = (batchEl?.value || "")
@@ -1600,11 +1620,25 @@ export function initBratGenerator(): () => void {
       alert("Add at least one line in the batch box.");
       return;
     }
-    if (!JSZip || !saveAs) {
+    
+    try {
+      await Promise.all([
+        loadScript("https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"),
+        loadScript("https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"),
+      ]);
+    } catch (err) {
+      alert("ZIP export requires JSZip and FileSaver. Failed to load.");
+      return;
+    }
+
+    const dynamicJSZip = (window as unknown as { JSZip?: any }).JSZip;
+    const dynamicSaveAs = (window as unknown as { saveAs?: any }).saveAs;
+
+    if (!dynamicJSZip || !dynamicSaveAs) {
       alert("ZIP export requires JSZip and FileSaver. Please refresh the page.");
       return;
     }
-    const zip = new JSZip();
+    const zip = new dynamicJSZip();
     const originalState = { ...state };
     const wasSelected = state.textTransform.selected;
     state.textTransform.selected = false;
@@ -1624,7 +1658,7 @@ export function initBratGenerator(): () => void {
     state.textTransform.selected = wasSelected;
     draw();
     const out = await zip.generateAsync({ type: "blob" });
-    saveAs(out, "brat_batch.zip");
+    dynamicSaveAs(out, "brat_batch.zip");
   });
 
   setCanvasSize();

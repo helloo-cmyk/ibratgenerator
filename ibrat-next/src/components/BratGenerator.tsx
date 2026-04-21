@@ -1162,45 +1162,14 @@ const BRAT_STYLES = `
 
 `;
 
-function loadScript(src: string): Promise<void> {
-  return new Promise((resolve, reject) => {
-    if (typeof document === "undefined") {
-      reject(new Error("Document not available"));
-      return;
-    }
-    const existing = document.querySelector(`script[src="${src}"]`);
-    if (existing) {
-      resolve();
-      return;
-    }
-    const script = document.createElement("script");
-    script.src = src;
-    script.async = true;
-    script.onload = () => resolve();
-    script.onerror = () => reject(new Error(`Failed to load ${src}`));
-    document.head.appendChild(script);
-  });
-}
-
 export default function BratGenerator() {
   const rootRef = useRef<HTMLDivElement>(null);
   const cleanupRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
-    const runInit = async () => {
-      try {
-        await Promise.all([
-          loadScript("https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"),
-          loadScript("https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"),
-        ]);
-        if (rootRef.current) {
-          cleanupRef.current = initBratGenerator();
-        }
-      } catch (err) {
-        console.error("BratGenerator init failed:", err);
-      }
-    };
-    runInit();
+    if (rootRef.current) {
+      cleanupRef.current = initBratGenerator();
+    }
     return () => {
       if (cleanupRef.current) {
         cleanupRef.current();
