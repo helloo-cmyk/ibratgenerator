@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const toolLinks = [
   { href: "/brat-maker/", label: "brat maker" },
@@ -31,7 +32,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block">
-              <img src="/logo.png" alt="ibrat logo" style={{ height: "32px", width: "auto" }} />
+              <Image src="/logo.png" alt="ibrat logo" width={120} height={32} className="w-auto h-[32px]" />
             </Link>
             <p className="mt-4 text-sm text-foreground/70 max-w-xs leading-relaxed">
               Create brat-style text, images, and profile pictures for free. No signup required.

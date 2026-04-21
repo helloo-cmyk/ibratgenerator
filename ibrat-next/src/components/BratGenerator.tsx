@@ -35,7 +35,7 @@ const BRAT_STYLES = `
   --bg: #c1ff00;
   --fg: #0a0a0a;
   --ui: #0f172a;
-  --muted: #64748b;
+  --muted: #475569;
   --card: #ffffff;
   --ring: #6366f1;
   --border: rgba(0, 0, 0, .06);
@@ -528,12 +528,13 @@ const BRAT_STYLES = `
 
 .brat-kbd {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  background: rgba(0, 0, 0, .05);
+  background: #e2e8f0;
   padding: 3px 8px;
   border-radius: 6px;
   font-size: 11px;
   font-weight: 500;
   border: 1px solid rgba(0, 0, 0, .06);
+  color: #0f172a;
 }
 
 .brat-pill {
