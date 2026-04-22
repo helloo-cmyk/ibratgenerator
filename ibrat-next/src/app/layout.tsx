@@ -42,7 +42,7 @@ const geistMono = Geist_Mono({
 });
 
 const GA_MEASUREMENT_ID = "G-XEV70REQ21";
-const ADSENSE_CLIENT_ID = "ca-pub-6288382637996752";
+const ADSENSE_CLIENT_ID = "ca-pub-4083132987699578";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ibratgenerator.com"),
@@ -130,7 +130,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
       >
         <Header />
-        <main className="flex-1 px-4 sm:px-6">
+        <main className="mx-auto flex-1 w-full max-w-screen-2xl px-4 sm:px-6">
           {children}
         </main>
         <Footer />
