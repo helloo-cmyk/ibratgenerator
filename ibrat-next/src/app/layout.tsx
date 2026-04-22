@@ -83,6 +83,7 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta name="p:domain_verify" content="a5fad79f5206533009b21255aa5b5b60" />
+        <meta name="google-adsense-account" content="ca-pub-4083132987699578" />
         <Script
           id="schema"
           type="application/ld+json"

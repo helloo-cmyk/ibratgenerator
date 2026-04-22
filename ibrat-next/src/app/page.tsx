@@ -105,32 +105,15 @@ export default function Home() {
       />
 
       {/* HERO & GENERATOR */}
-      <section>
+      <section className="!mt-0 sm:!mt-0">
         <div className="px-4 sm:px-6 text-center">
-          <div className="mx-auto max-w-[680px] pt-16 md:pt-24 pb-4">
+          <div className="mx-auto max-w-[680px] pt-6 md:pt-10 pb-4">
             <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground">
-              Make Brat-Style Text in Seconds
+              Free Brat Generator
             </h1>
             <p className="mt-4 text-base sm:text-lg leading-relaxed text-foreground/85">
-              Type anything. Get the iconic brat aesthetic instantly - free, no watermark, no account needed.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link
-                href="#generator"
-                className="inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-medium text-black transition-colors hover:opacity-90"
-                style={{ backgroundColor: "#B7FF00" }}
-              >
-                Start Creating →
-              </Link>
-              <Link
-                href="#examples"
-                className="inline-flex items-center justify-center rounded-md border border-foreground/20 bg-transparent px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5"
-              >
-                See Examples ↓
-              </Link>
-            </div>
-            <p className="mt-3 text-sm text-foreground/60">
-              No signup. No watermark. Works on any device.
+              Type your text, pick your colors, and download a brat-style image in
+              seconds. No signup, no watermark, completely free.
             </p>
           </div>
         </div>
