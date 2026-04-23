@@ -24,250 +24,234 @@ export const metadata = {
 
 export default function BratGeneratorWhitePage() {
   return (
-    <main className="space-y-10">
+    <main className="hp-root pb-24">
+      {/* ── HERO ── */}
+      <section className="hp-hero px-4">
+        <h1 className="hp-hero-heading mt-6 mb-3 mx-auto">White Brat Generator</h1>
+        <p className="intro-text">
+          Use this brat generator white to create clean, minimalist Brat-style captions, meme text, and typography instantly. The white brat generator lets you design subtle Brat visuals with balanced spacing and modern layouts. Type your text, customize the style, and download your design in seconds.
+        </p>
+      </section>
 
-<section>
-        <div className="text-center">
-          <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">White Brat Generator</h1>
-            <p className="mb-5">
-              Use this brat generator white to create clean, minimalist Brat-style captions, meme text, and typography instantly. The white brat generator lets you design subtle Brat visuals with balanced spacing and modern layouts. Type your text, customize the style, and download your design in seconds.
+      {/* ── GENERATOR APP ── */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-2 mb-16">
+        <BratGeneratorLazy defaultBg="#ffffff" defaultFg="#0a0a0a" />
+      </div>
+
+      {/* ── INTERNAL LINK ── */}
+      <section className="-mt-4 mb-10 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base" style={{color: "var(--hp-ink-soft)"}}>
+          Looking for all features? Try the <Link href="/" className="hp-link font-semibold">free brat generator</Link> to create memes, images, and more in one place.
+        </div>
+      </section>
+
+      {/* ── OVERVIEW ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <div className="hp-two-col max-w-[1200px] mx-auto">
+          <div>
+            <span className="hp-eyebrow">Overview</span>
+            <h2 className="hp-display-heading">What This Tool Does</h2>
+          </div>
+          <div>
+            <p className="hp-body-text">
+              The Brat White Generator is a minimalist tool designed for
+              creating clean, white Brat-style text and visuals. Unlike
+              bold neon or dark styles, this generator focuses on
+              simplicity, clarity, and balance. It&apos;s built for users
+              who want a softer, more neutral Brat aesthetic that works
+              across modern layouts and platforms.
             </p>
-
+            <p className="hp-body-text mt-4">
+              With this tool, you can generate white Brat text, minimalist
+              captions, clean meme visuals, album-style typography, and
+              subtle graphic posts without using design software.
+              Everything happens in real time — you type, adjust, preview,
+              and download instantly.
+            </p>
+            <p className="hp-body-text mt-4 font-medium">
+              The result is clean, modern, and highly readable Brat-style content.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
-        <BratGeneratorLazy />
-      </section>
+      {/* ── EXPLORE STYLES ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Explore More Color Styles</h2>
+        <p className="hp-body-text mt-4">
+          Want to try a different color theme? These generators use the same brat style with different palettes.
+        </p>
+        <ul className="hp-body-text space-y-3 mt-6 ml-4 list-disc">
+          <li><Link href="/brat-black-generator" className="hp-link">Black Brat Generator</Link> — High-contrast dark visuals for a sharper look.</li>
+          <li><Link href="/brat-generator-pink" className="hp-link">Pink Brat Generator</Link> — Softer tones with the same bold typography.</li>
+          <li><Link href="/brat-text-generator" className="hp-link">Brat Text Generator</Link> — Quick text-only designs with fast PNG export.</li>
+        </ul>
+      </div>
 
-      <section className="-mt-4 mb-10 text-center">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base text-foreground/80">
-          Looking for all features? Try the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create memes, images, and more in one place.
+      {/* ── TWO-COL: WHO USES IT ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <div className="hp-two-col flex flex-col md:flex-row items-start gap-12 max-w-[1200px] mx-auto">
+          <div className="flex-1">
+             <span className="hp-eyebrow">Audience</span>
+             <h2 className="hp-display-heading">Who This Tool Is For</h2>
+             <p className="hp-body-text mt-4">
+               The Brat White Generator is ideal for creators who prefer clean and understated visuals.
+             </p>
+             <p className="hp-body-text mt-4 font-medium">
+               If green feels too loud and black feels too dark, white is the perfect middle ground.
+             </p>
+          </div>
+          <div className="flex-1">
+            <p className="hp-body-text mb-4 font-medium">It works especially well for:</p>
+            <div className="flex flex-wrap gap-2">
+               {[
+                 "Minimalist design lovers",
+                 "Aesthetic creators",
+                 "Neutral palette designers",
+                 "Subtle Brat visuals",
+                 "Profile graphics",
+                 "Album-style layouts",
+                 "Soft typography fans"
+               ].map(p => (
+                 <span key={p} className="px-3 py-1.5 bg-[var(--hp-surface)] border border-[var(--hp-border)] rounded-md text-[13px] font-medium text-[var(--hp-ink)] shadow-sm transition-colors hover:border-[var(--hp-border-dark)]">{p}</span>
+               ))}
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What This Tool Does</h2>
-          <p className="mb-4">
-            The Brat White Generator is a minimalist tool designed for
-            creating clean, white Brat-style text and visuals. Unlike
-            bold neon or dark styles, this generator focuses on
-            simplicity, clarity, and balance. It&apos;s built for users
-            who want a softer, more neutral Brat aesthetic that works
-            across modern layouts and platforms.
-          </p>
-          <p className="mb-4">
-            With this tool, you can generate white Brat text, minimalist
-            captions, clean meme visuals, album-style typography, and
-            subtle graphic posts without using design software.
-            Everything happens in real time — you type, adjust, preview,
-            and download instantly.
-          </p>
-          <p>The result is clean, modern, and highly readable Brat-style content.</p>
+      {/* ── FEATURES GRID ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <span className="hp-eyebrow">Capabilities</span>
+        <h2 className="hp-display-heading">Main Features of the Brat White Generator</h2>
+        
+        <div className="hp-features-grid mt-8">
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">🤍</div>
+            <h3>Clean White Presets</h3>
+            <p>The generator uses pure white and soft off-white backgrounds to keep designs minimal, modern, and easily readable.</p>
+          </div>
+
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">🔤</div>
+            <h3>Minimal Typography</h3>
+            <p>Follows the Brat aesthetic in a softer way: bold yet clean, evenly spaced, highly readable, and perfectly neutral.</p>
+          </div>
+
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">✏️</div>
+            <h3>Full Customization</h3>
+            <p>Adjust the square ratio, type your name, define letter spacing, apply stickers, and tweak colors with ultimate precision.</p>
+          </div>
+
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">💭</div>
+            <h3>White Text Mode</h3>
+            <p>Optimized to create white Brat captions, minimalist meme text, pristine album titles, and clean lyric typography.</p>
+          </div>
+
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">🖼️</div>
+            <h3>Background Uploads</h3>
+            <p>If you prefer more creativity, upload custom aesthetic images or cool textures and confidently layer white Brat text on top.</p>
+          </div>
+
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">📐</div>
+            <h3>Multiple Aspect Ratios</h3>
+            <p>Design visuals for any platform using 1:1 square, 9:16 vertical, 4:5 portrait, and crisp 16:9 landscape aspect ratios.</p>
+          </div>
+
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">✨</div>
+            <h3>High-Quality Export</h3>
+            <p>All designs instantaneously export as sharp, high-resolution PNG files. Zero watermarks. Zero quality compression loss.</p>
+          </div>
+
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">📱</div>
+            <h3>Mobile-Friendly</h3>
+            <p>The editor operates seamlessly on mobile phones, empowering you to create and download visuals directly on the go.</p>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Explore More Color Styles</h2>
-          <p className="mb-4">
-            Want to try a different color theme? These generators use the same brat style with different palettes.
-          </p>
-          <ul className="space-y-2 list-none pl-0">
-            <li><Link href="/brat-black-generator" className="text-primary hover:underline">Black Brat Generator</Link> — High-contrast dark visuals for a sharper look.</li>
-            <li><Link href="/brat-generator-pink" className="text-primary hover:underline">Pink Brat Generator</Link> — Softer tones with the same bold typography.</li>
-            <li><Link href="/brat-text-generator" className="text-primary hover:underline">Brat Text Generator</Link> — Quick text-only designs with fast PNG export.</li>
-          </ul>
+      {/* ── HOW TO USE ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <span className="hp-eyebrow">Guide</span>
+        <h2 className="hp-display-heading">How to Use the Brat White Generator</h2>
+        <div className="hp-steps-grid mt-6">
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">1</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Enter Your Text</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Type your subtle statement, clean caption, aesthetic wording, or minimalist lyric.</p>
+          </div>
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">2</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Apply White Style</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Choose pure white or an off-white background depending on how soft you want it.</p>
+          </div>
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">3</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Adjust Layout</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Resize proportions and carefully position text until it is perfectly clean and balanced.</p>
+          </div>
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">4</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Add Background</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Upload an image layer if you desire layering, or keep it beautifully pure white.</p>
+          </div>
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">5</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Download Visual</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Export your white Brat design as a sharp PNG. No signup. No limits. No watermark.</p>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who This Tool Is For</h2>
-          <p className="mb-4">
-            The Brat White Generator is ideal for creators who prefer
-            clean and understated visuals. It works especially well for:
+      {/* ── WHY THIS TOOL IS BETTER ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Why This Tool Is Better</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
+            Most generators treat white backgrounds as an afterthought. This tool is built specifically for clean, minimalist Brat visuals.
           </p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>Users who like minimalist design</li>
-            <li>Creators making clean aesthetic posts</li>
-            <li>Designers working with neutral color palettes</li>
-            <li>Social media creators who want subtle Brat visuals</li>
-            <li>People creating profile graphics</li>
-            <li>Users designing album-style layouts</li>
-            <li>Anyone who wants Brat typography without heavy colors</li>
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-6">
+            <li>True white design focus with clean typography</li>
+            <li>High-resolution exports with no watermark output</li>
+            <li>Unlimited free usage and seamless mobile optimization</li>
+            <li>No account required, ever</li>
           </ul>
-          <p>If green feels too loud and black feels too dark, white is the perfect middle ground.</p>
+          <p className="hp-body-text font-medium">It prioritizes clarity and design quality.</p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Main Features of the Brat White Generator</h2>
-
-          <h3 className="text-xl font-semibold mt-6">1. Clean White Background Presets</h3>
-          <p className="mb-6">
-            The generator uses pure white and soft off-white backgrounds
-            to keep designs minimal and modern. This makes text easy to
-            read and visually balanced.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">2. Minimal Brat Typography</h3>
-          <p className="mb-4">
-            The text styling follows the Brat aesthetic but in a softer way:
-          </p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>bold yet clean</li>
-            <li>evenly spaced</li>
-            <li>highly readable</li>
-            <li>modern and neutral</li>
+      {/* ── EXAMPLES TEXT ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Examples of What You Can Create</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">With the Brat White Generator, you can design:</p>
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-6">
+            <li>White Brat text graphics & minimalist meme captions</li>
+            <li>Clean lyric visuals & album-style text layouts</li>
+            <li>Profile name images & neutral aesthetic posts</li>
+            <li>Modern typography graphics & subtle Brat edits</li>
           </ul>
-          <p className="mb-6">This makes it ideal for elegant designs and clean layouts.</p>
-
-          <h3 className="text-xl font-semibold mt-6">3. Full Text Customization</h3>
-          <p className="mb-4">You can adjust:</p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>use the square 1:1 ratio</li>
-            <li>type your name</li>
-            <li>adjust the layout</li>
-            <li>change letter spacing</li>
-            <li>add cute emoji stickers</li>
-            <li>choose bright or pastel colors</li>
-          </ul>
-          <p className="mb-6">
-            This allows you to create structured quotes or simple
-            captions with precision.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">4. White Text Generator Mode</h3>
-          <p className="mb-4">Use this tool to create:</p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>white Brat captions</li>
-            <li>minimalist meme text</li>
-            <li>album-style titles</li>
-            <li>clean lyric text</li>
-            <li>profile name graphics</li>
-          </ul>
-          <p className="mb-6">All optimized for white-based designs.</p>
-
-          <h3 className="text-xl font-semibold mt-6">5. Optional Background Upload</h3>
-          <p className="mb-6">
-            If you want more creativity, you can upload images or
-            textures and layer white Brat text on top for a refined look.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">6. Multiple Aspect Ratios</h3>
-          <p className="mb-4">Design visuals for any platform using:</p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>1:1 square</li>
-            <li>9:16 vertical</li>
-            <li>4:5 portrait</li>
-            <li>16:9 landscape</li>
-          </ul>
-          <p className="mb-6">This makes the tool flexible for posts, stories, banners, and thumbnails.</p>
-
-          <h3 className="text-xl font-semibold mt-6">7. High-Quality PNG Export</h3>
-          <p className="mb-6">All designs export as sharp, high-resolution PNG files. No watermark. No quality loss.</p>
-
-          <h3 className="text-xl font-semibold mt-6">8. Mobile-Friendly Editing</h3>
-          <p className="mb-6">
-            The generator works smoothly on mobile devices, allowing you
-            to create and download visuals directly from your phone.
-          </p>
-          <p>
-            For pure text designs without any color-specific presets, the brat text generator offers a streamlined way to generate brat-style typography in any shade you choose.
-          </p>
+          <p className="hp-body-text font-medium">These visuals work well across modern platforms and clean design feeds.</p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How to Use the Brat White Generator</h2>
-
-          <h3 className="text-xl font-semibold mt-6">Step 1 — Enter Your Text</h3>
-          <p className="mb-4">Type your caption, lyric, meme line, or quote.</p>
-          <p className="mb-6">Common uses include:</p>
-          <ul className="mb-6 list-inside list-disc space-y-1">
-            <li>minimalist captions</li>
-            <li>clean aesthetic text</li>
-            <li>album-style wording</li>
-            <li>subtle statements</li>
-            <li>profile text</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6">Step 2 — Apply the White Style</h3>
-          <p className="mb-6">
-            Choose white or off-white background presets depending on how
-            soft or bright you want the design to feel.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">Step 3 — Adjust Layout</h3>
-          <p className="mb-6">
-            Resize and position your text until it looks balanced and
-            visually clean.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">Step 4 — Add Background (Optional)</h3>
-          <p className="mb-6">
-            Upload an image if you want layered designs or keep it simple
-            with pure white.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">Step 5 — Download Your Visual</h3>
-          <p>Download your white Brat design as a PNG. No signup. No limits. No watermark.</p>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Why This Tool Is Better</h2>
-          <p className="mb-4">
-            Most generators treat white backgrounds as an afterthought.
-            This tool is built specifically for clean, minimalist Brat visuals.
-          </p>
-          <p className="mb-4">It stands out because it offers:</p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>true white design focus</li>
-            <li>clean Brat typography</li>
-            <li>high-resolution exports</li>
-            <li>unlimited free usage</li>
-            <li>mobile optimization</li>
-            <li>no watermark</li>
-            <li>no account required</li>
-          </ul>
-          <p>It prioritizes clarity and design quality.</p>
-
-          <h3 className="text-xl font-semibold mt-6">Examples of What You Can Create</h3>
-          <p className="mb-4">With the Brat White Generator, you can design:</p>
-          <ul className="list-inside list-disc space-y-1">
-            <li>white Brat text graphics</li>
-            <li>minimalist meme captions</li>
-            <li>clean lyric visuals</li>
-            <li>album-style text layouts</li>
-            <li>profile name images</li>
-            <li>neutral aesthetic posts</li>
-            <li>modern typography graphics</li>
-            <li>subtle Brat edits</li>
-          </ul>
-          <p className="mt-4">
-            These visuals work well across modern platforms and clean
-            design feeds.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">White Brat Generator Examples</h2>
-          <p className="mb-6">
+      {/* ── EXAMPLES GALLERY Grid ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <span className="hp-eyebrow">Gallery</span>
+        <h2 className="hp-display-heading">White Brat Generator Examples</h2>
+        <div className="max-w-4xl">
+          <p className="hp-body-text mt-4 mb-8">
             The images below are example outputs created with this tool. Each shows the clean, minimal white brat style you can make—type your own text above to get similar results.
           </p>
           <ul className="grid grid-cols-2 sm:grid-cols-3 gap-6 list-none pl-0">
             {WHITE_BRAT_EXAMPLES.map(({ src, phrase, alt }) => (
-              <li key={phrase} className="rounded-lg overflow-hidden bg-muted/30">
+              <li key={phrase} className="rounded-xl overflow-hidden bg-[var(--hp-surface)] shadow-sm border border-[var(--hp-border)]">
                 <Image
                   src={src}
                   alt={alt}
@@ -277,64 +261,79 @@ export default function BratGeneratorWhitePage() {
                   loading="lazy"
                   className="w-full aspect-square object-cover"
                 />
-                <p className="mt-2 text-sm font-medium text-foreground/90">{phrase}</p>
+                <div className="p-3">
+                  <p className="text-[13px] font-medium text-[var(--hp-ink)] capitalize">{phrase}</p>
+                </div>
               </li>
             ))}
           </ul>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why White Brat Feels Clean and Minimal</h2>
-          <p className="mb-6">
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Why White Brat Feels Clean and Minimal</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
             White brat visuals are all about simplicity. Unlike bold green or dark black styles, white creates a clean and neutral look that works across different platforms. It feels less aggressive and more refined, which makes it perfect for minimal designs and personal branding.
           </p>
+        </div>
+      </div>
 
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">When to Use White Brat</h2>
-          <ul className="mb-6 list-inside list-disc space-y-1">
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">When to Use White Brat</h2>
+        <div className="max-w-3xl">
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4">
             <li>Minimalist Instagram profiles and posts</li>
             <li>Clean captions for light-themed content</li>
             <li>Personal branding visuals</li>
             <li>Website graphics and headers</li>
             <li>Subtle meme formats without strong colors</li>
           </ul>
+        </div>
+      </div>
 
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">How to Get the Best Result</h2>
-          <p className="mb-4">
-            Use a pure white or slightly off-white background with dark text for clear contrast. Keep spacing balanced &mdash; white designs need more breathing room to look good. Avoid adding too many elements, as the strength of this style comes from its simplicity.
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">How to Get the Best Result</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
+            Use a pure white or slightly off-white background with dark text for clear contrast. Keep spacing balanced — white designs need more breathing room to look good. Avoid adding too many elements, as the strength of this style comes from its simplicity.
           </p>
-          <p className="mb-6">
+          <p className="hp-body-text mt-4">
             Export your design at 2048px or higher to maintain sharpness across all devices.
           </p>
+        </div>
+      </div>
 
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Try Other Styles</h2>
-          <p>
-            If you want stronger contrast, try the <Link href="/brat-black-generator/" className="text-primary hover:underline">black brat generator</Link>. For a softer aesthetic look, use the <Link href="/brat-generator-pink/" className="text-primary hover:underline">pink brat generator</Link>. You can also go back to the <Link href="/" className="text-primary hover:underline">free brat generator</Link> to access all styles in one place.
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Try Other Styles</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
+            If you want stronger contrast, try the <Link href="/brat-black-generator/" className="hp-link">black brat generator</Link>. For a softer aesthetic look, use the <Link href="/brat-generator-pink/" className="hp-link">pink brat generator</Link>. You can also go back to the <Link href="/" className="hp-link">free brat generator</Link> to access all styles in one place.
           </p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Related Tools</h2>
-          <p className="mb-4">
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Related Tools</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
             Want to explore other directions? These tools let you create different types of brat content.
           </p>
-          <ul className="space-y-3 list-none pl-0">
+          <ul className="hp-body-text list-disc space-y-3 mt-4 ml-5">
             <li>
-              Use the <Link href="/brat-text-generator/" className="text-primary hover:underline">brat text generator</Link> for quick captions and text-only exports.
+              Use the <Link href="/brat-text-generator/" className="hp-link">brat text generator</Link> for quick captions and text-only exports.
             </li>
             <li>
-              Try the <Link href="/brat-maker/" className="text-primary hover:underline">brat maker</Link> to design full images and meme-style visuals.
+              Try the <Link href="/brat-maker/" className="hp-link">brat maker</Link> to design full images and meme-style visuals.
             </li>
             <li>
-              For a bolder look, switch to the <Link href="/brat-black-generator/" className="text-primary hover:underline">black brat generator</Link> for high contrast designs.
+              For a bolder look, switch to the <Link href="/brat-black-generator/" className="hp-link">black brat generator</Link> for high contrast designs.
             </li>
           </ul>
         </div>
-      </section>
+      </div>
 
+      {/* ── FAQ ── */}
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Here are some common questions about our Brat Generator"
@@ -348,26 +347,18 @@ export default function BratGeneratorWhitePage() {
         ]}
       />
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Conclusion</h2>
-          <p className="mb-4">
-            The Brat White Generator is the ideal tool for creating clean,
-            minimalist Brat-style text and visuals. With subtle
-            typography, flexible layouts, and high-quality exports,
-            it&apos;s perfect for creators who want a softer and more
-            modern Brat aesthetic.
+      {/* ── CONCLUSION ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Conclusion</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
+            The Brat White Generator is the ideal tool for creating clean, minimalist Brat-style text and visuals. With subtle typography, flexible layouts, and high-quality exports, it&apos;s perfect for creators who want a softer and more modern Brat aesthetic.
           </p>
-          <p>
-            If you&apos;re looking for simple, elegant Brat designs without
-            distractions, this generator delivers exactly what you need.
+          <p className="hp-body-text mt-4">
+            If you&apos;re looking for simple, elegant Brat designs without distractions, this generator delivers exactly what you need.
           </p>
         </div>
-      </section>
-
-      
-
-      
+      </div>
     </main>
   );
 }

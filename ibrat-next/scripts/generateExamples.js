@@ -10,12 +10,39 @@ const fs = require("fs");
 const path = require("path");
 
 const PHRASES = [
-  "brat summer vibes",
+  "brat vibe",
   "stay toxic",
-  "main character energy",
+  "main character",
   "chaotic good",
-  "delulu mode activated",
-  "hot girl walk",
+  "delulu mode",
+  "iconic",
+];
+
+const MAKER_PHRASES = [
+  "profile pic",
+  "post graphic",
+  "tiktok layout",
+  "album look",
+  "unbothered",
+  "custom theme",
+];
+
+const TEXT_PHRASES = [
+  "clean text",
+  "typography",
+  "bold look",
+  "no distractions",
+  "pure vibe",
+  "minimalist",
+];
+
+const FONT_PHRASES = [
+  "sans serif",
+  "tight spacing",
+  "font style",
+  "bold weight",
+  "clean lines",
+  "minimalist",
 ];
 
 const BG_COLORS = ["#8ACE00", "#FFFFFF", "#000000", "#FF69B4", "#A8FFB0", "#E5FF00"];
@@ -24,13 +51,13 @@ const SIZE = 400;
 const OUT_DIR = path.join(__dirname, "..", "public", "examples");
 
 function drawBratText(ctx, width, height, text, bg, fg) {
-  const fontSize = Math.round(Math.min(width, height) * 0.18);
-  ctx.font = `bold ${fontSize}px "Inter", system-ui, -apple-system, sans-serif`;
+  const fontSize = Math.round(Math.min(width, height) * 0.22); // Increased font size multiplier
+  ctx.font = `normal ${fontSize}px "Arial", sans-serif`;
 
   const padding = Math.round(width * 0.08);
   const boxW = width - padding * 2;
-  const lineHeight = 1.0;
-  const letterSpacing = 0;
+  const lineHeight = 0.95;
+  const letterSpacing = -2;
 
   const words = text.split(/\s+/);
   const lines = [];
@@ -62,7 +89,7 @@ function drawBratText(ctx, width, height, text, bg, fg) {
   const lh = fontSize * lineHeight;
   const totalTextH = (lines.length - 1) * lh + fontSize;
   const centerX = width / 2;
-  const centerY = padding + totalTextH / 2;
+  const centerY = height / 2; // Perfect vertical center
 
   ctx.save();
   ctx.translate(centerX, centerY);
@@ -89,23 +116,34 @@ function main() {
     fs.mkdirSync(OUT_DIR, { recursive: true });
   }
 
-  for (let i = 0; i < PHRASES.length; i++) {
-    const phrase = PHRASES[i];
-    const bg = BG_COLORS[i % BG_COLORS.length];
-    const fg = bg === "#000000" ? "#FFFFFF" : "#0A0A0A";
+  const sets = [
+    { phrases: PHRASES, prefix: "brat-demo-" },
+    { phrases: MAKER_PHRASES, prefix: "brat-maker-ex-" },
+    { phrases: TEXT_PHRASES, prefix: "brat-text-ex-" },
+    { phrases: FONT_PHRASES, prefix: "brat-font-ex-" }
+  ];
 
-    const canvas = createCanvas(SIZE, SIZE);
-    const ctx = canvas.getContext("2d");
+  let count = 0;
+  for (const set of sets) {
+    for (let i = 0; i < set.phrases.length; i++) {
+      const phrase = set.phrases[i];
+      const bg = BG_COLORS[i % BG_COLORS.length];
+      const fg = bg === "#000000" ? "#FFFFFF" : "#0A0A0A";
 
-    drawBratText(ctx, SIZE, SIZE, phrase, bg, fg);
+      const canvas = createCanvas(SIZE, SIZE);
+      const ctx = canvas.getContext("2d");
 
-    const outPath = path.join(OUT_DIR, `brat${i + 1}.png`);
-    const buf = canvas.toBuffer("image/png");
-    fs.writeFileSync(outPath, buf);
-    console.log(`Generated ${outPath}`);
+      drawBratText(ctx, SIZE, SIZE, phrase, bg, fg);
+
+      const outPath = path.join(OUT_DIR, `${set.prefix}${i + 1}.png`);
+      const buf = canvas.toBuffer("image/png");
+      fs.writeFileSync(outPath, buf);
+      console.log(`Generated ${outPath}`);
+      count++;
+    }
   }
 
-  console.log(`Done. ${PHRASES.length} images saved to public/examples/`);
+  console.log(`Done. ${count} images saved to public/examples/`);
 }
 
 main();

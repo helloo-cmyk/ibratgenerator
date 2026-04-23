@@ -43,7 +43,7 @@ function getOrCreateEmojiBitmap(char: string): HTMLCanvasElement | null {
  * Brat Generator init logic - runs after mount when JSZip and FileSaver are loaded.
  * Returns cleanup function for window listeners.
  */
-export function initBratGenerator(): () => void {
+export function initBratGenerator(options?: { defaultBg?: string; defaultFg?: string }): () => void {
   const root = document.getElementById("brat-embed-root");
   const widget = document.getElementById("brat-widget");
   if (!root || !widget) return () => {};
@@ -66,8 +66,6 @@ export function initBratGenerator(): () => void {
     typeof window !== "undefined" && (window as unknown as { saveAs?: (b: Blob, n: string) => void }).saveAs;
 
   const textEl = document.getElementById("brat-text") as HTMLTextAreaElement;
-  const forceLower = document.getElementById("brat-forceLower") as HTMLInputElement;
-  const autoBreak = document.getElementById("brat-autoBreak") as HTMLInputElement;
   const fontSizeEl = document.getElementById("brat-fontSize") as HTMLInputElement;
   const lineHeightEl = document.getElementById("brat-lineHeight") as HTMLInputElement;
   const letterSpacingEl = document.getElementById("brat-letterSpacing") as HTMLInputElement;
@@ -99,8 +97,6 @@ export function initBratGenerator(): () => void {
 
   if (
     !textEl ||
-    !forceLower ||
-    !autoBreak ||
     !fontSizeEl ||
     !lineHeightEl ||
     !letterSpacingEl ||
@@ -133,7 +129,7 @@ export function initBratGenerator(): () => void {
 
   const state = {
     text: "brat",
-    fontSize: 120,
+    fontSize: 180,
     lineHeight: 1.0,
     letterSpacing: 0,
     align: "center",
@@ -141,8 +137,8 @@ export function initBratGenerator(): () => void {
     outlineColor: "#ffffff",
     shadow: false,
     shadowColor: "#000000",
-    bg: "#c1ff00",
-    fg: "#0a0a0a",
+    bg: options?.defaultBg || "#c1ff00",
+    fg: options?.defaultFg || "#0a0a0a",
     ratio: "1:1",
     res: 1500,
     safe: false,
@@ -407,8 +403,8 @@ export function initBratGenerator(): () => void {
     const padding = Math.round(c.width * 0.08);
     const boxW = c.width - padding * 2;
     let txt = state.text || "";
-    if (forceLower.checked) txt = txt.toLowerCase();
-    const lines = autoBreak.checked ? splitLines(txt, boxW) : txt.split("\n");
+    txt = txt.toLowerCase();
+    const lines = splitLines(txt, boxW);
     ctx.save();
     ctx.font = fontSpec();
     ctx.textBaseline = "top";
@@ -417,7 +413,7 @@ export function initBratGenerator(): () => void {
     const LH = state.fontSize * state.lineHeight;
     const totalTextH = (lines.length - 1) * LH + state.fontSize;
     const centerX = c.width / 2;
-    const centerY = padding + totalTextH / 2;
+    const centerY = c.height / 2;
     const tt = state.textTransform;
     ctx.translate(centerX + tt.x, centerY + tt.y);
     ctx.rotate(tt.rotation);
@@ -454,8 +450,8 @@ export function initBratGenerator(): () => void {
     const padding = Math.round(c.width * 0.08);
     const boxW = c.width - padding * 2;
     let txt = state.text || "";
-    if (forceLower.checked) txt = txt.toLowerCase();
-    const lines = autoBreak.checked ? splitLines(txt, boxW) : txt.split("\n");
+    txt = txt.toLowerCase();
+    const lines = splitLines(txt, boxW);
     ctx.save();
     ctx.font = fontSpec();
     const LH = state.fontSize * state.lineHeight;
@@ -467,7 +463,7 @@ export function initBratGenerator(): () => void {
     }
     const tt = state.textTransform;
     const centerX = c.width / 2;
-    const centerY = padding + totalTextH / 2;
+    const centerY = c.height / 2;
     ctx.translate(centerX + tt.x, centerY + tt.y);
     ctx.rotate(tt.rotation);
     ctx.scale(tt.scale, tt.scale);
@@ -766,8 +762,8 @@ export function initBratGenerator(): () => void {
     const padding = Math.round(c.width * 0.08);
     const boxW = c.width - padding * 2;
     let txt = state.text || "";
-    if (forceLower.checked) txt = txt.toLowerCase();
-    const lines = autoBreak.checked ? splitLines(txt, boxW) : txt.split("\n");
+    txt = txt.toLowerCase();
+    const lines = splitLines(txt, boxW);
     ctx.font = fontSpec();
     const LH = state.fontSize * state.lineHeight;
     const totalTextH = (lines.length - 1) * LH + state.fontSize;
@@ -778,7 +774,7 @@ export function initBratGenerator(): () => void {
       if (w > maxW) maxW = w;
     }
     const centerX = c.width / 2 + tt.x;
-    const centerY = padding + totalTextH / 2 + tt.y;
+    const centerY = c.height / 2 + tt.y;
     let lx = x - centerX;
     let ly = y - centerY;
     const cos = Math.cos(-tt.rotation);
@@ -908,13 +904,13 @@ export function initBratGenerator(): () => void {
       const padding = Math.round(c.width * 0.08);
       const boxW = c.width - padding * 2;
       let txt = state.text || "";
-      if (forceLower.checked) txt = txt.toLowerCase();
-      const lines = autoBreak.checked ? splitLines(txt, boxW) : txt.split("\n");
+      txt = txt.toLowerCase();
+      const lines = splitLines(txt, boxW);
       ctx.font = fontSpec();
       const LH = state.fontSize * state.lineHeight;
       const totalTextH = (lines.length - 1) * LH + state.fontSize;
       const centerX = c.width / 2 + tt.x;
-      const centerY = padding + totalTextH / 2 + tt.y;
+      const centerY = c.height / 2 + tt.y;
       const angle = Math.atan2(y - centerY, x - centerX);
       tt.rotation =
         rotateStart.initialRotation +
@@ -925,22 +921,8 @@ export function initBratGenerator(): () => void {
     if (resizingText) {
       c.style.cursor = "nwse-resize";
       const tt = state.textTransform;
-      const padding = Math.round(c.width * 0.08);
       const centerX = c.width / 2 + tt.x;
-      const centerY =
-        padding +
-        (() => {
-          let txt = state.text || "";
-          if (forceLower.checked) txt = txt.toLowerCase();
-          const lines = autoBreak.checked
-            ? splitLines(txt, c.width - padding * 2)
-            : txt.split("\n");
-          ctx.font = fontSpec();
-          const LH = state.fontSize * state.lineHeight;
-          return (lines.length - 1) * LH + state.fontSize;
-        })() /
-          2 +
-        tt.y;
+      const centerY = c.height / 2 + tt.y;
       const dist = Math.hypot(x - centerX, y - centerY);
       if (resizeStart.initialDist > 0) {
         tt.scale = Math.min(
@@ -965,8 +947,8 @@ export function initBratGenerator(): () => void {
       const padding = Math.round(c.width * 0.08);
       const boxW = c.width - padding * 2;
       let txt = state.text || "";
-      if (forceLower.checked) txt = txt.toLowerCase();
-      const lines = autoBreak.checked ? splitLines(txt, boxW) : txt.split("\n");
+      txt = txt.toLowerCase();
+      const lines = splitLines(txt, boxW);
       ctx.font = fontSpec();
       const LH = state.fontSize * state.lineHeight;
       const totalTextH = (lines.length - 1) * LH + state.fontSize;
@@ -976,7 +958,7 @@ export function initBratGenerator(): () => void {
         if (w > maxW) maxW = w;
       }
       const centerX = c.width / 2 + tt.x;
-      const centerY = padding + totalTextH / 2 + tt.y;
+      const centerY = c.height / 2 + tt.y;
       const lx = x - centerX;
       const ly = y - centerY;
       const cos = Math.cos(-tt.rotation);
@@ -1565,7 +1547,7 @@ export function initBratGenerator(): () => void {
   altBtn.addEventListener("click", async () => {
     const ratio = state.ratio;
     const bg = state.bgImage ? "photo background" : `solid background ${state.bg}`;
-    const txt = (forceLower.checked ? state.text.toLowerCase() : state.text)
+    const txt = (state.text.toLowerCase())
       .replace(/\s+/g, " ")
       .trim();
     await safeCopyText(
@@ -1661,6 +1643,10 @@ export function initBratGenerator(): () => void {
     dynamicSaveAs(out, "brat_batch.zip");
   });
 
+  setTimeout(() => {
+    syncInputsFromState();
+    requestDraw();
+  }, 100);
   setCanvasSize();
   switchTab("text");
   updateUndoRedoButtons();
@@ -1689,7 +1675,9 @@ export function initBratGenerator(): () => void {
     window.removeEventListener("pointercancel", onPointerUp);
     window.removeEventListener("keydown", onKeyDown);
     window.removeEventListener("resize", onResize);
-    // Left empty deliberately to prevent duplicate listeners during Strict Mode unmount/remount
-
+    // Reset __bratInit so HMR / re-mount can re-initialize
+    if (root) {
+      (root as HTMLElement & { __bratInit?: boolean }).__bratInit = false;
+    }
   };
 }

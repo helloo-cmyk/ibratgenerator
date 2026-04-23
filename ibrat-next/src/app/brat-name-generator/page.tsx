@@ -14,263 +14,251 @@ export const metadata = {
 
 export default function BratNameGeneratorPage() {
   return (
-    <main className="space-y-10">
-
-<section>
-        <div className="text-center">
-          <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Brat Name Generator</h1>
-            <p className="mb-5">
-              Create bold, Brat-inspired names for albums, profiles, and edits.
-            </p>
-
-          </div>
-        </div>
+    <main className="hp-root pb-24">
+      {/* ── HERO ── */}
+      <section className="hp-hero px-4">
+        <h1 className="hp-hero-heading mt-6 mb-3 mx-auto">Brat Name Generator</h1>
+        <p className="intro-text">
+          Create bold, Brat-inspired names for albums, profiles, and edits.
+        </p>
       </section>
 
-      <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
+      {/* ── GENERATOR APP ── */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-2 mb-16">
         <BratGeneratorLazy />
-      </section>
+      </div>
 
+      {/* ── INTERNAL LINK ── */}
       <section className="-mt-4 mb-10 text-center">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base text-foreground/80">
-          Looking for all features? Try the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create memes, images, and more in one place.
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base" style={{color: "var(--hp-ink-soft)"}}>
+          Looking for all features? Try the <Link href="/" className="hp-link font-semibold">free brat generator</Link> to create memes, images, and more in one place.
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What This Tool Does</h2>
-          <p className="mb-4">
+      {/* ── OVERVIEW ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <span className="hp-eyebrow">Overview</span>
+        <h2 className="hp-display-heading">What This Tool Does</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
             The Brat Name Generator is a simple tool that helps you create
             unique, Brat-style names instantly. It&apos;s designed for
             users who want short, bold, aesthetic names inspired by the
             Brat era and Charli XCX&apos;s visual and musical identity.
           </p>
-          <p className="mb-4">
+          <p className="hp-body-text mt-4">
             This tool generates names that work perfectly for album
             titles, usernames, profile names, playlists, edits, and
             creative projects. Instead of overthinking or manually
             brainstorming names, you can generate ideas in seconds and
             pick the one that fits your vibe.
           </p>
-          <p>Everything is instant. No signup, no limits, no distractions.</p>
+          <p className="hp-body-text mt-4 font-medium">Everything is instant. No signup, no limits, no distractions.</p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Related Brat Tools</h2>
-          <p className="mb-4">
-            If you want to explore more ways to create brat-style designs, these tools can help depending on what you&apos;re trying to make.
-          </p>
-          <ul className="space-y-2 list-none pl-0">
-            <li><Link href="/brat-text-generator" className="text-primary hover:underline">Brat Text Generator</Link> — Best for quick text-only designs and fast PNG downloads.</li>
-            <li><Link href="/brat-maker" className="text-primary hover:underline">Brat Maker</Link> — Use this if you want to create images, memes, or layered designs.</li>
-            <li><Link href="/brat-font-generator" className="text-primary hover:underline">Brat Font Generator</Link> — Ideal for adjusting typography, spacing, and font styling.</li>
-          </ul>
+      {/* ── RELATED TOOLS ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Related Brat Tools</h2>
+        <p className="hp-body-text mt-4">
+          If you want to explore more ways to create brat-style designs, these tools can help depending on what you&apos;re trying to make.
+        </p>
+        <ul className="hp-body-text space-y-3 mt-6 ml-4 list-disc">
+          <li>Use the <Link href="/brat-text-generator" className="hp-link">Brat Text Generator</Link> — Best for quick text-only designs and fast PNG downloads.</li>
+          <li>Try the <Link href="/brat-maker" className="hp-link">Brat Maker</Link> — Use this if you want to create images, memes, or layered designs.</li>
+          <li>Explore the <Link href="/brat-font-generator" className="hp-link">Brat Font Generator</Link> — Ideal for adjusting typography, spacing, and font styling.</li>
+        </ul>
+      </div>
+
+      {/* ── TWO-COL: WHO THIS TOOL IS FOR ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <div className="hp-two-col flex flex-col md:flex-row items-start gap-12">
+          <div className="flex-1">
+             <span className="hp-eyebrow">Audience</span>
+             <h2 className="hp-display-heading">Who This Tool Is For</h2>
+             <p className="hp-body-text mt-4">
+               The Brat Name Generator is made for anyone who needs creative naming ideas with a strong aesthetic edge.
+             </p>
+             <p className="hp-body-text mt-4">
+               If you want names that feel modern, bold, and confident, this tool is built for you.
+             </p>
+          </div>
+          <div className="flex-1">
+            <p className="hp-body-text mb-4 font-medium">It is especially useful for:</p>
+            <div className="flex flex-wrap gap-2">
+               {[
+                 "Fans of the Brat aesthetic",
+                 "Charli XCX listeners",
+                 "Musicians naming albums",
+                 "Naming edits or series",
+                 "Display names",
+                 "Playlist creators",
+                 "Meme pages",
+                 "Designers"
+               ].map(p => (
+                 <span key={p} className="px-3 py-1.5 bg-[var(--hp-surface)] border border-[var(--hp-border)] rounded-md text-[13px] font-medium text-[var(--hp-ink)] shadow-sm transition-colors hover:border-[var(--hp-border-dark)]">{p}</span>
+               ))}
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who This Tool Is For</h2>
-          <p className="mb-4">
-            The Brat Name Generator is made for anyone who needs creative
-            naming ideas with a strong aesthetic edge. It&apos;s especially
-            useful for:
-          </p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>Fans of the Brat aesthetic</li>
-            <li>Charli XCX listeners</li>
-            <li>Musicians naming albums or tracks</li>
-            <li>Creators naming edits or series</li>
-            <li>People choosing usernames or display names</li>
-            <li>Playlist creators</li>
-            <li>Meme pages</li>
-            <li>Designers working on Brat-style projects</li>
-          </ul>
-          <p>
-            If you want names that feel modern, bold, and confident, this
-            tool is built for you.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Makes a &quot;Brat&quot; Name</h2>
-          <p className="mb-4">
+      {/* ── WHAT MAKES A BRAT NAME ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <span className="hp-eyebrow">Traits</span>
+        <h2 className="hp-display-heading">What Makes a &quot;Brat&quot; Name</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
             Brat-style names usually share a few key traits:
           </p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>Fans of the Brat aesthetic</li>
-            <li>Charli XCX listeners</li>
-            <li>Musicians naming albums or tracks</li>
-            <li>Creators naming edits or series</li>
-            <li>People choosing usernames or display names</li>
-            <li>Playlist creators</li>
-            <li>Meme pages</li>
-            <li>Designers working on Brat-style projects</li>
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-6">
+            <li>Minimalist and stripped down</li>
+            <li>Often entirely lowercase for a casual, chaotic vibe</li>
+            <li>High contrast and bold phrasing</li>
+            <li>Unapologetic and confident tone</li>
           </ul>
-          <p className="mb-4">Examples of common Brat-style naming patterns include:</p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>one-word names</li>
-            <li>slightly chaotic phrases</li>
-            <li>confident statements</li>
-            <li>ironic or exaggerated tones</li>
-            <li>minimalist expressions</li>
+          <p className="hp-body-text mt-4">Examples of common Brat-style naming patterns include:</p>
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-6">
+            <li>One-word names</li>
+            <li>Slightly chaotic phrases</li>
+            <li>Confident statements</li>
+            <li>Ironic or exaggerated tones</li>
+            <li>Minimalist expressions</li>
           </ul>
-          <p>The generator is designed to follow these patterns naturally.</p>
+          <p className="hp-body-text mt-6 font-medium">The generator is designed to follow these patterns naturally.</p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Main Features of the Brat Name Generator</h2>
+      {/* ── FEATURES GRID ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <span className="hp-eyebrow">Features</span>
+        <h2 className="hp-display-heading">Main Features of the Generator</h2>
+        <div className="hp-features-grid mt-8">
+          
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">⚡</div>
+            <h3>Instant Generation</h3>
+            <p>Generate multiple Brat-style names instantly with one click. Each result is designed to feel aesthetic, modern, and usable.</p>
+          </div>
 
-          <h3 className="text-xl font-semibold mt-6">1. Instant Name Generation</h3>
-          <p className="mb-6">
-            Generate multiple Brat-style names instantly with one click.
-            Each result is designed to feel aesthetic, modern, and usable.
-          </p>
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">💿</div>
+            <h3>Album-Ready Names</h3>
+            <p>Creates names that work perfectly for album titles, EP names, playlist names, music projects, or fan-made releases.</p>
+          </div>
 
-          <h3 className="text-xl font-semibold mt-6">2. Album-Ready Name Styles</h3>
-          <p className="mb-4">
-            The generator creates names that work well for:
-          </p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>album titles</li>
-            <li>EP names</li>
-            <li>playlist names</li>
-            <li>music projects</li>
-            <li>fan-made releases</li>
-          </ul>
-          <p className="mb-6">
-            These names are short, expressive, and visually strong.
-          </p>
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">📱</div>
+            <h3>Profile &amp; Username Ideas</h3>
+            <p>Find visually strong names for Instagram, TikTok, Discord, Twitter (X), or creative aliases.</p>
+          </div>
 
-          <h3 className="text-xl font-semibold mt-6">3. Profile &amp; Username Ideas</h3>
-          <p className="mb-4">You can also use the generated names for:</p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>Instagram usernames</li>
-            <li>TikTok display names</li>
-            <li>Discord nicknames</li>
-            <li>Twitter (X) profiles</li>
-            <li>Creative aliases</li>
-          </ul>
-          <p className="mb-6">
-            The names are designed to look good visually, not just sound good.
-          </p>
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">✨</div>
+            <h3>Charli XCX–Inspired</h3>
+            <p>The naming style is heavily inspired by the Brat era&apos;s tone — bold, playful, and unapologetic.</p>
+          </div>
 
-          <h3 className="text-xl font-semibold mt-6">4. Charli XCX–Inspired Aesthetic</h3>
-          <p className="mb-6">
-            The naming style is inspired by the Brat era&apos;s tone —
-            bold, confident, playful, and unapologetic. This makes the
-            results feel authentic rather than generic.
-          </p>
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">🔓</div>
+            <h3>Unlimited Free Use</h3>
+            <p>Generate as many names as you want. There are no limits, no paywalls, and no locked features.</p>
+          </div>
 
-          <h3 className="text-xl font-semibold mt-6">5. Unlimited Free Use</h3>
-          <p className="mb-6">
-            You can generate as many names as you want. There are no
-            limits, no paywalls, and no locked features.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">6. Clean, Simple Interface</h3>
-          <p className="mb-6">
-            The tool focuses on one thing: generating names. No clutter,
-            no unnecessary options — just fast results.
-          </p>
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">📐</div>
+            <h3>Clean, Simple Interface</h3>
+            <p>The tool focuses on one thing: generating names. No clutter, no unnecessary options — just fast results.</p>
+          </div>
+          
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How to Use the Brat Name Generator</h2>
-
-          <h3 className="text-xl font-semibold mt-6">Step 1 — Open the Tool</h3>
-          <p className="mb-6">Load the generator page. No login is required.</p>
-
-          <h3 className="text-xl font-semibold mt-6">Step 2 — Generate Names</h3>
-          <p className="mb-6">
-            Click the generate button to receive a list of Brat-style
-            names instantly.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">Step 3 — Pick Your Favorite</h3>
-          <p className="mb-6">
-            Scroll through the results and choose the name that fits
-            your project, profile, or album.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">Step 4 — Use or Regenerate</h3>
-          <p>Use the name directly or generate again for more ideas. That&apos;s it. The entire process takes seconds.</p>
+      {/* ── HOW TO USE ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <span className="hp-eyebrow">Guide</span>
+        <h2 className="hp-display-heading">How to Use the Brat Name Generator</h2>
+        <div className="hp-steps-grid mt-6">
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">1</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Open the Tool</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Load the generator page. No signup or account creation is required.</p>
+          </div>
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">2</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Generate Names</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Click the generate button to receive a list of aesthetic Brat-style names instantly.</p>
+          </div>
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">3</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Pick Your Favorite</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Scroll through the uniquely generated results and choose the name that fits your specific project.</p>
+          </div>
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">4</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Use or Regenerate</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Use the name directly or generate again for endless more ideas. The entire process takes seconds.</p>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How People Use Brat Names</h2>
-          <p className="mb-4">
-            Here are some common real-world uses for Brat-style names:
+      {/* ── REAL WORLD USES ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">How People Use Brat Names</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
+            Because the names are short and expressive, they work across many platforms. Here are common real-world uses:
           </p>
-          <ul className="list-inside list-disc space-y-1">
-            <li>naming a concept album</li>
-            <li>choosing a playlist title</li>
-            <li>branding a meme page</li>
-            <li>creating a stage name</li>
-            <li>naming a creative series</li>
-            <li>choosing an online alias</li>
-            <li>labeling visual edits</li>
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-6">
+            <li>Naming a concept album</li>
+            <li>Choosing a playlist title</li>
+            <li>Branding a meme page</li>
+            <li>Creating a stage name</li>
+            <li>Naming a creative series</li>
+            <li>Choosing an online alias</li>
+            <li>Labeling visual edits</li>
           </ul>
-          <p className="mt-4">
-            Because the names are short and expressive, they work across
-            many platforms.
-          </p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Why This Tool Is Better</h2>
-          <p className="mb-4">
-            Most online name generators feel random, outdated, or generic.
-            They often produce names that don&apos;t match modern internet
-            aesthetics.
+      {/* ── WHY THIS TOOL IS BETTER ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Why This Tool Is Better</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
+            Most online name generators feel random, outdated, or generic. They often produce names that don&apos;t match modern internet aesthetics. The Brat Name Generator avoids that by focusing on authentic patterns:
           </p>
-          <p className="mb-4">
-            The Brat Name Generator avoids that by focusing on:
-          </p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>aesthetic naming patterns</li>
-            <li>modern tone</li>
-            <li>album-style structure</li>
-            <li>confidence and simplicity</li>
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-6">
+            <li>Aesthetic naming patterns</li>
+            <li>Modern, assertive tone</li>
+            <li>Album-style structure</li>
+            <li>Confidence and simplicity</li>
           </ul>
-          <p>You get names that actually feel usable — not filler.</p>
+          <p className="hp-body-text mt-6 font-medium">You get names that actually feel usable — not filler.</p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Examples of Brat Name Styles</h2>
-          <p className="mb-4">
+      {/* ── EXAMPLES ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Examples of Brat Name Styles</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
             The generator produces names that fall into styles such as:
           </p>
-          <ul className="list-inside list-disc space-y-1">
-            <li>minimalist single-word names</li>
-            <li>bold phrases</li>
-            <li>ironic titles</li>
-            <li>confident statements</li>
-            <li>playful expressions</li>
-            <li>album-style wording</li>
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-6">
+            <li>Minimalist single-word names</li>
+            <li>Bold phrases and ironic titles</li>
+            <li>Confident statements</li>
+            <li>Playful and chaotic expressions</li>
+            <li>Authentic album-style wording</li>
           </ul>
-          <p className="mt-4">
-            These styles are intentionally flexible so you can use them creatively.
+          <p className="hp-body-text mt-6">
+            These styles are intentionally flexible so you can use them creatively across any format.
           </p>
         </div>
-      </section>
+      </div>
 
+      {/* ── FAQ ── */}
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Here are some common questions about our Brat Generator"
@@ -286,26 +274,23 @@ export default function BratNameGeneratorPage() {
         ]}
       />
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Conclusion</h2>
-          <p className="mb-4">
+      {/* ── CONCLUSION ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Conclusion</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
             The Brat Name Generator gives you a fast, creative way to
             generate bold, Brat-inspired names for albums, profiles,
             playlists, and projects. With instant results, unlimited
             usage, and a clean aesthetic, it removes the frustration of
             naming and lets you focus on creating.
           </p>
-          <p>
+          <p className="hp-body-text mt-4">
             If you want modern, confident names that fit the Brat vibe,
             this generator delivers exactly that.
           </p>
         </div>
-      </section>
-
-      
-
-      
+      </div>
     </main>
   );
 }

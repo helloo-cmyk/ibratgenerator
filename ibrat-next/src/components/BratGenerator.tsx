@@ -29,6 +29,7 @@ const BRAT_STYLES = `
   color: #0f172a;
   overflow: visible;
   box-sizing: border-box;
+  max-width: 100vw;
 }
 
 :root {
@@ -37,17 +38,17 @@ const BRAT_STYLES = `
   --ui: #0f172a;
   --muted: #475569;
   --card: #ffffff;
-  --ring: #6366f1;
+  --ring: #CCFF00;
   --border: rgba(0, 0, 0, .06);
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, .04);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, .05), 0 1px 2px rgba(0, 0, 0, .03);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, .05), 0 1px 4px rgba(0, 0, 0, .03);
-  --shadow-lg: 0 10px 40px rgba(0, 0, 0, .08), 0 2px 8px rgba(0, 0, 0, .04);
-  --radius-xl: 20px;
-  --radius: 14px;
-  --radius-sm: 10px;
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, .03);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, .04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, .06);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, .08);
+  --radius-xl: 24px;
+  --radius: 16px;
+  --radius-sm: 12px;
   --radius-xs: 8px;
-  --transition: .2s cubic-bezier(.4, 0, .2, 1);
+  --transition: .3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ===== LAYOUT ===== */
@@ -116,50 +117,63 @@ const BRAT_STYLES = `
   .brat-grid {
     flex-direction: row;
     align-items: flex-start;
-    gap: 24px;
+    gap: 32px;
     min-height: 600px;
+    position: relative;
   }
   #brat-controls {
-    width: 320px;
+    width: 360px;
     flex-shrink: 0;
-    height: 100%;
-    overflow-y: auto;
+    min-height: 500px;
+    order: 2;
   }
   #brat-preview {
     flex: 1 1 0;
     min-width: 0;
     display: flex;
     flex-direction: column;
+    order: 1;
+    position: sticky;
+    top: 24px;
+    height: calc(100vh - 48px);
+    max-height: 1000px;
   }
   .brat-stage {
     flex: 1 1 auto;
-    min-height: 500px;
     position: relative;
+    background: var(--hp-surface-warm);
+    border-radius: 2rem;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
   }
   .brat-canvas {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: calc(100% - 24px);
-    max-height: calc(100% - 24px);
+    max-width: calc(100% - 48px);
+    max-height: calc(100% - 48px);
     width: auto;
     height: auto;
+    object-fit: contain;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-lg);
   }
 }
 
 .brat-card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 0.75rem;
-  padding: 16px;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  box-shadow: var(--shadow-md);
   min-height: 0;
 }
 
 @media(min-width:640px) {
   .brat-card {
-    padding: 24px;
+    padding: 32px;
   }
 }
 
@@ -187,12 +201,13 @@ const BRAT_STYLES = `
   width: 100%;
   background: #f8fafc;
   color: #0f172a;
-  border: 1px solid rgba(0, 0, 0, .08);
-  border-radius: var(--radius-xs);
-  padding: 10px 12px;
+  border: 1.5px solid rgba(0, 0, 0, .06);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
   box-sizing: border-box;
-  transition: border-color var(--transition), box-shadow var(--transition);
-  font-size: 14px;
+  transition: all var(--transition);
+  font-size: 15px;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -200,9 +215,9 @@ const BRAT_STYLES = `
 #brat-embed-root textarea:focus,
 #brat-embed-root select:focus {
   outline: none;
-  border-color: #a5b4fc;
+  border-color: #CCFF00;
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, .08);
+  box-shadow: 0 0 0 4px rgba(204, 255, 0, .15);
 }
 
 #brat-embed-root input[type="color"] {
@@ -233,30 +248,31 @@ const BRAT_STYLES = `
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  height: 6px;
-  border-radius: 3px;
+  height: 8px;
+  border-radius: 4px;
   background: #e2e8f0;
   outline: none;
   transition: background var(--transition);
-  margin: 8px 0;
+  margin: 12px 0;
 }
 
 #brat-embed-root input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: #fff;
-  border: 2px solid #6366f1;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+  border: 3px solid #000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
   cursor: pointer;
   transition: all var(--transition);
 }
 
 #brat-embed-root input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.15);
-  box-shadow: 0 2px 8px rgba(99, 102, 241, .3);
+  box-shadow: 0 4px 12px rgba(204, 255, 0, .4);
+  border-color: #CCFF00;
 }
 
 #brat-embed-root input[type="range"]::-moz-range-thumb {
@@ -305,71 +321,58 @@ const BRAT_STYLES = `
 
 /* ===== BUTTONS ===== */
 .brat-btn {
-  border: 1px solid rgba(0, 0, 0, .08);
+  border: 1px solid rgba(0, 0, 0, .06);
   background: var(--card);
   color: #0f172a;
-  border-radius: var(--radius);
-  padding: 11px 20px;
+  border-radius: var(--radius-sm);
+  padding: 12px 24px;
   cursor: pointer;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: -.01em;
+  font-weight: 700;
+  font-size: 14px;
   transition: all var(--transition);
   box-shadow: var(--shadow-xs);
-  min-height: 44px;
+  min-height: 48px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
-.brat-btn:hover {
+.brat-btn:hover:not(:disabled) {
   background: #f8fafc;
   box-shadow: var(--shadow-sm);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
-.brat-btn:active {
+.brat-btn:active:not(:disabled) {
   transform: translateY(0);
   box-shadow: none;
 }
 
 .brat-btn:focus-visible {
-  outline: 2px solid var(--ring);
+  outline: 2px solid #000;
   outline-offset: 2px;
 }
 
 .brat-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  transform: none;
-  pointer-events: none;
+  background: #f1f5f9;
 }
 
 .brat-btn.primary {
-  background: #111;
-  color: white;
-  border-color: #111;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+  background: #000;
+  color: #CCFF00;
+  border-color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
 }
 
-.brat-btn.primary:hover {
-  opacity: 0.9;
+.brat-btn.primary:hover:not(:disabled) {
+  background: #1a1a1a;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .2) !important;
 }
 
-.brat-btn.primary:active {
-  background: #111;
-  transform: translateY(0);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
-}
-
-.brat-btn.green {
-  background: #111;
-  color: white;
-  border-color: #111;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
-}
-
-.brat-btn.green:hover {
-  opacity: 0.9;
+.brat-btn.primary:active:not(:disabled) {
+  transform: translateY(0) !important;
 }
 
 /* ===== TOOLBAR ===== */
@@ -445,23 +448,24 @@ const BRAT_STYLES = `
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: var(--card);
-  margin-bottom: 8px;
-  transition: box-shadow var(--transition);
+  margin-bottom: 12px;
+  transition: all var(--transition);
 }
 
 .brat-acc:hover {
-  box-shadow: var(--shadow-xs);
+  border-color: rgba(0,0,0,0.12);
+  box-shadow: var(--shadow-sm);
 }
 
 .brat-acc-h {
   width: 100%;
   text-align: left;
-  padding: 14px 16px;
+  padding: 16px 20px;
   background: transparent;
   border: 0;
   color: #0f172a;
-  font-weight: 600;
-  font-size: 13px;
+  font-weight: 700;
+  font-size: 14px;
   cursor: pointer;
   transition: background var(--transition);
   display: flex;
@@ -471,10 +475,10 @@ const BRAT_STYLES = `
 
 .brat-acc-h::after {
   content: '';
-  width: 7px;
-  height: 7px;
-  border-right: 1.5px solid var(--muted);
-  border-bottom: 1.5px solid var(--muted);
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
   transform: rotate(45deg);
   transition: transform var(--transition);
   flex-shrink: 0;
@@ -483,6 +487,7 @@ const BRAT_STYLES = `
 
 .brat-acc.open .brat-acc-h::after {
   transform: rotate(-135deg);
+  margin-top: 4px;
 }
 
 .brat-acc-h:hover {
@@ -556,6 +561,12 @@ const BRAT_STYLES = `
   border-color: var(--border-soft);
   box-shadow: var(--shadow-sm);
   transform: translateY(-1px);
+}
+
+.brat-pill.active {
+  background: #f8fafc;
+  border-color: #000;
+  box-shadow: 0 0 0 1px #000;
 }
 
 .brat-pill:active {
@@ -833,31 +844,34 @@ const BRAT_STYLES = `
     gap: 0;
     overflow: visible;
   }
-  #brat-preview {
+    #brat-preview {
     order: 0;
-    display: block;
+    display: flex;
     margin: 0;
     border-radius: 0;
     border: none;
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    padding: 8px;
-    background: #ffffff;
+    box-shadow: none;
+    padding: 12px;
+    background: transparent;
     overflow: visible;
+    flex-direction: column;
   }
   .brat-stage {
     position: relative;
     width: 100%;
     aspect-ratio: unset;
-    height: 90vw;
-    max-height: 90vw;
+    height: 95vw;
+    max-height: 95vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
-    background: transparent;
+    border: 1px solid var(--border);
+    background: var(--card);
     padding: 0;
-    border-radius: 0.75rem;
+    border-radius: var(--radius-xl);
     overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    box-sizing: border-box;
   }
   .brat-canvas {
     width: auto !important;
@@ -875,14 +889,14 @@ const BRAT_STYLES = `
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    transition: max-height .35s cubic-bezier(.4, 0, .2, 1);
+    transition: max-height .4s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 1001;
-    border-radius: 16px;
+    border-radius: var(--radius-xl);
     box-shadow: none;
     padding: 0;
-    margin: 0 8px;
-    width: calc(100% - 16px);
-    border: none;
+    margin: 0 auto;
+    width: calc(100% - 24px);
+    border: 1px solid var(--border);
     background: #fff;
   }
   #brat-controls.sheet-open {
@@ -896,14 +910,22 @@ const BRAT_STYLES = `
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px;
+    padding: 12px;
     min-height: 44px;
+    cursor: grab;
+  }
+  .brat-sheet-handle:active {
+    cursor: grabbing;
   }
   .brat-sheet-handle span {
-    width: 36px;
-    height: 4px;
-    background: rgba(0, 0, 0, .12);
+    width: 48px;
+    height: 5px;
+    background: rgba(0, 0, 0, .15);
     border-radius: 4px;
+    transition: background var(--transition);
+  }
+  .brat-sheet-handle:active span {
+    background: rgba(0, 0, 0, .25);
   }
   .brat-tab-panel { display: none !important; }
   .brat-tab-panel.active { display: block !important; }
@@ -1147,28 +1169,30 @@ const BRAT_STYLES = `
   .brat-tab-panel.active .brat-acc-h {
     cursor: default;
     pointer-events: none;
-    font-size: 11px;
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: .05em;
+    letter-spacing: .08em;
     color: var(--muted);
-    font-weight: 600;
-    padding: 20px 0 8px 0;
+    font-weight: 800;
+    padding: 24px 0 12px 0;
     background: transparent;
     min-height: auto;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    margin-bottom: 16px;
   }
   .brat-tab-panel.active .brat-acc-h::after { display: none; }
-  .brat-tab-panel .brat-acc:only-child .brat-acc-h { display: none; }
+  .brat-tab-panel .brat-acc:only-child .brat-acc-h { display: flex; }
 }
 
 `;
 
-export default function BratGenerator() {
+export default function BratGenerator({ defaultBg, defaultFg }: { defaultBg?: string; defaultFg?: string }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const cleanupRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
     if (rootRef.current) {
-      cleanupRef.current = initBratGenerator();
+      cleanupRef.current = initBratGenerator({ defaultBg, defaultFg });
     }
     return () => {
       if (cleanupRef.current) {
@@ -1176,7 +1200,7 @@ export default function BratGenerator() {
         cleanupRef.current = null;
       }
     };
-  }, []);
+  }, [defaultBg, defaultFg]);
 
   return (
     <div id="brat-embed-root" ref={rootRef} style={{ all: "initial" }}>
@@ -1218,20 +1242,13 @@ export default function BratGenerator() {
                         placeholder="write your brat text here (it will be lowercased)"
                         defaultValue="brat"
                       />
-                      <div className="brat-row">
-                        <label>
-                          <input type="checkbox" id="brat-forceLower" defaultChecked /> force lowercase
-                        </label>
-                        <label>
-                          <input type="checkbox" id="brat-autoBreak" defaultChecked /> smart line breaks
-                        </label>
-                      </div>
+
                       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
                         <div>
                           <label className="brat-label" htmlFor="brat-fontSize">
                             Font size
                           </label>
-                          <input type="range" id="brat-fontSize" min={24} max={220} defaultValue={120} />
+                          <input type="range" id="brat-fontSize" min={24} max={220} defaultValue={180} />
                         </div>
                         <div>
                           <label className="brat-label" htmlFor="brat-lineHeight">

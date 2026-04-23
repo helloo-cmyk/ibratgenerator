@@ -14,239 +14,255 @@ export const metadata = {
 
 export default function BratBlackGeneratorPage() {
   return (
-    <main className="space-y-10">
+    <main className="hp-root pb-24">
+      {/* ── HERO ── */}
+      <section className="hp-hero px-4">
+        <h1 className="hp-hero-heading mt-6 mb-3 mx-auto">Black Brat Generator</h1>
+        <p className="intro-text">
+          The brat generator black lets you create high-contrast brat text and graphics on black backgrounds. Use this brat black generator as a brat text generator black for social posts, memes, and dark aesthetic visuals—no design software needed.
+        </p>
+      </section>
 
-<section>
-        <div className="text-center">
-          <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mt-6 mb-3 mx-auto">Black Brat Generator</h1>
-            <p className="mb-5">
-              The brat generator black lets you create high-contrast brat text and graphics on black backgrounds. Use this brat black generator as a brat text generator black for social posts, memes, and dark aesthetic visuals—no design software needed.
+      {/* ── GENERATOR APP ── */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-2 mb-16">
+        <BratGeneratorLazy defaultBg="#0a0a0a" defaultFg="#ffffff" />
+      </div>
+
+      {/* ── INTERNAL LINK ── */}
+      <section className="-mt-4 mb-10 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base" style={{color: "var(--hp-ink-soft)"}}>
+          Looking for all features? Try the <Link href="/" className="hp-link font-semibold">free brat generator</Link> to create memes, images, and more in one place.
+        </div>
+      </section>
+
+      {/* ── OVERVIEW ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <div className="hp-two-col max-w-[1200px] mx-auto">
+          <div>
+            <span className="hp-eyebrow">Overview</span>
+            <h2 className="hp-display-heading">What Is the Brat Generator Black</h2>
+          </div>
+          <div>
+            <p className="hp-body-text">
+              The brat generator black is a specialized tool for creating high-contrast brat text and graphics using black backgrounds. It lets you produce bold, minimal Brat-style visuals with strong contrast and clean typography—ideal for dark aesthetics and modern social content.
             </p>
-
+            <p className="hp-body-text mt-4">
+              This brat black generator lets you create black Brat text, dark meme captions, album-style visuals, profile graphics, and minimalist posts without design software. Type your text, customize the layout and dark themes, and download high-quality images instantly.
+            </p>
+            <p className="hp-body-text mt-4 font-medium">
+              Whether you need a brat generator black background, a dark aesthetic caption, or a black-themed profile image, everything can be created inside this generator.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="mt-6 sm:mt-8 mb-8 sm:mb-12">
-        <BratGeneratorLazy />
-      </section>
+      {/* ── EXPLORE STYLES ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Explore More Color Styles</h2>
+        <p className="hp-body-text mt-4">
+          Want to try a different color theme? These generators use the same brat style with different palettes.
+        </p>
+        <ul className="hp-body-text space-y-3 mt-6 ml-4 list-disc">
+          <li><Link href="/brat-generator-white" className="hp-link">White Brat Generator</Link> — Clean, minimal visuals with a neutral palette.</li>
+          <li><Link href="/brat-green-generator" className="hp-link">Green Brat Generator</Link> — The classic neon green brat aesthetic.</li>
+          <li><Link href="/brat-text-generator" className="hp-link">Brat Text Generator</Link> — Quick text-only designs with fast PNG export.</li>
+        </ul>
+      </div>
 
-      <section className="-mt-4 mb-10 text-center">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-base text-foreground/80">
-          Looking for all features? Try the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to create memes, images, and more in one place.
+      {/* ── TWO-COL: WHO USES IT ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <div className="hp-two-col flex flex-col md:flex-row items-start gap-12 max-w-[1200px] mx-auto">
+          <div className="flex-1">
+             <span className="hp-eyebrow">Audience</span>
+             <h2 className="hp-display-heading">Who Uses the Brat Generator Black</h2>
+             <p className="hp-body-text mt-4">
+               The black brat generator is ideal for creators who prefer darker visuals with strong contrast.
+             </p>
+             <p className="hp-body-text mt-4 font-medium">
+               If you want something sharp, serious, and visually striking, this black version delivers.
+             </p>
+          </div>
+          <div className="flex-1">
+            <p className="hp-body-text mb-4 font-medium">It works perfectly for:</p>
+            <div className="flex flex-wrap gap-2">
+               {[
+                 "Minimalist designs",
+                 "High-contrast posts",
+                 "Dark meme pages",
+                 "Social media creators",
+                 "Album-style visuals",
+                 "Black-themed edits",
+                 "Clean modern aesthetics"
+               ].map(p => (
+                 <span key={p} className="px-3 py-1.5 bg-[var(--hp-surface)] border border-[var(--hp-border)] rounded-md text-[13px] font-medium text-[var(--hp-ink)] shadow-sm transition-colors hover:border-[var(--hp-border-dark)]">{p}</span>
+               ))}
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">What Is the Brat Generator Black</h2>
-          <p className="mb-4">
-            The brat generator black is a specialized tool for creating high-contrast brat text and graphics using black backgrounds. It lets you produce bold, minimal Brat-style visuals with strong contrast and clean typography—ideal for dark aesthetics and modern social content.
-          </p>
-          <p className="mb-4">
-            This brat black generator lets you create black Brat text, dark meme captions, album-style visuals, profile graphics, and minimalist posts without design software. Type your text, customize the layout and dark themes, and download high-quality images instantly.
-          </p>
-          <p>
-            Whether you need a brat generator black background, a dark aesthetic caption, or a black-themed profile image, everything can be created inside this generator.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Explore More Color Styles</h2>
-          <p className="mb-4">
-            Want to try a different color theme? These generators use the same brat style with different palettes.
-          </p>
-          <ul className="space-y-2 list-none pl-0">
-            <li><Link href="/brat-generator-white" className="text-primary hover:underline">White Brat Generator</Link> — Clean, minimal visuals with a neutral palette.</li>
-            <li><Link href="/brat-green-generator" className="text-primary hover:underline">Green Brat Generator</Link> — The classic neon green brat aesthetic.</li>
-            <li><Link href="/brat-text-generator" className="text-primary hover:underline">Brat Text Generator</Link> — Quick text-only designs with fast PNG export.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Who Uses the Brat Generator Black</h2>
-          <p className="mb-4">
-            The black brat generator is ideal for creators who prefer darker visuals with strong contrast.
-          </p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>Users who like minimalist designs</li>
-            <li>Creators making bold, high-contrast posts</li>
-            <li>Meme pages with darker themes</li>
-            <li>Social media creators</li>
-            <li>Designers working on album-style visuals</li>
-            <li>People creating black-themed Brat edits</li>
-            <li>Anyone who wants a clean, modern Brat look</li>
-          </ul>
-          <p>
-            If you want something sharp, serious, and visually striking, this
-            black version delivers.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Features of the Brat Generator Black</h2>
-          <p className="mb-6">
+      {/* ── FEATURES GRID ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <span className="hp-eyebrow">Capabilities</span>
+        <h2 className="hp-display-heading">Features of the Brat Generator Black</h2>
+        <div className="max-w-3xl mb-8">
+          <p className="hp-body-text mt-4">
             The brat generator black offers customization of text, layout, and dark themes. Use it as a brat generator black background tool or a brat text generator black for captions, memes, and graphics.
           </p>
-
-          <h3 className="text-xl font-semibold mt-6">1. Deep Black Background Presets</h3>
-          <p className="mb-6">
-            The generator uses true black and near-black backgrounds to give your designs a clean, professional look with maximum contrast.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">2. Clean Brat Typography</h3>
-          <p className="mb-6">
-            Text styling follows the Brat aesthetic bold, minimal, and easy to
-            read. Light text on dark backgrounds ensures clarity and impact.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">3. Full Text Customization</h3>
-          <p className="mb-6">
-            Adjust font size, spacing, alignment, and placement to create
-            everything from structured quotes to expressive meme layouts.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">4. Black Text Generator Mode</h3>
-          <p className="mb-4">
-            Use the tool as a brat text generator black to create:
-          </p>
-          <ul className="mb-6 list-inside list-disc space-y-1">
-            <li>black Brat captions</li>
-            <li>dark meme text</li>
-            <li>album-style titles</li>
-            <li>minimalist quotes</li>
-            <li>profile name graphics</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6">5. Background Image Upload</h3>
-          <p className="mb-6">
-            Upload your own images or textures to combine black Brat text with
-            photos or creative visuals.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">6. Multiple Aspect Ratios</h3>
-          <p className="mb-4">Design for different platforms using:</p>
-          <ul className="mb-6 list-inside list-disc space-y-1">
-            <li>1:1 square</li>
-            <li>9:16 vertical</li>
-            <li>4:5 portrait</li>
-            <li>16:9 landscape</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6">7. High-Quality PNG Export</h3>
-          <p className="mb-6">
-            Download all designs as sharp PNG files with no watermark.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-6">8. Mobile-Friendly Editing</h3>
-          <p className="mb-6">
-            The editor works smoothly on mobile devices, allowing full control
-            from your phone.
-          </p>
         </div>
-      </section>
+        
+        <div className="hp-features-grid mt-8">
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">⬛</div>
+            <h3>Deep Black Presets</h3>
+            <p>The generator uses true black and near-black backgrounds to give your designs a clean, professional look with maximum contrast.</p>
+          </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">How to Use the Brat Generator Black</h2>
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">🔤</div>
+            <h3>Clean Brat Typography</h3>
+            <p>Text styling follows the Brat aesthetic bold, minimal, and easy to read. Light text on dark backgrounds ensures clarity.</p>
+          </div>
 
-          <h3 className="text-xl font-semibold mt-6">Step 1 — Enter Your Text</h3>
-          <p className="mb-6">Type your caption, lyric, meme line, or quote.</p>
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">✏️</div>
+            <h3>Full Customization</h3>
+            <p>Adjust font size, spacing, alignment, and placement to create everything from structured quotes to expressive memes.</p>
+          </div>
 
-          <h3 className="text-xl font-semibold mt-6">Step 2 — Select Black Style</h3>
-          <p className="mb-6">
-            Choose between solid black or near-black tones for better contrast.
-          </p>
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">📝</div>
+            <h3>Black Text Generator</h3>
+            <p>Design black Brat captions, dark meme text, album titles, minimalist quotes, and sleek profile name graphics.</p>
+          </div>
 
-          <h3 className="text-xl font-semibold mt-6">Step 3 — Adjust Layout</h3>
-          <p className="mb-6">
-            Resize and move text until the design feels balanced and visually strong.
-          </p>
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">🖼️</div>
+            <h3>Background Image Upload</h3>
+            <p>Upload your own images or textures to combine bold black Brat text with photos or creative personal visuals.</p>
+          </div>
 
-          <h3 className="text-xl font-semibold mt-6">Step 4 — Add a Background (Optional)</h3>
-          <p className="mb-6">Use a solid black background or upload an image.</p>
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">📐</div>
+            <h3>Multiple Aspect Ratios</h3>
+            <p>Design for different platforms using 1:1 square, 9:16 vertical, 4:5 portrait, and 16:9 landscape aspect ratios.</p>
+          </div>
 
-          <h3 className="text-xl font-semibold mt-6">Step 5 — Download Your Design</h3>
-          <p>Export your black Brat visual instantly as a PNG.</p>
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">✨</div>
+            <h3>High-Quality Export</h3>
+            <p>Download all designs as perfectly sharp, clean PNG files without any watermarks or compression loss.</p>
+          </div>
+
+          <div className="hp-feature-card">
+            <div className="hp-feature-icon">📱</div>
+            <h3>Mobile-Friendly</h3>
+            <p>The editor works smoothly on mobile devices, allowing full control directly from your phone on the go.</p>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Why This Tool Is Better</h2>
-          <p className="mb-4">
-            Many dark-themed generators simply invert colors without considering
-            readability or layout. The brat generator black tool is built
-            specifically around high-contrast design principles.
+      {/* ── HOW TO USE ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <span className="hp-eyebrow">Guide</span>
+        <h2 className="hp-display-heading">How to Use the Brat Generator Black</h2>
+        <div className="hp-steps-grid mt-6">
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">1</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Enter Your Text</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Type your caption, lyric, meme line, or bold quote into the editor.</p>
+          </div>
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">2</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Select Black Style</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Choose between solid black or near-black tones for better reading contrast.</p>
+          </div>
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">3</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Adjust Layout</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Resize and move text until the design feels balanced and visually strong.</p>
+          </div>
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">4</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Add a Background</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Use a pure solid black background or creatively upload an image layer.</p>
+          </div>
+          <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
+            <span className="hp-step-num">5</span>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Download Design</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Export your black Brat visual instantly as a sharp PNG. Ready in seconds.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* ── WHY THIS TOOL IS BETTER ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Why This Tool Is Better</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
+            Many dark-themed generators simply invert colors without considering readability or layout. The brat generator black tool is built specifically around high-contrast design principles.
           </p>
-          <p className="mb-4">It offers:</p>
-          <ul className="mb-4 list-inside list-disc space-y-1">
-            <li>true black presets</li>
-            <li>clean typography</li>
-            <li>high-resolution exports</li>
-            <li>unlimited free usage</li>
-            <li>mobile optimization</li>
-            <li>no watermark</li>
-            <li>no account required</li>
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-6">
+            <li>True black presets</li>
+            <li>Clean typography</li>
+            <li>High-resolution exports</li>
+            <li>Unlimited free usage</li>
+            <li>Mobile optimization</li>
+            <li>No watermark and no account required</li>
           </ul>
-          <p>You get professional results without complexity.</p>
+          <p className="hp-body-text font-medium">You get professional results without complexity.</p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Brat Generator Black Examples</h2>
-          <p className="mb-4">
-            With the brat generator black, users can create dark aesthetic brat graphics for a variety of uses.
+      {/* ── EXAMPLES ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Brat Generator Black Examples</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
+            With the brat generator black, users can create dark aesthetic brat graphics for a variety of uses:
           </p>
-          <ul className="list-inside list-disc space-y-1">
-            <li>black Brat text graphics</li>
-            <li>high-contrast memes</li>
-            <li>dark aesthetic captions</li>
-            <li>album-style visuals</li>
-            <li>profile graphics</li>
-            <li>minimalist posters</li>
-            <li>black-themed social posts</li>
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-6">
+            <li>Black Brat text graphics</li>
+            <li>High-contrast memes</li>
+            <li>Dark aesthetic captions</li>
+            <li>Album-style visuals</li>
+            <li>Profile graphics</li>
+            <li>Minimalist posters</li>
+            <li>Black-themed social posts</li>
           </ul>
-          <p className="mt-4">The tool works well for both simple text and expressive layouts.</p>
+          <p className="hp-body-text mt-4 font-medium">The tool works well for both simple text and expressive layouts.</p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why Black Background Works For Brat Typography</h2>
-          <p className="mb-4">
+      {/* ── WHY BLACK BACKGROUND WORKS ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Why Black Background Works For Brat Typography</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
             Black backgrounds create maximum contrast with light text, making Brat-style typography sharper and more readable than on most other surfaces. When bold sans-serif letters sit on pure black, the edges appear crisper and the message lands with more impact. This high contrast is especially effective on mobile screens and social feeds, where viewers scroll quickly and clarity matters.
           </p>
-          <p className="mb-4">
+          <p className="hp-body-text mt-4">
             Beyond readability, black conveys a distinct aesthetic. It feels serious, confident, and uncluttered—qualities that align with the Brat visual identity. Neon green on black pops even more than on white, and white or light gray text on black creates a sleek, modern look that works well for memes, captions, and profile graphics. The dark canvas also reduces visual noise, so the typography becomes the sole focus.
           </p>
-          <p>
+          <p className="hp-body-text mt-4">
             Creators choose black backgrounds when they want their Brat edits to feel more dramatic or refined. The combination of minimal design and high contrast makes the content stand out in crowded feeds without relying on bright colors. Whether used for album-style titles, lyric overlays, or meme captions, black backgrounds give Brat typography a premium, editorial feel that many users prefer over lighter alternatives.
           </p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Why Use the Black Brat Generator?</h2>
-          <p className="mb-4">
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Why Use the Black Brat Generator?</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
             Black brat visuals hit differently. While the original brat style is known for neon green, the black version creates a stronger, more dramatic look that stands out on dark interfaces. If you're posting on TikTok at night, creating edgy captions, or designing bold graphics, black brat text feels more intense and attention-grabbing.
           </p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">When Black Brat Works Best</h2>
-          <ul className="list-inside list-disc space-y-1">
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">When Black Brat Works Best</h2>
+        <div className="max-w-3xl">
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4">
             <li>Night-mode social media posts (TikTok, X, Instagram)</li>
             <li>Edgy meme captions with strong contrast</li>
             <li>Dark aesthetic profile pictures</li>
@@ -254,49 +270,50 @@ export default function BratBlackGeneratorPage() {
             <li>Album-style visuals with a serious tone</li>
           </ul>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">How to Get Better Results</h2>
-          <p className="mb-4">
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">How to Get Better Results</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
             Keep your text short — ideally 1 to 4 words. Black brat designs work best when they stay minimal. Use high contrast colors like white or neon text on a pure black background. Avoid clutter. The power of this style comes from simplicity.
           </p>
-          <p>
+          <p className="hp-body-text mt-4">
             For best quality, export your image at 2048px or higher. This keeps the text sharp across all platforms.
           </p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Try Other Styles</h2>
-          <p>
-            If you want something brighter, try the <Link href="/brat-green-generator/" className="text-primary underline hover:no-underline font-semibold">green brat generator</Link> for the classic look, or go back to the <Link href="/" className="text-primary underline hover:no-underline font-semibold">free brat generator</Link> to access all styles in one place.
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Try Other Styles</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
+            If you want something brighter, try the <Link href="/brat-green-generator/" className="hp-link">green brat generator</Link> for the classic look, or go back to the <Link href="/" className="hp-link">free brat generator</Link> to access all styles in one place.
           </p>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">Related Tools</h2>
-          <p className="mb-4">
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Related Tools</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
             Depending on what you&apos;re designing, these other tools might be a good fit alongside the dark aesthetic.
           </p>
-          <ul className="space-y-3 list-none pl-0">
+          <ul className="hp-body-text list-disc space-y-3 mt-4 ml-5">
             <li>
-              Use the <Link href="/brat-text-generator/" className="text-primary hover:underline">brat text generator</Link> for captions and short phrases you can export quickly.
+              Use the <Link href="/brat-text-generator/" className="hp-link">brat text generator</Link> for captions and short phrases you can export quickly.
             </li>
             <li>
-              Try the <Link href="/brat-maker/" className="text-primary hover:underline">brat maker</Link> to build full images and meme-ready graphics.
+              Try the <Link href="/brat-maker/" className="hp-link">brat maker</Link> to build full images and meme-ready graphics.
             </li>
             <li>
-              Switch to the <Link href="/brat-generator-white/" className="text-primary hover:underline">white brat generator</Link> if you want the opposite — clean and minimal.
+              Switch to the <Link href="/brat-generator-white/" className="hp-link">white brat generator</Link> if you want the opposite — clean and minimal.
             </li>
           </ul>
         </div>
-      </section>
+      </div>
 
+      {/* ── FAQ ── */}
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Here are some common questions about our Brat Generator"
@@ -310,20 +327,18 @@ export default function BratBlackGeneratorPage() {
         ]}
       />
 
-      <section>
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base leading-relaxed text-foreground/90">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Conclusion</h2>
-          <p className="mb-4">
+      {/* ── CONCLUSION ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">Conclusion</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
             The brat generator black is the perfect tool for creating dark, clean, high-contrast Brat-style visuals. With bold typography, flexible layouts, and high-quality exports, it gives creators a modern way to explore the Brat aesthetic.
           </p>
-          <p>
-            If you want strong, minimalist black Brat designs without design
-            software, this generator delivers exactly what you need.
+          <p className="hp-body-text mt-4">
+            If you want strong, minimalist black Brat designs without design software, this generator delivers exactly what you need.
           </p>
         </div>
-      </section>
-
-      
+      </div>
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, DM_Serif_Display } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "./globals.css";
@@ -38,6 +38,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const dmSerif = DM_Serif_Display({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -84,6 +91,7 @@ export default function RootLayout({
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta name="p:domain_verify" content="a5fad79f5206533009b21255aa5b5b60" />
         <meta name="google-adsense-account" content="ca-pub-4083132987699578" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <Script
           id="schema"
           type="application/ld+json"
@@ -107,12 +115,13 @@ export default function RootLayout({
             `,
           }}
         />
-        <Script
-          id="adsense-loader"
-          strategy="afterInteractive"
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
-          crossOrigin="anonymous"
-        />
+        {process.env.NODE_ENV === "production" && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+            crossOrigin="anonymous"
+          />
+        )}
         <Script
           id="clarity-script"
           strategy="lazyOnload"
@@ -128,7 +137,8 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dmSerif.variable} flex min-h-screen flex-col antialiased`}
+        suppressHydrationWarning
       >
         <Header />
         <main className="mx-auto flex-1 w-full max-w-screen-2xl px-4 sm:px-6">

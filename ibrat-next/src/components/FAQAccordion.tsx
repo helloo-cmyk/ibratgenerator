@@ -20,10 +20,10 @@ export default function FAQAccordion({ title, intro, items }: FAQAccordionProps)
     <section className="faq-section mt-12 mb-12">
       <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14 text-base text-foreground/90">
         <div className="text-center max-w-2xl mx-auto mb-8">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground mb-4">
+          <h2 className="hp-display-heading text-center mb-4">
             {title}
           </h2>
-          {intro && <p className="mb-6">{intro}</p>}
+          {intro && <p className="hp-body-text mx-auto">{intro}</p>}
         </div>
 
         <div className="w-full max-w-3xl mx-auto px-4 sm:px-6">
@@ -33,11 +33,11 @@ export default function FAQAccordion({ title, intro, items }: FAQAccordionProps)
               return (
                 <div
                   key={index}
-                  className="faq-accordion-item py-4 border-b border-black/5"
+                  className="faq-accordion-item py-4 border-b border-[var(--hp-border)]"
                 >
                 <button
                   type="button"
-                  className="faq-accordion-trigger w-full flex items-center justify-between text-left font-semibold text-foreground hover:opacity-80 transition-opacity"
+                  className="faq-accordion-trigger w-full flex items-center justify-between text-left font-medium text-[var(--hp-ink)] hover:opacity-70 transition-opacity"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
@@ -73,7 +73,7 @@ export default function FAQAccordion({ title, intro, items }: FAQAccordionProps)
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="faq-accordion-body pb-4 pt-2 leading-relaxed text-foreground/80">
+                    <div className="faq-accordion-body pb-4 pt-2 leading-relaxed text-[var(--hp-ink-soft)] text-[15px]">
                       {item.answer}
                     </div>
                   </div>
