@@ -1,30 +1,30 @@
 import Image from "next/image";
 
 const HOME_EXAMPLES = [
-  { src: "/examples/brat-demo-1.png", alt: "brat generator png example: brat summer vibes" },
-  { src: "/examples/brat-demo-2.png", alt: "brat image generator sample: stay toxic" },
-  { src: "/examples/brat-demo-3.png", alt: "brat words generator example: main character energy" },
-  { src: "/examples/brat-demo-4.png", alt: "brat generator png example: chaotic good" },
-  { src: "/examples/brat-demo-5.png", alt: "brat image generator sample: delulu mode activated" },
-  { src: "/examples/brat-demo-6.png", alt: "brat words generator example: hot girl walk" },
+  { src: "/examples/brat-demo-1.png", alt: "green brat text preview saying brat summer vibes" },
+  { src: "/examples/brat-demo-2.png", alt: "minimal brat meme example saying stay toxic" },
+  { src: "/examples/brat-demo-3.png", alt: "bold brat text image saying main character energy" },
+  { src: "/examples/brat-demo-4.png", alt: "neon green brat-style text reading chaotic good" },
+  { src: "/examples/brat-demo-5.png", alt: "pink brat meme style image saying delulu mode activated" },
+  { src: "/examples/brat-demo-6.png", alt: "square brat text design reading hot girl walk" },
 ];
 
 const MAKER_EXAMPLES = [
-  { src: "/examples/brat-maker-ex-1.png", alt: "brat maker app profile picture design graphic" },
-  { src: "/examples/brat-maker-ex-2.png", alt: "brat meme template maker text layout" },
-  { src: "/examples/brat-maker-ex-3.png", alt: "tiktok brat meme generation tool layout" },
-  { src: "/examples/brat-maker-ex-4.png", alt: "custom brat aesthetic post template example" },
-  { src: "/examples/brat-maker-ex-5.png", alt: "unbothered text layout meme format" },
-  { src: "/examples/brat-maker-ex-6.png", alt: "custom color hex brat style layout" },
+  { src: "/examples/brat-maker-ex-1.png", alt: "brat creator profile picture layout with centered text" },
+  { src: "/examples/brat-maker-ex-2.png", alt: "brat meme layout with bold lowercase caption" },
+  { src: "/examples/brat-maker-ex-3.png", alt: "social post mockup in brat style with text overlay" },
+  { src: "/examples/brat-maker-ex-4.png", alt: "custom brat-style post design with minimal text" },
+  { src: "/examples/brat-maker-ex-5.png", alt: "meme-style brat text card reading unbothered" },
+  { src: "/examples/brat-maker-ex-6.png", alt: "high-contrast brat design with custom hex colors" },
 ];
 
 const FONT_EXAMPLES = [
-  { src: "/examples/brat-font-ex-1.png", alt: "brat font generator typography sample" },
-  { src: "/examples/brat-font-ex-2.png", alt: "tight character spacing brat style" },
-  { src: "/examples/brat-font-ex-3.png", alt: "bold weight sans-serif brat font" },
-  { src: "/examples/brat-font-ex-4.png", alt: "minimalist typography layout design" },
-  { src: "/examples/brat-font-ex-5.png", alt: "accurate brat style font configuration" },
-  { src: "/examples/brat-font-ex-6.png", alt: "high contrast typographic image" },
+  { src: "/examples/brat-font-ex-1.png", alt: "brat font style preview with wide spacing" },
+  { src: "/examples/brat-font-ex-2.png", alt: "tight letter spacing example in brat style text" },
+  { src: "/examples/brat-font-ex-3.png", alt: "heavy sans-serif brat text sample" },
+  { src: "/examples/brat-font-ex-4.png", alt: "minimal typography layout with centered brat text" },
+  { src: "/examples/brat-font-ex-5.png", alt: "custom brat font settings preview" },
+  { src: "/examples/brat-font-ex-6.png", alt: "high-contrast typographic brat text design" },
 ];
 
 export default function ExampleGallery({ type = "home" }: { type?: "home" | "maker" | "font" }) {

@@ -218,7 +218,7 @@ button {
 
 /* ── HERO ── */
 .hp-hero {
-  padding: 72px 0 48px;
+  padding: 40px 0 20px;
   text-align: center;
   max-width: 680px;
   margin: 0 auto;
@@ -227,7 +227,7 @@ button {
 
 @media (max-width: 640px) {
   .hp-hero {
-    padding: 48px 0 32px;
+    padding: 32px 0 18px;
   }
 }
 
