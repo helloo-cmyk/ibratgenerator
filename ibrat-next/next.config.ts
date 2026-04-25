@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
         destination: '/brat-maker',
         permanent: true,
       },
+      {
+        source: '/what-is-brat-generator/',
+        destination: '/blog/what-is-brat-generator/',
+        permanent: true,
+      },
     ];
   }
 };

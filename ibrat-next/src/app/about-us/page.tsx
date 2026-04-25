@@ -178,7 +178,7 @@ export default function AboutUsPage() {
             If you want to try the tools, you can start with the{" "}
             <Link href="/brat-maker" className="hp-link">image editor</Link>{" "}
             for full image creation, or use the{" "}
-            <Link href="/brat-text-generator" className="hp-link">text generator tool</Link>{" "}
+            <Link href="/brat-text-generator/" className="hp-link">text generator tool</Link>{" "}
             for quick text designs.
           </p>
           <p className="hp-body-text mb-12">

@@ -14,6 +14,13 @@ export const metadata = {
 
 const BLOG_POSTS = [
   {
+    title: "What Is Brat Text? Aesthetic Explained",
+    slug: "what-is-brat-text",
+    description: "Learn about the iconic Brat text aesthetic, its origins, and why it became a viral sensation. Discover how to create your own bold graphics.",
+    category: "AESTHETICS",
+    image: "/examples/brat-text-ex-1.png",
+  },
+  {
     title: "What Is a Brat Generator? Simple Explanation",
     slug: "what-is-brat-generator",
     description: "A simple explanation of the music-inspired text aesthetic, how the cultural trend started, and how you can create your own bold typographic graphics.",

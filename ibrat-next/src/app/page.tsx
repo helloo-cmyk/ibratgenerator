@@ -81,9 +81,10 @@ const breadcrumbSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Brat Generator – Create Brat Text & Memes Instantly"
+    absolute: "Brat Generator — Free Online Brat Text, Memes & Image Maker"
   },
-  description: "Create brat text, memes, and album covers in seconds. No signup required — just type, customize, and download instantly.",
+  description:
+    "Free brat generator — create brat text, memes, stickers & images online. No signup. No watermark. Works on mobile. Download PNG instantly.",
   alternates: {
     canonical: "https://ibratgenerator.com/",
   },
@@ -109,7 +110,7 @@ export default function Home() {
       <section className="hp-hero">
         <h1 className="hp-hero-heading">Brat Generator</h1>
         <p className="hp-hero-sub">
-          Create bold brat-style text, memes, and album covers with this brat generator. No signup, no watermark.
+          Create bold brat-style visuals, memes, and album covers with this brat generator. No signup, no watermark.
         </p>
       </section>
 
@@ -137,10 +138,13 @@ export default function Home() {
               <a href="https://en.wikipedia.org/wiki/Brat_(album)" target="_blank" rel="nofollow noopener" className="hp-link">Brat</a>.
             </p>
             <p className="hp-body-text">
-              Type a phrase, choose colors, adjust spacing, and download your image. It takes seconds and works on any device. If you want to <Link href="/brat-text-generator/" className="hp-link">create brat text</Link>, start with the text tool. To <Link href="/brat-maker/" className="hp-link">make brat memes</Link> or edit photos, use brat maker.
+              Type a phrase, choose colors, adjust spacing, and download your image. It takes seconds and works on any device. For stickers, photo edits, and fuller layouts, <Link href="/brat-maker/" className="hp-link">use brat maker</Link> with this brat tool.
             </p>
           </div>
         </div>
+        <p className="hp-body-text mt-8 max-w-3xl">
+          Looking for text-only? <Link href="/brat-text-generator/" className="hp-link">Try the Brat Text Generator</Link> →
+        </p>
       </div>
 
       {/* ── FEATURES ── */}
@@ -226,9 +230,9 @@ export default function Home() {
       {/* ── CREATE BRAT DESIGNS / TOOLS ── */}
       <div className="hp-page-section hp-page-section-bordered">
         <span className="hp-eyebrow">More tools</span>
-        <h2 className="hp-display-heading">Create Brat Text, Memes, and Covers in One Tool</h2>
+        <h2 className="hp-display-heading">Create Memes, Covers, and Brat-Style Visuals in One Tool</h2>
         <p className="hp-body-text">
-          Create everything in one place, from simple brat text to social-ready memes and cover art.
+          Create everything in one place, from simple layouts to social-ready memes and cover art.
           Try different{" "}
           <Link href="/brat-font-generator/" className="hp-link">brat font styles</Link>{" "}
           to match your look, then use the{" "}
@@ -236,9 +240,9 @@ export default function Home() {
           for full artwork.
         </p>
         <div className="hp-tools-grid">
-          <Link href="/brat-text-generator/" className="hp-tool-link">
-            Brat Text Generator <span className="hp-tool-arrow">→</span>
-          </Link>
+          <div className="hp-tool-link">
+            Type-focused brat tool <span className="hp-tool-arrow">→</span>
+          </div>
           <Link href="/brat-maker/" className="hp-tool-link">
             Brat Maker <span className="hp-tool-arrow">→</span>
           </Link>
@@ -260,9 +264,7 @@ export default function Home() {
         <h2 className="hp-display-heading">Brat Generator Color Styles (Green, Pink, Black & More)</h2>
         <p className="hp-body-text">
           Switch between signature brat palettes for posts, profiles, or campaigns.
-          Start with{" "}
-          <Link href="/brat-text-generator/" className="hp-link">create brat text</Link>{" "}
-          and apply color variations in one click.
+          Start in this brat generator, then open a color style and apply variations in one click.
         </p>
         <div className="hp-colors-grid">
           <Link href="/brat-green-generator/" className="hp-color-card">
@@ -297,8 +299,8 @@ export default function Home() {
               <span style={{ color: "rgba(0,0,0,0.45)" }}>brat</span>
             </div>
             <div className="hp-color-label">
-              <h4>White Text Generator</h4>
-              <p>clean minimalist look</p>
+              <h4>White brat look</h4>
+              <p>clean minimalist style</p>
             </div>
           </Link>
         </div>
@@ -319,7 +321,7 @@ export default function Home() {
             what is the brat font: typography explained <span>→</span>
           </Link>
           <Link href="/blog/how-to-make-brat-text" className="hp-blog-link">
-            how to make brat text: step-by-step guide <span>→</span>
+            how to make brat-style graphics: step-by-step <span>→</span>
           </Link>
         </div>
       </div>
@@ -341,7 +343,7 @@ export default function Home() {
       <div className="hp-bridge">
         <div className="hp-bridge-inner">
           <p>
-            This generator tool makes brat-style visuals fast and simple. Create text, images, and memes in one place.
+            This brat generator makes bold visuals fast and simple. Create images and memes in one place.
           </p>
         </div>
       </div>

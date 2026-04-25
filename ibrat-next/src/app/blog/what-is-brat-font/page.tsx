@@ -86,7 +86,7 @@ export default function WhatIsBratFontPage() {
           </p>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
             If you want to try it yourself, you can use the{" "}
-            <Link href="/brat-text-generator" className="hp-link text-[17px] sm:text-[18px]">text generator tool</Link>{" "}
+            <Link href="/brat-text-generator/" className="hp-link text-[17px] sm:text-[18px]">text generator tool</Link>{" "}
             to quickly create and download your design.
           </p>
 

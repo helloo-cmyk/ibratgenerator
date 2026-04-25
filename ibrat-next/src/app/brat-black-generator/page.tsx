@@ -65,7 +65,7 @@ export default function BratBlackGeneratorPage() {
         <ul className="hp-body-text space-y-3 mt-6 ml-4 list-disc">
           <li><Link href="/brat-generator-white" className="hp-link">White Brat Generator</Link> — Clean, minimal visuals with a neutral palette.</li>
           <li><Link href="/brat-green-generator" className="hp-link">Green Brat Generator</Link> — The classic neon green brat aesthetic.</li>
-          <li><Link href="/brat-text-generator" className="hp-link">Brat Text Generator</Link> — Quick text-only designs with fast PNG export.</li>
+          <li><Link href="/brat-text-generator/" className="hp-link">Brat Text Generator</Link> — Quick text-only designs with fast PNG export.</li>
         </ul>
       </div>
 

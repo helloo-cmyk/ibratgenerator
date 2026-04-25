@@ -64,7 +64,7 @@ export default function BratNameGeneratorPage() {
           If you want to explore more ways to create brat-style designs, these tools can help depending on what you&apos;re trying to make.
         </p>
         <ul className="hp-body-text space-y-3 mt-6 ml-4 list-disc">
-          <li>Use the <Link href="/brat-text-generator" className="hp-link">Brat Text Generator</Link> — Best for quick text-only designs and fast PNG downloads.</li>
+          <li>Use the <Link href="/brat-text-generator/" className="hp-link">Brat Text Generator</Link> — Best for quick text-only designs and fast PNG downloads.</li>
           <li>Try the <Link href="/brat-maker" className="hp-link">Brat Maker</Link> — Use this if you want to create images, memes, or layered designs.</li>
           <li>Explore the <Link href="/brat-font-generator" className="hp-link">Brat Font Generator</Link> — Ideal for adjusting typography, spacing, and font styling.</li>
         </ul>

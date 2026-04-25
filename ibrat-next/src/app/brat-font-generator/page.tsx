@@ -6,12 +6,13 @@ import HomeScrollReveal from "@/components/HomeScrollReveal";
 
 export const metadata = {
   title: {
-    absolute: "Brat Font Generator – Create Brat Font Text Instantly",
+    absolute: "Brat Font Style Guide – Typography, Spacing & Visual Look",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-font-generator/",
   },
-  description: "Use our free brat font generator to create brat style typography instantly. Perfect for edits and memes. No signup required.",
+  description:
+    "Explore brat font style, spacing, and visual appearance. Study the typography look and adjust layout details in one place.",
 };
 
 export default function BratFontGeneratorPage() {
@@ -22,7 +23,7 @@ export default function BratFontGeneratorPage() {
       <section className="hp-hero">
         <h1 className="hp-hero-heading mt-6 mb-3 mx-auto">Brat Font Generator</h1>
         <p className="hp-hero-sub">
-          This tool is designed for adjusting brat-style typography, including spacing and visual style. If you just want to generate text or captions, use the <Link href="/brat-text-generator/" className="hp-link">brat text generator</Link> instead.
+          This page focuses on brat-style typography, including spacing, weight, and visual balance across different layouts.
         </p>
       </section>
 
@@ -53,6 +54,9 @@ export default function BratFontGeneratorPage() {
           <div>
             <p className="hp-body-text">
               The brat font is not a single official typeface, but a style inspired by bold, clean, and minimal sans-serif typography. It focuses on strong letter spacing, simple alignment, and high contrast visuals that became popular with the brat aesthetic. If you want a deeper breakdown, you can read our guide on <Link href="/blog/what-is-brat-font" className="hp-link">what the brat font actually is</Link>.
+            </p>
+            <p className="hp-body-text mt-4">
+              Want to create brat text? Use the <Link href="/brat-text-generator/" className="hp-link">Brat Text Generator</Link> →
             </p>
           </div>
         </div>
@@ -100,7 +104,7 @@ export default function BratFontGeneratorPage() {
         
         <div className="max-w-2xl mx-auto mt-12 text-center">
           <p className="text-[15px] leading-relaxed font-medium" style={{color: "var(--hp-ink)"}}>
-            These elements work together to create the confident, stripped-down look that defines the Brat aesthetic. The brat font generator below recreates this style so you can apply it to your own text.
+            These elements work together to create the confident, stripped-down look that defines the Brat aesthetic. Use the controls below to study how spacing, weight, and alignment change the same typographic style.
           </p>
         </div>
       </div>
@@ -129,25 +133,27 @@ export default function BratFontGeneratorPage() {
       <div className="hp-page-section hp-page-section-bordered">
         <h2 className="hp-display-heading">Related Brat Tools</h2>
         <p className="hp-body-text mt-4">
-          If you want to explore more ways to create brat-style designs, these tools can help depending on what you're trying to make.
+          If you want to explore more ways to shape brat-style visuals, these tools can support color direction and layout composition.
         </p>
         <p className="hp-body-text mt-4 font-medium">
-          <Link href="/brat-text-generator/" className="hp-link">Brat Text Generator</Link> — Best for quick text-only designs and fast PNG downloads.
+          <Link href="/brat-black-generator/" className="hp-link">Black Brat Generator</Link> — Useful for high-contrast typography studies.
         </p>
       </div>
 
-      {/* ── BRAT FONT VS TEXT GENERATOR ── */}
+      {/* ── FONT STYLE REFERENCE ── */}
       <div className="hp-page-section hp-page-section-bordered">
-        <h2 className="hp-display-heading">Brat Font Generator vs Brat Text Generator</h2>
+        <h2 className="hp-display-heading">How to Evaluate Brat Typography</h2>
         <p className="hp-body-text mt-4">
-          The brat font generator focuses on typography — spacing, style, and font appearance. The brat text generator is designed for quickly creating downloadable brat-style PNG images without focusing on font details.
+          Strong brat typography is less about a specific font file and more about visual decisions: weight, spacing, alignment, and contrast.
         </p>
         <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-4">
-          <li><strong>Font generator:</strong> typography control, spacing, style</li>
-          <li><strong>Text generator:</strong> fast PNG export, simple workflow</li>
+          <li><strong>Weight:</strong> use heavier strokes to keep the look assertive</li>
+          <li><strong>Spacing:</strong> tighten or open letter spacing to shape tone</li>
+          <li><strong>Alignment:</strong> center for symmetry or offset for tension</li>
+          <li><strong>Contrast:</strong> pair bold type with a clean, flat background</li>
         </ul>
         <p className="hp-body-text mt-4">
-          If your goal is to generate text quickly instead of adjusting typography manually, the text tool is usually faster.
+          Keeping these four factors consistent preserves the brat aesthetic even when you change palette, format, or content length.
         </p>
       </div>
 
@@ -234,7 +240,7 @@ export default function BratFontGeneratorPage() {
       <div className="hp-page-section hp-page-section-bordered">
         <h2 className="hp-display-heading">Brat Font Generator Examples</h2>
         <p className="hp-body-text mt-4">
-          With the brat font generator you can create a wide range of typographic outputs. Typical examples include single words or short phrases in bold green on a bright background—the classic brat font look—or the same brat album font style in pink, white, or black for contrast.
+          This page showcases a wide range of brat-inspired typographic looks. Typical examples include single words or short phrases in bold green on a bright background, or the same album-inspired style in pink, white, or black for contrast.
         </p>
         <p className="hp-body-text mt-4">
           Sample outputs might be minimalist one-line statements like "brat summer" or "hot girl music," album-style headings, or profile name graphics. You can adjust size, spacing, and alignment so each design matches the charli xcx brat font vibe while staying readable on social feeds and stories.
@@ -254,7 +260,6 @@ export default function BratFontGeneratorPage() {
           If you're working with brat-style typography, you may also want to explore other tools for creating full visuals.
         </p>
         <ul className="hp-body-text space-y-3 mt-6 ml-4">
-          <li>Use the <Link href="/brat-text-generator/" className="hp-link">brat text generator</Link> for creating captions and text content.</li>
           <li>Try the <Link href="/brat-maker/" className="hp-link">brat maker</Link> to generate images and meme-style graphics.</li>
           <li>Explore the <Link href="/brat-black-generator/" className="hp-link">black brat generator</Link> for high contrast designs.</li>
         </ul>
@@ -270,7 +275,7 @@ export default function BratFontGeneratorPage() {
           { question: "Can I download a font file?", answer: <p>This tool does not provide font files. Instead, it generates brat-style typography directly in your browser and exports the result as a PNG image.</p> },
           { question: "Is the Brat Font Generator free?", answer: <p>Yes. You can create unlimited brat-style text for free with no signup required.</p> },
           { question: "Does it work on mobile?", answer: <p>Yes. The generator is fully optimized for mobile devices and works in any browser.</p> },
-          { question: "How is this different from the brat text generator?", answer: <p>The brat font generator focuses on typography — spacing, style, and font appearance. The brat text generator is designed for fast PNG export with a simpler workflow.</p> } ,
+          { question: "What controls matter most for this style?", answer: <p>Focus on weight, spacing, alignment, and contrast. Those four controls define the brat look more than any single typeface name.</p> } ,
         ]}
       />
 
