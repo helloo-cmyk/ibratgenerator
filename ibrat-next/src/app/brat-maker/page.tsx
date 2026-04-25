@@ -235,6 +235,31 @@ export default function BratMakerPage() {
         </div>
       </div>
 
+      {/* ── BRAT MEME EXAMPLES ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <span className="hp-eyebrow">Memes</span>
+        <h2 className="hp-display-heading">Brat Meme Examples</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
+            Brat memes are bold, minimal text visuals that turn short phrases, sarcastic captions, and inside jokes into shareable graphics. Using the signature Brat typography on vivid backgrounds, they became a staple of social media humor — especially during the &quot;brat summer&quot; trend of 2024 inspired by Charli XCX&apos;s album era.
+          </p>
+          <p className="hp-body-text mt-4">
+            While brat summer as a seasonal trend has passed, the meme format lives on. People still use the style for funny one-liners, relatable quotes, friendship moments, and chaotic group chat energy. Here are some ideas you can create with this brat maker:
+          </p>
+          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-6">
+            <li>Summer-themed memes with neon green backgrounds</li>
+            <li>Funny captions and sarcastic one-liners</li>
+            <li>TikTok and Reels video overlays</li>
+            <li>Vacation and beach-day inside jokes</li>
+            <li>Brat-style quotes and friendship moments</li>
+            <li>Chaotic meme edits with bold typography</li>
+          </ul>
+          <p className="hp-body-text font-medium">
+            Whether you&apos;re keeping the brat summer spirit alive or creating fresh meme content year-round, this maker gives you everything you need to design and download instantly.
+          </p>
+        </div>
+      </div>
+
       <FAQAccordion
         title="Frequently Asked Questions"
         intro="Here are some common questions about the Brat Maker"

@@ -22,6 +22,11 @@ const nextConfig: NextConfig = {
         destination: '/brat-maker',
         permanent: true,
       },
+      {
+        source: '/brat-summer-meme-generator',
+        destination: '/brat-maker',
+        permanent: true,
+      },
     ];
   }
 };

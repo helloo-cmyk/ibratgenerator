@@ -9,7 +9,6 @@ const toolLinks = [
 
   { href: "/brat-album-cover-generator/", label: "Brat Album Cover Generator" },
   { href: "/brat-green-generator/", label: "Brat Green Generator" },
-  { href: "/brat-summer-meme-generator/", label: "Brat Summer Meme Generator" },
 ];
 
 const styleLinks = [

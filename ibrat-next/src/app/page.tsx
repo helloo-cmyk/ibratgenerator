@@ -245,8 +245,8 @@ export default function Home() {
           <Link href="/brat-font-generator/" className="hp-tool-link">
             Brat Font Generator <span className="hp-tool-arrow">→</span>
           </Link>
-          <Link href="/brat-summer-meme-generator/" className="hp-tool-link">
-            Brat Summer Meme Generator <span className="hp-tool-arrow">→</span>
+          <Link href="/brat-name-generator/" className="hp-tool-link">
+            Brat Name Generator <span className="hp-tool-arrow">→</span>
           </Link>
           <Link href="/brat-album-cover-generator/" className="hp-tool-link">
             Brat Album Cover Generator <span className="hp-tool-arrow">→</span>

@@ -4,6 +4,10 @@ export const metadata = {
   title: {
     absolute: "Disclaimer | Ibrat Generator",
   },
+  robots: {
+    index: false,
+    follow: true,
+  },
   alternates: {
     canonical: "https://ibratgenerator.com/disclaimer/",
   },

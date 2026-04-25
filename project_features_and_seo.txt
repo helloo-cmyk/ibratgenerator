@@ -1,0 +1,79 @@
+# Ibrat Generator - Project Feature Flow & SEO Documentation
+
+## 1. Feature Flow Sections
+
+The project is structured as a suite of "Brat" aesthetic creative tools. The user journey typically follows these stages:
+
+### A. Core Editor Workflow (The Generator)
+- **Live Text Input**: Users type their phrase directly into the editor; the canvas updates in real-time.
+- **Visual Customization**:
+    - **Font Selection**: Choice of fonts that match the "Brat" aesthetic.
+    - **Color Palette**: Preset "Brat" colors (Neon Green, Pink, Black, White) or custom hex code selection for both text and background.
+    - **Typography Controls**: Adjustment of font size, line height, letter spacing, and alignment.
+- **Interactive Elements**:
+    - **Sticker System**: Users can add, drag, resize, and rotate emojis or custom stickers on the canvas.
+    - **Canvas Manipulation**: Draggable text elements for custom placement.
+- **High-Resolution Export**:
+    - **Multiple Resolutions**: Export options for 1024px, 1500px, 2048px, and 3000px.
+    - **PNG Format**: High-quality, lossless output without watermarks.
+
+### B. Tool Variations & Dedicated Pages
+The project splits the main engine into specialized "micro-tools" to target specific user intents:
+- **Brat Text Generator**: Focused purely on typography and captions.
+- **Brat Maker**: Focused on creating images and complex meme layouts.
+- **Brat Font Generator**: Dedicated to font-styling and typography experiments.
+- **Brat Album Cover Generator**: Tailored for square-format artwork.
+- **Brat Name Generator**: For creating personalized name graphics.
+- **Color-Specific Generators**: Dedicated routes for Green, Pink, Black, and White themes.
+
+### C. Inspiration & Education
+- **Example Gallery**: A visual showcase of real outputs to inspire users.
+- **Inspiration Categories**: Grouped phrases (Captions, Memes, Album-Style, Quotes) that users can copy/paste.
+- **Resource Blog**: Educational articles on "What is Brat Font" and "How to make Brat text".
+- **FAQ Sections**: Detailed accordions on every page to answer common technical and usage questions.
+
+---
+
+## 2. SEO Implementation
+
+The project uses a robust SEO strategy to capture long-tail "Brat" related searches.
+
+### A. Technical SEO (Metadata)
+- **Dynamic Meta Tags**: Every page has a unique `<title>` and `<meta name="description">` tailored to its specific tool (e.g., "Brat Text Generator" vs "Brat Maker").
+- **Canonical Tags**: Each page includes an `<link rel="canonical">` to its own URL to prevent duplicate content issues across variations.
+- **Open Graph (OG)**: Standardized OG tags for social sharing, including site name, title, and description.
+- **Robots Config**: Globally set to `index, follow` with specific sitemap and manifest links.
+
+### B. Schema Markup (JSON-LD)
+Rich snippets are implemented on various pages to improve SERP visibility:
+- **WebSite & SoftwareApplication**: Global schema identifying the site as a free online tool.
+- **FAQPage Schema**: Automatically generated for the FAQ sections to show questions/answers directly in Google results.
+- **HowTo Schema**: Step-by-step instructions for using the generator (Enter text -> Customize -> Add stickers -> Download).
+- **BreadcrumbList**: Structured navigation paths for better site hierarchy recognition.
+
+### C. On-Page Optimization
+- **Semantic HTML**: Strict use of `<header>`, `<main>`, `<footer>`, and `<section>` tags.
+- **Heading Hierarchy**: Proper use of `<h1>` for page titles, `<h2>` for section headers, and `<h3>` for feature cards.
+- **Internal Linking**: A dense network of links between tools, color variants, and blog posts to distribute link equity.
+- **Performance-Driven SEO**:
+    - Lazy loading of the heavy "Generator" component (`BratGeneratorLazy`).
+    - Next.js font optimization (`next/font`) for fast loading and zero Layout Shift.
+    - Optimized Image components with proper aspect ratios and `alt` text.
+
+### D. Tracking & Verification
+- **Google Analytics**: Integrated (ID: G-XEV70REQ21).
+- **Google AdSense**: Configured for monetization with `ads.txt` and meta account verification.
+- **Microsoft Clarity**: Integrated for user behavior heatmaps and session recording.
+- **Site Verifications**: Google Search Console and Pinterest domain verification tags are present in the root layout.
+
+---
+
+## 3. Tech Stack & Infrastructure
+- **Framework**: Next.js 16 (App Router) with React 19.
+- **Styling**: Tailwind CSS 4 with PostCSS.
+- **Canvas Engine**: HTML5 Canvas (Client-side) and `canvas` (Server-side) for high-res rendering.
+- **Languages**: TypeScript, JavaScript.
+- **Key Scripts**:
+    - `npm run dev`: Starts the local development server.
+    - `npm run build`: Compiles the project and runs `generate:examples` script for gallery updates.
+    - `node scripts/generateExamples.js`: Custom script for automating example image generation.

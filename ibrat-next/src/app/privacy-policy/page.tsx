@@ -4,6 +4,10 @@ export const metadata = {
   title: {
     absolute: "Privacy Policy | Ibrat Generator",
   },
+  robots: {
+    index: false,
+    follow: true,
+  },
   alternates: {
     canonical: "https://ibratgenerator.com/privacy-policy/",
   },

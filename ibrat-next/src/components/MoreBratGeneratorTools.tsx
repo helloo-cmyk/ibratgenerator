@@ -37,8 +37,8 @@ export default function MoreBratGeneratorTools() {
             </Link>
           </li>
           <li>
-            <Link href="/brat-summer-meme-generator/" className="text-primary underline hover:no-underline">
-              summer meme generator
+            <Link href="/brat-maker/" className="text-primary underline hover:no-underline">
+              brat meme maker
             </Link>
           </li>
           <li>
