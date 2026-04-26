@@ -1,0 +1,128 @@
+PAGE: /brat-font-generator
+SOURCE: src/app/brat-font-generator/page.tsx
+
+META TITLE: Brat Font Style Guide – Typography, Spacing & Visual Look
+META DESCRIPTION: Explore brat font style, spacing, and visual appearance. Study the typography look and adjust layout details in one place.
+OPEN GRAPH TITLE: (inherits global default or not set)
+OPEN GRAPH DESCRIPTION: (inherits global default or not set)
+
+HEADING STRUCTURE:
+- H1: Brat Font Generator
+- H2: What Is the Brat Font?
+- H2: Key Characteristics of Brat Typography
+- H3: Bold weight
+- H3: Clean sans-serif forms
+- H3: Tight letter spacing
+- H3: High contrast
+- H3: Minimal ornamentation
+- H3: Centered or deliberate layouts
+- H2: What Font Is Used In The Brat Album Style
+- H2: Related Brat Tools
+- H2: How to Evaluate Brat Typography
+- H2: Who This Tool Is For
+- H2: Typography Controls
+- H3: Font Size & Weight
+- H3: Letter Spacing & Alignment
+- H3: Line Height
+- H3: Color System
+- H2: Why This Tool Is Better Than Downloading Fonts
+- H2: Brat Font Generator Examples
+- H2: Related Tools
+- H2: Conclusion
+- H2: Learn More About Brat Typography
+
+FEATURE FLOW SECTIONS:
+- What Is the Brat Font?
+- How to Evaluate Brat Typography
+- Who This Tool Is For
+
+TARGET KEYWORDS (INFERRED FROM VISIBLE PAGE CONTENT):
+- brat font generator
+- brat font
+
+ARTICLE / BODY TEXT (PARAGRAPH TAG CONTENT):
+This page focuses on brat-style typography, including spacing, weight, and visual balance across different layouts.
+
+The brat font is not a single official typeface, but a style inspired by bold, clean, and minimal sans-serif typography. It focuses on strong letter spacing, simple alignment, and high contrast visuals that became popular with the brat aesthetic. If you want a deeper breakdown, you can read our guide on what the brat font actually is .
+
+Want to create brat text? Use the Brat Text Generator →
+
+The brat font style is defined by a few consistent design principles that make it immediately recognizable:
+
+heavy strokes that command attention
+
+no serifs, no decorative strokes
+
+compact, intentional character gaps
+
+dark text on bright backgrounds (or vice versa)
+
+the text itself is the design
+
+strong compositional choices
+
+These elements work together to create the confident, stripped-down look that defines the Brat aesthetic. Use the controls below to study how spacing, weight, and alignment change the same typographic style.
+
+The Brat album style does not rely on a single named commercial font. Instead, it draws from a lineage of modern geometric sans-serif typefaces that prioritize clarity, weight, and minimal ornamentation. The visual identity comes from bold strokes, tight letter spacing, and generous use of uppercase or title case—all arranged in a way that feels both contemporary and deliberately stripped down.
+
+Designers and fans often compare the Brat aesthetic to fonts like Helvetica Neue Bold, Avenir Heavy, or Gotham—typefaces that share clean geometric forms and strong x-heights. The key is not letter-by-letter mimicry but the overall impression: heavy weight, minimal serifs, and a sense of confidence. The style works because it puts typography at the center of the design, with little or no decorative elements competing for attention.
+
+When people search for the brat font name, what font is brat charli xcx, or charli xcx brat font, they are usually trying to match the exact typography used in Brat-themed visuals and Charli XCX branding.
+
+Whether applied to album artwork, social media captions, or memes, the Brat typography style succeeds by being instantly legible and visually assertive. The design approach favors high contrast between text and background, centered or intentionally asymmetric layouts, and a confident use of negative space. Understanding these principles helps you recreate the Brat look even without access to the exact font files used in official branding.
+
+If you want to explore more ways to shape brat-style visuals, these tools can support color direction and layout composition.
+
+Black Brat Generator — Useful for high-contrast typography studies.
+
+Strong brat typography is less about a specific font file and more about visual decisions: weight, spacing, alignment, and contrast.
+
+Keeping these four factors consistent preserves the brat aesthetic even when you change palette, format, or content length.
+
+The brat font generator is built for users who want to understand and recreate brat-style typography without design software.
+
+If you want to explore the typography behind the Brat aesthetic and create bold, minimal text designs, this tool gives you full control.
+
+It is useful for:
+
+Adjust the size and weight of your text to match different brat font styles — from compact captions to large album-style headings.
+
+Fine-tune character spacing and text alignment. Tight spacing with centered alignment is the most recognizable brat font configuration.
+
+Control line height for multi-line phrases. This affects how compact or spread out your typography appears — both are valid in the brat style.
+
+Although neon green is the most iconic brat color, the font style works equally well in other palettes.
+
+Many users search for brat font download expecting a direct font file. However, installing fonts and manually adjusting layouts can be time-consuming and still may not match the brat aesthetic.
+
+This brat font generator simplifies the process by:
+
+Instead of searching repeatedly for what is the brat font, you can generate the look immediately with accurate typographic defaults.
+
+This page showcases a wide range of brat-inspired typographic looks. Typical examples include single words or short phrases in bold green on a bright background, or the same album-inspired style in pink, white, or black for contrast.
+
+Sample outputs might be minimalist one-line statements like "brat summer" or "hot girl music," album-style headings, or profile name graphics. You can adjust size, spacing, and alignment so each design matches the charli xcx brat font vibe while staying readable on social feeds and stories.
+
+All outputs are exported as high-quality PNGs with no watermark, so you can use them anywhere.
+
+If you're working with brat-style typography, you may also want to explore other tools for creating full visuals.
+
+The brat font is not a single official typeface. It refers to the bold, minimal sans-serif typography style popularized by the Brat aesthetic — characterized by clean lines, tight spacing, and high contrast.
+
+There is no single official brat font name. The style draws from geometric sans-serif typefaces like Helvetica Neue Bold, Avenir Heavy, and Gotham. This generator recreates the visual style without requiring any specific font file.
+
+Yes. This tool recreates the bold, minimal typography associated with Charli XCX's Brat aesthetic, including spacing, weight, and alignment.
+
+This tool does not provide font files. Instead, it generates brat-style typography directly in your browser and exports the result as a PNG image.
+
+Yes. You can create unlimited brat-style text for free with no signup required.
+
+Yes. The generator is fully optimized for mobile devices and works in any browser.
+
+Focus on weight, spacing, alignment, and contrast. Those four controls define the brat look more than any single typeface name.
+
+The brat font generator provides a detailed look at the typography behind the Brat aesthetic, along with a practical tool for recreating the style. Whether you are researching what font is brat, trying to identify the brat font name, or want to generate album-style typography, this page combines education and creation in one place.
+
+With typography controls, mobile-friendly editing, and high-quality PNG exports, you can create clean Brat-style typography in seconds without downloading any fonts or using design software.
+
+If you want to understand the font style in more detail, read our full breakdown of the brat font and how it is used.

@@ -1,0 +1,109 @@
+PAGE: /
+SOURCE: src/app/page.tsx
+
+META TITLE: Brat Generator — Free Online Brat Text, Memes & Image Maker
+META DESCRIPTION: Free brat generator — create brat text, memes, stickers & images online. No signup. No watermark. Works on mobile. Download PNG instantly.
+OPEN GRAPH TITLE: (inherits global default or not set)
+OPEN GRAPH DESCRIPTION: (inherits global default or not set)
+
+HEADING STRUCTURE:
+- H1: Brat Generator
+- H2: Brat Generator Features That Matter
+- H3: Real-time editing
+- H3: Custom colors
+- H3: Multiple aspect ratios
+- H3: Stickers and emojis
+- H3: Font control
+- H3: Mobile-optimized
+- H3: No account needed
+- H3: High-res export
+- H2: How to Use a Brat Generator (Step-by-Step)
+- H3: Enter your text
+- H3: Customize the style
+- H3: Add stickers
+- H3: Download your image
+- H2: Create Memes, Covers, and Brat-Style Visuals in One Tool
+- H2: Brat Generator Color Styles (Green, Pink, Black & More)
+- H4: Green Brat Tool
+- H4: Pink Brat Creator
+- H4: Black Generator Tool
+- H4: White brat look
+- H2: Why Use a Brat Generator Instead of Design Apps
+- H2: Brat Generator Examples (Real Outputs)
+
+FEATURE FLOW SECTIONS:
+- Brat Generator Features That Matter
+- How to Use a Brat Generator (Step-by-Step)
+
+TARGET KEYWORDS (INFERRED FROM VISIBLE PAGE CONTENT):
+- brat generator
+- free brat generator
+- brat text
+- no watermark
+
+ARTICLE / BODY TEXT (PARAGRAPH TAG CONTENT):
+Create bold brat-style visuals, memes, and album covers with this brat generator. No signup, no watermark.
+
+What Is a Brat Generator?
+
+This tool turns your words into a bold, minimal look: clean sans-serif text on a solid background. Popularized by Charli XCX and brat culture, it helps you recreate the style without design software, inspired by the visual identity of Brat .
+
+Type a phrase, choose colors, adjust spacing, and download your image. It takes seconds and works on any device. For stickers, photo edits, and fuller layouts, use brat maker with this brat tool.
+
+Looking for text-only? Try the Brat Text Generator →
+
+Skip complex editors and use the controls that matter for brat-style design. Customize text, color, layout, and export settings in one focused workflow.
+
+Every change renders instantly on the canvas
+
+Full hex color picker for text and background
+
+1:1 for profiles, 4:5 for feeds, 9:16 for stories, 16:9 for banners
+
+Drag, resize, and rotate them directly on the canvas
+
+Adjust size, weight, spacing, and alignment
+
+Works smoothly on phones, tablets, and desktops
+
+Open the page and start creating immediately
+
+PNG at 1024, 1500, 2048, or 3000 px with no watermark
+
+Type your phrase, caption, or name in the editor. The canvas updates as you type.
+
+Open the Style tab to pick a font, set text and background colors, and adjust size and spacing.
+
+Switch to the Stickers tab to place emojis on the canvas. Drag, resize, and rotate them to fit your layout.
+
+Click Download PNG, choose your resolution, and save. No watermark, no signup, no limits.
+
+Create everything in one place, from simple layouts to social-ready memes and cover art. Try different brat font styles to match your look, then use the album cover generator for full artwork.
+
+Switch between signature brat palettes for posts, profiles, or campaigns. Start in this brat generator, then open a color style and apply variations in one click.
+
+classic neon style
+
+softer aesthetic
+
+high contrast dark style
+
+clean minimalist style
+
+This brat tool gives you ready-made controls for this style, so you create faster. For quick tips, read the guides, then generate brat names before you design.
+
+Browse real outputs from this brat creator for layout, text, and color ideas. Use these examples as quick inspiration before exporting your own design.
+
+This brat generator makes bold visuals fast and simple. Create images and memes in one place.
+
+Yes. It is completely free: no signup, no watermarks, and no download limits. Create unlimited images up to 3000 px.
+
+Yes. Click Download PNG and pick from four resolutions: 1024, 1500, 2048, or 3000 px. Every export is watermark-free.
+
+Set the aspect ratio to 1:1, type your name or phrase, choose colors and font, then click Download PNG. It works as a profile picture on TikTok, Instagram, Discord, X, and WhatsApp.
+
+PNG images at your chosen resolution. PNG preserves quality without compression artifacts, so it works well for social media and print.
+
+Yes. The editor adapts to smaller screens and supports touch controls for stickers, text edits, and exports on iOS and Android.
+
+This tool is built specifically for the brat aesthetic. No templates, no menus, no subscription. You open the page, type your text, and download a finished image in seconds.

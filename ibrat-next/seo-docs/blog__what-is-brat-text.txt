@@ -1,0 +1,44 @@
+PAGE: /blog/what-is-brat-text
+SOURCE: src/app/blog/what-is-brat-text/page.tsx
+
+META TITLE: What Is Brat Text? Aesthetic Explained
+META DESCRIPTION: Learn about the iconic Brat text aesthetic, its origins, and why it became a viral sensation. Discover how to create your own bold graphics.
+OPEN GRAPH TITLE: (inherits global default or not set)
+OPEN GRAPH DESCRIPTION: (inherits global default or not set)
+
+HEADING STRUCTURE:
+- H2: What Is Brat Text?
+- H2: Where Brat Text Comes From
+- H2: What Makes Brat Text Unique
+- H2: Examples of Brat Text
+- H2: How to Create Brat Text
+- H2: FAQ
+
+FEATURE FLOW SECTIONS:
+- What Is Brat Text?
+- How to Create Brat Text
+
+TARGET KEYWORDS (INFERRED FROM VISIBLE PAGE CONTENT):
+- brat text
+- what is brat text
+
+ARTICLE / BODY TEXT (PARAGRAPH TAG CONTENT):
+Brat text is the minimalist, bold typographic style inspired by Charli XCX's 2024 album cover. It features lowercase sans-serif text on a bright neon green background.
+
+Brat text is defined by its extreme simplicity. It uses a clean, heavy font—similar to Arial—with tight letter spacing and a slightly blurry, low-resolution feel that mimics early internet graphics.
+
+The aesthetic originated with the cover art for Charli XCX's album *Brat*. The design's raw, "anti-design" approach challenged polished social media standards and immediately went viral across TikTok, X, and Instagram.
+
+The combination of high-contrast neon green and unpretentious typography makes it stand out. It feels personal, immediate, and unapologetically bold, stripping away distractions to focus purely on the message.
+
+Common examples include single words like "brat," "apple," or "360," as well as viral memes and brand parodies that use the signature green and black format to make a statement.
+
+You can easily generate your own graphics using specialized online tools that handle the styling, colors, and layout for you automatically.
+
+Create your own brat text using the Brat Text Generator →
+
+While the classic look is neon green, fans often use white, pink, and black variations to match different moods.
+
+It is a heavy sans-serif typeface similar to Arial or Helvetica, styled with custom spacing.
+
+The low-resolution effect is intentional, designed to give the graphic a raw, DIY, and unpolished feel.

@@ -22,7 +22,7 @@ export default function BratMakerPage() {
       <section className="hp-hero px-4">
         <h1 className="hp-hero-heading mt-6 mb-3 mx-auto">Brat Maker</h1>
         <p className="intro-text">
-          A complete editing suite to craft bold typography images, viral memes, and aesthetic profile pictures. Start creating instantly without needing to create an account.
+          The definitive free brat image maker for instantly generating custom graphics and text overlays directly in your browser with no signup required.
         </p>
       </section>
 
@@ -47,25 +47,7 @@ export default function BratMakerPage() {
           </div>
           <div>
             <p className="hp-body-text">
-              A brat meme is a bold, minimal visual that combines short text with
-              strong color contrast and clean composition. This brat maker is built for
-              generating Brat-style meme visuals and share-ready graphics in
-              seconds. Inspired by the bold, minimal look popularized by Charli
-              XCX&apos;s Brat era, it helps you create clean, eye-catching images without
-              needing any design experience.
-            </p>
-            <p className="hp-body-text mt-4">
-              Instead of switching between apps, fonts, and editing software,
-              everything works directly in your browser. You type your text,
-              customize the layout, choose your colors, and download instantly.
-            </p>
-            <p className="hp-body-text mt-4 font-medium">
-              Whether you want to create a meme, design a post graphic, or build
-              album-inspired visuals, this tool gives you full control in seconds.
-            </p>
-            <p className="hp-body-text mt-4">
-              It works smoothly on desktop and mobile, updates in real time,
-              and exports high-quality PNG files with no watermark.
+              A brat meme relies on extreme minimalism, pairing bold, slightly stretched lowercase typography against a highly saturated background for immediate visual impact. The format exploded during brat summer but quickly evolved into a permanent fixture of internet culture for reaction images and shitposting. This stripped-down aesthetic works because the strong color contrast and aggressive font styling make any phrase, regardless of context, feel like a statement.
             </p>
           </div>
         </div>
@@ -85,30 +67,27 @@ export default function BratMakerPage() {
         </div>
       </div>
 
+      {/* ── BRAT CREATOR ── */}
+      <div className="hp-page-section hp-page-section-bordered px-4">
+        <h2 className="hp-display-heading">The Ultimate Brat Creator</h2>
+        <div className="max-w-3xl">
+          <p className="hp-body-text mt-4">
+            Use this brat creator as your central tool for formatting bold text and generating custom visuals in seconds. The built-in brat meme generator handles any phrase length while maintaining the signature stretched typography and layout. Every design exports as a crisp PNG download, giving you images, memes, and profile pictures all in one place.
+          </p>
+        </div>
+      </div>
+
       {/* ── AUDIENCE ── */}
       <div className="hp-page-section hp-page-section-bordered px-4">
         <div className="hp-two-col flex flex-col md:flex-row items-start gap-12 max-w-[1200px] mx-auto">
           <div className="flex-1">
              <span className="hp-eyebrow">Audience</span>
              <h2 className="hp-display-heading">Who the Brat Maker Is For</h2>
-             <p className="hp-body-text mt-4">
-               The brat maker is built for creators who want fast, clean, aesthetic visuals. If you want a tool that handles images, memes, and profile pictures in one place, this brat maker covers everything.
-             </p>
           </div>
           <div className="flex-1">
-            <p className="hp-body-text mb-4 font-medium">It is perfect for:</p>
-            <div className="flex flex-wrap gap-2">
-               {[
-                 "Social media creators",
-                 "Meme pages",
-                 "Profile picture makers",
-                 "Brat-style captions",
-                 "Aesthetic edits",
-                 "Image creation fans"
-               ].map(p => (
-                 <span key={p} className="px-3 py-1.5 bg-[var(--hp-surface)] border border-[var(--hp-border)] rounded-md text-[13px] font-medium text-[var(--hp-ink)] shadow-sm transition-colors hover:border-[var(--hp-border-dark)]">{p}</span>
-               ))}
-            </div>
+             <p className="hp-body-text mt-4 md:mt-0">
+               Meme creators use this tool to quickly mock up reaction images without opening complex editing software. People looking for a fast brat profile picture can generate exactly what they need in seconds. Content creators making social posts rely on a reliable brat meme maker for consistent, highly legible text graphics that grab attention in a feed. Anyone who wants to make a brat graphic fast will find the interface built exactly for their workflow.
+             </p>
           </div>
         </div>
       </div>
@@ -122,59 +101,50 @@ export default function BratMakerPage() {
           <div className="hp-feature-card">
             <div className="hp-feature-icon">🔤</div>
             <h3>Bold Text on Images</h3>
-            <p>Add bold text directly onto your images with full control over font size, letter spacing, line height, alignment, background color, and position.</p>
+            <p>Type any phrase and the engine automatically formats it with the correct stretched, bold lowercase styling.</p>
           </div>
 
           <div className="hp-feature-card">
             <div className="hp-feature-icon">🖼️</div>
             <h3>Brat Image Maker</h3>
-            <p>Upload your own photos and add Brat-style text on top to create profile pictures, meme images, aesthetic edits, and album-inspired visuals instantly.</p>
+            <p>Upload your own background photo and apply the signature text overlay directly on top of it.</p>
           </div>
 
           <div className="hp-feature-card">
             <div className="hp-feature-icon">👤</div>
-            <h3>Profile Maker</h3>
-            <p>Create a 1:1 layout, type your phrase, adjust spacing, and export it instantly. Works perfectly as a profile picture for TikTok, Instagram, Discord, and X.</p>
+            <h3>Profile Picture Maker</h3>
+            <p>Use the built-in brat pfp maker tools to generate graphics perfectly sized and centered for social media avatars.</p>
           </div>
 
           <div className="hp-feature-card">
             <div className="hp-feature-icon">😂</div>
             <h3>Brat Meme Creator</h3>
-            <p>Create text-based memes or combine uploaded photos with bold captions to generate humorous, chaotic, or sarcastic brat-style meme visuals.</p>
+            <p>Assemble complete reaction images using standard layouts or custom positioning.</p>
           </div>
 
           <div className="hp-feature-card">
             <div className="hp-feature-icon">📐</div>
             <h3>Multiple Ratios</h3>
-            <p>Choose from multiple canvas sizes depending on your platform: 16:9 for landscape, 4:5 for portraits, 9:16 for TikTok/Reels, and 1:1 format.</p>
+            <p>Export your design in 16:9, 4:5, 9:16, or 1:1 aspect ratios to fit any platform requirement.</p>
           </div>
 
           <div className="hp-feature-card">
             <div className="hp-feature-icon">🎨</div>
             <h3>Custom Themes</h3>
-            <p>While green is popular, you can choose any custom hex color. Create pink edits, black minimalist visuals, clean white layouts, and more.</p>
+            <p>Move beyond the standard green and input any exact hex color code for your background and text.</p>
           </div>
 
           <div className="hp-feature-card">
             <div className="hp-feature-icon">💾</div>
             <h3>High-Quality Export</h3>
-            <p>Every design downloads as a sharp PNG file with no watermark, no compression, no account requirement, and absolutely no export limits.</p>
+            <p>Save your final design as a high-resolution PNG with no watermark and zero compression artifacts.</p>
           </div>
 
           <div className="hp-feature-card">
             <div className="hp-feature-icon">📱</div>
             <h3>Mobile-Optimized</h3>
-            <p>Works smoothly on smartphones, tablets, and desktops. You can drag, resize, edit text, and download your graphics seamlessly anywhere.</p>
+            <p>Drag, resize, and edit everything smoothly on your phone with touch-responsive controls.</p>
           </div>
-        </div>
-      </div>
-
-      <div className="hp-page-section hp-page-section-bordered px-4">
-        <h2 className="hp-display-heading">Brat Creator Tool</h2>
-        <div className="max-w-3xl">
-          <p className="hp-body-text mt-4">
-            This brat maker also works as a brat creator, allowing you to design custom brat-style images, memes, profile pictures, and text visuals in one intuitive place.
-          </p>
         </div>
       </div>
 
@@ -186,22 +156,22 @@ export default function BratMakerPage() {
           <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
             <span className="hp-step-num">1</span>
             <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Add Your Text</h3>
-            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Start by typing your caption, username, lyric, or meme line. You can make brat text or bold statements.</p>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Type your phrase into the editor and watch the text automatically scale and style itself in real time.</p>
           </div>
           <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
             <span className="hp-step-num">2</span>
             <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Customize the Style</h3>
-            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Adjust text size, alignment, spacing, color, and background to match your vision for full control.</p>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Adjust the text spacing, blur effects, and swap the background to any custom hex color or uploaded image.</p>
           </div>
           <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
             <span className="hp-step-num">3</span>
-            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Images & Layout</h3>
-            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Upload an image to serve as a custom background. Then select the optimal canvas aspect ratio.</p>
+            <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Images and Layout</h3>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Select your preferred aspect ratio and drag the text block to position it exactly where you want it.</p>
           </div>
           <div className="hp-step-card bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] transition-all duration-200">
             <span className="hp-step-num">4</span>
             <h3 className="text-[14px] sm:text-[15px] font-semibold mb-2">Download Instantly</h3>
-            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Click download and get your final PNG instantly. No signup. No watermark. No delay.</p>
+            <p className="hp-body-text text-[13px] leading-relaxed opacity-90">Hit the export button to save your file immediately with no signup, no watermark, and no delay.</p>
           </div>
         </div>
       </div>
@@ -209,15 +179,8 @@ export default function BratMakerPage() {
       <div className="hp-page-section hp-page-section-bordered px-4">
         <h2 className="hp-display-heading">Why This Brat Maker Is Better</h2>
         <div className="max-w-3xl">
-          <p className="hp-body-text mt-4">Many online editors are low quality, filled with ads, limited in features, or locked behind paywalls.</p>
-          <p className="hp-body-text mt-4">This brat maker is built differently. It offers:</p>
-          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-3 mb-4">
-            <li>Clean interface with full customization</li>
-            <li>Fast real-time editing and mobile compatibility</li>
-            <li>High-resolution downloads and unlimited usage</li>
-          </ul>
-          <p className="hp-body-text mt-4 font-medium">
-            It combines text editing, image editing, meme creation, and profile design in one simple tool. From simple text to full image edits, everything can be created in seconds.
+          <p className="hp-body-text mt-4">
+            Most online generators force a watermark onto your image or limit your exports to low-resolution files that look terrible when reposted. Others lock you into a single green background color, completely ignoring the need for custom hex codes or photo uploads. This tool fixes those issues by offering uncompressed PNG exports, full color customization, and an interface that actually works smoothly on mobile devices without glitching.
           </p>
         </div>
       </div>
@@ -241,52 +204,23 @@ export default function BratMakerPage() {
         <h2 className="hp-display-heading">Brat Meme Examples</h2>
         <div className="max-w-3xl">
           <p className="hp-body-text mt-4">
-            Brat memes are bold, minimal text visuals that turn short phrases, sarcastic captions, and inside jokes into shareable graphics. Using the signature Brat typography on vivid backgrounds, they became a staple of social media humor — especially during the &quot;brat summer&quot; trend of 2024 inspired by Charli XCX&apos;s album era.
-          </p>
-          <p className="hp-body-text mt-4">
-            While brat summer as a seasonal trend has passed, the meme format lives on. People still use the style for funny one-liners, relatable quotes, friendship moments, and chaotic group chat energy. Here are some ideas you can create with this brat maker:
-          </p>
-          <ul className="hp-body-text list-disc space-y-1 ml-5 mt-4 mb-6">
-            <li>Summer-themed memes with neon green backgrounds</li>
-            <li>Funny captions and sarcastic one-liners</li>
-            <li>TikTok and Reels video overlays</li>
-            <li>Vacation and beach-day inside jokes</li>
-            <li>Brat-style quotes and friendship moments</li>
-            <li>Chaotic meme edits with bold typography</li>
-          </ul>
-          <p className="hp-body-text font-medium">
-            Whether you&apos;re keeping the brat summer spirit alive or creating fresh meme content year-round, this maker gives you everything you need to design and download instantly.
+            People use this format to turn completely mundane thoughts into aggressive, highly stylized statements. You&apos;ll see users typing simple one-word complaints, sharing highly specific song lyrics, or generating heavily sarcastic captions for their group chats. A popular brat meme involves taking a screenshot of a text message and recreating it with the bold text and neon background for dramatic effect. The original charli xcx meme spawned countless variations, and this brat aesthetic maker lets you replicate that exact look. Users building a specific brat summer meme or those who just need a fast image text overlay find the brat meme format highly adaptable as a versatile meme maker online.
           </p>
         </div>
       </div>
 
       <FAQAccordion
         title="Frequently Asked Questions"
-        intro="Here are some common questions about the Brat Maker"
+        intro=""
         items={[
-          { question: "Is the Brat Maker free?", answer: <p>Yes. You can create unlimited designs without paying.</p> },
-          { question: "Do I need to create an account?", answer: <p>No. The tool works instantly without signup.</p> },
-          { question: "What file format is used?", answer: <p>All designs export as high-quality PNG files.</p> },
-          { question: "Can I upload my own images?", answer: <p>Yes. You can upload any image and add Brat-style text.</p> },
-          { question: "Does it work on mobile?", answer: <p>Yes. The editor is optimized for mobile devices.</p> },
-          { question: "Can I use the designs commercially?", answer: <p>Yes. You can use your creations for personal or commercial use.</p> },
+          { question: "Is the brat maker free?", answer: <p>Yes, the tool is completely free to use with no hidden fees or premium features locked behind a paywall.</p> },
+          { question: "Do I need an account?", answer: <p>No, you can generate and download as many images as you want without creating an account or providing an email address.</p> },
+          { question: "What file format is exported?", answer: <p>All images are exported as high-resolution PNG files to ensure maximum quality and crisp text.</p> },
+          { question: "Can I upload my own photo?", answer: <p>Yes, you can upload any custom image to use as your background instead of a solid color.</p> },
+          { question: "Is it mobile-optimized?", answer: <p>The entire interface is built to work reliably on mobile, allowing you to drag, scale, and edit with touch controls.</p> },
+          { question: "Can I use my creations commercially?", answer: <p>Yes, you own whatever you create and can use the generated images for commercial projects, social media, or merchandise.</p> },
         ]}
       />
-
-      <div className="hp-page-section hp-page-section-bordered px-4">
-        <h2 className="hp-display-heading">Conclusion</h2>
-        <div className="max-w-3xl">
-          <p className="hp-body-text mt-4">
-            The brat maker is a complete online editor for creating Brat-style text, memes, profile pictures, and image-based graphics. It combines text editing, layout control, image upload, and high-quality export in one simple interface.
-          </p>
-          <p className="hp-body-text mt-4">
-            If you want a fast, flexible way to design Brat visuals without installing software, this tool gives you everything you need.
-          </p>
-          <p className="hp-body-text mt-6 font-medium text-[var(--hp-ink)]">
-            No watermark. No signup. No limits. Just create and download instantly.
-          </p>
-        </div>
-      </div>
 
       <HomeScrollReveal />
     </main>

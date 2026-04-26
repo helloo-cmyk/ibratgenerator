@@ -1,0 +1,112 @@
+PAGE: /brat-name-generator
+SOURCE: src/app/brat-name-generator/page.tsx
+
+META TITLE: Free Brat Name Generator – Create Unique Brat Names Instantly
+META DESCRIPTION: Use our free brat name generator to create unique brat names and text instantly. Generate your brat identity with no signup required.
+OPEN GRAPH TITLE: (inherits global default or not set)
+OPEN GRAPH DESCRIPTION: (inherits global default or not set)
+
+HEADING STRUCTURE:
+- H1: Brat Name Generator
+- H2: What This Tool Does
+- H2: Related Brat Tools
+- H2: Who This Tool Is For
+- H2: What Makes a "Brat" Name
+- H2: Main Features of the Generator
+- H3: Instant Generation
+- H3: Album-Ready Names
+- H3: Profile & Username Ideas
+- H3: Charli XCX–Inspired
+- H3: Unlimited Free Use
+- H3: Clean, Simple Interface
+- H2: How to Use the Brat Name Generator
+- H3: Open the Tool
+- H3: Generate Names
+- H3: Pick Your Favorite
+- H3: Use or Regenerate
+- H2: How People Use Brat Names
+- H2: Why This Tool Is Better
+- H2: Examples of Brat Name Styles
+- H2: Conclusion
+
+FEATURE FLOW SECTIONS:
+- What This Tool Does
+- Who This Tool Is For
+- Main Features of the Generator
+- How to Use the Brat Name Generator
+
+TARGET KEYWORDS (INFERRED FROM VISIBLE PAGE CONTENT):
+- brat name generator
+
+ARTICLE / BODY TEXT (PARAGRAPH TAG CONTENT):
+Create bold, Brat-inspired names for albums, profiles, and edits.
+
+The Brat Name Generator is a simple tool that helps you create unique, Brat-style names instantly. It's designed for users who want short, bold, aesthetic names inspired by the Brat era and Charli XCX's visual and musical identity.
+
+This tool generates names that work perfectly for album titles, usernames, profile names, playlists, edits, and creative projects. Instead of overthinking or manually brainstorming names, you can generate ideas in seconds and pick the one that fits your vibe.
+
+Everything is instant. No signup, no limits, no distractions.
+
+If you want to explore more ways to create brat-style designs, these tools can help depending on what you're trying to make.
+
+The Brat Name Generator is made for anyone who needs creative naming ideas with a strong aesthetic edge.
+
+If you want names that feel modern, bold, and confident, this tool is built for you.
+
+It is especially useful for:
+
+Brat-style names usually share a few key traits:
+
+Examples of common Brat-style naming patterns include:
+
+The generator is designed to follow these patterns naturally.
+
+Generate multiple Brat-style names instantly with one click. Each result is designed to feel aesthetic, modern, and usable.
+
+Creates names that work perfectly for album titles, EP names, playlist names, music projects, or fan-made releases.
+
+Find visually strong names for Instagram, TikTok, Discord, Twitter (X), or creative aliases.
+
+The naming style is heavily inspired by the Brat era's tone — bold, playful, and unapologetic.
+
+Generate as many names as you want. There are no limits, no paywalls, and no locked features.
+
+The tool focuses on one thing: generating names. No clutter, no unnecessary options — just fast results.
+
+Load the generator page. No signup or account creation is required.
+
+Click the generate button to receive a list of aesthetic Brat-style names instantly.
+
+Scroll through the uniquely generated results and choose the name that fits your specific project.
+
+Use the name directly or generate again for endless more ideas. The entire process takes seconds.
+
+Because the names are short and expressive, they work across many platforms. Here are common real-world uses:
+
+Most online name generators feel random, outdated, or generic. They often produce names that don't match modern internet aesthetics. The Brat Name Generator avoids that by focusing on authentic patterns:
+
+You get names that actually feel usable — not filler.
+
+The generator produces names that fall into styles such as:
+
+These styles are intentionally flexible so you can use them creatively across any format.
+
+Yes. You can generate unlimited names for free.
+
+No signup is required.
+
+Yes. You can use generated names for personal or commercial projects.
+
+The generator creates a wide variety of names, but uniqueness depends on how and where you use them.
+
+Yes. Many names are designed specifically to work as album or playlist titles.
+
+No. It generates original name combinations based on style patterns.
+
+Yes. You can generate as many lists as you want.
+
+No. This is a fan-made generator inspired by the Brat aesthetic. It is not officially connected to Charli XCX.
+
+The Brat Name Generator gives you a fast, creative way to generate bold, Brat-inspired names for albums, profiles, playlists, and projects. With instant results, unlimited usage, and a clean aesthetic, it removes the frustration of naming and lets you focus on creating.
+
+If you want modern, confident names that fit the Brat vibe, this generator delivers exactly that.
