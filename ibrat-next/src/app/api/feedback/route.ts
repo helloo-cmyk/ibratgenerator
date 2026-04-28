@@ -1,10 +1,21 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    
+    if (!apiKey) {
+      console.error("Feedback API Error: RESEND_API_KEY is not defined.");
+      return NextResponse.json(
+        { success: false, error: "Email service is not configured" },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
     const body = await request.json();
     const { name, email, message } = body;
 
@@ -38,8 +49,9 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
+    console.error("Feedback submission catch block:", error);
     return NextResponse.json(
-      { success: false, error: "Invalid request body" },
+      { success: false, error: "Invalid request or server error" },
       { status: 400 }
     );
   }
