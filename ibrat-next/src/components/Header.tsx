@@ -7,12 +7,9 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/brat-maker/", label: "Brat Maker" },
+  { href: "/brat-maker/", label: "Brat Generator" },
   { href: "/brat-text-generator/", label: "Brat Text Generator" },
-  { href: "/brat-font-generator/", label: "Brat Font" },
-  { href: "/brat-name-generator", label: "Brat Name" },
-  { href: "/about-us", label: "About" },
-  { href: "/contact-us", label: "Contact" },
+  { href: "/brat-font-generator/", label: "Brat Font Generator" },
 ];
 
 export default function Header() {

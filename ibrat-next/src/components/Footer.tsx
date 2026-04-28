@@ -15,7 +15,10 @@ const styleLinks = [
   { href: "/brat-generator-pink/", label: "Pink Brat Generator" },
 ];
 
-const legalLinks = [
+const supportLinks = [
+  { href: "/about-us", label: "About" },
+  { href: "/contact-us", label: "Contact" },
+  { href: "/feedback", label: "Feedback" },
   { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/terms-conditions", label: "Terms & Conditions" },
   { href: "/disclaimer", label: "Disclaimer" },
@@ -72,11 +75,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal column */}
+          {/* Support & Legal column */}
           <div>
-            <h3 className="!text-xs !font-semibold uppercase tracking-[0.12em] text-foreground/65">Legal</h3>
+            <h3 className="!text-xs !font-semibold uppercase tracking-[0.12em] text-foreground/65">Support & Legal</h3>
             <ul className="mt-3 space-y-2.5">
-              {legalLinks.map(({ href, label }) => (
+              {supportLinks.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
@@ -91,16 +94,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border-soft pt-6 sm:flex-row">
-          <p className="text-xs text-foreground/65 sm:text-sm">
+        <div className="mt-10 flex flex-col items-center justify-center border-t border-border-soft pt-6 sm:flex-row">
+          <p className="text-xs text-foreground/65 sm:text-sm text-center">
             © {currentYear} Ibrat Generator. All rights reserved.
           </p>
-          <Link
-            href="/contact-us"
-            className="text-xs font-medium text-foreground/75 transition-colors hover:text-foreground hover:underline underline-offset-2 sm:text-sm"
-          >
-            Contact
-          </Link>
         </div>
       </div>
     </footer>
