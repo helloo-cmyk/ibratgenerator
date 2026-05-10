@@ -40,7 +40,7 @@ function getOrCreateEmojiBitmap(char: string): HTMLCanvasElement | null {
 }
 
 /**
- * Brat Generator init logic - runs after mount when JSZip and FileSaver are loaded.
+ * Brat Generator init logic, which runs after mount when JSZip and FileSaver are loaded.
  * Returns cleanup function for window listeners.
  */
 export function initBratGenerator(options?: { 
@@ -55,7 +55,7 @@ export function initBratGenerator(options?: {
   const widget = document.getElementById("brat-widget");
   if (!root || !widget) return () => {};
 
-  // Guard against React StrictMode double-invoke (prevents duplicate listeners → 4x downloads)
+  // Guard against React StrictMode double-invoke (prevents duplicate listeners, preventing duplicate downloads)
   if ((root as HTMLElement & { __bratInit?: boolean }).__bratInit) return () => {};
   (root as HTMLElement & { __bratInit?: boolean }).__bratInit = true;
 
@@ -589,7 +589,7 @@ export function initBratGenerator(options?: {
 
   function updateContrast() {
     if (contrastLabel)
-      contrastLabel!.textContent = `${formatContrast(contrastRatio(state.bg, state.fg))} — bg ${state.bg} / text ${state.fg}`;
+      contrastLabel!.textContent = `${formatContrast(contrastRatio(state.bg, state.fg))} - bg ${state.bg} / text ${state.fg}`;
   }
 
   function deleteSelectedSticker() {
@@ -1528,7 +1528,7 @@ export function initBratGenerator(options?: {
     if (!navigator.clipboard || typeof ClipboardItem === "undefined") {
       const url = URL.createObjectURL(blob);
       window.open(url, "_blank");
-      showToast("Clipboard API not available — opened image in new tab");
+      showToast("Clipboard API not available, opened image in new tab");
       return false;
     }
     try {
@@ -1538,7 +1538,7 @@ export function initBratGenerator(options?: {
     } catch {
       const url = URL.createObjectURL(blob);
       window.open(url, "_blank");
-      showToast("Image copy blocked — opened in new tab");
+      showToast("Image copy blocked, opened in new tab");
       return false;
     }
   }
@@ -1547,7 +1547,7 @@ export function initBratGenerator(options?: {
     try {
       await safeCopyCanvasImage();
     } catch {
-      alert("Copy failed — use Download instead.");
+      alert("Copy failed: use Download instead.");
     }
   });
 

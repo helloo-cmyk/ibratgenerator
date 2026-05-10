@@ -51,7 +51,7 @@ export default function BratNameGeneratorPage() {
         <h2 className="hp-display-heading">What This Tool Does</h2>
         <div className="max-w-3xl">
           <p className="hp-body-text mt-4">
-            This brat username generator produces short, bold brat aesthetic names on demand. Each generation follows the patterns that define a strong brat identity: lowercase, blunt, slightly abstract. Use it for fresh brat name ideas across albums, playlists, profiles, and creative projects — unlimited times, no account needed.
+            This brat username generator produces short, bold brat aesthetic names on demand. Each generation follows the patterns that define a strong brat identity: lowercase, blunt, slightly abstract. Use it for fresh brat name ideas across albums, playlists, profiles, and creative projects, with unlimited use and no account needed.
           </p>
         </div>
       </div>

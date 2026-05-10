@@ -39,7 +39,7 @@ export default function AboutPage() {
             The idea for ibratgenerator.com came during the peak of "Brat Summer." I noticed that while everyone wanted to recreate the iconic Charli XCX album aesthetic, most people were struggling with complex design software like Photoshop or paying for mobile apps just to add some text to a green square.
           </p>
           <p className="hp-body-text mb-6">
-            I wanted to build a "one-click" solution—a tool that was entirely free, required no signup, and worked perfectly on a mobile browser. I spent a few weeks perfecting the typography rules, the specific stretched-text look, and the color hex codes to ensure that anyone, regardless of their design skill, could create an authentic Brat visual in seconds.
+            I wanted to build a "one-click" solution: a tool that was entirely free, required no signup, and worked perfectly on a mobile browser. I spent a few weeks perfecting the typography rules, the specific stretched-text look, and the color hex codes to ensure that anyone, regardless of their design skill, could create an authentic Brat visual in seconds.
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">What We Do</h2>

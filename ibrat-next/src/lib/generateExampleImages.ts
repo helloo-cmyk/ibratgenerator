@@ -92,7 +92,7 @@ function drawBratText(
 /**
  * Generate brat-style PNG images for each example phrase.
  * Returns base64 data URLs. Cached after first call.
- * Client-side only—returns empty array if not in browser.
+ * Client-side only, returns empty array if not in browser.
  */
 export async function generateExampleImages(): Promise<string[]> {
   if (cachedExamples !== null) {

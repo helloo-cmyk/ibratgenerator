@@ -10,7 +10,7 @@ export const metadata = {
     canonical: "https://ibratgenerator.com/blog/what-is-brat-font/",
   },
   description:
-    "No official brat font download exists — the style is a set of typography rules. Learn what defines the Charli XCX brat aesthetic and how to recreate it.",
+    "No official brat font download exists, as the style is a set of typography rules. Learn what defines the Charli XCX brat aesthetic and how to recreate it.",
 };
 
 const faqSchema = {
@@ -71,10 +71,10 @@ export default function WhatIsBratFontPage() {
       <BlogHero 
         category="TYPOGRAPHY"
         title="What Is the Brat Font? Charli XCX Brat Font Name & Style Explained"
-        subtitle="No official brat font download exists — the style is a set of typography rules. Learn what defines the Charli XCX brat aesthetic and how to recreate it."
+        subtitle="No official brat font download exists, as the style is a set of typography rules. Learn what defines the Charli XCX brat aesthetic and how to recreate it."
         readTime="6 MIN READ"
         imageSrc="/blog-images/font-hero-v2.png"
-        imageAlt="brat font style example — bold lowercase typography on neon green background"
+        imageAlt="brat font style example, bold lowercase typography on neon green background"
       />
 
       {/* ── ARTICLE BODY ── */}
@@ -89,7 +89,7 @@ export default function WhatIsBratFontPage() {
             There is no official brat font download available because the style is built on standard typographic principles, not a proprietary typeface. The brat font name itself doesn't exist as a single file you can install on your computer. Instead, the aesthetic is achieved by taking a heavy sans-serif font and applying very specific spacing and layout rules.
           </p>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Skip the search — use the free <Link href="/brat-font-generator/" className="hp-link">brat font generator</Link> to create the exact brat style instantly. No font file needed.
+            Skip the search, so use the free <Link href="/brat-font-generator/" className="hp-link">brat font generator</Link> to create the exact brat style instantly. No font file needed.
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">What Font Does Brat Look Like?</h2>
@@ -102,7 +102,7 @@ export default function WhatIsBratFontPage() {
             Even if you find a brat font free download online, installing the font is only ten percent of the work. You still have to manually adjust the tracking, set up the high-contrast background, and export the file at the correct resolution. If you attempt to use a standard brat font canva setup, you will likely struggle to get the letter spacing tight enough to match the authentic album style.
           </p>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            This tool handles all of that automatically. Type your text, set the weight and spacing, and download a clean PNG. Try the <Link href="/brat-font-generator/" className="hp-link">brat font generator</Link> — it's free and requires no signup.
+            This tool handles all of that automatically. Type your text, set the weight and spacing, and download a clean PNG. Try the <Link href="/brat-font-generator/" className="hp-link">brat font generator</Link>, which is free and requires no signup.
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">How to Create Brat Style Text</h2>
@@ -118,7 +118,7 @@ export default function WhatIsBratFontPage() {
             </li>
           </ul>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Brat Font on Canva — Does It Work?</h2>
+          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Brat Font on Canva - Does It Work?</h2>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
             There is no dedicated brat font canva preset available on the platform right now. You can approximate the look by selecting Arial Bold, applying a neon green background, and manually crushing the letter spacing as tight as it will go. Alternatively, using a dedicated site like ibratgenerator.com gives you the exact formatting instantly without wrestling with slider controls.
           </p>
@@ -135,7 +135,7 @@ export default function WhatIsBratFontPage() {
             As the trend grew, fans used online brat generators to turn their names and favorite phrases into aesthetic graphics. These generators allowed people who weren't designers to participate in the culture instantly. The font stopped being just an album cover and became a way for people to express a specific mood.
           </p>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            The viral trend reached a massive peak when it crossed into the mainstream world. One of the biggest moments was the "Kamala IS brat" social media wave. This moment proved that the font was more than just a music trend—it was a powerful tool for communication that anyone could use.
+            The viral trend reached a massive peak when it crossed into the mainstream world. One of the biggest moments was the "Kamala IS brat" social media wave. This moment proved that the font was more than just a music trend: it was a powerful tool for communication that anyone could use.
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Brat Font vs Other Minimalist Fonts</h2>

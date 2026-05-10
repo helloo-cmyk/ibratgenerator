@@ -5,12 +5,12 @@ import FAQAccordion from "@/components/FAQAccordion";
 import HomeScrollReveal from "@/components/HomeScrollReveal";
 
 const BRAT_TEXT_EXAMPLES = [
-  { src: "/examples/brat-text-ex-1.png", phrase: "typography", alt: "brat text generator example — green background with classic lowercase text" },
-  { src: "/examples/brat-text-ex-2.png", phrase: "clean text", alt: "brat text generator example — bold typography layout" },
-  { src: "/examples/brat-text-ex-3.png", phrase: "bold look", alt: "brat text generator example — minimal brat text style" },
-  { src: "/examples/brat-text-ex-4.png", phrase: "pure vibe", alt: "brat text generator example — neon green aesthetic text" },
-  { src: "/examples/brat-text-ex-5.png", phrase: "minimalist", alt: "brat text generator example — pink background with black brat text" },
-  { src: "/examples/brat-text-ex-6.png", phrase: "no distractions", alt: "brat text generator example — custom color brat text image" },
+  { src: "/examples/brat-text-ex-1-v5.png", phrase: "typography", alt: "brat text generator example, green background with classic lowercase text" },
+  { src: "/examples/brat-text-ex-2-v5.png", phrase: "clean text", alt: "brat text generator example, bold typography layout" },
+  { src: "/examples/brat-text-ex-3-v5.png", phrase: "bold look", alt: "brat text generator example, minimal brat text style" },
+  { src: "/examples/brat-text-ex-4-v5.png", phrase: "pure vibe", alt: "brat text generator example, neon green aesthetic text" },
+  { src: "/examples/brat-text-ex-5-v5.png", phrase: "minimalist", alt: "brat text generator example, pink background with black brat text" },
+  { src: "/examples/brat-text-ex-6-v5.png", phrase: "no distractions", alt: "brat text generator example, custom color brat text image" },
 ];
 
 const faqSchema = {
@@ -46,7 +46,7 @@ const faqSchema = {
       name: "What font does the tool use?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "It uses a condensed, stretched sans-serif font styled to match the Charli XCX brat album typography — bold, lowercase, and tightly kerned.",
+        text: "It uses a condensed, stretched sans-serif font styled to match the Charli XCX brat album typography, which is bold, lowercase, and tightly kerned.",
       },
     },
     {
@@ -62,7 +62,7 @@ const faqSchema = {
       name: "Does it work on mobile devices?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. It runs fully in your mobile browser with touch support. Works on iPhone, Android, and tablets — no app required. Open the page and start typing.",
+        text: "Yes. It runs fully in your mobile browser with touch support. Works on iPhone, Android, and tablets, with no app required. Open the page and start typing.",
       },
     },
     {
@@ -79,7 +79,7 @@ const faqSchema = {
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How to Make Brat Text — Step by Step",
+  name: "How to Make Brat Text - Step by Step",
   step: [
     {
       "@type": "HowToStep",
@@ -106,7 +106,7 @@ const howToSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Brat Text Generator — Free Brat Text Maker & Image Creator [2026]",
+    absolute: "Brat Text Generator - Free Brat Text Maker & Image Creator [2026]",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-text-generator/",
@@ -155,10 +155,10 @@ export default function BratTextGeneratorPage() {
         <h2 className="hp-display-heading">What Is the Brat Text Generator?</h2>
         <div className="max-w-3xl">
           <p className="hp-body-text mt-4">
-            This specialized tool recreates the Charli XCX text generator aesthetic — bold, stretched lowercase type against highly saturated solid color backgrounds.
+            This specialized tool recreates the Charli XCX text generator aesthetic, featuring bold, stretched lowercase type against highly saturated solid color backgrounds.
           </p>
           <p className="hp-body-text mt-4">
-            It’s perfect for crafting quick text posts, custom stickers, or reaction memes directly in your browser. Use it as a brat words generator — type a single word or full phrase, no account needed.
+            It’s perfect for crafting quick text posts, custom stickers, or reaction memes directly in your browser. Use it as a brat words generator to type a single word or full phrase, no account needed.
           </p>
           <p className="hp-body-text mt-4">
             Want more advanced controls? Check out the full <Link href="/" className="hp-link">brat generator</Link> on our homepage.
@@ -179,7 +179,7 @@ export default function BratTextGeneratorPage() {
               <strong>Typography &amp; Spacing Control:</strong> Fine-tune your typography. Adjust font size, letter spacing, line height, and text alignment for the perfect look.
             </p>
             <p className="hp-body-text">
-              <strong>Custom color palettes:</strong> Create brat custom text in any color — neon green, pink, black, or any hex code you want.
+              <strong>Custom color palettes:</strong> Create brat custom text in any color, such as neon green, pink, black, or any hex code you want.
             </p>
             <p className="hp-body-text">
               <strong>Aspect Ratio Presets:</strong> Export in square, portrait, or landscape formats tailored for different social platforms.
@@ -197,7 +197,7 @@ export default function BratTextGeneratorPage() {
       {/* ── HOW TO USE ── */}
       <div className="hp-page-section hp-page-section-bordered px-4">
         <span className="hp-eyebrow">Getting started</span>
-        <h2 className="hp-display-heading">How to Make Brat Text — Step by Step</h2>
+        <h2 className="hp-display-heading">How to Make Brat Text - Step by Step</h2>
         <div className="hp-steps-grid mt-6">
           <div className="hp-step-card">
             <span className="hp-step-num">1</span>
@@ -251,7 +251,7 @@ export default function BratTextGeneratorPage() {
         <h2 className="hp-display-heading">Why Use This Brat Text Maker Instead of Canva?</h2>
         <div className="max-w-3xl">
           <p className="hp-body-text mt-4">
-            While standard design apps require you to set up a canvas, find the right font, and align everything manually, this brat text creator automatically formats your brat style text — no manual setup required.
+            While standard design apps require you to set up a canvas, find the right font, and align everything manually, this brat text creator automatically formats your brat style text, with no manual setup required.
           </p>
           <p className="hp-body-text mt-4">
             You only need to type. The tool automatically formats your brat generator text to match the iconic stretched, lowercase style. It's the fastest way to turn text into an aesthetic image.
@@ -334,9 +334,9 @@ export default function BratTextGeneratorPage() {
           { question: "Is the brat text generator free?", answer: <p>Yes. It's 100% free to use. There are no subscriptions or hidden fees.</p> },
           { question: "Is there a limit to how much text I can add?", answer: <p>You can type as much as you like, though shorter phrases and single words tend to look best in this bold aesthetic.</p> },
           { question: "Does it add a watermark to the text image?", answer: <p>No. All exports are completely clean and watermark-free.</p> },
-          { question: "What font does the tool use?", answer: <p>It uses a condensed, stretched sans-serif font styled to match the Charli XCX brat album typography — bold, lowercase, and tightly kerned.</p> },
+          { question: "What font does the tool use?", answer: <p>It uses a condensed, stretched sans-serif font styled to match the Charli XCX brat album typography, which is bold, lowercase, and tightly kerned.</p> },
           { question: "Can I use the generated text commercially?", answer: <p>Yes. The images you create are yours to use for commercial projects, merchandise, or any other purpose.</p> },
-          { question: "Does it work on mobile devices?", answer: <p>Yes. It runs fully in your mobile browser with touch support. Works on iPhone, Android, and tablets — no app required. Open the page and start typing.</p> },
+          { question: "Does it work on mobile devices?", answer: <p>Yes. It runs fully in your mobile browser with touch support. Works on iPhone, Android, and tablets, with no app required. Open the page and start typing.</p> },
           { question: "Can I make a brat text generator transparent background image?", answer: <p>The tool exports brat text generator PNG files with your chosen background color. For a transparent background, set it to match your target surface, then remove it with any PNG editor after downloading.</p> },
         ]}
       />

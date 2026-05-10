@@ -13,7 +13,7 @@ const faqSchema = {
       name: "What is the brat font download alternative?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "There is no official font file to download for the brat style. This brat font generator recreates the exact look in your browser — correct weight, tight spacing, and the right layout. No installation, no font file hunting required.",
+        text: "There is no official font file to download for the brat style. This brat font generator recreates the exact look in your browser, with the correct weight, tight spacing, and the right layout. No installation, no font file hunting required.",
       },
     },
     {
@@ -61,13 +61,13 @@ const faqSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Brat Font Generator — Free Brat Font Download Alternative [2026]",
+    absolute: "Brat Font Generator - Free Brat Font Maker Online [2026]",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-font-generator/",
   },
   description:
-    "Free brat font generator — recreate bold Charli XCX brat typography instantly. Adjust spacing, weight & color. No signup, no watermark. Download PNG.",
+    "Free brat font generator to recreate bold Charli XCX brat typography instantly. Adjust spacing, weight & color. No signup, no watermark. Download PNG.",
 };
 
 export default function BratFontGeneratorPage() {
@@ -258,7 +258,7 @@ export default function BratFontGeneratorPage() {
         title="Frequently Asked Questions"
         intro="Common questions about the brat font and this generator."
         items={[
-          { question: "What is the brat font download alternative?", answer: <p>There is no official font file to download for the brat style. This brat font generator recreates the exact look in your browser — correct weight, tight spacing, and the right layout. No installation, no font file hunting required.</p> },
+          { question: "What is the brat font download alternative?", answer: <p>There is no official font file to download for the brat style. This brat font generator recreates the exact look in your browser, with the correct weight, tight spacing, and the right layout. No installation, no font file hunting required.</p> },
           { question: "How do I get the brat font for free?", answer: <p>Use this free brat font generator. Type your text, set your colors, and export a watermark-free PNG at up to 3000px resolution. No signup, no payment, no download needed.</p> },
           { question: "Does this recreate the Charli XCX brat font style?", answer: <p>Yes. The generator recreates the bold, minimal typography associated with Charli XCX Brat visuals, including spacing, weight, and alignment.</p> },
           { question: "Can I export my typography as PNG?", answer: <p>Yes. Export at 1024, 1500, 2048, or 3000 px. No watermark, no compression.</p> },

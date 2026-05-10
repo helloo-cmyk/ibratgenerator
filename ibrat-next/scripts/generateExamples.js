@@ -45,60 +45,87 @@ const FONT_PHRASES = [
   "minimalist",
 ];
 
-const BG_COLORS = ["#8ACE00", "#FFFFFF", "#000000", "#FF69B4", "#A8FFB0", "#E5FF00"];
+const BG_COLORS = ["#89CC04", "#FFFFFF", "#000000", "#FF69B4", "#89CC04", "#000000"];
 
 const SIZE = 400;
 const OUT_DIR = path.join(__dirname, "..", "public", "examples");
 
 function drawBratText(ctx, width, height, text, bg, fg) {
-  const fontSize = Math.round(Math.min(width, height) * 0.22); // Increased font size multiplier
-  ctx.font = `normal ${fontSize}px "Arial", sans-serif`;
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, width, height);
 
-  const padding = Math.round(width * 0.08);
+  const padding = Math.round(width * 0.1);
   const boxW = width - padding * 2;
   const lineHeight = 0.95;
-  const letterSpacing = -2;
+  
+  // Find dynamic font size
+  let fontSize = width * 0.25; // Start large
+  let lines = [];
+  let letterSpacing = 0;
 
-  const words = text.split(/\s+/);
-  const lines = [];
-  let cur = "";
-  for (const w of words) {
-    const test = (cur ? cur + " " : "") + w;
-    if (ctx.measureText(test).width <= boxW) {
-      cur = test;
-    } else {
-      if (cur) lines.push(cur);
-      cur = w;
+  // We loop until the text fits the box width
+  while (fontSize > 10) {
+    ctx.font = `normal ${fontSize}px "Arial", sans-serif`;
+    letterSpacing = Math.max(-3, -fontSize * 0.05); // Dynamic letter spacing
+    
+    // Split into lines based on boxW
+    const words = text.split(/\s+/);
+    lines = [];
+    let cur = "";
+    let tooWideWord = false;
+
+    for (const w of words) {
+      // Check if a single word is too wide
+      const wordW = measureLineW(ctx, w, letterSpacing);
+      if (wordW > boxW) {
+        tooWideWord = true;
+        break;
+      }
+
+      const test = (cur ? cur + " " : "") + w;
+      if (measureLineW(ctx, test, letterSpacing) <= boxW) {
+        cur = test;
+      } else {
+        if (cur) lines.push(cur);
+        cur = w;
+      }
     }
+    
+    if (tooWideWord) {
+      fontSize -= 2; // Shrink and retry
+      continue;
+    }
+    
+    if (cur) lines.push(cur);
+    break; // Fits!
   }
-  if (cur) lines.push(cur);
 
-  function totalLineWidth(line) {
+  function measureLineW(context, line, spacing) {
     const chars = [...line];
     let w = 0;
     for (let i = 0; i < chars.length; i++) {
-      w += ctx.measureText(chars[i]).width;
-      if (i < chars.length - 1) w += letterSpacing;
+      w += context.measureText(chars[i]).width;
+      if (i < chars.length - 1) w += spacing;
     }
     return w;
   }
 
-  ctx.fillStyle = bg;
-  ctx.fillRect(0, 0, width, height);
-
   const lh = fontSize * lineHeight;
   const totalTextH = (lines.length - 1) * lh + fontSize;
   const centerX = width / 2;
-  const centerY = height / 2; // Perfect vertical center
+  const centerY = height / 2;
 
   ctx.save();
   ctx.translate(centerX, centerY);
   ctx.textBaseline = "top";
-  ctx.fillStyle = fg;
   ctx.textAlign = "left";
 
+  // Authentic Brat Blur Effect
+  ctx.filter = `blur(${fontSize * 0.015}px)`;
+  ctx.fillStyle = fg;
+
   lines.forEach((line, i) => {
-    const lineWidth = totalLineWidth(line);
+    const lineWidth = measureLineW(ctx, line, letterSpacing);
     const lineX = -lineWidth / 2;
     const lineY = -totalTextH / 2 + i * lh;
     const chars = [...line];

@@ -11,7 +11,7 @@ const faqSchema = {
       name: "What is the brat generator black background color?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The background is locked to #0a0a0a — a near-pure black. This matches the dark variant of the brat aesthetic. You cannot change it on this page; it is fixed by design.",
+        text: "The background is locked to #0a0a0a, which is a near-pure black. This matches the dark variant of the brat aesthetic. You cannot change it on this page; it is fixed by design.",
       },
     },
     {
@@ -51,13 +51,13 @@ const faqSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Brat Generator Black — Free Black Brat Image Maker",
+    absolute: "Brat Generator Black - Free Black Brat Image Maker",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-black-generator/",
   },
   description:
-    "Make a black brat generator image in seconds. Type your text, download a clean black background PNG — no watermark, no signup. Works on mobile.",
+    "Make a black brat generator image in seconds. Type your text, download a clean black background PNG, with no watermark or signup. Works on mobile.",
 };
 
 export default function BratBlackGeneratorPage() {
@@ -72,7 +72,7 @@ export default function BratBlackGeneratorPage() {
       <section className="hp-hero px-4">
         <h1 className="hp-hero-heading mt-6 mb-3 mx-auto">Brat Generator Black</h1>
         <p className="intro-text">
-          Type any text and create a sharp, high-contrast brat image on a locked black background. Download a clean PNG — no watermark, no signup.
+          Type any text and create a sharp, high-contrast brat image on a locked black background. Download a clean PNG, which has no watermark and no signup.
         </p>
       </section>
 
@@ -102,7 +102,7 @@ export default function BratBlackGeneratorPage() {
       <div className="hp-page-section hp-page-section-bordered px-4">
         <div className="max-w-3xl">
           <p className="hp-body-text">
-            The black brat aesthetic is darker, sharper, and hits harder than the original green. This black brat generator locks the background to deep black (#0a0a0a) and lets you type any text — your name, a mood, a lyric, anything. Download a clean PNG in seconds. No watermark. No signup. No color pickers to mess with — it&apos;s locked to black because that&apos;s the whole point.
+            The black brat aesthetic is darker, sharper, and hits harder than the original green. This black brat generator locks the background to deep black (#0a0a0a) and lets you type any text, such as your name, a mood, or a lyric. Download a clean PNG in seconds. No watermark. No signup. No color pickers to mess with, as it&apos;s locked to black because that&apos;s the whole point.
           </p>
         </div>
       </div>
@@ -116,7 +116,7 @@ export default function BratBlackGeneratorPage() {
           </div>
           <div>
             <p className="hp-body-text">
-              It&apos;s the same brat generator you already know, but locked to a black background. Inspired by the dark variant aesthetics of Charli XCX&apos;s brat album, this version strips the color palette down to white text on black — high contrast, clean, minimal. Whether you search for the black brat generator or the brat black generator, you land here. The background stays fixed at #0a0a0a so you can focus on the text, not the settings. No color picker, no distractions — just type and download.
+              It&apos;s the same brat generator you already know, but locked to a black background. Inspired by the dark variant aesthetics of Charli XCX&apos;s brat album, this version strips the color palette down to white text on black, providing a high contrast, clean, and minimal look. Whether you search for the black brat generator or the brat black generator, you land here. The background stays fixed at #0a0a0a so you can focus on the text, not the settings. No color picker, no distractions, just type and download.
             </p>
           </div>
         </div>
@@ -136,7 +136,7 @@ export default function BratBlackGeneratorPage() {
           <div className="hp-feature-card">
             <div className="hp-feature-icon">⬛</div>
             <h3>Locked Black Background</h3>
-            <p>Deep #0a0a0a background — pure black, no color picker, no accidental changes.</p>
+            <p>Deep #0a0a0a background, pure black, no color picker, no accidental changes.</p>
           </div>
 
           <div className="hp-feature-card">
@@ -216,7 +216,7 @@ export default function BratBlackGeneratorPage() {
         <h2 className="hp-display-heading">What to Make With a Black Brat Image</h2>
         <div className="max-w-3xl">
           <p className="hp-body-text mt-4">
-            A black brat image works anywhere you need bold, minimal visuals. Create brat text generator black background posts for TikTok that stand out in dark-mode feeds. Build profile pictures and pfps with clean white or neon text on brat generator black background for a look that reads instantly at thumbnail size. Use them as Twitter or X headers — the wide aspect ratio and high contrast make the text pop across the banner. Set one as your phone wallpaper for a locked-screen aesthetic that feels intentional. Or go the meme route: type a short phrase, export, and drop it into a group chat as a reaction image. The format is flexible enough for all of it.
+            A black brat image works anywhere you need bold, minimal visuals. Create brat text generator black background posts for TikTok that stand out in dark-mode feeds. Build profile pictures and pfps with clean white or neon text on brat generator black background for a look that reads instantly at thumbnail size. Use them as Twitter or X headers, as the wide aspect ratio and high contrast make the text pop across the banner. Set one as your phone wallpaper for a locked-screen aesthetic that feels intentional. Or go the meme route: type a short phrase, export, and drop it into a group chat as a reaction image. The format is flexible enough for all of it.
           </p>
         </div>
       </div>
@@ -228,7 +228,7 @@ export default function BratBlackGeneratorPage() {
         items={[
           {
             question: "What is the brat generator black background color?",
-            answer: <p>The background is locked to #0a0a0a — a near-pure black. This matches the dark variant of the brat aesthetic. You cannot change it on this page; it is fixed by design.</p>,
+            answer: <p>The background is locked to #0a0a0a, which is a near-pure black. This matches the dark variant of the brat aesthetic. You cannot change it on this page; it is fixed by design.</p>,
           },
           {
             question: "Can I make brat text on a black background?",
@@ -254,12 +254,12 @@ export default function BratBlackGeneratorPage() {
         <h2 className="hp-display-heading">More Brat Generators</h2>
         <div className="max-w-3xl">
           <ul className="hp-body-text space-y-3 mt-6 ml-4 list-disc">
-            <li><Link href="/" className="hp-link">Brat Generator</Link> — the full editor with all colors and tools.</li>
-            <li><Link href="/brat-text-generator/" className="hp-link">Brat Text Generator</Link> — fast text-only PNG export.</li>
-            <li><Link href="/brat-generator-pink/" className="hp-link">Pink Brat Generator</Link> — soft pastel brat aesthetic.</li>
-            <li><Link href="/brat-generator-white/" className="hp-link">White Brat Generator</Link> — clean minimalist brat layouts.</li>
-            <li><Link href="/brat-green-generator/" className="hp-link">Brat Green Generator</Link> — original neon green brat look.</li>
-            <li><Link href="/blog/brat-color-code/" className="hp-link">Brat Color Codes</Link> — hex values for every brat palette.</li>
+            <li><Link href="/" className="hp-link">Brat Generator</Link>, the full editor with all colors and tools.</li>
+            <li><Link href="/brat-text-generator/" className="hp-link">Brat Text Generator</Link>, fast text-only PNG export.</li>
+            <li><Link href="/brat-generator-pink/" className="hp-link">Pink Brat Generator</Link>, soft pastel brat aesthetic.</li>
+            <li><Link href="/brat-generator-white/" className="hp-link">White Brat Generator</Link>, clean minimalist brat layouts.</li>
+            <li><Link href="/brat-green-generator/" className="hp-link">Brat Green Generator</Link>, original neon green brat look.</li>
+            <li><Link href="/blog/brat-color-code/" className="hp-link">Brat Color Codes</Link>, hex values for every brat palette.</li>
           </ul>
         </div>
       </div>

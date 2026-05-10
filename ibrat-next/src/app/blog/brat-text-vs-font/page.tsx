@@ -4,7 +4,7 @@ import BlogHero from "@/components/BlogHero";
 
 export const metadata = {
   title: {
-    absolute: "Brat Text Generator vs Brat Font Generator — What Is the Difference?",
+    absolute: "Brat Text Generator vs Brat Font Generator - What Is the Difference?",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/blog/brat-text-vs-font/",
@@ -67,7 +67,7 @@ export default function BratTextVsFontPage() {
       />
       <BlogHero 
         category="TUTORIAL"
-        title="Brat Text Generator vs Brat Font Generator — What Is the Difference?"
+        title="Brat Text Generator vs Brat Font Generator - What Is the Difference?"
         subtitle="Confused about which tool to use? We explain the core differences between our text and font generators so you can pick the right one for your project."
         readTime="5 MIN READ"
         publishDate={today}

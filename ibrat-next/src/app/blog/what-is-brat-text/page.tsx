@@ -30,7 +30,7 @@ const faqSchema = {
       "name": "How do I make brat text online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use a free brat text generator — type your phrase, choose your background color, and download a PNG. No design skills needed."
+        "text": "Use a free brat text generator to type your phrase, choose your background color, and download a PNG. No design skills needed."
       }
     },
     {
@@ -38,7 +38,7 @@ const faqSchema = {
       "name": "What should I write in brat text?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your name, a mood, a short lyric, a year, or a reaction phrase. Shorter is always better — 1 to 4 words works best."
+        "text": "Your name, a mood, a short lyric, a year, or a reaction phrase. Shorter is always better, with 1 to 4 words working best."
       }
     }
   ]
@@ -100,8 +100,8 @@ export default function WhatIsBratTextPage() {
             </li>
           </ul>
 
-          {/* ── NEW SECTION: Brat Text Ideas — What to Write ── */}
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Brat Text Ideas — What to Write</h2>
+          {/* ── NEW SECTION: Brat Text Ideas - What to Write ── */}
+          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Brat Text Ideas - What to Write</h2>
           <p className="hp-body-text mb-8 text-[17px] sm:text-[18px]">
             Not sure what to type? Here are five categories that consistently produce the best brat text results. Open the <Link href="/brat-text-generator" className="hp-link">brat text generator</Link> and try any of these.
           </p>
@@ -118,7 +118,7 @@ export default function WhatIsBratTextPage() {
 
           <h3 className="text-[20px] sm:text-[22px] font-semibold mt-10 mb-3">A Lyric Fragment</h3>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Short Charli XCX lyric fragments work perfectly in the brat format. Keep it to three to five words maximum — anything longer breaks the visual balance and loses impact.
+            Short Charli XCX lyric fragments work perfectly in the brat format. Keep it to three to five words maximum, as anything longer breaks the visual balance and loses impact.
           </p>
 
           <h3 className="text-[20px] sm:text-[22px] font-semibold mt-10 mb-3">A Date or Year</h3>
@@ -137,8 +137,8 @@ export default function WhatIsBratTextPage() {
             intro=""
             items={[
               { question: "What is brat text?", answer: <p>Brat text is the blurry, condensed text style from Charli XCX&apos;s 2024 album &quot;brat.&quot; It typically appears as short lowercase phrases on a colored background.</p> },
-              { question: "How do I make brat text online?", answer: <p>Use a free brat text generator — type your phrase, choose your background color, and download a PNG. No design skills needed.</p> },
-              { question: "What should I write in brat text?", answer: <p>Your name, a mood, a short lyric, a year, or a reaction phrase. Shorter is always better — 1 to 4 words works best.</p> },
+              { question: "How do I make brat text online?", answer: <p>Use a free brat text generator to type your phrase, choose your background color, and download a PNG. No design skills needed.</p> },
+              { question: "What should I write in brat text?", answer: <p>Your name, a mood, a short lyric, a year, or a reaction phrase. Shorter is always better, with 1 to 4 words working best.</p> },
             ]}
           />
 

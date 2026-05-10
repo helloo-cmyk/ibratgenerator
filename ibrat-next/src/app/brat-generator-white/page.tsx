@@ -61,12 +61,12 @@ const faqSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Brat Generator White — Free Clean Aesthetic Text, No Watermark",
+    absolute: "Brat Generator White - Free Clean Aesthetic Text, No Watermark",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-generator-white/",
   },
-  description: "Free brat generator white — create minimalist white brat text & images instantly. No watermark, no signup. Download high-res PNG for Instagram, TikTok & more.",
+  description: "Free brat generator white to create minimalist white brat text & images instantly. No watermark, no signup. Download high-res PNG for Instagram, TikTok & more.",
 };
 
 export default function BratGeneratorWhitePage() {
@@ -138,10 +138,10 @@ export default function BratGeneratorWhitePage() {
           Same brat style, different palettes.
         </p>
         <ul className="hp-body-text space-y-3 mt-6 ml-4 list-disc">
-          <li><Link href="/brat-green-generator/" className="hp-link">Green Brat Generator</Link> — original neon green brat look.</li>
-          <li><Link href="/brat-generator-pink/" className="hp-link">Pink Brat Generator</Link> — softer pastel brat aesthetic.</li>
-          <li><Link href="/brat-black-generator/" className="hp-link">Black Brat Generator</Link> — high-contrast dark brat visuals.</li>
-          <li><Link href="/brat-text-generator/" className="hp-link">Brat Text Generator</Link> — fast text-only PNG export.</li>
+          <li><Link href="/brat-green-generator/" className="hp-link">Green Brat Generator</Link>, original neon green brat look.</li>
+          <li><Link href="/brat-generator-pink/" className="hp-link">Pink Brat Generator</Link>, softer pastel brat aesthetic.</li>
+          <li><Link href="/brat-black-generator/" className="hp-link">Black Brat Generator</Link>, high-contrast dark brat visuals.</li>
+          <li><Link href="/brat-text-generator/" className="hp-link">Brat Text Generator</Link>, fast text-only PNG export.</li>
         </ul>
       </div>
 

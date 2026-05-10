@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
             Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. 
           </p>
           <p className="hp-body-text mb-12">
-            However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads" className="hp-link">https://policies.google.com/technologies/ads</a>
+            However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL: <a href="https://policies.google.com/technologies/ads" className="hp-link">https://policies.google.com/technologies/ads</a>
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">6. Google AdSense & Third-Party Partners</h2>
@@ -83,12 +83,12 @@ export default function PrivacyPolicyPage() {
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">8. GDPR Data Protection Rights</h2>
           <p className="hp-body-text mb-4">We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
           <ul className="hp-body-text mb-12 list-disc pl-6 space-y-3">
-            <li><strong>The right to access</strong> – You have the right to request copies of your personal data.</li>
-            <li><strong>The right to rectification</strong> – You have the right to request that we correct any information you believe is inaccurate.</li>
-            <li><strong>The right to erasure</strong> – You have the right to request that we erase your personal data, under certain conditions.</li>
-            <li><strong>The right to restrict processing</strong> – You have the right to request that we restrict the processing of your personal data.</li>
-            <li><strong>The right to object to processing</strong> – You have the right to object to our processing of your personal data.</li>
-            <li><strong>The right to data portability</strong> – You have the right to request that we transfer the data that we have collected to another organization.</li>
+            <li><strong>The right to access</strong>: You have the right to request copies of your personal data.</li>
+            <li><strong>The right to rectification</strong>: You have the right to request that we correct any information you believe is inaccurate.</li>
+            <li><strong>The right to erasure</strong>: You have the right to request that we erase your personal data, under certain conditions.</li>
+            <li><strong>The right to restrict processing</strong>: You have the right to request that we restrict the processing of your personal data.</li>
+            <li><strong>The right to object to processing</strong>: You have the right to object to our processing of your personal data.</li>
+            <li><strong>The right to data portability</strong>: You have the right to request that we transfer the data that we have collected to another organization.</li>
           </ul>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">9. CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>

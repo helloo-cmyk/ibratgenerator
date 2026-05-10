@@ -4,7 +4,7 @@ import BlogHero from "@/components/BlogHero";
 
 export const metadata = {
   title: {
-    absolute: "Brat Summer Meaning — What It Is and Where It Came From [2026]",
+    absolute: "Brat Summer Meaning - What It Is and Where It Came From [2026]",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/blog/brat-summer-meaning/",
@@ -22,7 +22,7 @@ const faqSchema = {
       name: "What does brat summer mean?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Brat summer means living with confidence, chaos, and zero apology — embracing being messy, going out, and not having everything figured out. The phrase comes from Charli XCX's 2024 album \"Brat\" and the attitude she described: a girl who is a little messy, likes to party, and owns it completely.",
+        text: "Brat summer means living with confidence, chaos, and zero apology, embracing being messy, going out, and not having everything figured out. The phrase comes from Charli XCX's 2024 album \"Brat\" and the attitude she described: a girl who is a little messy, likes to party, and owns it completely.",
       },
     },
     {
@@ -30,7 +30,7 @@ const faqSchema = {
       name: "Who started brat summer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Charli XCX started brat summer with her sixth studio album released on June 7, 2024. The album cover — just the word \"brat\" in lowercase on a neon green background — became the defining visual of the movement. Fans immediately began recreating it with their own words.",
+        text: "Charli XCX started brat summer with her sixth studio album released on June 7, 2024. The album cover, featuring just the word \"brat\" in lowercase on a neon green background, became the defining visual of the movement. Fans immediately began recreating it with their own words.",
       },
     },
     {
@@ -38,7 +38,7 @@ const faqSchema = {
       name: "What is the difference between brat and clean girl aesthetic?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Clean girl aesthetic is about being polished, organized, and put-together. Brat aesthetic is the opposite — chaotic, unfiltered, and deliberately imperfect. Both are about confidence but from completely different directions. Brat rejects the pressure to look effortless.",
+        text: "Clean girl aesthetic is about being polished, organized, and put-together. Brat aesthetic is the opposite: chaotic, unfiltered, and deliberately imperfect. Both are about confidence but from completely different directions. Brat rejects the pressure to look effortless.",
       },
     },
     {
@@ -46,7 +46,7 @@ const faqSchema = {
       name: "What color is associated with brat summer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The official brat green color code is #89CC04 — a bold, saturated yellow-green from the Charli XCX album cover. This neon green became the instant visual shorthand for the entire brat aesthetic.",
+        text: "The official brat green color code is #89CC04, a bold, saturated yellow-green from the Charli XCX album cover. This neon green became the instant visual shorthand for the entire brat aesthetic.",
       },
     },
     {
@@ -70,7 +70,7 @@ export default function BratSummerMeaningPage() {
 
       <BlogHero
         category="CULTURE"
-        title="Brat Summer Meaning — What It Is and Where It Came From"
+        title="Brat Summer Meaning - What It Is and Where It Came From"
         subtitle="Explore the origins of the viral trend that redefined pop culture. Learn what Charli XCX meant by 'brat' and why the aesthetic is still everywhere."
         readTime="5 MIN READ"
         author="ibratgenerator"
@@ -84,7 +84,7 @@ export default function BratSummerMeaningPage() {
         <div className="prose-container">
           {/* INTRO */}
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Brat summer means embracing confidence, chaos, and imperfection — and
+            Brat summer means embracing confidence, chaos, and imperfection, and
             not apologizing for any of it. This phrase came from Charli XCX's
             2024 album "Brat" and turned into one of the biggest cultural moments
             of the year. This post covers where it started, what it actually
@@ -99,7 +99,7 @@ export default function BratSummerMeaningPage() {
             just the music. It is an attitude, not a strict set of rules.
           </p>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            At its core, it means being unapologetically yourself — messy,
+            At its core, it means being unapologetically yourself: messy,
             confident, and a little chaotic. It is the exact opposite of the
             "clean girl" or "that girl" trends, which are all about being highly
             polished and perfectly put-together.
@@ -131,7 +131,7 @@ export default function BratSummerMeaningPage() {
             started recreating the cover with their own words and jokes.
           </p>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            The neon green background — hex code #89CC04 — became instantly
+            The neon green background, with the hex code #89CC04, became instantly
             recognizable as the visual shorthand for the whole movement. You can
             read more about the exact{" "}
             <Link href="/blog/brat-color-code" className="hp-link">
@@ -153,7 +153,7 @@ export default function BratSummerMeaningPage() {
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">
-            Brat Summer vs Hot Girl Summer — What Is the Difference?
+            Brat Summer vs Hot Girl Summer - What Is the Difference?
           </h2>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
             People often compare these two viral trends, but they have distinct
@@ -174,12 +174,12 @@ export default function BratSummerMeaningPage() {
             altogether.
           </p>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            This contrast is exactly why brat summer resonated — it gave people
+            This contrast is exactly why brat summer resonated, as it gave people
             permission to stop trying so hard.
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">
-            The Brat Aesthetic — What Does It Look Like?
+            The Brat Aesthetic - What Does It Look Like?
           </h2>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
             The visual identity of the brat aesthetic is impossible to miss. It
@@ -220,8 +220,8 @@ export default function BratSummerMeaningPage() {
             and stuck around for years after their original moment.
           </p>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            More importantly, the attitude — confident, unapologetic, and
-            imperfect — has true staying power because it taps into something
+            More importantly, the attitude, which is confident, unapologetic, and
+            imperfect, has true staying power because it taps into something
             real. Brat charli xcx fans remained engaged as she continued touring
             and releasing new music.
           </p>
@@ -245,7 +245,7 @@ export default function BratSummerMeaningPage() {
             <Link href="/" className="hp-link">
               brat generator
             </Link>{" "}
-            to create your own image in under 30 seconds — just type your text,
+            to create your own image in under 30 seconds: just type your text,
             download the PNG, and you are done.
           </p>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
@@ -267,7 +267,7 @@ export default function BratSummerMeaningPage() {
                 answer: (
                   <p>
                     Brat summer means living with confidence, chaos, and zero
-                    apology — embracing being messy, going out, and not having
+                    apology, embracing being messy, going out, and not having
                     everything figured out. The phrase comes from Charli XCX's
                     2024 album "Brat" and the attitude she described: a girl who
                     is a little messy, likes to party, and owns it completely.
@@ -279,8 +279,8 @@ export default function BratSummerMeaningPage() {
                 answer: (
                   <p>
                     Charli XCX started brat summer with her sixth studio album
-                    released on June 7, 2024. The album cover — just the word
-                    "brat" in lowercase on a neon green background — became the
+                    released on June 7, 2024. The album cover, featuring just the word
+                    "brat" in lowercase on a neon green background, became the
                     defining visual of the movement. Fans immediately began
                     recreating it with their own words.
                   </p>
@@ -291,7 +291,7 @@ export default function BratSummerMeaningPage() {
                 answer: (
                   <p>
                     Clean girl aesthetic is about being polished, organized, and
-                    put-together. Brat aesthetic is the opposite — chaotic,
+                    put-together. Brat aesthetic is the opposite: chaotic,
                     unfiltered, and deliberately imperfect. Both are about
                     confidence but from completely different directions. Brat
                     rejects the pressure to look effortless.
@@ -302,7 +302,7 @@ export default function BratSummerMeaningPage() {
                 question: "What color is associated with brat summer?",
                 answer: (
                   <p>
-                    The official brat green color code is #89CC04 — a bold,
+                    The official brat green color code is #89CC04, a bold,
                     saturated yellow-green from the Charli XCX album cover. This
                     neon green became the instant visual shorthand for the entire
                     brat aesthetic.

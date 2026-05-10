@@ -8,7 +8,7 @@ import HexCopyBox from "@/components/HexCopyBox";
 
 export const metadata = {
   title: {
-    absolute: "Brat Color Code — The Official Brat Green Hex Code (#89CC04)",
+    absolute: "Brat Color Code - The Official Brat Green Hex Code (#89CC04)",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/blog/brat-color-code/",
@@ -50,7 +50,7 @@ const faqSchema = {
       name: "Can I use the brat color code for free in commercial projects?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Hex color codes are not copyrightable — you are free to use #89CC04 in any personal or commercial project. Only specific artworks and logos are protected by copyright, not color values themselves.",
+        text: "Yes. Hex color codes are not copyrightable, so you are free to use #89CC04 in any personal or commercial project. Only specific artworks and logos are protected by copyright, not color values themselves.",
       },
     },
     {
@@ -74,7 +74,7 @@ export default function BratColorCodePage() {
 
       <BlogHero 
         category="DESIGN"
-        title="Brat Color Code — The Official Brat Green Hex Code (#89CC04)"
+        title="Brat Color Code - The Official Brat Green Hex Code (#89CC04)"
         subtitle="The definitive guide to the official Charli XCX Brat green. Get the hex, RGB, HSL, and CMYK values for the 2024 aesthetic."
         readTime="8 MIN READ"
         author="ibratgenerator"
@@ -88,7 +88,7 @@ export default function BratColorCodePage() {
         <div className="prose-container">
           
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            The brat color code is #89CC04 — a bold, saturated yellow-green used on Charli XCX's Brat album cover. This specific shade has become a global cultural phenomenon, defining the visual style of an entire generation (read about the full <Link href="/blog/brat-summer-meaning" className="hp-link">brat summer meaning</Link> here). This post contains the exact hex, RGB, and HSL values plus how to use them anywhere.
+            The brat color code is #89CC04, a bold, saturated yellow-green used on Charli XCX's Brat album cover. This specific shade has become a global cultural phenomenon, defining the visual style of an entire generation (read about the full <Link href="/blog/brat-summer-meaning" className="hp-link">brat summer meaning</Link> here). This post contains the exact hex, RGB, and HSL values plus how to use them anywhere.
           </p>
 
           <div className="my-12 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -132,12 +132,12 @@ export default function BratColorCodePage() {
             On screen, it appears almost fluorescent, especially on high-quality OLED displays. It is closer to a classic chartreuse than it is to a pure lime green. This specific intensity is why it works so well for the aesthetic.
           </p>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            This is exactly why the color works for the brat aesthetic — it is impossible to ignore. It demands your attention the moment it appears on your social media feed or on a billboard.
+            This is exactly why the color works for the brat aesthetic, as it is impossible to ignore. It demands your attention the moment it appears on your social media feed or on a billboard.
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Why Did This Color Get So Popular?</h2>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Charli XCX released Brat on June 7, 2024. The album cover was just the word "brat" in lowercase Arial on this green background. There was no decoration, no photography, and no fancy graphics — just pure color and type.
+            Charli XCX released Brat on June 7, 2024. The album cover was just the word "brat" in lowercase Arial on this green background. There was no decoration, no photography, and no fancy graphics, just pure color and type.
           </p>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
             That extreme minimalism made the color itself the entire identity. Fans started recreating it immediately, replacing the word "brat" with their own names and phrases. It became a template for self-expression.
@@ -155,7 +155,7 @@ export default function BratColorCodePage() {
             The simplicity of the design meant it could be adapted for anything. From luxury fashion brands to small independent creators, everyone used this green to tap into the cultural zeitgeist of the moment.
           </p>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Other Brat Colors — The Full Palette</h2>
+          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Other Brat Colors - The Full Palette</h2>
           <p className="hp-body-text mb-10 text-[17px] sm:text-[18px]">
             While #89CC04 is THE brat color, the complete aesthetic also uses companion colors to create a full design system. Use these hex codes to keep your designs authentic.
           </p>
@@ -216,7 +216,7 @@ background-color: hsl(80, 96%, 41%);`}
             After updating your config, you can simply use the className="bg-brat-green" in your HTML code. This makes it incredibly easy to apply the color to buttons, cards, or backgrounds.
           </p>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Or skip the manual setup — the <Link href="/brat-album-cover-generator/" className="hp-link">brat album cover generator</Link> uses this exact color by default. It is the easiest way to join the trend without needing any technical skills.
+            Or skip the manual setup, as the <Link href="/brat-album-cover-generator/" className="hp-link">brat album cover generator</Link> uses this exact color by default. It is the easiest way to join the trend without needing any technical skills.
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Frequently Asked Questions</h2>
@@ -238,7 +238,7 @@ background-color: hsl(80, 96%, 41%);`}
               },
               {
                 question: "Can I use the brat color code for free in commercial projects?",
-                answer: <p>Yes. Hex color codes are not copyrightable — you are free to use #89CC04 in any personal or commercial project. Only specific artworks and logos are protected by copyright, not color values themselves.</p>
+                answer: <p>Yes. Hex color codes are not copyrightable, so you are free to use #89CC04 in any personal or commercial project. Only specific artworks and logos are protected by copyright, not color values themselves.</p>
               },
               {
                 question: "What font does Charli XCX use with the brat green color?",

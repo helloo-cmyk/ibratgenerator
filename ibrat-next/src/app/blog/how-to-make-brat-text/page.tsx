@@ -4,7 +4,7 @@ import BlogHero from "@/components/BlogHero";
 
 export const metadata = {
   title: {
-    absolute: "How to Make Brat Text – Step-by-Step",
+    absolute: "How to Make Brat Text - Step-by-Step",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/blog/how-to-make-brat-text/",
@@ -53,7 +53,7 @@ export default function HowToMakeBratTextPage() {
       />
       <BlogHero 
         category="TUTORIAL"
-        title="How to Make Brat Text – Step-by-Step"
+        title="How to Make Brat Text - Step-by-Step"
         subtitle=""
         readTime="3 MIN READ"
         imageSrc="/blog-images/how-to-hero.png"
@@ -69,7 +69,7 @@ export default function HowToMakeBratTextPage() {
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">How to Make Brat Text (Step-by-Step)</h2>
           <ul className="hp-body-text mb-12 list-none pl-0 space-y-6 text-[17px] sm:text-[18px]">
             <li>
-              <strong>Type your phrase.</strong> Enter your words directly into the <Link href="/brat-text-generator" className="hp-link">brat text generator</Link>. Keep it short — one to three words work best for this layout.
+              <strong>Type your phrase.</strong> Enter your words directly into the <Link href="/brat-text-generator" className="hp-link">brat text generator</Link>. Keep it short, with one to three words working best for this layout.
             </li>
             <li>
               <strong>Choose your color theme.</strong> Neon green is the original standard, but black, white, and pink all work flawlessly. The background will automatically apply high contrast to your text.
@@ -90,7 +90,7 @@ export default function HowToMakeBratTextPage() {
             <li>Use 1-3 words maximum.</li>
             <li>Square format (1:1) for Instagram, vertical (9:16) for TikTok.</li>
             <li>Export at 2048px for sharpness.</li>
-            <li>Avoid busy backgrounds — solid color works best.</li>
+            <li>Avoid busy backgrounds, as solid colors work best.</li>
           </ul>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Common Mistakes</h2>
@@ -98,19 +98,19 @@ export default function HowToMakeBratTextPage() {
             <li>Too many words (loses readability).</li>
             <li>Using wrong aspect ratio for the platform.</li>
             <li>Exporting at low resolution.</li>
-            <li>Adding too many elements — brat style is about reduction.</li>
+            <li>Adding too many elements because brat style is about reduction.</li>
           </ul>
 
           {/* ── NEW SECTION: Why Brat Text Works on Social Media ── */}
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Why Brat Text Works on Social Media</h2>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Brat text dominates social feeds because of how aggressively it grabs attention. The high contrast between bold dark text and a bright neon green or black background makes every post pop instantly, even at thumbnail size. Short, punchy phrases of one to four words perform significantly better than longer sentences because they can be read in under a second while scrolling. TikTok, Twitter/X, and Instagram Stories are the primary platforms where brat text thrives — all three reward bold, eye-catching visuals that communicate a mood or reaction immediately. The lo-fi, slightly blurry aesthetic also feels far more authentic and personal than polished designs made with traditional tools. That rawness is part of what makes the format so shareable — people trust content that looks like it was made in five seconds over something that took an hour in a design suite. The brat format also works at every screen size, from a tiny comment reply to a full-screen story takeover. If you want to create your own, the <Link href="/brat-text-generator" className="hp-link">brat text generator</Link> handles the styling automatically so your output always looks right.
+            Brat text dominates social feeds because of how aggressively it grabs attention. The high contrast between bold dark text and a bright neon green or black background makes every post pop instantly, even at thumbnail size. Short, punchy phrases of one to four words perform significantly better than longer sentences because they can be read in under a second while scrolling. TikTok, Twitter/X, and Instagram Stories are the primary platforms where brat text thrives, as all three reward bold, eye-catching visuals that communicate a mood or reaction immediately. The lo-fi, slightly blurry aesthetic also feels far more authentic and personal than polished designs made with traditional tools. That rawness is part of what makes the format so shareable, as people trust content that looks like it was made in five seconds over something that took an hour in a design suite. The brat format also works at every screen size, from a tiny comment reply to a full-screen story takeover. If you want to create your own, the <Link href="/brat-text-generator" className="hp-link">brat text generator</Link> handles the styling automatically so your output always looks right.
           </p>
 
           {/* ── NEW SECTION: Common Mistakes When Making Brat Text ── */}
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Common Mistakes When Making Brat Text</h2>
           <p className="hp-body-text mb-16 text-[17px] sm:text-[18px]">
-            The most frequent mistake is cramming too many words into the image. Brat text works best with one to four words — anything longer dilutes the visual impact and makes the text harder to read at a glance. Another common error is choosing a font size that is too small. The entire point of the format is that the text fills the frame and demands attention, so going too small defeats the purpose entirely. Overloading the design with effects, borders, or extra graphic elements is equally counterproductive — the brat aesthetic is defined by its minimalism, so resist the urge to add more. Using the wrong aspect ratio for the platform is another easy mistake: a square crop works for Instagram posts, while TikTok needs 9:16 vertical. Finally, saving your image as a JPG instead of PNG introduces compression artifacts that muddy the sharp text edges and degrade the clean background color. Always export as PNG to preserve the crisp, high-contrast look that makes brat text instantly recognizable across every platform.
+            The most frequent mistake is cramming too many words into the image. Brat text works best with one to four words, as anything longer dilutes the visual impact and makes the text harder to read at a glance. Another common error is choosing a font size that is too small. The entire point of the format is that the text fills the frame and demands attention, so going too small defeats the purpose entirely. Overloading the design with effects, borders, or extra graphic elements is equally counterproductive, since the brat aesthetic is defined by its minimalism, so resist the urge to add more. Using the wrong aspect ratio for the platform is another easy mistake: a square crop works for Instagram posts, while TikTok needs 9:16 vertical. Finally, saving your image as a JPG instead of PNG introduces compression artifacts that muddy the sharp text edges and degrade the clean background color. Always export as PNG to preserve the crisp, high-contrast look that makes brat text instantly recognizable across every platform.
           </p>
 
           {/* ── FAQ ── */}

@@ -68,7 +68,7 @@ export default function HowToMakeBratPfpPage() {
         author="ibratgenerator"
         publishDate="May 04, 2026"
         imageSrc="/blog-images/pfp-hero-v2.png"
-        imageAlt="brat profile picture example — bold lowercase text on neon green background"
+        imageAlt="brat profile picture example, bold lowercase text on neon green background"
       />
 
       {/* ── ARTICLE BODY ── */}
@@ -94,7 +94,7 @@ export default function HowToMakeBratPfpPage() {
             High resolution is key because it prevents blurriness on modern retina displays and keeps the text readable even on tiny notification icons. By using a larger source image, you guarantee that the "crushed" typography look remains sharp and impactful no matter where it is viewed.
           </p>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">How to Make a Brat PFP — Step by Step</h2>
+          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">How to Make a Brat PFP - Step by Step</h2>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
             Creating your own aesthetic graphic is simple and takes less than a minute. You don't need any design experience to get a professional result. Follow these five easy steps to get started with the <Link href="/brat-maker/" className="hp-link">brat maker</Link> tool today:
           </p>
@@ -130,7 +130,7 @@ export default function HowToMakeBratPfpPage() {
             The <Link href="/brat-maker/" className="hp-link">brat maker</Link> allows you to switch between these colors with a single click. Darker colors are often easier on the eyes for late-night scrolling, but the neon green is what makes the trend instantly recognizable. Pick a color that matches your personal brand or your current mood for the best results. Don't be afraid to try something unique like a bright orange or a deep purple to put your own spin on the trend.
           </p>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Brat PFP Ideas — 5 Phrases to Try</h2>
+          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Brat PFP Ideas - 5 Phrases to Try</h2>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
             Not sure what text to use for your new image? The best profile pictures use short, punchy words that fit on one or two lines. This ensures the text stays large and readable even in small circles. 
           </p>
@@ -166,7 +166,7 @@ export default function HowToMakeBratPfpPage() {
           />
 
           <p className="hp-body-text mt-16 mb-12 text-[17px] sm:text-[18px] font-bold">
-            Create your brat PFP now using the free <Link href="/brat-maker/" className="hp-link">brat maker</Link> — no signup, no watermark.
+            Create your brat PFP now using the free <Link href="/brat-maker/" className="hp-link">brat maker</Link>, with no signup and no watermark.
           </p>
 
         </div>

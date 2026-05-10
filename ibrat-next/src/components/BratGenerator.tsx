@@ -952,7 +952,7 @@ const BRAT_STYLES = `
     justify-content: space-around;
   }
 
-  /* Tab buttons — icon + label stacked */
+  /* Tab buttons, icon and label stacked */
   .brat-tab-btn {
     flex: 1;
     min-height: 56px;
@@ -975,7 +975,7 @@ const BRAT_STYLES = `
     position: relative;
   }
 
-  /* Active tab — label bold + dark */
+  /* Active tab, label bold and dark */
   .brat-tab-btn.active {
     color: #111;
     font-weight: 700;
@@ -986,7 +986,7 @@ const BRAT_STYLES = `
     display: none;
   }
 
-  /* Icon wrapper — pill effect on active */
+  /* Icon wrapper, pill effect on active */
   .brat-tab-icon {
     display: flex;
     align-items: center;
@@ -1449,7 +1449,7 @@ export default function BratGenerator({
                       </div>
                       <div className="brat-row">
                         <div className="brat-help">
-                          Contrast check: <span id="brat-contrastLabel">—</span>
+                          Contrast check: <span id="brat-contrastLabel">-</span>
                         </div>
                       </div>
                     </div>
@@ -1528,7 +1528,7 @@ export default function BratGenerator({
                   </div>
                 </section>
               </div>
-              {/* Hidden utility buttons — required by init.ts for download/copy/batch/random logic */}
+              {/* Hidden utility buttons, required by init.ts for download/copy/batch/random logic */}
               <div style={{ display: "none" }} aria-hidden="true">
                 <button type="button" id="brat-download" />
                 <button type="button" id="brat-copy" />

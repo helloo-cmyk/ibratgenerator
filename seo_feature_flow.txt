@@ -1,0 +1,84 @@
+# Ibrat Generator - Feature Flow & SEO Implementation Guide
+
+## SEO Implementation (Text Tags & Logic)
+
+1. **Global Layout (`src/app/layout.tsx`)**
+   - **Schema Markup (JSON-LD)**: Uses `WebSite` and `SoftwareApplication` (MultimediaApplication) schema markup injected via `next/script` (`strategy="beforeInteractive"`).
+   - **Global Metadata**:
+     - `metadataBase`: `https://ibratgenerator.com`
+     - `title`: `Free Brat Generator` (with template: `%s | Ibrat Generator`)
+     - `description`: "Create Brat-style text, images, and graphics online. Free Brat generator for memes, captions, and social media."
+     - `openGraph`: Configured with siteName, title, and description.
+     - `robots`: index, follow set to true.
+     - `icons`: Sets standard favicons and apple-touch-icon.
+     - `verification`: Google Search Console verification tag included.
+   - **HTML/Head Tags**:
+     - `<html lang="en">`
+     - `<link rel="manifest" href="/favicon/site.webmanifest" />`
+     - Domain verification tags for Pinterest/AdSense.
+     - Responsive viewport meta tag.
+
+2. **Homepage (`src/app/page.tsx`)**
+   - **Schema Markup (JSON-LD)**: Injects `FAQPage` (6 Questions) and `HowTo` (4 Steps) schema directly via `<script>` tags for rich snippets.
+   - **Page Metadata**:
+     - `title.absolute`: "Brat Generator - Free Brat Image & Text Maker [2026]"
+     - `description`: Custom homepage description.
+     - `alternates.canonical`: "https://ibratgenerator.com/"
+
+3. **Subpages (Generators, Blog, Legal)**
+   - Each page exports its own standard `metadata` object containing customized `title`, `description`, and `alternates.canonical` tailored to its specific keyword targeting (e.g., Pink Brat Generator, Brat Name Generator, etc.).
+
+---
+
+## Feature Flow Sections
+
+The core homepage (`src/app/page.tsx`) is structured in the following flow:
+
+1. **Hero Section (`hp-hero`)**
+   - H1 Heading: "Brat Generator"
+   - Subheading explaining the tool's core value proposition (No signup, no watermark, free png).
+
+2. **Live Generator (`hp-gen-section`)**
+   - Contains the `BratGeneratorLazy` component.
+   - Features: Full mode, default tab: text, default ratio: 1:1, placeholder: "brat".
+
+3. **"What Is the Brat Trend?" (Trends)**
+   - Explains the origin from Charli XCX's brat album.
+   - Links to internal blog guides (brat summer meaning, brat aesthetic guide, brat maker).
+
+4. **"What Font Is the Brat Album?" (Typography)**
+   - Explains the typography rules (Arial Bold / Helvetica Neue Bold).
+   - Links to font guides and color code blog posts.
+
+5. **Features Grid (Capabilities)**
+   - 8 Core Features highlighted: Live preview, Full color control, Aspect ratio presets, Stickers and emojis, Typography controls, Works on mobile, No signup required, High-res PNG export.
+
+6. **How to Use (Getting Started)**
+   - 4-Step Process: Type your text -> Pick your colors -> Adjust the layout -> Download your image.
+
+7. **Who Is This For? (Use Cases)**
+   - Targets: Social media users, Meme creators, Charli XCX fans, Content creators, Designers and marketers.
+
+8. **Comparison ("Why Use Instead of Canva or Photoshop?")**
+   - Emphasizes speed, simplicity, and specific focus on the brat aesthetic without paywalls or complex UI.
+
+9. **Explore All Brat Tools (More tools)**
+   - Navigation links to related generators: Brat Text Generator, Brat Name Generator, Brat Album Cover Generator.
+
+10. **Color Styles (Variants)**
+    - Cross-links to dedicated color variants: Green Brat Tool, Pink Brat Creator, Black Generator Tool, White Brat Look.
+
+11. **Real Examples Gallery (Gallery)**
+    - Uses `ExampleGallery` component to show real outputs for user inspiration.
+
+12. **Frequently Asked Questions (FAQ)**
+    - Uses `FAQAccordion` component to answer 6 common questions (Free? Watermark? Format? Mobile? PFP? Commercial use?).
+
+13. **Scroll Reveal Animation**
+    - `HomeScrollReveal` script is attached at the bottom to animate elements into view.
+
+---
+
+## Typography & Design Standard
+- **Fonts**: Inter (Geist Sans), Geist Mono, and DM Serif Display injected via Next.js Google Fonts optimization (`layout.tsx`).
+- **Styling**: Vanilla CSS in `globals.css` with a standardized `.hp-` prefix class naming convention for marketing sections. All typography relies on hyphens and commas instead of em dashes (`—`) to maintain a standard SEO-friendly text style.

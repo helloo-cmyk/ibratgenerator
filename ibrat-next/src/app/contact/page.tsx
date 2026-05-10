@@ -30,7 +30,7 @@ export default function ContactPage() {
       <article className="px-4 pt-12 max-w-[800px] mx-auto">
         <div className="prose-container">
           <p className="hp-body-text mb-6">
-            Whether you want to report a bug, suggest a new feature, or simply say hello — you can reach us using the information below. We read every message and do our best to reply within 24-48 hours.
+            Whether you want to report a bug, suggest a new feature, or simply say hello, you can reach us using the information below. We read every message and do our best to reply within 24-48 hours.
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">How to Reach Us</h2>

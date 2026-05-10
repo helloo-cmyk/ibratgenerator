@@ -59,12 +59,12 @@ const faqSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Brat Album Cover Generator – Free Brat Cover Art Maker",
+    absolute: "Brat Album Cover Generator - Free Brat Cover Art Maker",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-album-cover-generator/",
   },
-  description: "Free brat album cover generator — create brat-style album art, playlist covers & music visuals instantly. No signup, no watermark. Download high-res PNG.",
+  description: "Free brat album cover generator - create brat-style album art, playlist covers & music visuals instantly. No signup, no watermark. Download high-res PNG.",
 };
 
 export default function BratAlbumCoverGeneratorPage() {

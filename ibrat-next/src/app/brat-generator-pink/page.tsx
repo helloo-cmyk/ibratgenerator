@@ -56,7 +56,7 @@ export const metadata = {
   alternates: {
     canonical: "https://ibratgenerator.com/brat-generator-pink/",
   },
-  description: "Free pink brat generator — create pink brat text and images with pastel or bright pink backgrounds. No signup, no watermark. Download PNG instantly.",
+  description: "Free pink brat generator to create pink brat text and images with pastel or bright pink backgrounds. No signup, no watermark. Download PNG instantly.",
 };
 
 export default function BratGeneratorPinkPage() {
@@ -128,10 +128,10 @@ export default function BratGeneratorPinkPage() {
           Same brat style, different palettes.
         </p>
         <ul className="hp-body-text space-y-3 mt-6 ml-4 list-disc">
-          <li><Link href="/brat-green-generator/" className="hp-link">Green Brat Generator</Link> — original neon green brat look.</li>
-          <li><Link href="/brat-black-generator/" className="hp-link">Black Brat Generator</Link> — high-contrast dark brat visuals.</li>
-          <li><Link href="/brat-generator-white/" className="hp-link">White Brat Generator</Link> — clean minimalist brat layouts.</li>
-          <li><Link href="/brat-text-generator/" className="hp-link">Brat Text Generator</Link> — fast text-only PNG export.</li>
+          <li><Link href="/brat-green-generator/" className="hp-link">Green Brat Generator</Link>, original neon green brat look.</li>
+          <li><Link href="/brat-black-generator/" className="hp-link">Black Brat Generator</Link>, high-contrast dark brat visuals.</li>
+          <li><Link href="/brat-generator-white/" className="hp-link">White Brat Generator</Link>, clean minimalist brat layouts.</li>
+          <li><Link href="/brat-text-generator/" className="hp-link">Brat Text Generator</Link>, fast text-only PNG export.</li>
         </ul>
       </div>
 

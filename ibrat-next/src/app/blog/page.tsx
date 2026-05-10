@@ -4,7 +4,7 @@ import BlogList from "@/components/BlogList";
 
 export const metadata = {
   title: {
-    absolute: "Brat Generator Blog — Trends, Aesthetics & How-Tos",
+    absolute: "Brat Generator Blog - Trends, Aesthetics & How-Tos",
   },
   description: "Read the latest articles about the Brat aesthetic, Charli XCX trends, and how to create the best brat text memes online.",
   alternates: {

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #eee;
+    }
+
+    /* Container for rendering */
+    #render-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* === HERO: Brat vs Clean Girl === */
+    .hero-container {
+      width: 1200px;
+      height: 630px;
+      display: flex;
+    }
+
+    .hero-half {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Left: Brat */
+    .hero-brat {
+      background: #89CC04;
+    }
+    
+    .hero-brat::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.1"/%3E%3C/svg%3E');
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .hero-brat-text {
+      font-family: 'Arial', sans-serif;
+      font-size: 160px;
+      font-weight: normal;
+      color: #000;
+      letter-spacing: -8px;
+      filter: blur(1.5px);
+      transform: scaleY(1.1);
+    }
+
+    /* Right: Clean Girl */
+    .hero-clean {
+      background: #F9F9F6;
+      border-left: 2px solid rgba(0,0,0,0.05);
+    }
+
+    .hero-clean-card {
+      background: #FFFFFF;
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.02);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .clean-line {
+      width: 40px;
+      height: 1px;
+      background: #ccc;
+    }
+
+    .hero-clean-text {
+      font-family: 'Inter', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: #333;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* === EXAMPLES: 400x400 Squares === */
+    .example-container {
+      width: 400px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 30px;
+    }
+
+    .example-noise {
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.2"/%3E%3C/svg%3E');
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .example-text {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      line-height: 0.85;
+      font-weight: 900;
+      word-wrap: break-word;
+      z-index: 20;
+      text-transform: lowercase;
+      /* Dynamic transform applied via JS */
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="render-container"></div>
+
+  <script>
+    function getParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        type: params.get('type') || 'example',
+        text: params.get('text') || 'brat',
+        bg: params.get('bg') || '#89CC04',
+        fg: params.get('fg') || '#000000',
+        id: params.get('id') || '1'
+      };
+    }
+
+    function fitText(el, maxWidth, maxHeight) {
+      let size = 180; // start size
+      el.style.fontSize = size + 'px';
+      el.style.letterSpacing = Math.max(-10, -size * 0.08) + 'px';
+      
+      while ((el.scrollWidth > maxWidth || el.scrollHeight > maxHeight) && size > 20) {
+        size -= 2;
+        el.style.fontSize = size + 'px';
+        el.style.letterSpacing = Math.max(-10, -size * 0.08) + 'px';
+        
+        // Adjust blur based on size
+        const blurAmt = Math.max(0.3, size * 0.012);
+        el.style.filter = `blur(${blurAmt}px)`;
+      }
+
+      // Add a bit of creative stretching
+      const stretch = 1 + (Math.random() * 0.2);
+      el.style.transform = `scaleY(${stretch})`;
+    }
+
+    const container = document.getElementById('render-container');
+    const config = getParams();
+
+    if (config.type === 'hero') {
+      container.style.width = '1200px';
+      container.style.height = '630px';
+      container.innerHTML = `
+        <div class="hero-container">
+          <div class="hero-half hero-brat">
+            <div class="hero-brat-text">brat</div>
+          </div>
+          <div class="hero-half hero-clean">
+            <div class="hero-clean-card">
+              <div class="clean-line"></div>
+              <div class="hero-clean-text">Clean Girl</div>
+              <div class="clean-line"></div>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      container.style.width = '400px';
+      container.style.height = '400px';
+      container.style.backgroundColor = config.bg;
+      
+      container.innerHTML = `
+        <div class="example-container">
+          <div class="example-noise"></div>
+          <div class="example-text" id="ex-text" style="color: ${config.fg};">${config.text}</div>
+        </div>
+      `;
+      
+      const textEl = document.getElementById('ex-text');
+      fitText(textEl, 340, 340);
+    }
+  </script>
+
+
+</body>
+</html>

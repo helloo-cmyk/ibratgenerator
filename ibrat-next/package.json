@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/generate-blog-list.js",
     "dev": "next dev",
+    "prebuild": "node scripts/generate-blog-list.js",
     "build": "npm run generate:examples && next build",
     "start": "next start",
     "lint": "eslint",
-    "generate:examples": "node scripts/generateExamples.js",
+    "generate:examples": "node scripts/generate-blog-list.js && node scripts/generateExamples.js",
     "ping-index": "node scripts/ping-indexnow.js"
   },
   "dependencies": {
