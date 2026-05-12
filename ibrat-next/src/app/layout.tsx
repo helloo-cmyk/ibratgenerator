@@ -79,6 +79,8 @@ export const metadata: Metadata = {
   },
 };
 
+import PartnerBadges from "@/components/PartnerBadges";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -107,6 +109,7 @@ export default function RootLayout({
         <main className="mx-auto flex-1 w-full max-w-screen-2xl px-4 sm:px-6">
           {children}
         </main>
+        <PartnerBadges />
         <Footer />
         <CookieConsentBanner />
       </body>
