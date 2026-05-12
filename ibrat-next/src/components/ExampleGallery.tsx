@@ -10,7 +10,7 @@ const HOME_EXAMPLES = [
 ];
 
 const MAKER_EXAMPLES = [
-  { src: "/examples/brat-maker-ex-1-v5.png", alt: "brat creator profile picture layout with centered text" },
+  { src: "/examples/brat-maker-ex-1-v5.png", alt: "brat maker profile picture layout with centered text" },
   { src: "/examples/brat-maker-ex-2-v5.png", alt: "brat meme layout with bold lowercase caption" },
   { src: "/examples/brat-maker-ex-3-v5.png", alt: "social post mockup in brat style with text overlay" },
   { src: "/examples/brat-maker-ex-4-v5.png", alt: "custom brat-style post design with minimal text" },

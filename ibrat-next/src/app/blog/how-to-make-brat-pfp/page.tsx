@@ -88,7 +88,7 @@ export default function HowToMakeBratPfpPage() {
             To look sharp on social media, you need the right dimensions for every platform. TikTok PFPs are 200x200px, while Instagram uses 110x110px for mobile displays. Discord profile pictures should be at least 128x128px, and X (formerly Twitter) requires 400x400px.
           </p>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            While these sizes vary, we recommend using a 1:1 aspect ratio at 1500px for all platforms. This ensures your image stays high-quality and crisp when you upload it to any site. Our <Link href="/brat-maker/" className="hp-link">brat maker</Link> exports high-resolution files that fit perfectly everywhere from mobile apps to desktop sites. 
+            While these sizes vary, we recommend using a 1:1 aspect ratio at 1500px for all platforms. This ensures your image stays high-quality and crisp when you upload it to any site. Our <Link href="/brat-name-generator/" className="hp-link">brat name generator</Link> exports high-resolution files that fit perfectly everywhere from mobile apps to desktop sites. 
           </p>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
             High resolution is key because it prevents blurriness on modern retina displays and keeps the text readable even on tiny notification icons. By using a larger source image, you guarantee that the "crushed" typography look remains sharp and impactful no matter where it is viewed.
@@ -127,7 +127,7 @@ export default function HowToMakeBratPfpPage() {
             You can try a soft pink (#FF90E8) for a "coquette" brat vibe that feels more feminine and playful. Black backgrounds with white text look sleek and modern on Discord dark mode, while white backgrounds with black text feel very "high fashion" and minimalist on X. 
           </p>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            The <Link href="/brat-maker/" className="hp-link">brat maker</Link> allows you to switch between these colors with a single click. Darker colors are often easier on the eyes for late-night scrolling, but the neon green is what makes the trend instantly recognizable. Pick a color that matches your personal brand or your current mood for the best results. Don't be afraid to try something unique like a bright orange or a deep purple to put your own spin on the trend.
+            The <Link href="/brat-generator-pink/" className="hp-link">pink brat generator</Link> allows you to switch between these colors with a single click. Darker colors are often easier on the eyes for late-night scrolling, but the neon green is what makes the trend instantly recognizable. Pick a color that matches your personal brand or your current mood for the best results. Don't be afraid to try something unique like a bright orange or a deep purple to put your own spin on the trend.
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Brat PFP Ideas - 5 Phrases to Try</h2>
@@ -138,7 +138,7 @@ export default function HowToMakeBratPfpPage() {
             Try your first name for a personal touch, or use a vibe word like "icon," "messy," or "real." If you are a fan of the culture, try a Charli XCX lyric reference like "360" or "apple." Even simple phrases like "it's brat," "365," or "so julia" work perfectly and are highly recognizable. 
           </p>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Enter these into the <Link href="/brat-maker/" className="hp-link">brat maker</Link> to see how they look in different weights. Keep your text lowercase for the most authentic and "raw" style. Short words look best because the font can be scaled up much larger, making your PFP pop on the screen.
+            Enter these into the <Link href="/brat-green-generator/" className="hp-link">brat green generator</Link> to see how they look in different weights. Keep your text lowercase for the most authentic and "raw" style. Short words look best because the font can be scaled up much larger, making your PFP pop on the screen.
           </p>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Frequently Asked Questions</h2>

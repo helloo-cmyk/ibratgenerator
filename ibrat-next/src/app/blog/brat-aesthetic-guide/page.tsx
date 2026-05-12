@@ -112,17 +112,17 @@ export default function BratAestheticGuidePage() {
 
           <h3 className="text-[20px] sm:text-[22px] font-semibold mt-10 mb-3">Brat vs Clean Girl</h3>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Clean girl is polished, minimal, and effortful — everything placed with precision. Brat is messy, loud, and effortless. They share a love of minimalism but deliver completely opposite energy. Clean girl whispers; brat shouts.
+            Clean girl is polished, minimal, and effortful, with everything placed with precision. Brat is messy, loud, and effortless. They share a love of minimalism but deliver completely opposite energy. Clean girl whispers; brat shouts.
           </p>
 
           <h3 className="text-[20px] sm:text-[22px] font-semibold mt-10 mb-3">Brat vs Cottagecore</h3>
           <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Cottagecore is soft, rural, warm-toned, and nostalgic. Brat is urban, neon, sharp-edged, and current. There is essentially no overlap — if cottagecore is a Sunday morning in the countryside, brat is a Tuesday night in the city.
+            Cottagecore is soft, rural, warm-toned, and nostalgic. Brat is urban, neon, sharp-edged, and current. There is essentially no overlap. If cottagecore is a Sunday morning in the countryside, brat is a Tuesday night in the city.
           </p>
 
           <h3 className="text-[20px] sm:text-[22px] font-semibold mt-10 mb-3">Brat vs Y2K</h3>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Y2K is nostalgic, maximalist, and sparkly — chrome, butterflies, low-rise everything. Brat is current, stripped back, and built on a single color. Both are bold but in completely different ways. Y2K adds; brat subtracts.
+            Y2K is nostalgic, maximalist, and sparkly, featuring chrome, butterflies, and low-rise everything. Brat is current, stripped back, and built on a single color. Both are bold but in completely different ways. Y2K adds; brat subtracts.
           </p>
 
           {/* ── HOW TO CREATE ── */}

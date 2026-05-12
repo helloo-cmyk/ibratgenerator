@@ -249,12 +249,12 @@ export default function BratSummerMeaningPage() {
             download the PNG, and you are done.
           </p>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Or, use the specific{" "}
-            <Link href="/brat-text-generator" className="hp-link">
-              brat text generator
+            Or, use the{" "}
+            <Link href="/brat-name-generator/" className="hp-link">
+              brat name generator
             </Link>{" "}
-            for a focused text-only workflow if you want to experiment with
-            different fonts and layouts.
+            to create personalized name graphics if you want to turn your name
+            or a short phrase into a brat-style profile picture.
           </p>
 
           {/* ── FAQ ── */}

@@ -112,7 +112,7 @@ export default function Home() {
             <span className="hp-gen-dot" />
             Live Generator
           </div>
-          <div style={{ minHeight: '520px' }}>
+          <div style={{ minHeight: '520px', position: 'relative', width: '100%' }}>
             <BratGeneratorLazy
               mode="full"
               defaultTab="text"
