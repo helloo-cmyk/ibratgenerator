@@ -39,9 +39,13 @@ export default function Footer() {
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-foreground/70">
               Create brat-style text, images, and profile pictures for free. No signup required.
             </p>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col gap-3">
               <a href="https://startupfa.me/s/ibrat?utm_source=ibratgenerator.com" target="_blank" rel="noopener noreferrer">
                 <img src="https://startupfa.me/badges/featured-badge-small.webp" alt="Brat Generator - Featured on Startup Fame" width="224" height="36" className="opacity-80 hover:opacity-100 transition-opacity" />
+              </a>
+              <a href="https://allinai.tools" target="_blank" rel="noopener" title="All The Best AI Tools" className="inline-flex items-center gap-2 rounded-lg border border-[#d4d0c8] px-4 text-[13px] font-semibold tracking-wide text-[#4a4637] opacity-80 hover:opacity-100 transition-opacity" style={{ height: '36px', width: '224px', background: 'linear-gradient(180deg, #faf8f4 0%, #ede9e0 100%)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.7), 0 1px 2px rgba(0,0,0,0.08)' }}>
+                <span style={{ fontSize: '15px', lineHeight: 1 }}>⚡</span>
+                All The Best AI Tools
               </a>
             </div>
           </div>
