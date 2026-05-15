@@ -75,71 +75,141 @@ export default function HowToMakeBratPfpPage() {
       <article className="px-4 pt-12 max-w-[720px] mx-auto">
         <div className="prose-container">
           
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">What Is a Brat PFP?</h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            A brat PFP is a profile picture inspired by the iconic 2024 album cover style that took over the internet. It usually features bold, lowercase text on a bright neon green background, though other colors like pink and white are also popular. This look went viral on TikTok and Instagram because it is raw, messy, and unapologetically cool.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            It represents a specific attitude of being authentic and a bit rebellious. Users love it because it shows off a "brat" personality without needing a professional camera or complex design skills. You can make your own using the <Link href="/brat-maker/" className="hp-link">brat maker</Link> at <Link href="/" className="hp-link">ibratgenerator.com</Link> to join the global trend instantly. Whether you are a fan of the music or just love the aesthetic, this style is the perfect way to make your profile stand out in a crowded feed.
-          </p>
+          <div className="border-b-4 border-black pb-16 mb-24 group">
+            <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-8 leading-none">The Manual</h2>
+            <p className="hp-body-text mb-8 text-[18px] sm:text-[20px] font-medium leading-relaxed italic">
+              A brat PFP is a profile picture inspired by the iconic 2024 album cover style that took over the internet. It usually features bold, lowercase text on a bright neon green background, though other colors like pink and white are also popular. This look went viral on TikTok and Instagram because it is raw, messy, and unapologetically cool.
+            </p>
+            <p className="hp-body-text text-[17px] opacity-70 leading-relaxed italic">
+              It represents a specific attitude of being authentic and a bit rebellious. Users love it because it shows off a &quot;brat&quot; personality without needing a professional camera or complex design skills. You can make your own using the <Link href="/brat-maker/" className="hp-link">brat maker</Link> to join the global trend instantly.
+            </p>
+          </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">What Size Should a Brat PFP Be?</h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            To look sharp on social media, you need the right dimensions for every platform. TikTok PFPs are 200x200px, while Instagram uses 110x110px for mobile displays. Discord profile pictures should be at least 128x128px, and X (formerly Twitter) requires 400x400px.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            While these sizes vary, we recommend using a 1:1 aspect ratio at 1500px for all platforms. This ensures your image stays high-quality and crisp when you upload it to any site. Our <Link href="/brat-name-generator/" className="hp-link">brat name generator</Link> exports high-resolution files that fit perfectly everywhere from mobile apps to desktop sites. 
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            High resolution is key because it prevents blurriness on modern retina displays and keeps the text readable even on tiny notification icons. By using a larger source image, you guarantee that the "crushed" typography look remains sharp and impactful no matter where it is viewed.
-          </p>
+          <div className="flex gap-12 mb-32 group">
+            <div className="w-12 flex-shrink-0 flex items-start pt-2">
+              <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Dimensions</span>
+            </div>
+            <div className="flex-1 border-l-4 border-black pl-12 py-2">
+              <h2 className="hp-display-heading mb-10 !text-3xl uppercase tracking-tighter">Platform Specs</h2>
+              <div className="grid grid-cols-2 gap-4 mb-10">
+                <div className="bg-zinc-50 p-6 border border-black/5">
+                  <span className="text-[10px] font-black uppercase tracking-widest opacity-40 block mb-1">TikTok</span>
+                  <span className="text-xl font-bold italic tracking-tighter">200 x 200 PX</span>
+                </div>
+                <div className="bg-zinc-50 p-6 border border-black/5">
+                  <span className="text-[10px] font-black uppercase tracking-widest opacity-40 block mb-1">Instagram</span>
+                  <span className="text-xl font-bold italic tracking-tighter">110 x 110 PX</span>
+                </div>
+                <div className="bg-zinc-50 p-6 border border-black/5">
+                  <span className="text-[10px] font-black uppercase tracking-widest opacity-40 block mb-1">Discord</span>
+                  <span className="text-xl font-bold italic tracking-tighter">128 x 128 PX</span>
+                </div>
+                <div className="bg-zinc-50 p-6 border border-black/5">
+                  <span className="text-[10px] font-black uppercase tracking-widest opacity-40 block mb-1">Twitter / X</span>
+                  <span className="text-xl font-bold italic tracking-tighter">400 x 400 PX</span>
+                </div>
+              </div>
+              <p className="hp-body-text text-[17px] opacity-70 leading-relaxed font-medium italic">
+                While these sizes vary, we recommend using a 1:1 aspect ratio at 1500px for all platforms. This ensures your image stays high-quality and crisp when you upload it to any site. High resolution is key because it prevents blurriness on modern retina displays.
+              </p>
+            </div>
+          </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">How to Make a Brat PFP - Step by Step</h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Creating your own aesthetic graphic is simple and takes less than a minute. You don't need any design experience to get a professional result. Follow these five easy steps to get started with the <Link href="/brat-maker/" className="hp-link">brat maker</Link> tool today:
-          </p>
-          <ul className="hp-body-text mb-12 list-none pl-0 space-y-6 text-[17px] sm:text-[18px]">
-            <li>
-              <strong>1. Open the tool.</strong> Launch the generator on your phone or computer browser.
-            </li>
-            <li>
-              <strong>2. Type your text.</strong> Enter your name, a username, or a short vibe word into the text box.
-            </li>
-            <li>
-              <strong>3. Set colors.</strong> Choose your background color (the classic neon green is #C1FF00).
-            </li>
-            <li>
-              <strong>4. Pick 1:1 ratio.</strong> Set the aspect ratio to 1:1 to ensure it fits perfectly into social media circles.
-            </li>
-            <li>
-              <strong>5. Download PNG.</strong> Hit the download button to save your custom high-quality PNG file to your device.
-            </li>
-          </ul>
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl uppercase tracking-tighter">Five Steps to Brat</h2>
+          
+          <div className="space-y-12 mb-32">
+            <div className="flex gap-8 sm:gap-12 group">
+              <span className="text-5xl sm:text-7xl font-black italic opacity-10 group-hover:opacity-100 group-hover:text-[#89CC04] transition-all duration-500">01</span>
+              <div className="pt-2 border-l-2 border-black/5 pl-8 group-hover:border-[#89CC04] transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-black italic tracking-tighter uppercase mb-2">Open Tool</h3>
+                <p className="text-[17px] opacity-70 leading-relaxed m-0">Launch the generator on your phone or computer browser at ibratgenerator.com.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-8 sm:gap-12 group">
+              <span className="text-5xl sm:text-7xl font-black italic opacity-10 group-hover:opacity-100 group-hover:text-[#89CC04] transition-all duration-500">02</span>
+              <div className="pt-2 border-l-2 border-black/5 pl-8 group-hover:border-[#89CC04] transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-black italic tracking-tighter uppercase mb-2">Type Text</h3>
+                <p className="text-[17px] opacity-70 leading-relaxed m-0">Enter your name, a username, or a short vibe word into the text box. Keep it lowercase.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-8 sm:gap-12 group">
+              <span className="text-5xl sm:text-7xl font-black italic opacity-10 group-hover:opacity-100 group-hover:text-[#89CC04] transition-all duration-500">03</span>
+              <div className="pt-2 border-l-2 border-black/5 pl-8 group-hover:border-[#89CC04] transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-black italic tracking-tighter uppercase mb-2">Set Color</h3>
+                <p className="text-[17px] opacity-70 leading-relaxed m-0">Choose your background color. The classic neon green is #C1FF00, but pink and black are also popular.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-8 sm:gap-12 group">
+              <span className="text-5xl sm:text-7xl font-black italic opacity-10 group-hover:opacity-100 group-hover:text-[#89CC04] transition-all duration-500">04</span>
+              <div className="pt-2 border-l-2 border-black/5 pl-8 group-hover:border-[#89CC04] transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-black italic tracking-tighter uppercase mb-2">Pick Ratio</h3>
+                <p className="text-[17px] opacity-70 leading-relaxed m-0">Set the aspect ratio to 1:1 to ensure it fits perfectly into social media profile circles.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-8 sm:gap-12 group">
+              <span className="text-5xl sm:text-7xl font-black italic opacity-10 group-hover:opacity-100 group-hover:text-[#89CC04] transition-all duration-500">05</span>
+              <div className="pt-2 border-l-2 border-black/5 pl-8 group-hover:border-[#89CC04] transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-black italic tracking-tighter uppercase mb-2 text-[#89CC04]">Download PNG</h3>
+                <p className="text-[17px] opacity-70 leading-relaxed m-0">Hit the download button to save your custom high-quality PNG file to your device instantly.</p>
+              </div>
+            </div>
+          </div>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
             Using a dedicated <strong>brat pfp maker</strong> is the fastest way to get the signature "crushed" font look that defines the aesthetic. You don't need to learn Photoshop or wrestle with complex software settings. The tool handles the layout, spacing, and font weight for you so you can focus on finding the right words. Once downloaded, just upload the file to your profile settings on your favorite app and you are ready to go.
           </p>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Best Colors for a Brat Profile Picture</h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Color choice is the most important part of the brat aesthetic. The classic choice is the famous neon green (#C1FF00), which works best on TikTok and Instagram to grab immediate attention. However, the trend has evolved to include many other variations. 
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            You can try a soft pink (#FF90E8) for a "coquette" brat vibe that feels more feminine and playful. Black backgrounds with white text look sleek and modern on Discord dark mode, while white backgrounds with black text feel very "high fashion" and minimalist on X. 
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            The <Link href="/brat-generator-pink/" className="hp-link">pink brat generator</Link> allows you to switch between these colors with a single click. Darker colors are often easier on the eyes for late-night scrolling, but the neon green is what makes the trend instantly recognizable. Pick a color that matches your personal brand or your current mood for the best results. Don't be afraid to try something unique like a bright orange or a deep purple to put your own spin on the trend.
-          </p>
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl uppercase tracking-tighter">Color Selection</h2>
+          <div className="flex gap-12 mb-32 group">
+            <div className="w-12 flex-shrink-0 flex items-start pt-2">
+              <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Palette</span>
+            </div>
+            <div className="flex-1 border-l-4 border-black pl-12 py-2">
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+                  <div className="group/swatch">
+                    <div className="h-32 bg-[#C1FF00] mb-4 border border-black/5 group-hover/swatch:h-40 transition-all"></div>
+                    <h4 className="text-xl font-black italic tracking-tighter uppercase mb-1">Classic Neon</h4>
+                    <p className="text-sm opacity-60 m-0">#C1FF00 - The Viral Standard</p>
+                  </div>
+                  <div className="group/swatch">
+                    <div className="h-32 bg-[#FF90E8] mb-4 border border-black/5 group-hover/swatch:h-40 transition-all"></div>
+                    <h4 className="text-xl font-black italic tracking-tighter uppercase mb-1">Coquette Brat</h4>
+                    <p className="text-sm opacity-60 m-0">#FF90E8 - Playful & Aesthetic</p>
+                  </div>
+                  <div className="group/swatch">
+                    <div className="h-32 bg-[#0A0A0A] mb-4 border border-black/5 group-hover/swatch:h-40 transition-all"></div>
+                    <h4 className="text-xl font-black italic tracking-tighter uppercase mb-1">Dark Mode</h4>
+                    <p className="text-sm opacity-60 m-0">#0A0A0A - Industrial Energy</p>
+                  </div>
+                  <div className="group/swatch">
+                    <div className="h-32 bg-[#FFFFFF] mb-4 border border-black/10 group-hover/swatch:h-40 transition-all"></div>
+                    <h4 className="text-xl font-black italic tracking-tighter uppercase mb-1">Minimalist</h4>
+                    <p className="text-sm opacity-60 m-0">#FFFFFF - High Fashion Clean</p>
+                  </div>
+               </div>
+               <p className="hp-body-text text-[17px] opacity-70 leading-relaxed font-medium italic">
+                 Color choice is the most important part of the brat aesthetic. The classic choice is the famous neon green, which works best on TikTok and Instagram to grab immediate attention. However, the trend has evolved to include many other variations like coquette pink or high-fashion white.
+               </p>
+            </div>
+          </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Brat PFP Ideas - 5 Phrases to Try</h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Not sure what text to use for your new image? The best profile pictures use short, punchy words that fit on one or two lines. This ensures the text stays large and readable even in small circles. 
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Try your first name for a personal touch, or use a vibe word like "icon," "messy," or "real." If you are a fan of the culture, try a Charli XCX lyric reference like "360" or "apple." Even simple phrases like "it's brat," "365," or "so julia" work perfectly and are highly recognizable. 
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Enter these into the <Link href="/brat-green-generator/" className="hp-link">brat green generator</Link> to see how they look in different weights. Keep your text lowercase for the most authentic and "raw" style. Short words look best because the font can be scaled up much larger, making your PFP pop on the screen.
-          </p>
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl uppercase tracking-tighter">Idea Bank</h2>
+          <div className="bg-zinc-50 p-12 mb-32 border-2 border-black/5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-10 text-center">
+              <div className="py-4 border-b-2 border-black/10 font-black italic tracking-tighter text-xl uppercase">Icon</div>
+              <div className="py-4 border-b-2 border-black/10 font-black italic tracking-tighter text-xl uppercase">Messy</div>
+              <div className="py-4 border-b-2 border-black/10 font-black italic tracking-tighter text-xl uppercase">Real</div>
+              <div className="py-4 border-b-2 border-black/10 font-black italic tracking-tighter text-xl uppercase">360</div>
+              <div className="py-4 border-b-2 border-black/10 font-black italic tracking-tighter text-xl uppercase">Apple</div>
+              <div className="py-4 border-b-2 border-black/10 font-black italic tracking-tighter text-xl uppercase">So Julia</div>
+            </div>
+            <p className="hp-body-text text-[17px] opacity-70 leading-relaxed font-medium italic text-center">
+              Not sure what text to use? The best profile pictures use short, punchy words that fit on one or two lines. Try your first name for a personal touch, or use a vibe word. Keep your text lowercase for the most authentic and &quot;raw&quot; style.
+            </p>
+          </div>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Frequently Asked Questions</h2>
           <FAQAccordion

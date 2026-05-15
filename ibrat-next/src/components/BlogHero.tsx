@@ -28,7 +28,7 @@ export default function BlogHero({
         
         {/* Left Side: Text Content */}
         <div className="text-left flex flex-col items-start lg:col-span-7 pr-0 lg:pr-8">
-          <Link href="/blog" className="inline-flex items-center text-[12px] font-bold text-[var(--hp-ink)] opacity-60 hover:opacity-100 uppercase tracking-widest mb-8 transition-opacity">
+          <Link href="/blog" className="inline-flex items-center text-[12px] font-bold text-[#555555] hover:opacity-100 uppercase tracking-widest mb-8 transition-opacity">
             <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
@@ -57,12 +57,12 @@ export default function BlogHero({
               </p>
             </div>
             <div className="w-1.5 h-1.5 rounded-full bg-[var(--hp-ink)] opacity-20"></div>
-            <p className="text-[13px] font-medium text-[var(--hp-ink)] opacity-60">
+            <p className="text-[13px] font-medium text-[#555555]">
               Published: {publishDate} | Updated: May 03, 2026
             </p>
           </div>
           
-          <p className="text-[12px] font-semibold text-[var(--hp-ink)] opacity-50 tracking-widest uppercase">
+          <p className="text-[12px] font-semibold text-[#555555] tracking-widest uppercase">
             {readTime}
           </p>
         </div>

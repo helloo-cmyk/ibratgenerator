@@ -18,6 +18,7 @@ const styleLinks = [
 const supportLinks = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/feedback", label: "Feedback" },
   { href: "/blog", label: "Blog" },
   { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms" },

@@ -17,11 +17,15 @@ export default function BlogIndexPage() {
     <main className="hp-root pb-24">
       
       {/* ── HERO ── */}
-      <section className="hp-hero px-4 pb-0 mb-10">
-        <h1 className="hp-hero-heading mt-6 mb-3 mx-auto">Brat Aesthetic Blog</h1>
-        <p className="intro-text">
-          Explore the culture, design tips, and guides behind the viral Brat aesthetic. Learn how to create perfect memes, find caption inspiration, and understand the typography trend.
-        </p>
+      <section className="bg-white pt-24 pb-16 px-4 border-b border-black/5">
+        <div className="max-w-[1000px] mx-auto">
+          <h1 className="text-4xl sm:text-6xl font-black italic uppercase tracking-tighter mb-4">
+            The Blog
+          </h1>
+          <p className="text-lg opacity-60 max-w-xl font-medium leading-relaxed italic border-l-2 border-[#89CC04] pl-6">
+            Insights, trends, and guides for the Brat aesthetic.
+          </p>
+        </div>
       </section>
 
       {/* ── ARTICLES GRID & SEARCH ── */}

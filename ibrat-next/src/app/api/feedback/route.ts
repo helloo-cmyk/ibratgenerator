@@ -42,7 +42,7 @@ export async function POST(request: Request) {
     if (error) {
       console.error("Resend API error:", error);
       return NextResponse.json(
-        { success: false, error: "Failed to send feedback" },
+        { success: false, error: error.message || "Failed to send feedback" },
         { status: 500 }
       );
     }

@@ -56,6 +56,39 @@ p {
   margin-bottom: 1.5rem;
 }
 
+.text-white p,
+.text-white span,
+.text-white li,
+.text-white strong,
+.text-white em,
+.bg-black p,
+.bg-black span,
+.bg-black li,
+.bg-black strong,
+.bg-black em,
+.bg-zinc-900 p,
+.bg-zinc-900 span,
+.bg-zinc-900 li,
+.bg-zinc-900 strong,
+.bg-zinc-900 em,
+.bg-zinc-800 p,
+.bg-zinc-800 span,
+.bg-zinc-800 li,
+.bg-zinc-800 strong,
+.bg-zinc-800 em {
+  color: white !important;
+}
+
+.text-white-soft {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Ensure neon green headings in dark sections stay green */
+.bg-black h1, .bg-black h2, .bg-black h3,
+.bg-zinc-900 h1, .bg-zinc-900 h2, .bg-zinc-900 h3 {
+  color: inherit;
+}
+
 p:last-child {
   margin-bottom: 0;
 }

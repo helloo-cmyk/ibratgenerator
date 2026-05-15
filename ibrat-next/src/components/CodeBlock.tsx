@@ -79,8 +79,8 @@ export default function CodeBlock({ code, language, title }: CodeBlockProps) {
       </div>
 
       {/* Code */}
-      <div className="relative overflow-x-auto p-8 font-mono text-[15px] leading-relaxed">
-        <pre className="text-zinc-300">
+      <div className="relative overflow-hidden p-8 font-mono text-[15px] leading-relaxed [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+        <pre className="text-zinc-300 whitespace-pre-wrap">
           <code>{highlightCode(code)}</code>
         </pre>
         

@@ -83,179 +83,137 @@ export default function BratSummerMeaningPage() {
       <article className="px-4 pt-12 max-w-[720px] mx-auto">
         <div className="prose-container">
           {/* INTRO */}
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Brat summer means embracing confidence, chaos, and imperfection, and
-            not apologizing for any of it. This phrase came from Charli XCX's
-            2024 album "Brat" and turned into one of the biggest cultural moments
-            of the year. This post covers where it started, what it actually
-            means, how it spread, and why it still matters today.
+          <div className="bg-[#89CC04] p-10 sm:p-16 mb-24 relative overflow-hidden group">
+            <span className="absolute top-4 right-8 text-[10px] font-black uppercase tracking-[0.3em] opacity-30">Definition v2.026</span>
+            <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-8 leading-none">Brat Summer</h2>
+            <p className="hp-body-text !text-black !opacity-100 text-[20px] sm:text-[24px] font-bold leading-tight italic mb-0">
+              Embracing confidence, chaos, and imperfection, and not apologizing for any of it.
+            </p>
+          </div>
+
+          <p className="hp-body-text mb-24 text-[18px] sm:text-[20px] leading-relaxed border-l-4 border-black pl-10 italic">
+            This phrase came from Charli XCX's 2024 album &quot;Brat&quot; and turned into one of the biggest cultural moments of the year. This post covers where it started, what it actually means, how it spread, and why it still matters today.
           </p>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">
-            What Does "Brat Summer" Actually Mean?
-          </h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            To understand the true brat summer meaning, you have to look beyond
-            just the music. It is an attitude, not a strict set of rules.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            At its core, it means being unapologetically yourself: messy,
-            confident, and a little chaotic. It is the exact opposite of the
-            "clean girl" or "that girl" trends, which are all about being highly
-            polished and perfectly put-together.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Instead, what is brat summer? It is about going out, staying out
-            late, not having your life entirely figured out, and completely
-            owning that reality. Charli XCX herself described a "brat" as a girl
-            who is a little messy, likes to party, and maybe says some dumb
-            things sometimes.
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Ultimately, what does brat summer mean? It is freedom. It gives you
-            permission to escape the exhausting pressure to be perfect all the
-            time.
-          </p>
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl text-left tracking-tighter uppercase">The Meaning</h2>
+          
+          <div className="flex gap-12 mb-20 group">
+            <div className="w-12 flex-shrink-0 flex items-start pt-2">
+              <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Identity</span>
+            </div>
+            <div className="flex-1 border-l-4 border-black pl-12 py-2">
+              <p className="hp-body-text mb-8 text-[18px] sm:text-[20px] font-medium leading-relaxed italic">
+                To understand the true brat summer meaning, you have to look beyond just the music. It is an attitude, not a strict set of rules. At its core, it means being unapologetically yourself: messy, confident, and a little chaotic. 
+              </p>
+              <div className="bg-black text-white p-10 mb-8 italic text-lg sm:text-xl font-bold leading-snug">
+                &quot;The exact opposite of the 'clean girl' or 'that girl' trends, which are all about being highly polished and perfectly put-together.&quot;
+              </div>
+              <p className="hp-body-text text-[18px] sm:text-[20px] opacity-70 leading-relaxed">
+                Instead, what is brat summer? It is about going out, staying out late, not having your life entirely figured out, and completely owning that reality. Charli XCX herself described a &quot;brat&quot; as a girl who is a little messy, likes to party, and maybe says some dumb things sometimes. Ultimately, what does brat summer mean? It is freedom. It gives you permission to escape the exhausting pressure to be perfect all the time.
+              </p>
+            </div>
+          </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">
-            Where Did Brat Summer Come From?
-          </h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            The origin story begins when Charli XCX released her sixth studio
-            album on June 7, 2024. The album cover was famously simple: just the
-            word "brat" in a lowercase Arial font.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            There was no glamorous photography or styling. That extreme
-            minimalism quickly became the entire aesthetic, as fans immediately
-            started recreating the cover with their own words and jokes.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            The neon green background, with the hex code #89CC04, became instantly
-            recognizable as the visual shorthand for the whole movement. You can
-            read more about the exact{" "}
-            <Link href="/blog/brat-color-code" className="hp-link">
-              brat green color code
-            </Link>{" "}
-            if you want the technical details.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Within days, the phrase spread massively across TikTok and Instagram.
-            By July, brat summer charli xcx was one of the most searched
-            cultural phrases on the internet.
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            The moment it went completely mainstream happened when Charli posted
-            "kamala IS brat" on X after Kamala Harris entered the 2024 US
-            presidential race. Overnight, the green aesthetic appeared on global
-            news networks, and even major brands and sports teams started using
-            the format.
-          </p>
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl text-left tracking-tighter uppercase">The Origins</h2>
+          
+          <div className="space-y-16 mb-32 relative">
+            <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-black opacity-5"></div>
+            
+            <div className="relative pl-16 group">
+              <div className="absolute left-[21px] top-2 w-2 h-2 bg-black rounded-full group-hover:scale-[2] group-hover:bg-[#89CC04] transition-all"></div>
+              <h3 className="text-2xl font-black italic tracking-tighter mb-2 uppercase">June 7, 2024</h3>
+              <p className="text-[17px] opacity-70 leading-relaxed">
+                The origin story begins when Charli XCX released her sixth studio album. The album cover was famously simple: just the word &quot;brat&quot; in a lowercase Arial font. There was no glamorous photography or styling.
+              </p>
+            </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">
-            Brat Summer vs Hot Girl Summer - What Is the Difference?
-          </h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            People often compare these two viral trends, but they have distinct
-            differences. Hot girl summer, popularized by Megan Thee Stallion in
-            2019, was about finding confidence through looking and feeling your
-            absolute best. It was polished, sexy, and self-assured.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            In contrast, brat culture finds confidence through simply not caring.
-            It is chaotic, unfiltered, and a little reckless. While hot girl
-            summer requires aesthetic effort, brat summer is characterized by a
-            deliberate lack of effort.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Both phrases celebrate confidence, but they approach it from
-            completely opposite directions. Hot girl summer is aspirational in a
-            traditional sense, while the brat attitude rejects aspiration
-            altogether.
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            This contrast is exactly why brat summer resonated, as it gave people
-            permission to stop trying so hard.
-          </p>
+            <div className="relative pl-16 group">
+              <div className="absolute left-[21px] top-2 w-2 h-2 bg-black rounded-full group-hover:scale-[2] group-hover:bg-[#89CC04] transition-all"></div>
+              <h3 className="text-2xl font-black italic tracking-tighter mb-2 uppercase">The Green Hex</h3>
+              <p className="text-[17px] opacity-70 leading-relaxed">
+                The neon green background, with the hex code #89CC04, became instantly recognizable as the visual shorthand for the whole movement. You can read more about the exact <Link href="/blog/brat-color-code" className="hp-link">brat green color code</Link> if you want the technical details.
+              </p>
+            </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">
-            The Brat Aesthetic - What Does It Look Like?
-          </h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            The visual identity of the brat aesthetic is impossible to miss. It
-            relies on a very specific, aggressive neon green background paired
-            with bold, lowercase text.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            There is zero decoration involved. You will not find any Instagram
-            filters, smooth gradients, or elaborate graphic design. It typically
-            uses a heavy sans-serif font like Arial, with incredibly tight letter
-            spacing to create a blocky look.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            The high contrast between the dark text and the bright background is
-            deliberately raw and unfinished. It looks like something made
-            quickly on a phone on purpose.
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            This visual style exploded because anyone could participate
-            instantly without any design skills. People used a{" "}
-            <Link href="/brat-text-generator" className="hp-link">
-              brat text generator
-            </Link>{" "}
-            to make their own versions with their names, moods, or unhinged
-            captions.
-          </p>
+            <div className="relative pl-16 group">
+              <div className="absolute left-[21px] top-2 w-2 h-2 bg-black rounded-full group-hover:scale-[2] group-hover:bg-[#89CC04] transition-all"></div>
+              <h3 className="text-2xl font-black italic tracking-tighter mb-2 uppercase">Going Viral</h3>
+              <p className="text-[17px] opacity-70 leading-relaxed">
+                Within days, the phrase spread massively across TikTok and Instagram. By July, brat summer charli xcx was one of the most searched cultural phrases on the internet.
+              </p>
+            </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">
-            Is Brat Summer Still a Thing in 2026?
-          </h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            The absolute peak of the trend was undeniably brat summer 2024, but
-            the aesthetic did not just disappear when autumn arrived.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            The minimalist text-on-color format became a lasting design pattern
-            across the internet. It is similar to how Y2K aesthetics returned
-            and stuck around for years after their original moment.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            More importantly, the attitude, which is confident, unapologetic, and
-            imperfect, has true staying power because it taps into something
-            real. Brat charli xcx fans remained engaged as she continued touring
-            and releasing new music.
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Brat summer as a specific moment in time is over. However, brat as
-            an aesthetic and an attitude is firmly part of the cultural
-            vocabulary now.
-          </p>
+            <div className="relative pl-16 group">
+              <div className="absolute left-[21px] top-2 w-2 h-2 bg-black rounded-full group-hover:scale-[2] group-hover:bg-[#89CC04] transition-all"></div>
+              <h3 className="text-2xl font-black italic tracking-tighter mb-2 uppercase">Mainstream Moment</h3>
+              <p className="text-[17px] opacity-70 leading-relaxed">
+                The moment it went completely mainstream happened when Charli posted &quot;kamala IS brat&quot; on X. Overnight, the green aesthetic appeared on global news networks, and even major brands and sports teams started using the format.
+              </p>
+            </div>
+          </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">
-            How to Join the Brat Aesthetic
-          </h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Making your own brat-style content is incredibly simple. You just
-            need to pick a word or short phrase that captures your current brat
-            summer vibes, put it on a neon green background in bold lowercase
-            text, and post it. That is the entire format.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Use the free{" "}
-            <Link href="/" className="hp-link">
-              brat generator
-            </Link>{" "}
-            to create your own image in under 30 seconds: just type your text,
-            download the PNG, and you are done.
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Or, use the{" "}
-            <Link href="/brat-name-generator/" className="hp-link">
-              brat name generator
-            </Link>{" "}
-            to create personalized name graphics if you want to turn your name
-            or a short phrase into a brat-style profile picture.
-          </p>
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl text-left tracking-tighter uppercase text-center">Brat <span className="text-zinc-300 italic font-serif lowercase px-4">vs</span> Hot Girl</h2>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 mb-32 bg-black border-4 border-black group">
+            <div className="bg-[#89CC04] p-10 group-hover:bg-[#a3f005] transition-colors">
+              <h3 className="text-3xl font-black italic tracking-tighter mb-6 uppercase">Brat Summer</h3>
+              <p className="text-[17px] font-bold leading-snug mb-6 italic">&quot;Finding confidence through simply not caring.&quot;</p>
+              <ul className="space-y-2 text-[15px] font-medium opacity-80 uppercase tracking-wider">
+                <li>• Chaotic & Unfiltered</li>
+                <li>• Deliberate Lack of Effort</li>
+                <li>• Imperfection as Power</li>
+              </ul>
+            </div>
+            <div className="bg-white p-10 group-hover:bg-zinc-50 transition-colors">
+              <h3 className="text-3xl font-black italic tracking-tighter mb-6 uppercase">Hot Girl Summer</h3>
+              <p className="text-[17px] font-bold leading-snug mb-6 italic">&quot;Finding confidence through feeling your absolute best.&quot;</p>
+              <ul className="space-y-2 text-[15px] font-medium opacity-60 uppercase tracking-wider">
+                <li>• Polished & Sexy</li>
+                <li>• Traditional Aspiration</li>
+                <li>• Highly Curated Style</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl text-left tracking-tighter uppercase">The Aesthetic</h2>
+          <div className="bg-zinc-50 p-12 mb-24 border-2 border-black/5">
+             <p className="hp-body-text mb-8 text-[18px] sm:text-[20px] font-medium leading-relaxed italic">
+               The visual identity of the brat aesthetic is impossible to miss. It relies on a very specific, aggressive neon green background paired with bold, lowercase text.
+             </p>
+             <p className="hp-body-text text-[17px] opacity-70 leading-relaxed mb-10">
+               There is zero decoration involved. It typically uses a heavy sans-serif font like Arial, with incredibly tight letter spacing to create a blocky look. The high contrast between the dark text and the bright background is deliberately raw and unfinished. It looks like something made quickly on a phone on purpose.
+             </p>
+             <Link href="/brat-text-generator" className="inline-flex items-center text-xl font-black italic uppercase tracking-tighter bg-[#89CC04] px-8 py-4 hover:bg-black hover:text-white transition-all">
+                Try the Text Generator
+                <svg className="ml-4 w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+             </Link>
+          </div>
+
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl text-left tracking-tighter uppercase">Current Status: 2026</h2>
+          <div className="flex gap-12 mb-32 group">
+            <div className="w-12 flex-shrink-0 flex items-start pt-2">
+              <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Legacy</span>
+            </div>
+            <div className="flex-1 border-l-4 border-black pl-12 py-2">
+              <p className="hp-body-text text-[18px] sm:text-[20px] font-medium italic leading-relaxed">
+                The absolute peak of the trend was undeniably brat summer 2024, but the aesthetic did not just disappear when autumn arrived. The minimalist text-on-color format became a lasting design pattern across the internet. More importantly, the attitude, which is confident, unapologetic, and imperfect, has true staying power because it taps into something real. Brat summer as a specific moment in time is over. However, brat as an aesthetic and an attitude is firmly part of the cultural vocabulary now.
+              </p>
+            </div>
+          </div>
+
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl text-left tracking-tighter uppercase">Join the Movement</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-32">
+             <Link href="/" className="group bg-[#89CC04] p-10 hover:bg-black transition-all">
+                <h3 className="text-2xl font-black italic tracking-tighter mb-4 uppercase group-hover:text-white transition-colors">Brat Generator</h3>
+                <p className="text-sm font-bold italic opacity-60 group-hover:text-[#89CC04] group-hover:opacity-100 transition-all">Create your own images in under 30 seconds.</p>
+             </Link>
+             <Link href="/brat-name-generator/" className="group bg-zinc-100 p-10 hover:bg-[#ff90e8] transition-all">
+                <h3 className="text-2xl font-black italic tracking-tighter mb-4 uppercase group-hover:text-white transition-colors">Name Generator</h3>
+                <p className="text-sm font-bold italic opacity-60 group-hover:text-white transition-colors">Turn your name into a personalized brat graphic.</p>
+             </Link>
+          </div>
 
           {/* ── FAQ ── */}
           <FAQAccordion

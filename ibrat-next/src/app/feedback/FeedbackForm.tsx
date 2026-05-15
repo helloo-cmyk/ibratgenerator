@@ -40,61 +40,63 @@ export default function FeedbackForm() {
   }
 
   return (
-    <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
       {status && (
-        <div className={`p-4 rounded-xl text-sm font-medium ${status.type === 'success' ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-700 border border-red-200'}`}>
+        <div className={`p-6 border-2 font-black italic uppercase tracking-tight text-sm ${status.type === 'success' ? 'bg-[#89CC04]/10 border-[#89CC04] text-black' : 'bg-red-50 border-red-500 text-red-700'}`}>
           {status.message}
         </div>
       )}
-      <div className="flex flex-col gap-2">
-        <label htmlFor="name" className="text-sm font-semibold text-[var(--hp-ink)]">
-          Name <span className="text-[var(--hp-ink-muted)] font-normal">(optional)</span>
+      
+      <div className="flex flex-col gap-3">
+        <label htmlFor="name" className="text-[12px] font-black uppercase tracking-widest opacity-50">
+          Identity <span className="font-normal italic">(optional)</span>
         </label>
         <input 
           type="text" 
           id="name" 
           name="name" 
           disabled={isSubmitting}
-          className="bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] rounded-xl px-4 py-3 text-[var(--hp-ink)] focus:outline-none focus:border-[var(--hp-ink)] focus:ring-1 focus:ring-[var(--hp-ink)] transition-all disabled:opacity-50"
-          placeholder="Your name"
+          className="w-full bg-white border-2 border-black/10 px-6 py-4 text-[18px] font-medium focus:outline-none focus:border-black transition-all disabled:opacity-50 placeholder:opacity-20 italic"
+          placeholder="Your name or handle"
         />
       </div>
 
-      <div className="flex flex-col gap-2">
-        <label htmlFor="email" className="text-sm font-semibold text-[var(--hp-ink)]">
-          Email <span className="text-[var(--hp-ink-muted)] font-normal">(optional)</span>
+      <div className="flex flex-col gap-3">
+        <label htmlFor="email" className="text-[12px] font-black uppercase tracking-widest opacity-50">
+          Reach <span className="font-normal italic">(optional)</span>
         </label>
         <input 
           type="email" 
           id="email" 
           name="email" 
           disabled={isSubmitting}
-          className="bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] rounded-xl px-4 py-3 text-[var(--hp-ink)] focus:outline-none focus:border-[var(--hp-ink)] focus:ring-1 focus:ring-[var(--hp-ink)] transition-all disabled:opacity-50"
+          className="w-full bg-white border-2 border-black/10 px-6 py-4 text-[18px] font-medium focus:outline-none focus:border-black transition-all disabled:opacity-50 placeholder:opacity-20 italic"
           placeholder="your@email.com"
         />
       </div>
 
-      <div className="flex flex-col gap-2">
-        <label htmlFor="message" className="text-sm font-semibold text-[var(--hp-ink)]">
-          Message <span className="text-red-500">*</span>
+      <div className="flex flex-col gap-3">
+        <label htmlFor="message" className="text-[12px] font-black uppercase tracking-widest opacity-50">
+          Thoughts <span className="text-[#89CC04]">*</span>
         </label>
         <textarea 
           id="message" 
           name="message" 
           required
-          rows={5}
+          rows={6}
           disabled={isSubmitting}
-          className="bg-[var(--hp-surface-warm)] border border-[var(--hp-border)] rounded-xl px-4 py-3 text-[var(--hp-ink)] focus:outline-none focus:border-[var(--hp-ink)] focus:ring-1 focus:ring-[var(--hp-ink)] transition-all resize-y disabled:opacity-50"
-          placeholder="Your feedback or suggestions..."
+          className="w-full bg-white border-2 border-black/10 px-6 py-4 text-[18px] font-medium focus:outline-none focus:border-black transition-all resize-y disabled:opacity-50 placeholder:opacity-20 italic"
+          placeholder="What's on your mind? Suggestions, bugs, or vibes..."
         ></textarea>
       </div>
 
       <button 
         type="submit" 
         disabled={isSubmitting}
-        className="hp-btn-primary w-full justify-center mt-2 !py-4 !text-[16px] disabled:opacity-70 disabled:cursor-not-allowed"
+        className="w-full bg-black !text-white py-6 px-8 text-xl font-black italic uppercase tracking-tighter hover:bg-[#89CC04] hover:text-black transition-all disabled:opacity-50 flex items-center justify-center gap-4 group"
       >
-        {isSubmitting ? "Sending..." : "Submit Feedback"}
+        {isSubmitting ? "Processing..." : "Dispatch Feedback"}
+        <span className="text-2xl group-hover:translate-x-2 transition-transform">→</span>
       </button>
     </form>
   );

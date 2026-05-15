@@ -609,7 +609,7 @@ const BRAT_STYLES = `
   padding: 12px 0;
   font-size: 13px;
   font-weight: 500;
-  color: #888880;
+  color: #555555;
   border-bottom: 2px solid transparent;
   background: transparent;
   cursor: pointer;

@@ -78,73 +78,97 @@ export default function BratTextVsFontPage() {
       <article className="px-4 pt-12 max-w-[720px] mx-auto">
         <div className="prose-container">
           
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">The Short Answer</h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            The main difference is about speed versus control. One tool is built for making a complete social media image in just a few seconds. The other tool is built for people who want to adjust the exact typography settings like weight and spacing.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            If you want a finished graphic, choose the text tool. If you are a designer who wants to perfect the letter spacing, choose the font tool. Both are free and easy to use.
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            In simple terms, one handles the "vibe" and the other handles the "specs." Knowing which one to pick will save you time and help you get the best result for your memes or profile pictures.
+          <div className="bg-black text-white p-10 sm:p-16 mb-24 relative overflow-hidden group">
+            <span className="absolute top-4 right-8 text-[10px] font-black uppercase tracking-[0.3em] opacity-30">Quick Verdict</span>
+            <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-8 leading-none">The Short Answer</h2>
+            <p className="hp-body-text !text-white !opacity-100 text-[18px] sm:text-[22px] font-medium leading-tight italic m-0">
+              The main difference is about speed versus control. One tool is built for making a complete social media image in seconds. The other is built for precise typography control.
+            </p>
+          </div>
+
+          <p className="hp-body-text mb-24 text-[18px] sm:text-[20px] leading-relaxed border-l-4 border-[#89CC04] pl-10 italic">
+             If you want a finished graphic, choose the text tool. If you are a designer who wants to perfect the letter spacing, choose the font tool. Both are free and easy to use. In simple terms, one handles the &quot;vibe&quot; and the other handles the &quot;specs.&quot;
           </p>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">What the Brat Text Generator Does</h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            This tool is all about the final product. It is a complete image maker that handles everything at once. When you use the <Link href="/brat-text-generator/" className="hp-link">brat text generator</Link>, you enter your phrase and pick a background color like neon green or pink.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            It automatically places the text in the right spot. It also lets you choose the correct aspect ratio for apps like TikTok or Instagram. This is the best choice if you want to add stickers or emojis to your design. 
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            The process is very fast. You type, you pick a color, and you download a high-quality PNG file instantly. There are no complex settings to worry about. It is designed to look like the original album cover with zero effort.
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            Most users find this to be the most helpful tool for creating viral memes. It is the fastest way to join the trend and share your thoughts in that iconic style. If you are in a rush, this is the one for you.
-          </p>
+          <div className="flex gap-12 mb-32 group">
+            <div className="w-12 flex-shrink-0 flex items-start pt-2">
+              <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Automation</span>
+            </div>
+            <div className="flex-1 bg-zinc-50 p-10 sm:p-16 border-2 border-black/5">
+              <h2 className="text-3xl sm:text-5xl font-black italic tracking-tighter uppercase mb-8 leading-none">Brat Text Tool</h2>
+              <p className="hp-body-text mb-8 text-[18px] font-medium italic">
+                This tool is all about the final product. It is a complete image maker that handles everything at once. 
+              </p>
+              <p className="hp-body-text text-[17px] opacity-70 leading-relaxed m-0">
+                When you use the <Link href="/brat-text-generator/" className="hp-link">brat text generator</Link>, it automatically places the text in the right spot, handles aspect ratios for TikTok/Instagram, and lets you add stickers or emojis. It is designed to look like the original album cover with zero effort. Most users find this to be the fastest way to join the trend.
+              </p>
+            </div>
+          </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">What the Brat Font Generator Does</h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            This tool focuses entirely on the typography itself. While the other tool makes a whole image, the <Link href="/brat-font-generator/" className="hp-link">brat font generator</Link> gives you fine control over the letters. It is built for people who want to match the exact look of the original font.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            You can adjust the font weight to make it thicker or thinner. You can change the letter spacing to make the words look more "crushed" or more readable. You also have control over line height and text alignment.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            This tool is popular with graphic designers and artists. It helps you understand how the aesthetic actually works. You are not just picking a color; you are building the typography from scratch.
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            It is perfect if you are working on a larger design project. For example, if you are making a poster or a complex digital artwork, you need this level of detail. It ensures your text looks authentic and professionally made.
-          </p>
+          <div className="flex gap-12 mb-32 group">
+            <div className="w-12 flex-shrink-0 flex items-start pt-2">
+              <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Precision</span>
+            </div>
+            <div className="flex-1 bg-[#89CC04] p-10 sm:p-16 border-2 border-black/5">
+              <h2 className="text-3xl sm:text-5xl font-black italic tracking-tighter uppercase mb-8 leading-none">Brat Font Tool</h2>
+              <p className="hp-body-text mb-8 text-[18px] font-medium italic text-black">
+                This tool focuses entirely on the typography itself, giving you fine control over every letter.
+              </p>
+              <p className="hp-body-text text-[17px] text-black/80 leading-relaxed m-0">
+                The <Link href="/brat-font-generator/" className="font-bold underline decoration-black/20 hover:decoration-black transition-all">brat font generator</Link> allows you to adjust font weight, letter spacing, line height, and alignment. It is built for graphic designers and artists working on larger projects like posters or complex digital artwork where an exact typography match is mandatory.
+              </p>
+            </div>
+          </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Which One Should You Use?</h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Choosing between these two depends on what you are trying to make. If you want to make a meme for TikTok or a quick story for Instagram, you should use the text-focused tool. It is much faster and handles the background colors for you.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            If you need an exact typography match for a professional project, the font-focused tool is better. It allows you to adjust the letter spacing precisely until it looks perfect. This is great for high-quality banners or prints.
-          </p>
-          <ul className="hp-body-text mb-12 list-none pl-0 space-y-4 text-[17px] sm:text-[18px]">
-            <li><strong>Quick meme or post:</strong> Use the text tool.</li>
-            <li><strong>Typography matching:</strong> Use the font tool.</li>
-            <li><strong>Stickers and emojis:</strong> Use the text tool.</li>
-            <li><strong>Custom spacing:</strong> Use the font tool.</li>
-            <li><strong>First-time user:</strong> We suggest starting with the text tool.</li>
-          </ul>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl uppercase tracking-tighter text-center">Feature Matrix</h2>
+          
+          <div className="overflow-hidden border-4 border-black mb-32 group">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-black text-white">
+                  <th className="p-6 uppercase tracking-widest text-[10px] font-black italic">Requirement</th>
+                  <th className="p-6 uppercase tracking-widest text-[10px] font-black italic text-center border-l border-white/20">Text Tool</th>
+                  <th className="p-6 uppercase tracking-widest text-[10px] font-black italic text-center border-l border-white/20">Font Tool</th>
+                </tr>
+              </thead>
+              <tbody className="text-[15px] sm:text-[17px] font-bold italic uppercase tracking-tighter">
+                <tr className="border-b border-black/5 hover:bg-[#89CC04]/10 transition-colors">
+                  <td className="p-6 border-r border-black/5">Quick Meme / Post</td>
+                  <td className="p-6 text-center border-r border-black/5 text-[#89CC04]">YES</td>
+                  <td className="p-6 text-center opacity-30">NO</td>
+                </tr>
+                <tr className="border-b border-black/5 hover:bg-[#89CC04]/10 transition-colors">
+                  <td className="p-6 border-r border-black/5">Custom Spacing</td>
+                  <td className="p-6 text-center border-r border-black/5 opacity-30">NO</td>
+                  <td className="p-6 text-center text-[#89CC04]">YES</td>
+                </tr>
+                <tr className="border-b border-black/5 hover:bg-[#89CC04]/10 transition-colors">
+                  <td className="p-6 border-r border-black/5">Stickers & Emojis</td>
+                  <td className="p-6 text-center border-r border-black/5 text-[#89CC04]">YES</td>
+                  <td className="p-6 text-center opacity-30">NO</td>
+                </tr>
+                <tr className="border-b border-black/5 hover:bg-[#89CC04]/10 transition-colors">
+                  <td className="p-6 border-r border-black/5">Exact Typography Match</td>
+                  <td className="p-6 text-center border-r border-black/5 opacity-30">NO</td>
+                  <td className="p-6 text-center text-[#89CC04]">YES</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="hp-body-text mb-24 text-[18px] sm:text-[20px] leading-relaxed italic border-l-4 border-black pl-10">
             Both tools output a PNG file, so you can always use them together. The important thing is to decide how much control you actually need before you start typing.
           </p>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Can You Use Both?</h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Yes, using both tools together is a great workflow. You can start by using the font-focused tool to find the exact style you like. Once you have the letters looking perfect, you can note down those settings.
-          </p>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Then, you can head over to our main <Link href="/" className="hp-link">brat generator</Link> to build the final image. This allows you to add stickers, choose a background, and set the right aspect ratio for social media. 
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            This approach gives you the best of both worlds. You get the professional typography from one tool and the social media features from the other. It is the most practical way to create high-end graphics for free.
-          </p>
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl uppercase tracking-tighter">The Perfect Workflow</h2>
+          <div className="bg-zinc-50 p-12 border-2 border-black/5 mb-32">
+             <p className="hp-body-text mb-8 text-[18px] sm:text-[20px] font-medium leading-relaxed italic">
+               Yes, using both tools together is a great workflow. You can start by using the font-focused tool to find the exact style you like.
+             </p>
+             <p className="hp-body-text text-[17px] opacity-70 leading-relaxed mb-0">
+               Once you have the letters looking perfect, head over to our main <Link href="/" className="hp-link">brat generator</Link> to build the final image. This allows you to add stickers, choose a background, and set the right aspect ratio for social media. This approach gives you the best of both worlds: professional typography and viral features.
+             </p>
+          </div>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Frequently Asked Questions</h2>
           <FAQAccordion
