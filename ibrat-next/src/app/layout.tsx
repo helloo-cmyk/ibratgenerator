@@ -92,6 +92,7 @@ export default function RootLayout({
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta name="p:domain_verify" content="a5fad79f5206533009b21255aa5b5b60" />
         <meta name="google-adsense-account" content="ca-pub-4083132987699578" />
+        <meta name="_foundr" content="7e5ad995c34295ce18501b53df488dd6" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <Script
           id="schema"
