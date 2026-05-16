@@ -1,13 +1,22 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
+import { Metadata } from "next";
 import FAQAccordion from "@/components/FAQAccordion";
 import BlogHero from "@/components/BlogHero";
 import CodeBlock from "@/components/CodeBlock";
-import ColorValueCard from "@/components/ColorValueCard";
-import ColorSwatch from "@/components/ColorSwatch";
 import HexCopyBox from "@/components/HexCopyBox";
+import InteractiveColorSpecGrid from "@/components/InteractiveColorSpecGrid";
+import InteractivePalette from "@/components/InteractivePalette";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Brat Color Code - The Official Brat Green Hex Code (#89CC04)",
+  },
+  alternates: {
+    canonical: "https://ibratgenerator.com/blog/brat-color-code/",
+  },
+  description:
+    "The definitive guide to the official Charli XCX Brat green. Get the hex, RGB, HSL, and CMYK values for the 2024 aesthetic.",
+};
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -57,14 +66,6 @@ const faqSchema = {
 };
 
 export default function BratColorCodePage() {
-  const [copiedValue, setCopiedValue] = useState<string | null>(null);
-
-  const handleCopy = (value: string) => {
-    navigator.clipboard.writeText(value);
-    setCopiedValue(value);
-    setTimeout(() => setCopiedValue(null), 2000);
-  };
-
   return (
     <main className="hp-root pb-24">
       <script
@@ -111,26 +112,14 @@ export default function BratColorCodePage() {
                </div>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-black border-4 border-black overflow-hidden shadow-[20px_20px_0px_rgba(137,204,4,0.1)]">
-              {[
+            <InteractiveColorSpecGrid 
+              specs={[
                 { label: "HEX", value: "#89CC04" },
                 { label: "RGB", value: "137, 204, 4" },
                 { label: "HSL", value: "80, 96%, 41%" },
                 { label: "CMYK", value: "33, 0, 98, 20" }
-              ].map((spec) => (
-                <button 
-                  key={spec.label}
-                  onClick={() => handleCopy(spec.value)}
-                  className="bg-white p-8 group text-left relative overflow-hidden active:bg-zinc-50 transition-all border-r border-b border-black last:border-r-0"
-                >
-                  <span className="text-[10px] font-black uppercase tracking-widest opacity-30 group-hover:opacity-100 block mb-4">{spec.label}</span>
-                  <span className={`text-xl sm:text-2xl font-black italic tracking-tighter transition-opacity ${copiedValue === spec.value ? "opacity-0" : "opacity-100"}`}>{spec.value}</span>
-                  {copiedValue === spec.value && (
-                    <span className="absolute inset-0 flex items-center justify-center bg-[#89CC04] text-black font-black italic tracking-tighter text-xl animate-in fade-in duration-300">COPIED</span>
-                  )}
-                </button>
-              ))}
-            </div>
+              ]}
+            />
           </div>
 
           <div className="space-y-8 mb-32">
@@ -190,24 +179,15 @@ export default function BratColorCodePage() {
             While #89CC04 is THE brat color, the complete aesthetic also uses companion colors to create a full design system. Use these hex codes to keep your designs authentic.
           </p>
 
-          <div className="space-y-6 mb-32">
-            {[
+          <InteractivePalette 
+            colors={[
               { type: "Primary", name: "brat green", hex: "#89CC04", bg: "bg-[#89CC04]", text: "text-black" },
               { type: "Soft", name: "brat pink", hex: "#FF90E8", bg: "bg-[#FF90E8]", text: "text-black" },
               { type: "Dark", name: "brat black", hex: "#0A0A0A", bg: "bg-[#0A0A0A]", text: "text-white" },
               { type: "Clean", name: "brat white", hex: "#FFFFFF", bg: "bg-white border-2 border-black/5", text: "text-black" }
-            ].map((color) => (
-              <div key={color.hex} className="flex gap-6 items-center group">
-                 <div className="w-12 flex-shrink-0">
-                    <span className="text-[10px] font-black uppercase tracking-widest [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-opacity">{color.type}</span>
-                 </div>
-                 <div className={`flex-1 ${color.bg} h-24 sm:h-32 flex items-center px-8 sm:px-12 border-2 border-black group-hover:-translate-y-1 transition-transform cursor-pointer shadow-[8px_8px_0px_black] active:shadow-none active:translate-x-1 active:translate-y-1`} onClick={() => handleCopy(color.hex)}>
-                    <span className={`text-2xl sm:text-4xl font-black italic tracking-tighter uppercase ${color.text}`}>{color.name}</span>
-                    <span className={`ml-auto text-xl font-bold opacity-30 ${color.text}`}>{color.hex}</span>
-                 </div>
-              </div>
-            ))}
-          </div>
+            ]}
+          />
+
           <h2 className="hp-display-heading mt-32 mb-12 !text-4xl text-left tracking-tighter uppercase">Implementation</h2>
           <HexCopyBox />
           

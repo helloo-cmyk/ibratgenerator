@@ -1,0 +1,124 @@
+CORE WEB VITALS AUDIT
+=======================
+
+CHECK 1A — LCP (Largest Contentful Paint)
+- LCP Element (Homepage): H1 "Brat Generator" or the BratGeneratorLazy container.
+- LCP Element (Tool Pages): H1 tool title.
+- Analysis:
+  * H1 is the first visible text on all pages.
+  * No large images are above the fold.
+  * BratGeneratorLazy is correctly wrapped in minHeight: 520px, preventing layout shifts.
+  * next/dynamic is used with ssr: false for the generator.
+  * Issue: BratGenerator is a large JS chunk that may delay interactivity.
+  * Layout: Fonts load with display: swap. next/script is used with afterInteractive.
+
+CHECK 1B — CLS (Cumulative Layout Shift)
+- Sources Found:
+  * PartnerBadges.tsx: Uses <img> without explicit width/height attributes (Style only). [MEDIUM Risk]
+  * BratGeneratorLazy: Reserved space is good, but potential for minor shifts exists. [LOW Risk]
+  * ExampleGallery: Uses aspect-square wrappers and next/image with dimensions. [SAFE]
+  * CookieConsentBanner: Potential to push content if not fixed-positioned. [LOW Risk]
+
+CHECK 1C — INP (Interaction to Next Paint)
+- Bottlenecks:
+  * BratGenerator.tsx: Heavy canvas operations and many event listeners. Synchronous drawing on keystrokes.
+  * brat-generator-init.ts: Deep cloning of state on every history snapshot (up to 50) could cause lag.
+  * FAQ Accordion: uses max-height transitions which can be heavy.
+
+CHECK 1D — FID / TBT (Total Blocking Time)
+- Analysis:
+  * Third-party scripts (GA, Adsense, Clarity) are loaded with afterInteractive.
+  * Build Output: All pages are pre-rendered as Static (o).
+  * Bundle Size: Shared chunks are optimized, but BratGenerator remains the largest client-side component.
+
+
+PERFORMANCE AUDIT
+=================
+
+CHECK 2A — IMAGE OPTIMIZATION
+- PartnerBadges logos: Uses <img>, needs next/image.
+- ExampleGallery: Format is PNG, should be WebP.
+- BlogHero images: Large PNG files (>500KB).
+- public/examples/: Large assets (up to 400KB each).
+
+CHECK 2B — FONT LOADING
+- Fonts: Geist, Geist_Mono, DM_Serif_Display.
+- Strategy: next/font/google with display: swap and subsets: ["latin"].
+- Audit: Correct implementation.
+
+CHECK 2D — CACHING HEADERS
+- next.config.ts: Configures Cache-Control for static assets (images, fonts).
+- Audit: Correct implementation.
+
+CHECK 2E — THIRD PARTY SCRIPTS
+- GA, Clarity, AdSense: All correctly use next/script with afterInteractive.
+
+
+SECURITY AUDIT
+==============
+
+CHECK 3A — HTTP SECURITY HEADERS
+- Content-Security-Policy: Not Present [FAIL]
+- X-Frame-Options: Not Present [FAIL]
+- X-Content-Type-Options: Not Present [FAIL]
+- Strict-Transport-Security: Not Present [FAIL]
+
+CHECK 3B — ENVIRONMENT VARIABLES
+- Audit: .env.local exists. RESEND_API_KEY is present.
+- Safety: No NEXT_PUBLIC_ secrets found.
+
+CHECK 3C — DEPENDENCY VULNERABILITIES
+- Total: 5 vulnerabilities (3 High, 2 Moderate).
+- High: Picomatch ReDoS.
+- Moderate: PostCSS XSS via unescaped style.
+
+CHECK 3D — dangerouslySetInnerHTML USAGE
+- Usage: Schema JSON-LD and hardcoded styles. [LOW Risk]
+
+CHECK 3E — USER INPUT HANDLING
+- Canvas: Safe from XSS (uses fillText).
+- Feedback API: Insecurely replaces \n with <br/> without full sanitization. [MEDIUM Risk]
+
+CHECK 3G — API ROUTES
+- /api/feedback: Unprotected (no auth) and no rate limiting. Vulnerable to spam.
+
+
+NEXT.JS SPECIFIC CHECKS
+========================
+
+CHECK 4A — SERVER vs CLIENT COMPONENTS
+- Audit: Several blog pages are marked "use client" entirely. This prevents SEO metadata and increases client JS bundle.
+
+CHECK 4B — METADATA
+- Audit: Pages marked as "use client" are missing metadata exports. [SEO FAIL]
+
+CHECK 4C — ERROR BOUNDARIES
+- Audit: error.tsx and not-found.tsx are missing (using defaults).
+
+CHECK 4D — STATIC vs DYNAMIC RENDERING
+- Results: All pages are Static (o) except the feedback API (f). Correct.
+
+
+FINAL REPORT SUMMARY
+====================
+
+CORE WEB VITALS:
+- PASS: LCP Fold strategy, Font display swap, reserved generator space.
+- WARNING: Minor CLS in PartnerBadges and Cookie Banner.
+
+PERFORMANCE:
+- PASS: Static asset caching, Google Fonts integration.
+- FAIL: Large PNG images (>500KB) in blog and examples.
+- WARNING: PartnerBadges not using next/image.
+
+SECURITY:
+- PASS: Environment variable protection.
+- FAIL: Missing Security Headers, No Rate Limiting on Feedback API.
+- WARNING: Unsanitized user input in Feedback email body.
+
+PRIORITY FIXES:
+1. CRITICAL: Implement Security Headers in next.config.ts.
+2. HIGH: Add Rate Limiting and sanitization to /api/feedback.
+3. HIGH: Refactor Client-side Blog pages to Server Components and restore Metadata.
+4. MEDIUM: Convert large PNG assets to WebP and use next/image for Partner Badges.
+5. LOW: Add custom error.tsx and not-found.tsx.

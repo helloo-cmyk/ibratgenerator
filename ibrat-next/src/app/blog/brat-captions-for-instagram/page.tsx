@@ -1,18 +1,21 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
+import { Metadata } from "next";
 import FAQAccordion from "@/components/FAQAccordion";
 import BlogHero from "@/components/BlogHero";
+import InteractiveCaptionGrid from "@/components/InteractiveCaptionGrid";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Brat Captions for Instagram (50+ Real Examples You Can Copy)",
+  },
+  alternates: {
+    canonical: "https://ibratgenerator.com/blog/brat-captions-for-instagram/",
+  },
+  description:
+    "Get 50+ brat captions for Instagram you can copy, plus practical tips to write your own short, bold, and natural captions.",
+};
 
 export default function BratCaptionsForInstagramPage() {
-  const [copiedText, setCopiedText] = useState<string | null>(null);
-
-  const handleCopy = (text: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedText(text);
-    setTimeout(() => setCopiedText(null), 2000);
-  };
   return (
     <main className="hp-root pb-24">
       <BlogHero 
@@ -43,27 +46,15 @@ export default function BratCaptionsForInstagramPage() {
             <div className="w-12 flex-shrink-0 flex items-start pt-2">
               <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Essentials</span>
             </div>
-            <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-px bg-black border-2 border-black group-hover:border-[#89CC04] transition-colors">
-              {[
+            <InteractiveCaptionGrid 
+              captions={[
                 "so what", "stay mad", "idc", "not impressed", "cool enough", 
                 "say less", "no thanks", "try again", "already bored", "keep watching", 
                 "still unbothered", "too real", "next question", "no comment", "move along"
-              ].map((cap) => (
-                <button 
-                  key={cap} 
-                  onClick={() => handleCopy(cap)}
-                  className="bg-white p-6 text-[16px] font-black italic lowercase tracking-tight hover:bg-[#89CC04] hover:text-black transition-all cursor-pointer relative overflow-hidden group/btn text-left"
-                >
-                  <span className={`transition-opacity ${copiedText === cap ? "opacity-0" : "opacity-100"}`}>{cap}</span>
-                  <span className="absolute top-1 right-2 text-[6px] font-black uppercase tracking-widest opacity-0 group-hover/btn:opacity-30">COPY_CMD</span>
-                  {copiedText === cap && (
-                    <span className="absolute inset-0 flex items-center justify-center bg-[#89CC04] text-black text-[12px] font-black uppercase italic tracking-tighter animate-in fade-in duration-200">
-                      SAVED_TO_CLIPBOARD
-                    </span>
-                  )}
-                </button>
-              ))}
-            </div>
+              ]} 
+              hoverBg="hover:bg-[#89CC04]"
+              hoverText="hover:text-black"
+            />
           </div>
 
           <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">Bold Captions</h2>
@@ -71,27 +62,15 @@ export default function BratCaptionsForInstagramPage() {
             <div className="w-12 flex-shrink-0 flex items-start pt-2">
               <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Attitude</span>
             </div>
-            <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-px bg-black border-2 border-black group-hover:border-black transition-colors shadow-[10px_10px_0px_black]">
-              {[
+            <InteractiveCaptionGrid 
+              captions={[
                 "not your type", "you wish", "watch me", "i said no", "deal with it", 
                 "not sorry", "stay pressed", "i meant that", "main character", "not for everyone", 
                 "know your place", "too busy winning", "out of reach", "you had a chance", "i do me"
-              ].map((cap) => (
-                <button 
-                  key={cap} 
-                  onClick={() => handleCopy(cap)}
-                  className="bg-white p-6 text-[16px] font-black italic lowercase tracking-tight hover:bg-black hover:text-white transition-all cursor-pointer relative overflow-hidden group/btn text-left"
-                >
-                  <span className={`transition-opacity ${copiedText === cap ? "opacity-0" : "opacity-100"}`}>{cap}</span>
-                  <span className="absolute top-1 right-2 text-[6px] font-black uppercase tracking-widest opacity-0 group-hover/btn:opacity-30">COPY_CMD</span>
-                  {copiedText === cap && (
-                    <span className="absolute inset-0 flex items-center justify-center bg-black text-white text-[12px] font-black uppercase italic tracking-tighter animate-in fade-in duration-200">
-                      SAVED_TO_CLIPBOARD
-                    </span>
-                  )}
-                </button>
-              ))}
-            </div>
+              ]} 
+              hoverBg="hover:bg-black"
+              hoverText="hover:text-white"
+            />
           </div>
           <p className="hp-body-text mt-8 mb-24 text-[16px] opacity-60 italic leading-relaxed">
             Do not stack an aggressive brat meme caption on top of an aggressive photo unless that intense tone is intentional.
@@ -102,27 +81,15 @@ export default function BratCaptionsForInstagramPage() {
             <div className="w-12 flex-shrink-0 flex items-start pt-2">
               <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Minimal</span>
             </div>
-            <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-px bg-black border-2 border-black group-hover:border-[#ff90e8] transition-colors">
-              {[
+            <InteractiveCaptionGrid 
+              captions={[
                 "just vibes", "low energy", "nothing serious", "it is what it is", "soft chaos", 
                 "quiet today", "slow morning", "no pressure", "doing my best", "half awake", 
                 "gentle mood", "taking my time"
-              ].map((cap) => (
-                <button 
-                  key={cap} 
-                  onClick={() => handleCopy(cap)}
-                  className="bg-white p-6 text-[16px] font-black italic lowercase tracking-tight hover:bg-[#ff90e8] hover:text-white transition-all cursor-pointer relative overflow-hidden group/btn text-left"
-                >
-                  <span className={`transition-opacity ${copiedText === cap ? "opacity-0" : "opacity-100"}`}>{cap}</span>
-                  <span className="absolute top-1 right-2 text-[6px] font-black uppercase tracking-widest opacity-0 group-hover/btn:opacity-30">COPY_CMD</span>
-                  {copiedText === cap && (
-                    <span className="absolute inset-0 flex items-center justify-center bg-[#ff90e8] text-white text-[12px] font-black uppercase italic tracking-tighter animate-in fade-in duration-200">
-                      SAVED_TO_CLIPBOARD
-                    </span>
-                  )}
-                </button>
-              ))}
-            </div>
+              ]} 
+              hoverBg="hover:bg-[#ff90e8]"
+              hoverText="hover:text-white"
+            />
           </div>
 
           <h2 className="hp-display-heading mt-32 mb-12 !text-4xl text-left tracking-tighter">Pro Tip: Writing Original Captions</h2>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const PartnerBadges = () => {
   return (
@@ -17,9 +18,11 @@ const PartnerBadges = () => {
               rel="noopener noreferrer"
               className="transition-all duration-300"
             >
-              <img 
+              <Image 
                 src="https://startupfa.me/badges/featured-badge-small.webp" 
                 alt="Brat Generator - Featured on Startup Fame" 
+                width={160}
+                height={40}
                 style={{ 
                   height: '40px', 
                   width: 'auto'
@@ -50,9 +53,11 @@ const PartnerBadges = () => {
               title="Featured on ToolPilot" 
               className="transition-all duration-300"
             >
-              <img 
+              <Image 
                 src="/toolpilot-badge.png" 
                 alt="Featured on ToolPilot" 
+                width={160}
+                height={40}
                 style={{ 
                   height: '40px', 
                   width: 'auto'
@@ -68,9 +73,11 @@ const PartnerBadges = () => {
               title="OpenHunts Club" 
               className="transition-all duration-300"
             >
-              <img 
+              <Image 
                 alt="OpenHunts Club Member" 
                 src="https://cdn.openhunts.com/badges/club.webp" 
+                width={160}
+                height={40}
                 style={{ 
                   height: '40px', 
                   width: 'auto'
@@ -85,9 +92,11 @@ const PartnerBadges = () => {
               rel="noopener noreferrer"
               className="transition-all duration-300"
             >
-              <img 
+              <Image 
                 src="https://backlinklog.com/badge/ibratgenerator.com.svg" 
                 alt="Listed on BacklinkLog"
+                width={160}
+                height={40}
                 style={{ 
                   height: '40px', 
                   width: 'auto'
@@ -102,9 +111,11 @@ const PartnerBadges = () => {
               rel="noopener noreferrer"
               className="transition-all duration-300"
             >
-              <img 
+              <Image 
                 src="https://cdn.prod.website-files.com/63d8afd87da01fb58ea3fbcb/6487e2868c6c8f93b4828827_dang-badge.png" 
                 alt="Dang.ai" 
+                width={160}
+                height={40}
                 style={{ 
                   height: '40px', 
                   width: 'auto'
