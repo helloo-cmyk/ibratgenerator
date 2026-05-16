@@ -15,16 +15,14 @@ const PartnerBadges = () => {
               href="https://startupfa.me/s/ibrat?utm_source=ibratgenerator.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="transition-all duration-300 hover:opacity-100"
+              className="transition-all duration-300"
             >
               <img 
                 src="https://startupfa.me/badges/featured-badge-small.webp" 
                 alt="Brat Generator - Featured on Startup Fame" 
                 style={{ 
                   height: '40px', 
-                  width: 'auto',
-                  filter: 'grayscale(100%)',
-                  opacity: '0.85'
+                  width: 'auto'
                 }}
               />
             </a>
@@ -35,11 +33,9 @@ const PartnerBadges = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               title="All The Best AI Tools" 
-              className="flex items-center gap-2 text-xl font-black italic uppercase tracking-tighter transition-all duration-300 hover:opacity-100"
+              className="flex items-center gap-2 text-xl font-black italic uppercase tracking-tighter transition-all duration-300"
               style={{ 
-                height: '40px', 
-                filter: 'grayscale(100%)',
-                opacity: '0.85'
+                height: '40px'
               }}
             >
               <span className="text-2xl">⚡</span>
@@ -52,15 +48,14 @@ const PartnerBadges = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               title="Featured on ToolPilot" 
-              className="transition-all duration-300 hover:opacity-100"
+              className="transition-all duration-300"
             >
               <img 
                 src="/toolpilot-badge.png" 
                 alt="Featured on ToolPilot" 
                 style={{ 
                   height: '40px', 
-                  width: 'auto',
-                  opacity: '0.85'
+                  width: 'auto'
                 }}
               />
             </a>
@@ -71,15 +66,14 @@ const PartnerBadges = () => {
               target="_blank" 
               rel="noopener noreferrer"
               title="OpenHunts Club" 
-              className="transition-all duration-300 hover:opacity-100"
+              className="transition-all duration-300"
             >
               <img 
                 alt="OpenHunts Club Member" 
                 src="https://cdn.openhunts.com/badges/club.webp" 
                 style={{ 
                   height: '40px', 
-                  width: 'auto',
-                  opacity: '0.85'
+                  width: 'auto'
                 }}
               />
             </a>
@@ -89,16 +83,14 @@ const PartnerBadges = () => {
               href="https://backlinklog.com/listing/ibratgenerator.com?utm_source=backlinklog&utm_medium=badge"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-all duration-300 hover:opacity-100"
+              className="transition-all duration-300"
             >
               <img 
                 src="https://backlinklog.com/badge/ibratgenerator.com.svg" 
                 alt="Listed on BacklinkLog"
                 style={{ 
                   height: '40px', 
-                  width: 'auto',
-                  filter: 'grayscale(100%)',
-                  opacity: '0.85'
+                  width: 'auto'
                 }}
               />
             </a>
@@ -108,16 +100,14 @@ const PartnerBadges = () => {
               href="https://dang.ai/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="transition-all duration-300 hover:opacity-100"
+              className="transition-all duration-300"
             >
               <img 
                 src="https://cdn.prod.website-files.com/63d8afd87da01fb58ea3fbcb/6487e2868c6c8f93b4828827_dang-badge.png" 
                 alt="Dang.ai" 
                 style={{ 
                   height: '40px', 
-                  width: 'auto',
-                  filter: 'grayscale(100%)',
-                  opacity: '0.85'
+                  width: 'auto'
                 }}
               />
             </a>
