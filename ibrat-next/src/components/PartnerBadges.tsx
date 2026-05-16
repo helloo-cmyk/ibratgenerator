@@ -102,6 +102,25 @@ const PartnerBadges = () => {
                 }}
               />
             </a>
+
+            {/* Dang.ai */}
+            <a 
+              href="https://dang.ai/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="transition-all duration-300 hover:opacity-100"
+            >
+              <img 
+                src="https://cdn.prod.website-files.com/63d8afd87da01fb58ea3fbcb/6487e2868c6c8f93b4828827_dang-badge.png" 
+                alt="Dang.ai" 
+                style={{ 
+                  height: '40px', 
+                  width: 'auto',
+                  filter: 'grayscale(100%)',
+                  opacity: '0.85'
+                }}
+              />
+            </a>
           </div>
         </div>
       </div>
