@@ -9,19 +9,23 @@ const PartnerBadges = () => {
             Featured On <span className="text-[#89CC04]">&</span> Partnerships
           </h2>
           
-          <div className="flex flex-wrap items-center justify-center gap-12 sm:gap-20">
+          <div className="flex flex-wrap items-center justify-center gap-8 max-w-[1000px] mx-auto">
             {/* Startup Fame */}
             <a 
               href="https://startupfa.me/s/ibrat?utm_source=ibratgenerator.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="transition-all duration-300"
+              className="transition-all duration-300 hover:opacity-100"
             >
               <img 
                 src="https://startupfa.me/badges/featured-badge-small.webp" 
                 alt="Brat Generator - Featured on Startup Fame" 
-                width="224" 
-                height="36" 
+                style={{ 
+                  height: '40px', 
+                  width: 'auto',
+                  filter: 'grayscale(100%)',
+                  opacity: '0.85'
+                }}
               />
             </a>
  
@@ -29,9 +33,14 @@ const PartnerBadges = () => {
             <a 
               href="https://allinai.tools" 
               target="_blank" 
-              rel="noopener" 
+              rel="noopener noreferrer" 
               title="All The Best AI Tools" 
-              className="flex items-center gap-2 text-xl font-black italic uppercase tracking-tighter transition-all duration-300"
+              className="flex items-center gap-2 text-xl font-black italic uppercase tracking-tighter transition-all duration-300 hover:opacity-100"
+              style={{ 
+                height: '40px', 
+                filter: 'grayscale(100%)',
+                opacity: '0.85'
+              }}
             >
               <span className="text-2xl">⚡</span>
               All The Best AI Tools
@@ -41,14 +50,18 @@ const PartnerBadges = () => {
             <a 
               href="https://www.toolpilot.ai/" 
               target="_blank" 
-              rel="noopener" 
+              rel="noopener noreferrer" 
               title="Featured on ToolPilot" 
-              className="transition-all duration-300"
+              className="transition-all duration-300 hover:opacity-100"
             >
               <img 
                 src="/toolpilot-badge.png" 
                 alt="Featured on ToolPilot" 
-                className="h-[30px] w-auto" 
+                style={{ 
+                  height: '40px', 
+                  width: 'auto',
+                  opacity: '0.85'
+                }}
               />
             </a>
  
@@ -56,13 +69,37 @@ const PartnerBadges = () => {
             <a 
               href="https://openhunts.com" 
               target="_blank" 
+              rel="noopener noreferrer"
               title="OpenHunts Club" 
-              className="transition-all duration-300"
+              className="transition-all duration-300 hover:opacity-100"
             >
               <img 
                 alt="OpenHunts Club Member" 
                 src="https://cdn.openhunts.com/badges/club.webp" 
-                style={{ width: "220px", height: "auto" }} 
+                style={{ 
+                  height: '40px', 
+                  width: 'auto',
+                  opacity: '0.85'
+                }}
+              />
+            </a>
+
+            {/* BacklinkLog */}
+            <a 
+              href="https://backlinklog.com/listing/ibratgenerator.com?utm_source=backlinklog&utm_medium=badge"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all duration-300 hover:opacity-100"
+            >
+              <img 
+                src="https://backlinklog.com/badge/ibratgenerator.com.svg" 
+                alt="Listed on BacklinkLog"
+                style={{ 
+                  height: '40px', 
+                  width: 'auto',
+                  filter: 'grayscale(100%)',
+                  opacity: '0.85'
+                }}
               />
             </a>
           </div>
