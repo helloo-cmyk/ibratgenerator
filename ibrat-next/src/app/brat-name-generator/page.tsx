@@ -4,12 +4,12 @@ import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
   title: {
-    absolute: "Free Brat Name Generator – Create Unique Brat Names Instantly",
+    absolute: "Brat Name Generator - Type Your Name, Get the Brat Look Free",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-name-generator/",
   },
-  description: "Use our free brat name generator to create unique brat names and text instantly. Generate your brat identity with no signup required.",
+  description: "Type your name, download it in the brat style - free, no signup, no watermark. Works on mobile. Pick green, black, pink, or white background.",
 };
 
 export default function BratNameGeneratorPage() {

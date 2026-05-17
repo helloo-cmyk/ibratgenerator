@@ -75,10 +75,10 @@ const howToSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Brat Generator - Free Brat Image & Text Maker [2026]"
+    absolute: "Brat Generator - Free Brat Image Maker, No Signup [2026]"
   },
   description:
-    "Recreate the Charli XCX album aesthetic with this free brat generator. Design custom text images and pfps for TikTok. Download your clean PNG.",
+    "Type your text, pick your color, download a clean brat PNG in seconds. Free brat generator — no signup, no watermark. Works on mobile.",
   alternates: {
     canonical: "https://ibratgenerator.com/",
   },
