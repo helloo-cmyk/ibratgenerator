@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <header
-      className="sticky top-0 z-50 w-full"
+      className="sticky top-0 z-[100] w-full"
       style={{ background: "#ffffff", borderBottom: "1px solid #E8E6E0" }}
     >
       <div className="mx-auto flex max-w-6xl justify-between items-center px-4 sm:px-6 py-4 sm:py-5">

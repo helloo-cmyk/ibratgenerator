@@ -1,84 +1,447 @@
-# Ibrat Generator - Feature Flow & SEO Implementation Guide
+# Ibrat Generator - Core System Architecture, Feature Flows & SEO Implementation Guide
 
-## SEO Implementation (Text Tags & Logic)
-
-1. **Global Layout (`src/app/layout.tsx`)**
-   - **Schema Markup (JSON-LD)**: Uses `WebSite` and `SoftwareApplication` (MultimediaApplication) schema markup injected via `next/script` (`strategy="beforeInteractive"`).
-   - **Global Metadata**:
-     - `metadataBase`: `https://ibratgenerator.com`
-     - `title`: `Free Brat Generator` (with template: `%s | Ibrat Generator`)
-     - `description`: "Create Brat-style text, images, and graphics online. Free Brat generator for memes, captions, and social media."
-     - `openGraph`: Configured with siteName, title, and description.
-     - `robots`: index, follow set to true.
-     - `icons`: Sets standard favicons and apple-touch-icon.
-     - `verification`: Google Search Console verification tag included.
-   - **HTML/Head Tags**:
-     - `<html lang="en">`
-     - `<link rel="manifest" href="/favicon/site.webmanifest" />`
-     - Domain verification tags for Pinterest/AdSense.
-     - Responsive viewport meta tag.
-
-2. **Homepage (`src/app/page.tsx`)**
-   - **Schema Markup (JSON-LD)**: Injects `FAQPage` (6 Questions) and `HowTo` (4 Steps) schema directly via `<script>` tags for rich snippets.
-   - **Page Metadata**:
-     - `title.absolute`: "Brat Generator - Free Brat Image & Text Maker [2026]"
-     - `description`: Custom homepage description.
-     - `alternates.canonical`: "https://ibratgenerator.com/"
-
-3. **Subpages (Generators, Blog, Legal)**
-   - Each page exports its own standard `metadata` object containing customized `title`, `description`, and `alternates.canonical` tailored to its specific keyword targeting (e.g., Pink Brat Generator, Brat Name Generator, etc.).
+This document serves as the absolute source of truth for the **Ibrat Generator** project (`ibratgenerator.com`). It details the system's core technical stack, global layout configuration, analytics pipelines, interactive editor workflows, page-by-page feature distributions, SEO meta tags, and structured JSON-LD schemas.
 
 ---
 
-## Feature Flow Sections
-
-The core homepage (`src/app/page.tsx`) is structured in the following flow:
-
-1. **Hero Section (`hp-hero`)**
-   - H1 Heading: "Brat Generator"
-   - Subheading explaining the tool's core value proposition (No signup, no watermark, free png).
-
-2. **Live Generator (`hp-gen-section`)**
-   - Contains the `BratGeneratorLazy` component.
-   - Features: Full mode, default tab: text, default ratio: 1:1, placeholder: "brat".
-
-3. **"What Is the Brat Trend?" (Trends)**
-   - Explains the origin from Charli XCX's brat album.
-   - Links to internal blog guides (brat summer meaning, brat aesthetic guide, brat maker).
-
-4. **"What Font Is the Brat Album?" (Typography)**
-   - Explains the typography rules (Arial Bold / Helvetica Neue Bold).
-   - Links to font guides and color code blog posts.
-
-5. **Features Grid (Capabilities)**
-   - 8 Core Features highlighted: Live preview, Full color control, Aspect ratio presets, Stickers and emojis, Typography controls, Works on mobile, No signup required, High-res PNG export.
-
-6. **How to Use (Getting Started)**
-   - 4-Step Process: Type your text -> Pick your colors -> Adjust the layout -> Download your image.
-
-7. **Who Is This For? (Use Cases)**
-   - Targets: Social media users, Meme creators, Charli XCX fans, Content creators, Designers and marketers.
-
-8. **Comparison ("Why Use Instead of Canva or Photoshop?")**
-   - Emphasizes speed, simplicity, and specific focus on the brat aesthetic without paywalls or complex UI.
-
-9. **Explore All Brat Tools (More tools)**
-   - Navigation links to related generators: Brat Text Generator, Brat Name Generator, Brat Album Cover Generator.
-
-10. **Color Styles (Variants)**
-    - Cross-links to dedicated color variants: Green Brat Tool, Pink Brat Creator, Black Generator Tool, White Brat Look.
-
-11. **Real Examples Gallery (Gallery)**
-    - Uses `ExampleGallery` component to show real outputs for user inspiration.
-
-12. **Frequently Asked Questions (FAQ)**
-    - Uses `FAQAccordion` component to answer 6 common questions (Free? Watermark? Format? Mobile? PFP? Commercial use?).
-
-13. **Scroll Reveal Animation**
-    - `HomeScrollReveal` script is attached at the bottom to animate elements into view.
+## 1. Core Technology Stack & Typography
+- **Core Framework**: React 19 & Next.js 15 (App Router, optimized with TypeScript).
+- **Styling Paradigm**: Hybrid styling using utility-first classes (Tailwind CSS) integrated with raw Vanilla CSS in `globals.css` with a standardized `.hp-` prefix convention for marketing sections.
+- **Typography & Font Optimization**: Injected via Next.js Google Fonts optimization in `layout.tsx` to prevent cumulative layout shift (CLS):
+  - **Geist Sans** (`Geist`): Loaded as `--font-geist-sans` (subsets: latin, display: swap).
+  - **Geist Mono** (`Geist_Mono`): Loaded as `--font-geist-mono` (subsets: latin, display: swap).
+  - **DM Serif Display** (`DM_Serif_Display`): Loaded as `--font-display` (weight: 400, subsets: latin, display: swap).
+  - **Google Fonts CDN Link**: An additional external stylesheet is injected within the generator component to enable fonts like *Anton*, *Bebas Neue*, *Montserrat*, *Playfair Display*, and *Poppins* dynamically inside the `<canvas>`.
+- **Text Standards**: All copy utilizes standard hyphens and commas instead of em dashes (`—`) to strictly follow clean, SEO-friendly body copy guidelines.
 
 ---
 
-## Typography & Design Standard
-- **Fonts**: Inter (Geist Sans), Geist Mono, and DM Serif Display injected via Next.js Google Fonts optimization (`layout.tsx`).
-- **Styling**: Vanilla CSS in `globals.css` with a standardized `.hp-` prefix class naming convention for marketing sections. All typography relies on hyphens and commas instead of em dashes (`—`) to maintain a standard SEO-friendly text style.
+## 2. Global Layout & Search Verification Tags (`src/app/layout.tsx`)
+The root layout serves as the shell for the entire application, housing the header, footer, global CSS fonts, search engine verifications, and background badges.
+
+### A. Global Meta Tags & Viewport
+- **Viewport**: `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />` (ensures optimal accessibility and performance on mobile devices while allowing user zooming up to 5x).
+- **Web App Manifest**: `<link rel="manifest" href="/favicon/site.webmanifest" />` (enables progressive web application discovery).
+- **Favicons & Apple Touch Icons**:
+  - `icon`: `/favicon/favicon.ico` (any size), `/favicon/favicon-32x32.png` (32x32), `/favicon/favicon-16x16.png` (16x16).
+  - `apple`: `/favicon/apple-touch-icon.png` (for iOS homescreen bookmarks).
+
+### B. Domain Verification & Ad Ownership Tags
+- **Google Search Console**:
+  - `<meta name="google-site-verification" content="Udx1enXz-U1mTcBhnvsLB49_SMuif2lfkYmMvdL3-7M" />` (configured in Next.js `metadata.verification` object).
+- **Pinterest Domain Ownership**:
+  - `<meta name="p:domain_verify" content="a5fad79f5206533009b21255aa5b5b60" />`
+- **Google AdSense Account Association**:
+  - `<meta name="google-adsense-account" content="ca-pub-4083132987699578" />`
+- **Foundr Verification**:
+  - `<meta name="_foundr" content="7e5ad995c34295ce18501b53df488dd6" />`
+
+### C. Global Metadata Export
+```typescript
+export const metadata: Metadata = {
+  metadataBase: new URL("https://ibratgenerator.com"),
+  title: {
+    default: "Free Brat Generator",
+    template: "%s | Ibrat Generator",
+  },
+  description: "Create Brat-style text, images, and graphics online. Free Brat generator for memes, captions, and social media.",
+  openGraph: {
+    siteName: "Free Brat Generator",
+    title: "Free Brat Generator",
+    description: "Free brat generator to create brat text, memes, images, and profile pictures. No signup. No watermark. Works on mobile and desktop.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+```
+
+---
+
+## 3. Analytics, AdSense & Tracking Pipelines (`src/components/AnalyticsScripts.tsx`)
+Third-party scripts are aggregated inside `AnalyticsScripts.tsx` and respect user privacy through explicit cookie consent management.
+
+- **Cookie Consent Validation**: Scripts only execute if the cookie `ibrat_cookie_consent=true` is present in the client browser. If consent is rejected or not yet provided, no trackers are loaded.
+- **Google Analytics 4 (GA4)**:
+  - **Measurement ID**: `G-XEV70REQ21`
+  - Loaded with `strategy="afterInteractive"` via Google Tag Manager script wrappers.
+- **Google AdSense**:
+  - **Client ID**: `ca-pub-4083132987699578`
+  - Loaded asynchronously in production environments only (`process.env.NODE_ENV === "production"`).
+- **Microsoft Clarity**:
+  - **Clarity ID**: `w7xme9goii`
+  - Tracks user interaction, scrolls, and engagement patterns to detect and mitigate friction points.
+
+---
+
+## 4. The Interactive Brat Generator Widget (`src/components/BratGenerator.tsx`)
+The centerpiece of the application is a highly optimized, client-side canvas designer supporting drag-and-drop operations, real-time font adjustments, custom uploads, sticker overlays, and dynamic clipboard rendering.
+
+### A. Core Interactive Features & Editor Flow
+The generator divides controls into three focused categories, adapted for desktop and mobile viewport configurations:
+1. **Text Control Tab**:
+   - **Text Input**: Multi-line `<textarea>` backing instant Canvas updates on keypress events.
+   - **Font Size Slider**: Controls the type scale dynamically between `24px` and `220px` (default: `180px`).
+   - **Line Spacing Slider**: Controls height ratios between `0.8` and `1.6` (default: `1.0`, step: `0.05`).
+   - **Letter Spacing Slider**: Controls typographic tracking between `-4` and `10` (default: `0`, step: `0.5`).
+   - **Align Selector**: Sets paragraph alignments to `left`, `center`, or `right`.
+   - **Font Family Selector**: Allows users to select between *Inter* (default), *Poppins*, *Montserrat*, *Bebas Neue*, *Anton*, and *Playfair Display*.
+   - **Border Outline System**: Toggleable text stroke outline with a dedicated custom Color Picker.
+   - **Drop Shadow System**: Toggleable soft dropshadow underneath text elements with a custom Color Picker.
+2. **Style & Color Tab**:
+   - **Preset Swatches**: Instantly sets layout parameters:
+     - *Brat*: Background `#c1ff00`, Text `#0a0a0a`
+     - *Deluxe*: Background `#0a0a0a`, Text `#ffffff`
+     - *Crash*: Background `#ff90e8`, Text `#0a0a0a`
+     - *White*: Background `#ffffff`, Text `#0a0a0a`
+   - **Background & Text Color Pickers**: Full custom hex picker control.
+   - **Live Contrast Checker**: Evaluates color contrast between text and background on-the-fly (`#brat-contrastLabel`).
+   - **Aspect Ratio Presets**: Adjusts dimensions to `1:1` (Square), `4:5` (Instagram), `9:16` (Story/Reel), or `16:9` (Wide).
+   - **Resolution Presets**: Selectable exports: `1024px`, `1500px` (default), `2048px`, or `3000px`.
+   - **Safe Margins Guidelines**: Toggleable dashed border guides to help align compositions.
+   - **Selfie Mode (Image Backgrounds)**: Allows local image file uploads (`#brat-bgUpload`). The uploaded photo covers the background automatically while text and stickers remain active layers on top. Includes a dedicated removal trigger.
+3. **Stickers & Emoji Tab**:
+   - **Category Switcher**: Allows sorting stickers by category groups.
+   - **Sticker Interaction Grid**: Direct insertion of emojis/stickers onto the canvas viewport.
+   - **Sticker Mouse & Touch Gestures**:
+     - *Single Tap/Click*: Places the sticker.
+     - *Drag*: Moves stickers around the canvas viewport.
+     - *Corners Handle Drag*: Dynamically scales the sticker size.
+     - *Top Handle Drag*: Rotates the sticker.
+     - *Double Click/Double Tap*: Deletes the target sticker.
+
+### B. Action Controls & Output Exporters
+- **Undo / Redo Managers**: High-fidelity history stack.
+- **Copy Image**: Directly serializes the active `<canvas>` state to the system clipboard (`navigator.clipboard.write`) for instant copy-pasting.
+- **Save PNG**: Renders a dedicated high-fidelity graphic at the designated resolution preset (up to 3000px), bypassing compression, and triggering an immediate browser download.
+
+### C. Desktop vs. Mobile Layout Orchestration
+- **Desktop Vibe (width >= 1000px)**: Two-column layout where controls sit in a sticky side panel (`#brat-controls`, width: `380px`) and the interactive canvas remains pinned in a high-contrast viewport stage. Uses top-aligned tabs.
+- **Mobile Vibe (width < 1000px)**: App-like layout featuring:
+  - Sticky bottom navigation bar (`.brat-bottom-nav`) with intuitive emoji highlights.
+  - Floating Action Button (FAB) or high-visibility bottom pill to trigger the Save PNG action instantly.
+  - Interactive bottom drawer configuration (`#brat-controls` with `.sheet-open`) incorporating a touch-friendly grab handle indicator.
+  - Dynamic responsive scaling of the `<canvas>` viewport (`height: 95vw`) to ensure high usability on smaller mobile touchscreens.
+
+---
+
+## 5. Page-by-Page Feature & SEO Structure
+Each subpage contains custom targeted keyword copies, specific generator parameter lockouts, and localized JSON-LD schemas.
+
+### 1. Homepage (`src/app/page.tsx`)
+- **Generator Mode**: `full` (all tabs and options unlocked, ratio default 1:1, text default "brat").
+- **Aesthetic Feature Flows**:
+  1. **Hero Section (`hp-hero`)**: H1 title ("Brat Generator") and detailed descriptive text emphasizing a clean experience (no watermark, no signup).
+  2. **Live Generator (`hp-gen-section`)**: Sticky editor canvas panel.
+  3. **Brat Trend Overview**: Explores Charli XCX's brat album, viral culture, and links to internal guides.
+  4. **Typography Discussion**: Outlines Helvetica Neue Bold / Arial Bold typography standards.
+  5. **Capabilities Grid**: Highlights 8 key visual feature cards (Live Preview, Color Control, aspect ratios, etc.).
+  6. **How to Use Process**: Interactive 4-step checklist.
+  7. **Use Case Columns**: Targeted panels mapping users (Social Media, Meme Creators, XCX Fans, Marketers).
+  8. **Aesthetic Contrast Comparison**: Quick pitch outlining why Ibrat Generator beats Canva or Photoshop for memes.
+  9. **More Tools Grid**: Interactive navigation cards to secondary generators.
+  10. **Color Styles Swatches**: Custom-crafted navigation links to color variant pages.
+  11. **Real Examples Gallery (`ExampleGallery`)**: Visual lookbook displaying real layouts for user inspiration.
+  12. **FAQ Accordion (`FAQAccordion`)**: Responsive list answering common questions.
+  13. **HomeScrollReveal**: Adds elegant fade-in-up entrance animations to marketing sections on scroll.
+- **Meta Tags**:
+  - Title (Absolute): `"Brat Generator - Free Brat Image Maker, No Signup [2026]"`
+  - Description: `"Type your text, pick your color, download a clean brat PNG in seconds. Free brat generator — no signup, no watermark. Works on mobile."`
+  - Canonical: `https://ibratgenerator.com/`
+
+### 2. Brat Album Cover Generator (`src/app/brat-album-cover-generator/page.tsx`)
+- **Generator Mode**: `album` (calibrated for album layouts, ratio locked default 1:1, resolution default 3000px, starts on the "Style" tab, default text "album title").
+- **Meta Tags**:
+  - Title (Absolute): `"Brat Album Cover Generator - Free Brat Cover Art Maker"`
+  - Description: `"Free brat album cover generator - create brat-style album art, playlist covers & music visuals instantly. No signup, no watermark. Download high-res PNG."`
+  - Canonical: `https://ibratgenerator.com/brat-album-cover-generator/`
+
+### 3. Brat Name Generator (`src/app/brat-name-generator/page.tsx`)
+- **Generator Mode**: `name` (unlocks the specialized `#brat-randomBtn` "Generate Random Name" button in the text tab).
+- **Meta Tags**:
+  - Title (Absolute): `"Brat Name Generator - Create Custom Brat Text & PFPs"`
+  - Description: `"Free brat name generator to create custom brat style names and profile pictures. Type your name, pick colors, download high-res PNG instantly."`
+  - Canonical: `https://ibratgenerator.com/brat-name-generator/`
+
+### 4. Brat Text Generator (`src/app/brat-text-generator/page.tsx`)
+- **Generator Mode**: `text-only` (hides the stickers tab, disables emojis, focuses entirely on raw typographic adjustments).
+- **Meta Tags**:
+  - Title (Absolute): `"Brat Text Generator – Create Bold Minimalist Text Images"`
+  - Description: `"Free brat text generator to create bold, stretched lowercase text images. Type your word, choose neon green or custom colors, download PNG."`
+  - Canonical: `https://ibratgenerator.com/brat-text-generator/`
+
+### 5. Brat Font Generator (`src/app/brat-font-generator/page.tsx`)
+- **Generator Mode**: `font-only` (deactivates stickers, structures typography settings upfront to help users study font spacing rules).
+- **Meta Tags**:
+  - Title (Absolute): `"Brat Font Generator - Custom Brat Typography Controls"`
+  - Description: `"Free brat font generator to make brat typography layouts. Choose Arial, Inter, or custom sans-serif fonts. Adjust letter spacing, size, weight, export PNG."`
+  - Canonical: `https://ibratgenerator.com/brat-font-generator/`
+
+### 6. Brat Maker (`src/app/brat-maker/page.tsx`)
+- **Generator Mode**: `full` (loaded with a custom graphic design workflow for advanced multi-layer and sticker-heavy compositions).
+- **Meta Tags**:
+  - Title (Absolute): `"Brat Maker - Free Meme, PFP & Sticker Layout Tool"`
+  - Description: `"Free brat maker to design custom brat layouts, memes, stickers, and profile pictures. Full editor with custom uploads, emojis, and styling presets."`
+  - Canonical: `https://ibratgenerator.com/brat-maker/`
+
+### 7. Green Brat Generator (`src/app/brat-green-generator/page.tsx`)
+- **Generator Mode**: `full` (defaultBg locked to `#c1ff00`, defaultFg locked to `#0a0a0a`, presets bar hidden).
+- **Meta Tags**:
+  - Title (Absolute): `"Brat Green Generator – Free Neon Green Brat Text & Images"`
+  - Description: `"Free brat green generator to create neon green brat text and images instantly. The original brat color. No signup, no watermark. Download PNG."`
+  - Canonical: `https://ibratgenerator.com/brat-green-generator/`
+
+### 8. Pink Brat Generator (`src/app/brat-generator-pink/page.tsx`)
+- **Generator Mode**: `full` (defaultBg locked to `#ff90e8`, defaultFg locked to `#0a0a0a`, presets bar hidden).
+- **Meta Tags**:
+  - Title (Absolute): `"Pink Brat Generator – Free Pink Brat Text & Images"`
+  - Description: `"Free pink brat generator to create pink brat text and images with pastel or bright pink backgrounds. No signup, no watermark. Download PNG instantly."`
+  - Canonical: `https://ibratgenerator.com/brat-generator-pink/`
+
+### 9. Black Brat Generator (`src/app/brat-black-generator/page.tsx`)
+- **Generator Mode**: `full` (defaultBg locked to `#0a0a0a`, defaultFg locked to `#ffffff`, presets bar hidden).
+- **Meta Tags**:
+  - Title (Absolute): `"Black Brat Generator – Free Dark Mode Brat Text Maker"`
+  - Description: `"Free black brat generator to create dark mode, high-contrast brat text and images. Classic deluxe aesthetic. No signup, no watermark. Save PNG."`
+  - Canonical: `https://ibratgenerator.com/brat-black-generator/`
+
+### 10. White Brat Generator (`src/app/brat-generator-white/page.tsx`)
+- **Generator Mode**: `full` (defaultBg locked to `#ffffff`, defaultFg locked to `#0a0a0a`, presets bar hidden).
+- **Meta Tags**:
+  - Title (Absolute): `"White Brat Generator – Free Minimalist Brat Text Images"`
+  - Description: `"Free white brat generator to create clean, minimalist brat text layouts. Soft aesthetic fashion look. No watermark, no signup. Download PNG."`
+  - Canonical: `https://ibratgenerator.com/brat-generator-white/`
+
+### 11. About (`src/app/about/page.tsx`)
+- **Meta Tags**:
+  - Title (Absolute): `"About Us - Learn About the Aesthetic Creator"`
+  - Description: `"Learn about the motivation, tech stack, and design choices behind this free Brat Generator."`
+  - Canonical: `https://ibratgenerator.com/about/`
+
+### 12. Contact (`src/app/contact/page.tsx`)
+- **Meta Tags**:
+  - Title (Absolute): `"Contact Us - Feedback & Questions"`
+  - Description: `"Get in touch with the team behind the aesthetic generator for feedback, ideas, or questions."`
+  - Canonical: `https://ibratgenerator.com/contact/`
+
+### 13. Disclaimer (`src/app/disclaimer/page.tsx`)
+- **Meta Tags**:
+  - Title (Absolute): `"Disclaimer - Legal & Trademark Information"`
+  - Description: `"Legal disclaimer regarding the brat generator, fan-made creations, and trademark rights."`
+  - Canonical: `https://ibratgenerator.com/disclaimer/`
+
+### 14. Feedback (`src/app/feedback/page.tsx`)
+- **Meta Tags**:
+  - Title (Template): `Feedback`
+  - Description: `"Share your thoughts and feedback to help us improve the Brat Generator."`
+
+### 15. Privacy Policy (`src/app/privacy-policy/page.tsx`)
+- **Meta Tags**:
+  - Title (Absolute): `"Privacy Policy - Your Privacy Matters"`
+  - Description: `"Learn how we handle privacy, data, and tracking scripts on this free generator site."`
+  - Canonical: `https://ibratgenerator.com/privacy-policy/`
+
+### 16. Terms of Service (`src/app/terms/page.tsx`)
+- **Meta Tags**:
+  - Title (Absolute): `"Terms of Service - Usage Terms & Rules"`
+  - Description: `"Review the terms of service, usage guidelines, and rules for creating images."`
+  - Canonical: `https://ibratgenerator.com/terms/`
+
+---
+
+## 6. Blog Content Architecture & Article Meta Tags
+The blog section (`/blog`) serves to educate users on typographic and cultural contexts, capturing highly targeted organic searches.
+
+### Blog List Page (`src/app/blog/page.tsx`)
+- **Meta Tags**:
+  - Title (Absolute): `"Brat Generator Blog - Trends, Aesthetics & How-Tos"`
+  - Description: `"Read the latest articles about the Brat aesthetic, Charli XCX trends, and how to create the best brat text memes online."`
+  - Canonical: `https://ibratgenerator.com/blog/`
+
+### Active Blog Article Directory Audit
+Below is a systematic breakdown of the active content pieces, including metadata and canonical references:
+
+#### A. Brat Summer Meaning (`src/app/blog/brat-summer-meaning/page.tsx`)
+- **SEO Title**: `"What is Brat Summer? Trend Meaning & Culture Guide"`
+- **Meta Description**: `"What is brat summer? Read the complete guide to the viral Charli XCX trend, its aesthetic rules, and how it took over social media."`
+- **Canonical**: `https://ibratgenerator.com/blog/brat-summer-meaning/`
+
+#### B. Brat Aesthetic Guide (`src/app/blog/brat-aesthetic-guide/page.tsx`)
+- **SEO Title**: `"The Brat Aesthetic: Style Rules, Trends & Design Guide"`
+- **Meta Description**: `"How to recreate the signature brat aesthetic: typography spacing, neon green palettes, attitude, fashion, and social media layout rules."`
+- **Canonical**: `https://ibratgenerator.com/blog/brat-aesthetic-guide/`
+
+#### C. What Is Brat Font (`src/app/blog/what-is-brat-font/page.tsx`)
+- **SEO Title**: `"What Font is Used on the Brat Album Cover?"`
+- **Meta Description**: `"Find out what font the official brat album cover uses and learn how to recreate the exact typographic look using Helvetica and Arial Bold."`
+- **Canonical**: `https://ibratgenerator.com/blog/what-is-brat-font/`
+
+#### D. Brat Color Code Guide (`src/app/blog/brat-color-code/page.tsx`)
+- **SEO Title**: `"Official Brat Green Color Code - Hex, RGB & Palettes"`
+- **Meta Description**: `"Get the exact hex code, RGB values, and CMYK ratios for the signature neon green brat color. Perfect for graphic design and edits."`
+- **Canonical**: `https://ibratgenerator.com/blog/brat-color-code/`
+
+#### E. Brat PFP Ideas (`src/app/blog/brat-pfp-ideas/page.tsx`)
+- **SEO Title**: `"Brat PFP Ideas - Best Avatar Styles for Social Media"`
+- **Meta Description**: `"Find the best brat profile picture ideas for TikTok, Instagram, Discord, and X. Learn how to design a high-contrast aesthetic pfp."`
+- **Canonical**: `https://ibratgenerator.com/blog/brat-pfp-ideas/`
+
+#### F. What Is Brat Text (`src/app/blog/what-is-brat-text/page.tsx`)
+- **SEO Title**: `"What is Brat Text? Aesthetic Meaning & Creator Trends"`
+- **Meta Description**: `"Understand the history behind the stretched lowercase text trend, why it went viral, and how to use a text generator to replicate it."`
+- **Canonical**: `https://ibratgenerator.com/blog/what-is-brat-text/`
+
+#### G. How to Make Brat Text (`src/app/blog/how-to-make-brat-text/page.tsx`)
+- **SEO Title**: `"How to Make Brat Text - Typographic Design Steps"`
+- **Meta Description**: `"Learn how to make authentic brat text in 4 simple steps. Master spacing, contrast rules, background scales, and font weight ratios."`
+- **Canonical**: `https://ibratgenerator.com/blog/how-to-make-brat-text/`
+
+#### H. How to Make Brat PFP (`src/app/blog/how-to-make-brat-pfp/page.tsx`)
+- **SEO Title**: `"How to Make a Brat PFP - Avatar Design Checklist"`
+- **Meta Description**: `"A step-by-step guide to creating your own custom brat profile picture for social media feeds. Resolutions, aspect ratios, and styles."`
+- **Canonical**: `https://ibratgenerator.com/blog/how-to-make-brat-pfp/`
+
+#### I. Brat Text vs. Font (`src/app/blog/brat-text-vs-font/page.tsx`)
+- **SEO Title**: `"Brat Text vs. Font - Layout Differences & Usage"`
+- **Meta Description**: `"An in-depth study of structural layouts: why a quick text export behaves differently than raw custom typography installations."`
+- **Canonical**: `https://ibratgenerator.com/blog/brat-text-vs-font/`
+
+#### J. Brat vs. Clean Girl Aesthetic (`src/app/blog/brat-vs-clean-girl-aesthetic/page.tsx`)
+- **SEO Title**: `"Brat vs. Clean Girl - Cultural Clash of Lifestyles"`
+- **Meta Description**: `"An in-depth cultural analysis comparing the messy, high-contrast Brat trend against the minimalist, neutral-toned Clean Girl aesthetic."`
+- **Canonical**: `https://ibratgenerator.com/blog/brat-vs-clean-girl-aesthetic/`
+
+#### K. What Is Brat Generator (`src/app/blog/what-is-brat-generator/page.tsx`)
+- **SEO Title**: `"What is a Brat Generator? Digital Design Innovations"`
+- **Meta Description**: `"Discover how web-based brat generators democratized aesthetic layouts, making high-fidelity png exports accessible without software."`
+- **Canonical**: `https://ibratgenerator.com/blog/what-is-brat-generator/`
+
+#### L. Brat Captions for Instagram (`src/app/blog/brat-captions-for-instagram/page.tsx`)
+- **SEO Title**: `"Best Brat Captions for Instagram & TikTok Posts"`
+- **Meta Description**: `"Looking for the best brat aesthetic captions? Copy-paste over 100 bold, confident, and funny brat summer captions for your photos."`
+- **Canonical**: `https://ibratgenerator.com/blog/brat-captions-for-instagram/`
+
+---
+
+## 7. JSON-LD Schema Markups (Rich Snippet Integrations)
+Search engines ingest structured data in JSON-LD syntax dynamically to qualify pages for Rich Results, carousel reviews, and snippet lists.
+
+### A. Global Layout Schemas (WebSite & SoftwareApplication)
+Injected via `next/script` (`strategy="beforeInteractive"`) to ensure search engines recognize the root platform identity:
+```json
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ibrat Generator",
+    "url": "https://ibratgenerator.com"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Brat Generator",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "url": "https://ibratgenerator.com",
+    "description": "Create brat-style text, images, memes, and profile pictures instantly with this free online generator.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+]
+```
+
+### B. Homepage Schemas (FAQPage & HowTo)
+Embedded directly inside the HTML page markup to display visual search answer cards under queries:
+
+#### 1. FAQPage Schema Structure
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this brat generator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This free brat generator has no limits, no hidden fees, and no signup. Create and download as many images as you want at up to 3000 px."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it add a watermark?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every PNG you export is completely clean. No watermark, no branding, no fine print."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What file format does it export?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG. You pick the resolution (1024, 1500, 2048, or 3000 px). No compression, no quality loss."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work on mobile?",
+      "acceptedAnswer: {
+        "@type": "Answer",
+        "text": "Yes. The editor runs in your mobile browser with full touch support. Works on iPhone, Android, iPad, and tablets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it as a profile picture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Set the aspect ratio to 1:1, type your text, pick a color, and download. Works as a pfp on TikTok, Instagram, Discord, X, and WhatsApp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the images commercially?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every image you create belongs to you. Use it for merch, social media, videos, print, or any commercial project."
+      }
+    }
+  ]
+}
+```
+
+#### 2. HowTo Schema Structure
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Use the Brat Generator - Step by Step",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Type your text",
+      "text": "Open the tool and type any word or phrase. The canvas updates live as you type."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Pick your colors",
+      "text": "Use the hex color pickers to set your background and text color. Try the classic brat green or go custom."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Adjust the layout",
+      "text": "Change the font size, letter spacing, and aspect ratio. Add stickers or emojis if you want."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download your image",
+      "text": "Tap Download PNG and choose your resolution. The file saves instantly, no signup, no watermark."
+    }
+  ]
+}
+```

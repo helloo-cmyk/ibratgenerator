@@ -20,6 +20,7 @@ const CookieConsentBanner = () => {
         alignItems: "center",
         borderTop: "1px solid #333",
         boxShadow: "0 -4px 10px rgba(0,0,0,0.1)",
+        zIndex: 9999,
       }}
       buttonStyle={{
         background: "#CCFF00",

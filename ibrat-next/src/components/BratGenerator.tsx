@@ -23,7 +23,7 @@ const BRAT_STYLES = `
   position: relative;
   width: 100%;
   min-height: 400px;
-  z-index: 1000;
+  z-index: 1;
   padding: 28px;
   margin: 60px 0;
   background: #ffffff;
@@ -34,7 +34,7 @@ const BRAT_STYLES = `
 }
 
 :root {
-  --bg: #c1ff00;
+  --bg: #89cc04;
   --fg: #0a0a0a;
   --ui: #0f172a;
   --muted: #475569;
@@ -514,7 +514,7 @@ const BRAT_STYLES = `
   color: #fff;
   padding: 12px 20px;
   border-radius: var(--radius);
-  z-index: 2147483647;
+  z-index: 50;
   font-size: 13px;
   font-weight: 500;
   box-shadow: var(--shadow-lg);
@@ -891,7 +891,7 @@ const BRAT_STYLES = `
     max-height: 0;
     overflow: hidden;
     transition: max-height .4s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 1001;
+    z-index: 41;
     border-radius: var(--radius-xl);
     box-shadow: none;
     padding: 0;
@@ -945,7 +945,7 @@ const BRAT_STYLES = `
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-top: 1px solid rgba(0, 0, 0, .07);
     box-shadow: 0 -4px 24px rgba(0, 0, 0, .06);
-    z-index: 1002;
+    z-index: 42;
     padding: 0 8px;
     padding-bottom: env(safe-area-inset-bottom, 0px);
     align-items: center;
@@ -1016,7 +1016,7 @@ const BRAT_STYLES = `
     bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1003;
+    z-index: 43;
     width: fit-content;
     margin: 0 auto;
     background: #1a1a1a;
@@ -1382,14 +1382,14 @@ export default function BratGenerator({
                   <div className="brat-acc-b">
                     <div className="brat-controls-inner" style={{ padding: 10 }}>
                       <div style={{ display: hidePresets ? "none" : "flex", gap: 8, flexWrap: "wrap" }}>
-                        <div className="brat-pill" data-bg="#c1ff00" data-fg="#0a0a0a">
+                        <div className="brat-pill" data-bg="#89cc04" data-fg="#0a0a0a">
                           <span
                             style={{
                               display: "inline-block",
                               width: 18,
                               height: 18,
                               borderRadius: 4,
-                              background: "#c1ff00",
+                              background: "#89cc04",
                               border: "1px solid rgba(0,0,0,.06)",
                             }}
                           />
@@ -1438,7 +1438,7 @@ export default function BratGenerator({
                           <label className="brat-label" htmlFor="brat-bgColor">
                             Background {lockBg && <span style={{ fontSize: '10px', color: '#666', textTransform: 'lowercase' }}>(locked)</span>}
                           </label>
-                          <input type="color" id="brat-bgColor" defaultValue="#c1ff00" disabled={lockBg} />
+                          <input type="color" id="brat-bgColor" defaultValue="#89cc04" disabled={lockBg} />
                         </div>
                         <div style={{ opacity: lockFg ? 0.4 : 1, pointerEvents: lockFg ? 'none' : 'auto' }}>
                           <label className="brat-label" htmlFor="brat-fgColor">

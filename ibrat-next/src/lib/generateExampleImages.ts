@@ -9,11 +9,11 @@ let cachedExamples: string[] | null = null;
 
 /** Brat-style colors for variety across examples */
 const EXAMPLE_STYLES = [
-  { bg: "#c1ff00", fg: "#0a0a0a" }, // brat green
+  { bg: "#89cc04", fg: "#0a0a0a" }, // brat green
   { bg: "#ffffff", fg: "#0a0a0a" }, // white
   { bg: "#0a0a0a", fg: "#ffffff" }, // black
   { bg: "#ffc0cb", fg: "#0a0a0a" }, // pink
-  { bg: "#c1ff00", fg: "#0a0a0a" }, // brat green
+  { bg: "#89cc04", fg: "#0a0a0a" }, // brat green
   { bg: "#e0f7fa", fg: "#0a0a0a" }, // mint
 ];
 

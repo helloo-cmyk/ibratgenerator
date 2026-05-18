@@ -144,7 +144,7 @@ export function initBratGenerator(options?: {
     outlineColor: "#ffffff",
     shadow: false,
     shadowColor: "#000000",
-    bg: options?.defaultBg || "#c1ff00",
+    bg: options?.defaultBg || "#89cc04",
     fg: options?.defaultFg || "#0a0a0a",
     ratio: (options?.defaultRatio || "1:1") as string,
     res: Number(options?.defaultResolution) || 1500,
@@ -1426,7 +1426,7 @@ export function initBratGenerator(options?: {
     p.addEventListener("click", () => {
       pushHistory();
       const el = p as HTMLElement;
-      state.bg = el.dataset.bg || "#c1ff00";
+      state.bg = el.dataset.bg || "#89cc04";
       state.fg = el.dataset.fg || "#0a0a0a";
       syncInputsFromState();
       requestDraw();
