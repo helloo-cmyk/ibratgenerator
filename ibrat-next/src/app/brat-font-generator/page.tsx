@@ -61,13 +61,13 @@ const faqSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Brat Font Generator - Free Brat Font Maker Online [2026]",
+    absolute: "Brat Font Generator - Free Brat Style Font Maker Online",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-font-generator/",
   },
   description:
-    "Free brat font generator to recreate bold Charli XCX brat typography instantly. Adjust spacing, weight & color. No signup, no watermark. Download PNG.",
+    "Make brat-style text with the exact font spacing and look. Free brat font generator — adjust size, spacing, download PNG. No signup, no watermark.",
 };
 
 export default function BratFontGeneratorPage() {

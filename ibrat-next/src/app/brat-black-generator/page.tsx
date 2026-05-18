@@ -51,7 +51,7 @@ const faqSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Brat Generator Black - Free Black Brat Image Maker",
+    absolute: "Brat Generator Black - Free Dark Mode Brat Image Maker",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-black-generator/",

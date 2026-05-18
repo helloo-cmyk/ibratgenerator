@@ -167,15 +167,15 @@ Each subpage contains custom targeted keyword copies, specific generator paramet
 ### 4. Brat Text Generator (`src/app/brat-text-generator/page.tsx`)
 - **Generator Mode**: `text-only` (hides the stickers tab, disables emojis, focuses entirely on raw typographic adjustments).
 - **Meta Tags**:
-  - Title (Absolute): `"Brat Text Generator – Create Bold Minimalist Text Images"`
-  - Description: `"Free brat text generator to create bold, stretched lowercase text images. Type your word, choose neon green or custom colors, download PNG."`
+  - Title (Absolute): `"Brat Text Generator - Free Brat Text Maker, No Signup"`
+  - Description: `"Type any text, pick your color, download clean brat PNG instantly. Free brat text generator — no signup, no watermark. Works on mobile."`
   - Canonical: `https://ibratgenerator.com/brat-text-generator/`
 
 ### 5. Brat Font Generator (`src/app/brat-font-generator/page.tsx`)
 - **Generator Mode**: `font-only` (deactivates stickers, structures typography settings upfront to help users study font spacing rules).
 - **Meta Tags**:
-  - Title (Absolute): `"Brat Font Generator - Custom Brat Typography Controls"`
-  - Description: `"Free brat font generator to make brat typography layouts. Choose Arial, Inter, or custom sans-serif fonts. Adjust letter spacing, size, weight, export PNG."`
+  - Title (Absolute): `"Brat Font Generator - Free Brat Style Font Maker Online"`
+  - Description: `"Make brat-style text with the exact font spacing and look. Free brat font generator — adjust size, spacing, download PNG. No signup, no watermark."`
   - Canonical: `https://ibratgenerator.com/brat-font-generator/`
 
 ### 6. Brat Maker (`src/app/brat-maker/page.tsx`)
@@ -188,7 +188,7 @@ Each subpage contains custom targeted keyword copies, specific generator paramet
 ### 7. Green Brat Generator (`src/app/brat-green-generator/page.tsx`)
 - **Generator Mode**: `full` (defaultBg locked to `#c1ff00`, defaultFg locked to `#0a0a0a`, presets bar hidden).
 - **Meta Tags**:
-  - Title (Absolute): `"Brat Green Generator – Free Neon Green Brat Text & Images"`
+  - Title (Absolute): `"Brat Green Generator - Free Neon Green Brat Image Maker"`
   - Description: `"Free brat green generator to create neon green brat text and images instantly. The original brat color. No signup, no watermark. Download PNG."`
   - Canonical: `https://ibratgenerator.com/brat-green-generator/`
 
@@ -202,7 +202,7 @@ Each subpage contains custom targeted keyword copies, specific generator paramet
 ### 9. Black Brat Generator (`src/app/brat-black-generator/page.tsx`)
 - **Generator Mode**: `full` (defaultBg locked to `#0a0a0a`, defaultFg locked to `#ffffff`, presets bar hidden).
 - **Meta Tags**:
-  - Title (Absolute): `"Black Brat Generator – Free Dark Mode Brat Text Maker"`
+  - Title (Absolute): `"Brat Generator Black - Free Dark Mode Brat Image Maker"`
   - Description: `"Free black brat generator to create dark mode, high-contrast brat text and images. Classic deluxe aesthetic. No signup, no watermark. Save PNG."`
   - Canonical: `https://ibratgenerator.com/brat-black-generator/`
 

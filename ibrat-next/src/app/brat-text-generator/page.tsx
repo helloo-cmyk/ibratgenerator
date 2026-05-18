@@ -106,13 +106,13 @@ const howToSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Brat Text Generator - Free Brat Text Maker & Image Creator [2026]",
+    absolute: "Brat Text Generator - Free Brat Text Maker, No Signup",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-text-generator/",
   },
   description:
-    "Free brat text generator inspired by Charli XCX. Type any phrase, customize colors, and download a clean watermark-free PNG. Works on mobile. No signup.",
+    "Type any text, pick your color, download clean brat PNG instantly. Free brat text generator — no signup, no watermark. Works on mobile.",
 };
 
 export default function BratTextGeneratorPage() {

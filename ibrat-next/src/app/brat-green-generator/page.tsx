@@ -51,7 +51,7 @@ const faqSchema = {
 
 export const metadata = {
   title: {
-    absolute: "Brat Green Generator – Free Neon Green Brat Text & Images",
+    absolute: "Brat Green Generator - Free Neon Green Brat Image Maker",
   },
   alternates: {
     canonical: "https://ibratgenerator.com/brat-green-generator/",

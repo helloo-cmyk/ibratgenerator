@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { initBratGenerator } from "./brat-generator-init";
 
 const BRAT_STYLES = `
@@ -1185,6 +1185,43 @@ const BRAT_STYLES = `
   .brat-tab-panel .brat-acc:only-child .brat-acc-h { display: flex; }
 }
 
+/* ===== BLUR CONTROL STYLES ===== */
+.blur-control {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.blur-control label {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px !important;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  width: 100%;
+}
+.blur-value {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 700;
+  color: #0f172a;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+}
+.blur-hints {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: -6px;
+  padding: 0 4px;
+}
+
 `;
 
 type BratGeneratorMode = 'full' | 'text-only' | 'font-only' | 'album' | 'name' | 'color-variant';
@@ -1197,6 +1234,7 @@ interface BratGeneratorProps {
   defaultRatio?: '1:1' | '4:5' | '9:16' | '16:9';
   defaultResolution?: '1024' | '1500' | '2048' | '3000';
   defaultPlaceholder?: string;
+  defaultBlur?: number;
   lockBg?: boolean;
   lockFg?: boolean;
   hideSelfieMode?: boolean;
@@ -1213,6 +1251,7 @@ export default function BratGenerator({
   defaultRatio,
   defaultResolution,
   defaultPlaceholder,
+  defaultBlur,
   lockBg,
   lockFg,
   hideSelfieMode,
@@ -1222,6 +1261,7 @@ export default function BratGenerator({
 }: BratGeneratorProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const cleanupRef = useRef<(() => void) | null>(null);
+  const [blurAmount, setBlurAmount] = useState(defaultBlur ?? 1.5);
 
   useEffect(() => {
     if (rootRef.current) {
@@ -1231,7 +1271,8 @@ export default function BratGenerator({
         defaultTab,
         defaultRatio,
         defaultResolution,
-        defaultPlaceholder
+        defaultPlaceholder,
+        defaultBlur: defaultBlur ?? 1.5
       });
     }
     return () => {
@@ -1240,7 +1281,7 @@ export default function BratGenerator({
         cleanupRef.current = null;
       }
     };
-  }, [defaultBg, defaultFg, defaultTab, defaultRatio, defaultResolution, defaultPlaceholder]);
+  }, [defaultBg, defaultFg, defaultTab, defaultRatio, defaultResolution, defaultPlaceholder, defaultBlur]);
 
   return (
     <div id="brat-embed-root" ref={rootRef} style={{ all: "initial" }}>
@@ -1339,6 +1380,69 @@ export default function BratGenerator({
                             <option value="center">center</option>
                             <option value="right">right</option>
                           </select>
+                        </div>
+                      </div>
+
+                      <div className="blur-control">
+                        <label className="brat-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          Softness
+                          <span className="blur-value">{blurAmount}px</span>
+                        </label>
+                        <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+                          <input
+                            id="brat-blur"
+                            type="range"
+                            min={0}
+                            max={5}
+                            step={0.5}
+                            value={blurAmount}
+                            onChange={(e) => setBlurAmount(Number(e.target.value))}
+                            style={{ margin: '8px 0' }}
+                          />
+                          <div 
+                            className="blur-marker"
+                            title="Authentic brat softness (1.5px)"
+                            style={{
+                              position: 'absolute',
+                              left: 'calc(30% - 0.5px)',
+                              width: '6px',
+                              height: '6px',
+                              borderRadius: '50%',
+                              background: blurAmount === 1.5 ? '#CCFF00' : '#000000',
+                              border: '1.5px solid #ffffff',
+                              pointerEvents: 'none',
+                              boxShadow: '0 1px 2px rgba(0,0,0,0.2)',
+                              transition: 'background 0.2s ease',
+                            }}
+                          />
+                        </div>
+                        <div className="blur-hints" style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#94a3b8', marginTop: '-4px' }}>
+                          <span style={{ cursor: 'pointer' }} onClick={() => {
+                            const el = document.getElementById("brat-blur") as HTMLInputElement;
+                            if (el) { el.value = "0"; el.dispatchEvent(new Event("input", { bubbles: true })); }
+                          }}>Sharp</span>
+                          <span 
+                            style={{ 
+                              cursor: 'pointer', 
+                              fontWeight: blurAmount === 1.5 ? '700' : '500',
+                              color: blurAmount === 1.5 ? '#000000' : '#94a3b8',
+                              background: blurAmount === 1.5 ? '#CCFF00' : 'transparent',
+                              padding: blurAmount === 1.5 ? '1px 6px' : '0',
+                              borderRadius: '4px',
+                              fontSize: '10px',
+                              transition: 'all 0.15s ease'
+                            }} 
+                            onClick={() => {
+                              const el = document.getElementById("brat-blur") as HTMLInputElement;
+                              if (el) { el.value = "1.5"; el.dispatchEvent(new Event("input", { bubbles: true })); }
+                            }}
+                          >
+                            Authentic
+                          </span>
+                          <span style={{ cursor: 'pointer' }} onClick={() => {
+                            const el = document.getElementById("brat-blur") as HTMLInputElement;
+                            if (el) { el.value = "5"; el.dispatchEvent(new Event("input", { bubbles: true })); }
+                          }}>Heavy</span>
                         </div>
                       </div>
                       <div>

@@ -21,6 +21,7 @@ type GeneratorState = {
   align: string;
   fg: string;
   safe: boolean;
+  blurAmount: number;
 };
 
 function getOrCreateEmojiBitmap(char: string): HTMLCanvasElement | null {
@@ -50,6 +51,7 @@ export function initBratGenerator(options?: {
   defaultRatio?: '1:1' | '4:5' | '9:16' | '16:9';
   defaultResolution?: '1024' | '1500' | '2048' | '3000';
   defaultPlaceholder?: string;
+  defaultBlur?: number;
 }): () => void {
   const root = document.getElementById("brat-embed-root");
   const widget = document.getElementById("brat-widget");
@@ -159,6 +161,7 @@ export function initBratGenerator(options?: {
     }[],
     fontFamily: "'Inter', sans-serif",
     textTransform: { x: 0, y: 0, rotation: 0, scale: 1, selected: false },
+    blurAmount: options?.defaultBlur ?? 1.5,
   };
 
   const historyStack: GeneratorState[] = [];
@@ -183,13 +186,7 @@ export function initBratGenerator(options?: {
         rotation: st.rotation,
       })),
       bg: s.bg,
-      bgImage: s.bgImage
-        ? (() => {
-            const img = new Image();
-            img.src = s.bgImage!.src;
-            return img;
-          })()
-        : null,
+      bgImage: s.bgImage,
       fontSize: s.fontSize,
       lineHeight: s.lineHeight,
       letterSpacing: s.letterSpacing,
@@ -203,6 +200,7 @@ export function initBratGenerator(options?: {
       align: s.align,
       fg: s.fg,
       safe: s.safe,
+      blurAmount: s.blurAmount,
     };
   }
 
@@ -253,6 +251,12 @@ export function initBratGenerator(options?: {
     fontSelectEl.value = state.fontFamily;
     outlineColorContainer!.style.display = state.outline ? "inline-flex" : "none";
     shadowColorContainer!.style.display = state.shadow ? "inline-flex" : "none";
+
+    const blurEl = document.getElementById("brat-blur") as HTMLInputElement | null;
+    if (blurEl) {
+      blurEl.value = String(state.blurAmount);
+      blurEl.dispatchEvent(new Event("input", { bubbles: true }));
+    }
   }
 
   function undo() {
@@ -425,6 +429,9 @@ export function initBratGenerator(options?: {
     ctx.translate(centerX + tt.x, centerY + tt.y);
     ctx.rotate(tt.rotation);
     ctx.scale(tt.scale, tt.scale);
+    ctx.filter = state.blurAmount > 0 
+      ? `blur(${state.blurAmount}px)` 
+      : 'none';
     if (state.shadow) {
       ctx.shadowColor = state.shadowColor;
       ctx.shadowBlur = Math.round(state.fontSize * 0.08);
@@ -450,6 +457,7 @@ export function initBratGenerator(options?: {
         lineX += ctx.measureText(ch).width + state.letterSpacing;
       }
     });
+    ctx.filter = 'none';
     ctx.restore();
   }
 
@@ -1174,6 +1182,10 @@ export function initBratGenerator(options?: {
       }
     }
   });
+  window.removeEventListener("pointermove", onPointerMove);
+  window.removeEventListener("pointerup", onPointerUp);
+  window.removeEventListener("pointercancel", onPointerUp);
+
   window.addEventListener("pointermove", onPointerMove);
   window.addEventListener("pointerup", onPointerUp);
   window.addEventListener("pointercancel", onPointerUp);
@@ -1336,6 +1348,14 @@ export function initBratGenerator(options?: {
     state.letterSpacing = Number(letterSpacingEl.value);
     requestDraw();
   });
+  const blurEl = document.getElementById("brat-blur") as HTMLInputElement | null;
+  if (blurEl) {
+    blurEl.addEventListener("input", () => {
+      pushHistory();
+      state.blurAmount = Number(blurEl.value);
+      requestDraw();
+    });
+  }
   alignEl.addEventListener("change", () => {
     pushHistory();
     state.align = alignEl.value;
