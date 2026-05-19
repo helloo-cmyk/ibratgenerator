@@ -10,7 +10,7 @@ export const metadata = {
     canonical: "https://ibratgenerator.com/blog/what-is-brat-generator/",
   },
   description:
-    "A simple explanation of the music-inspired text aesthetic, how the cultural trend started, and how you can create your own bold typographic graphics.",
+    "A brat generator is a free online tool to make Charli XCX-style images. Type text, pick colors, download PNG — no Photoshop, no signup needed.",
 };
 
 const faqSchema = {

@@ -10,7 +10,7 @@ export const metadata = {
     canonical: "https://ibratgenerator.com/blog/brat-text-vs-font/",
   },
   description:
-    "Understand the difference between a brat text generator and a brat font generator. Learn which tool is best for memes, typography, and social media posts.",
+    "Brat text and brat font are not the same thing. Learn the difference and find out which one you actually need for your aesthetic.",
 };
 
 const faqSchema = {
