@@ -284,18 +284,20 @@ export default function BratAlbumCoverGeneratorPage() {
       </div>
 
       {/* ── FAQ ── */}
-      <FAQAccordion
-        title="Frequently Asked Questions"
-        intro="Common questions about this brat album cover generator."
-        items={[
-          { question: "Is the brat album cover generator free?", answer: <p>Yes. Unlimited use, no payment, no hidden limits.</p> },
-          { question: "Do I need to sign up?", answer: <p>No. The tool works instantly in your browser. No account, no email.</p> },
-          { question: "Can I upload my own background image?", answer: <p>Yes. Upload any photo, texture, or artwork and layer brat text on top.</p> },
-          { question: "Are downloads watermark-free?", answer: <p>Yes. Every export is clean with no watermark or branding.</p> },
-          { question: "Can I use my cover for commercial projects?", answer: <p>Yes. Every image you create is yours to use for any purpose, including commercial releases.</p> },
-          { question: "What resolution are exports?", answer: <p>PNG at 1024, 1500, 2048, or 3000 px. No compression loss.</p> },
-        ]}
-      />
+      <section className="bg-zinc-50 py-12 px-4 overflow-hidden border-b-2 border-black/5">
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          intro="Common questions about this brat album cover generator."
+          items={[
+            { question: "Is the brat album cover generator free?", answer: <p>Yes. Unlimited use, no payment, no hidden limits.</p> },
+            { question: "Do I need to sign up?", answer: <p>No. The tool works instantly in your browser. No account, no email.</p> },
+            { question: "Can I upload my own background image?", answer: <p>Yes. Upload any photo, texture, or artwork and layer brat text on top.</p> },
+            { question: "Are downloads watermark-free?", answer: <p>Yes. Every export is clean with no watermark or branding.</p> },
+            { question: "Can I use my cover for commercial projects?", answer: <p>Yes. Every image you create is yours to use for any purpose, including commercial releases.</p> },
+            { question: "What resolution are exports?", answer: <p>PNG at 1024, 1500, 2048, or 3000 px. No compression loss.</p> },
+          ]}
+        />
+      </section>
     </main>
   );
 }

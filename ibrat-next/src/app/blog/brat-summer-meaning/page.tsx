@@ -154,8 +154,8 @@ export default function BratSummerMeaningPage() {
 
           <h2 className="hp-display-heading mt-32 mb-16 !text-4xl text-left tracking-tighter uppercase text-center">Brat <span className="text-zinc-300 italic font-serif lowercase px-4">vs</span> Hot Girl</h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 mb-32 bg-black border-4 border-black group">
-            <div className="bg-[#89CC04] p-10 group-hover:bg-[#a3f005] transition-colors">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 mb-32 bg-[#000] border-4 border-black group">
+            <div className="bg-[#89CC04] p-10 group-hover:bg-[#a3f005] transition-colors text-black">
               <h3 className="text-3xl font-black italic tracking-tighter mb-6 uppercase">Brat Summer</h3>
               <p className="text-[17px] font-bold leading-snug mb-6 italic">&quot;Finding confidence through simply not caring.&quot;</p>
               <ul className="space-y-2 text-[15px] font-medium opacity-80 uppercase tracking-wider">
@@ -164,7 +164,7 @@ export default function BratSummerMeaningPage() {
                 <li>• Imperfection as Power</li>
               </ul>
             </div>
-            <div className="bg-white p-10 group-hover:bg-zinc-50 transition-colors">
+            <div className="bg-white p-10 group-hover:bg-zinc-50 transition-colors text-black">
               <h3 className="text-3xl font-black italic tracking-tighter mb-6 uppercase">Hot Girl Summer</h3>
               <p className="text-[17px] font-bold leading-snug mb-6 italic">&quot;Finding confidence through feeling your absolute best.&quot;</p>
               <ul className="space-y-2 text-[15px] font-medium opacity-60 uppercase tracking-wider">

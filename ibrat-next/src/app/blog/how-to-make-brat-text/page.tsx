@@ -104,7 +104,7 @@ export default function HowToMakeBratTextPage() {
           </p>
 
           <h2 className="hp-display-heading mt-32 mb-16 !text-4xl uppercase tracking-tighter text-center">Tips for Better Brat Text & Common Mistakes</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-black border-4 border-black mb-32 overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#000] border-4 border-black mb-32 overflow-hidden">
             <div className="bg-[#89CC04] p-12 group transition-all">
               <h3 className="text-3xl font-black italic uppercase tracking-tighter mb-8">The Do&apos;s</h3>
               <ul className="hp-body-text list-none pl-0 space-y-4 text-[16px] font-bold italic uppercase tracking-tight text-black/80">

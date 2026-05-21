@@ -1,147 +1,253 @@
 import Link from "next/link";
-import { Metadata } from "next";
 import FAQAccordion from "@/components/FAQAccordion";
 import BlogHero from "@/components/BlogHero";
 import InteractiveCaptionGrid from "@/components/InteractiveCaptionGrid";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Brat Captions for Instagram (50+ Real Examples You Can Copy)",
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Brat Captions for Instagram — 60+ Ideas [2026]",
+  "description": "60+ brat captions for Instagram — curated for selfies, night-out shots, and full Charli XCX energy. All free to copy. Pair with a brat image and post now.",
+  "author": {
+    "@type": "Organization",
+    "name": "ibratgenerator.com team"
   },
-  alternates: {
-    canonical: "https://ibratgenerator.com/blog/brat-captions-for-instagram/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ibratgenerator.com"
   },
-  description:
-    "Get 50+ brat captions for Instagram you can copy, plus practical tips to write your own short, bold, and natural captions.",
+  "url": "https://ibratgenerator.com/blog/brat-captions-for-instagram/"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes a caption \"brat\" on Instagram?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A brat caption is confident, blunt, and doesn't try to be likable. It's lowercase energy, zero over-explanation, and unapologetic phrasing. Think self-aware over polished."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these captions on TikTok?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every caption here works for TikTok, Instagram, X, and Discord. The brat aesthetic crosses every platform — pair any of them with a lime green visual for the full effect."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best caption length for Instagram?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under 15 words performs best for engagement on Instagram. The short captions section at the top of this list is the safest zone for reach and saves."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be a Charli XCX fan to use brat captions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Brat as an aesthetic has grown beyond the album. Confident, lowercase, unapologetic energy is the only entry requirement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get the BRAT green look for my Instagram post?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Go to ibratgenerator.com, type your caption into the tool, and download the PNG. It gives you the lime green BRAT-style image instantly — free, no sign-up needed."
+      }
+    }
+  ]
 };
 
 export default function BratCaptionsForInstagramPage() {
   return (
     <main className="hp-root pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <BlogHero 
         category="IDEAS & INSPO"
-        title="Brat Captions for Instagram (50+ Real Examples You Can Copy)"
-        subtitle=""
+        title="Brat Captions for Instagram"
+        subtitle="Short, confident, and totally unapologetic — these brat Instagram captions are built for anyone posting on their own terms."
         readTime="5 MIN READ"
+        publishDate="May 2026"
         imageSrc="/blog-images/captions-hero.png"
       />
 
-      {/* ── ARTICLE BODY ── */}
       <article className="px-4 pt-12 max-w-[720px] mx-auto">
         <div className="prose-container">
-          <div className="bg-black text-white p-10 sm:p-16 mb-24 relative overflow-hidden group border-b-8 border-[#89CC04]">
-            <span className="absolute top-4 right-8 text-[10px] font-black uppercase tracking-[0.3em] opacity-30">Social Command Center</span>
-            <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-8 leading-none">Find Your Statement</h2>
-            <p className="hp-body-text !text-white !opacity-100 text-[18px] sm:text-[22px] font-medium leading-tight italic m-0">
-              This guide provides over 50 ready-to-use brat captions for instagram that you can use directly on your next post. Beyond just giving you a brat captions copy paste list, you will also find practical tips for writing your own original phrases.
-            </p>
-          </div>
-
           <p className="hp-body-text mb-24 text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-4 border-black/5 pl-10">
-            Use these brat caption ideas to quickly find the right words without overthinking your post.
+            They pull from Charli XCX's BRAT aesthetic: lowercase font, blunt phrasing, and zero-apology energy. This list covers every type of brat captions for Instagram — selfies, brat summer shots, night-out photos, and more. Pick one and post it without second-guessing.
           </p>
 
-          <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">Simple Captions</h2>
-          <div className="flex gap-12 mb-32 group">
-            <div className="w-12 flex-shrink-0 flex items-start pt-2">
-              <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Essentials</span>
-            </div>
+          <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">Short Brat Captions for Instagram</h2>
+          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px] opacity-70">
+            Sometimes one line hits harder than a paragraph. These short captions work for Instagram grids, Stories, and TikTok text overlays. Keep them lowercase — that's the whole point.
+          </p>
+          <div className="flex gap-12 mb-12 group">
             <InteractiveCaptionGrid 
               captions={[
-                "so what", "stay mad", "idc", "not impressed", "cool enough", 
-                "say less", "no thanks", "try again", "already bored", "keep watching", 
-                "still unbothered", "too real", "next question", "no comment", "move along"
+                "not your soft girl era", "messy but make it fashion", "unbothered. always.",
+                "i'm the main character", "rated me out of ten. got an eleven.", "loud by design",
+                "this is just how i exist", "your loss, honestly", "the attitude came free",
+                "not a phase", "too busy being iconic", "zero apologies, full send",
+                "doing it my way, specifically"
               ]} 
               hoverBg="hover:bg-[#89CC04]"
               hoverText="hover:text-black"
             />
           </div>
+          <p className="hp-body-text mb-24 text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-2 border-black/5 pl-8">
+            Short lines work best with bold visuals. Pair them with a BRAT lime green background and blurry lowercase text. Instagram and TikTok will both clock the reference immediately.
+          </p>
 
-          <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">Bold Captions</h2>
-          <div className="flex gap-12 mb-4 group">
-            <div className="w-12 flex-shrink-0 flex items-start pt-2">
-              <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Attitude</span>
-            </div>
+          <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">Brat Summer Captions for Instagram</h2>
+          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px] opacity-70">
+            Brat summer never really ended — it just became a permanent state of mind. These brat summer captions work any time you're feeling chaotic, confident, and done with being likable.
+          </p>
+          <div className="flex gap-12 mb-12 group">
             <InteractiveCaptionGrid 
               captions={[
-                "not your type", "you wish", "watch me", "i said no", "deal with it", 
-                "not sorry", "stay pressed", "i meant that", "main character", "not for everyone", 
-                "know your place", "too busy winning", "out of reach", "you had a chance", "i do me"
+                "it's giving brat summer and i won't apologize", "summer started when i walked in", 
+                "hot, unhinged, having fun", "brat summer, perpetual edition", "the green era is every era",
+                "chaos and sunshine", "tan lines and bad decisions", "i peaked and kept going",
+                "summer never ended, actually", "no soft launches this season"
+              ]} 
+              hoverBg="hover:bg-black"
+              hoverText="hover:text-[#89CC04]"
+            />
+          </div>
+          <p className="hp-body-text mb-24 text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-2 border-black/5 pl-8">
+            Post these to Instagram as a grid caption or TikTok text overlay. They also work as X bio lines or Discord status updates. The brat aesthetic travels well across every platform.
+          </p>
+
+          <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">Charli XCX-Inspired Brat Captions</h2>
+          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px] opacity-70">
+            These lines capture the BRAT album's energy without lifting lyrics directly. They're self-aware, a little chaotic, and completely unbothered. Use them when the mood is earned.
+          </p>
+          <div className="flex gap-12 mb-12 group">
+            <InteractiveCaptionGrid 
+              captions={[
+                "365, party mode", "i might be the problem, but at least i'm interesting", 
+                "i'm your favorite reference, honestly", "brat and knowing it", "too iconic to be normal",
+                "i said what i said", "chaotic but make it art", "everyone's watching, nobody's winning",
+                "the main character, obviously", "i didn't come to be subtle"
+              ]} 
+              hoverBg="hover:bg-[#ff90e8]"
+              hoverText="hover:text-black"
+            />
+          </div>
+          <p className="hp-body-text mb-24 text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-2 border-black/5 pl-8">
+            Charli XCX captions land differently when the visual matches the energy. Use the BRAT lime green, blurry lowercase font, and no-punctuation attitude to complete the look. Instagram recognizes the aesthetic before the caption even loads.
+          </p>
+
+          <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">Brat Aesthetic Captions for Selfies</h2>
+          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px] opacity-70">
+            Your selfie needs a caption that matches the energy — no explaining yourself, no softening the vibe. These brat aesthetic captions are written for solo shots, mirror pics, and anything where you're clearly the subject.
+          </p>
+          <div className="flex gap-12 mb-12 group">
+            <InteractiveCaptionGrid 
+              captions={[
+                "shot by me, directed by me, starring me", "i woke up like this. intentionally.", 
+                "the face that launched a thousand captions", "soft launch: me", 
+                "camera roll when i'm the only one who matters", "born this era", 
+                "my vibe is non-negotiable", "low effort, high result", 
+                "arrived and everyone noticed", "not seeking approval"
+              ]} 
+              hoverBg="hover:bg-white border-2 border-black/5"
+              hoverText="hover:text-black"
+            />
+          </div>
+          <p className="hp-body-text mb-24 text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-2 border-black/5 pl-8">
+            These brat quotes for Instagram work best as single-line captions with no hashtags. The confidence carries itself. Keep the post clean — one photo, one line, zero over-explanation.
+          </p>
+
+          <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">Brat Captions for Night-Out Photos</h2>
+          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px] opacity-70">
+            Night-out photos have their own energy. These lines match chaotic, fun, and slightly unhinged — built for Instagram grids, Discord server albums, and Stories worth screenshotting.
+          </p>
+          <div className="flex gap-12 mb-12 group">
+            <InteractiveCaptionGrid 
+              captions={[
+                "we didn't go home early", "this is what happens when you don't cancel", 
+                "the night wasn't even trying and still won", "bad decisions, great photos", 
+                "we said one drink", "blurry photo, unforgettable night", 
+                "if you weren't there you already missed it", "dancing like nobody's watching, because i don't care", 
+                "the aftermath was worth it", "peak chaos, zero regrets"
               ]} 
               hoverBg="hover:bg-black"
               hoverText="hover:text-white"
             />
           </div>
-          <p className="hp-body-text mt-8 mb-24 text-[16px] opacity-60 italic leading-relaxed">
-            Do not stack an aggressive brat meme caption on top of an aggressive photo unless that intense tone is intentional.
+          <p className="hp-body-text mb-24 text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-2 border-black/5 pl-8">
+            Group shots, solo bathroom-mirror pics, or blurry action frames — any of these work. Post to Instagram before the night's over while the energy is still in the room.
           </p>
 
-          <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">Soft Captions</h2>
-          <div className="flex gap-12 mb-32 group">
-            <div className="w-12 flex-shrink-0 flex items-start pt-2">
-              <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Minimal</span>
-            </div>
-            <InteractiveCaptionGrid 
-              captions={[
-                "just vibes", "low energy", "nothing serious", "it is what it is", "soft chaos", 
-                "quiet today", "slow morning", "no pressure", "doing my best", "half awake", 
-                "gentle mood", "taking my time"
-              ]} 
-              hoverBg="hover:bg-[#ff90e8]"
-              hoverText="hover:text-white"
-            />
-          </div>
-
-          <h2 className="hp-display-heading mt-32 mb-12 !text-4xl text-left tracking-tighter">Pro Tip: Writing Original Captions</h2>
-          <div className="bg-zinc-900 text-white p-10 sm:p-16 mb-24 relative overflow-hidden group border-2 border-white/10">
-             <div className="absolute top-0 right-0 p-4 opacity-10 font-mono text-[10px]">VER: 2026.05 // HACKER_MODE</div>
-             <p className="hp-body-text !text-white !opacity-100 text-[18px] sm:text-[22px] font-medium leading-relaxed italic m-0 relative z-10">
-               To write original brat captions or charli xcx captions, start with your actual reaction to the photo, cut it down to three words max, and drop any unnecessary explaining. Make sure the text is entirely lowercase so it matches the brat summer captions style. For example, instead of writing &quot;I am feeling so exhausted today and just want to sleep,&quot; you cut it down to simply &quot;completely exhausted&quot;. This method turns long thoughts into sharp brat quote captions, and can even be used to format your favorite brat lyric captions or brat song captions instantly.
-             </p>
-          </div>
-
-          <h2 className="hp-display-heading mt-32 mb-12 !text-4xl text-left tracking-tighter uppercase">Visual Captions</h2>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px] opacity-70 border-l-2 border-black pl-8 italic">
-            Instead of just writing text under a photo, you can type your caption directly into the <Link href="/brat-text-generator" className="hp-link">brat text generator</Link> to create an image. Export it as a PNG and post it as a standalone image or carousel opener. This is the fastest way to get authentic brat text for instagram without manually editing photos. For full meme layouts, you can also use the <Link href="/brat-maker" className="hp-link">brat maker</Link>.
+          <h2 className="hp-display-heading mt-32 mb-12 !text-4xl text-left tracking-tighter">How to Make Your Caption Look Brat</h2>
+          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px] opacity-70">
+            A great caption works harder when the visual matches it. The BRAT aesthetic is specific: lime green background, lowercase blurry text, no polish, no perfection. You can recreate it for free using the brat text generator at ibratgenerator.com.
+          </p>
+          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px] opacity-70">
+            No design skills needed. No account required. No watermark on the download.
           </p>
 
-          <div className="py-24 sm:py-32 text-center border-t-2 border-black/5 mt-12">
-            <h3 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none">Ready to post?</h3>
-            <Link href="/" className="group inline-flex items-center text-2xl sm:text-5xl font-black italic uppercase tracking-tighter transition-all">
-              <span className="relative">
-                Open the Generator
-                <div className="absolute -bottom-2 left-0 w-full h-3 bg-[#89CC04] -z-10 group-hover:h-full transition-all duration-300 opacity-60"></div>
-              </span>
-              <svg className="ml-6 w-8 h-8 sm:w-12 sm:h-12 transform group-hover:translate-x-3 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </Link>
-            <p className="mt-12 text-lg opacity-40 font-medium italic tracking-widest uppercase">The original brat caption creator.</p>
-          </div>
+          <h3 className="text-2xl font-black italic tracking-tighter uppercase mb-6">Create the BRAT-Style Image</h3>
+          <ol className="list-decimal list-inside space-y-4 mb-24 text-[17px] sm:text-[18px] opacity-70 font-medium">
+            <li>Pick a caption from this list</li>
+            <li>Go to ibratgenerator.com</li>
+            <li>Type or paste your caption into the tool</li>
+            <li>Download the PNG</li>
+            <li>Post to Instagram, TikTok, or use it as a Story overlay</li>
+          </ol>
+          <p className="hp-body-text mb-24 text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-2 border-black/5 pl-8">
+            The visual and the caption together hit harder than either one alone. That's the whole formula.
+          </p>
 
-          {/* ── FAQ ── */}
           <FAQAccordion
             title="Frequently Asked Questions"
             intro=""
             items={[
-              { 
-                question: "What makes a good brat caption?", 
-                answer: <p>A good caption is short, usually under three words, and sounds like something you would actually say in real life.</p> 
-              },
-              { 
-                question: "Should brat captions be lowercase?", 
-                answer: <p>Yes, keeping the text lowercase is a core part of the aesthetic because it feels casual and unfiltered.</p> 
+              {
+                question: "What makes a caption \"brat\" on Instagram?",
+                answer: <p>A brat caption is confident, blunt, and doesn't try to be likable. It's lowercase energy, zero over-explanation, and unapologetic phrasing. Think self-aware over polished.</p>
               },
               {
-                question: "Can I use these captions for TikTok too?",
-                answer: <p>Yes, these short phrases work perfectly as text overlays on TikTok videos or inside the caption box.</p>
+                question: "Can I use these captions on TikTok?",
+                answer: <p>Yes. Every caption here works for TikTok, Instagram, X, and Discord. The brat aesthetic crosses every platform — pair any of them with a lime green visual for the full effect.</p>
               },
               {
-                question: "How do I make a brat text visual for my caption?",
-                answer: <p>You can use a free brat generator to type your caption, select a background color, and download it as an image instantly.</p>
+                question: "What's the best caption length for Instagram?",
+                answer: <p>Under 15 words performs best for engagement on Instagram. The short captions section at the top of this list is the safest zone for reach and saves.</p>
+              },
+              {
+                question: "Do I need to be a Charli XCX fan to use brat captions?",
+                answer: <p>No. Brat as an aesthetic has grown beyond the album. Confident, lowercase, unapologetic energy is the only entry requirement.</p>
+              },
+              {
+                question: "How do I get the BRAT green look for my Instagram post?",
+                answer: <p>Go to ibratgenerator.com, type your caption into the tool, and download the PNG. It gives you the lime green BRAT-style image instantly — free, no sign-up needed.</p>
               }
             ]}
           />
+
+          <div className="pt-16 pb-8 sm:pt-24 sm:pb-12 text-center border-t-2 border-black/5 mt-12">
+            <p className="hp-body-text mb-0 text-[17px] sm:text-[18px] opacity-70">
+              Ready to pair your caption with the full BRAT visual? Use the <Link href="/" className="hp-link">brat generator</Link> to turn any line from this list into a free, downloadable lime green image. Post it to Instagram or TikTok in under a minute — no design skills, no account, no watermark.
+            </p>
+          </div>
+
         </div>
       </article>
     </main>

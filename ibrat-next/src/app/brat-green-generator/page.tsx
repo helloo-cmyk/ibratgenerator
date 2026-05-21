@@ -282,17 +282,19 @@ export default function BratGreenGeneratorPage() {
       </div>
 
       {/* ── FAQ ── */}
-      <FAQAccordion
-        title="Frequently Asked Questions"
-        intro="Common questions about this green brat generator."
-        items={[
-          { question: "Is the green brat generator free?", answer: <p>Yes. Unlimited use, no payment, no hidden limits.</p> },
-          { question: "Do I need to sign up?", answer: <p>No. The tool works instantly in your browser. No account, no email.</p> },
-          { question: "What file format do designs export as?", answer: <p>PNG at your chosen resolution: 1024, 1500, 2048, or 3000 px. No watermark.</p> },
-          { question: "Can I add my own photo background?", answer: <p>Yes. Upload any image and layer neon green brat text on top.</p> },
-          { question: "Can I use it on mobile?", answer: <p>Yes. Full touch support on iOS and Android. Same controls as desktop.</p> },
-        ]}
-      />
+      <section className="bg-zinc-50 py-12 px-4 overflow-hidden border-b-2 border-black/5">
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          intro="Common questions about this green brat generator."
+          items={[
+            { question: "Is the green brat generator free?", answer: <p>Yes. Unlimited use, no payment, no hidden limits.</p> },
+            { question: "Do I need to sign up?", answer: <p>No. The tool works instantly in your browser. No account, no email.</p> },
+            { question: "What file format do designs export as?", answer: <p>PNG at your chosen resolution: 1024, 1500, 2048, or 3000 px. No watermark.</p> },
+            { question: "Can I add my own photo background?", answer: <p>Yes. Upload any image and layer neon green brat text on top.</p> },
+            { question: "Can I use it on mobile?", answer: <p>Yes. Full touch support on iOS and Android. Same controls as desktop.</p> },
+          ]}
+        />
+      </section>
     </main>
   );
 }

@@ -584,6 +584,31 @@ button {
   .hp-steps-grid { grid-template-columns: 1fr; }
 }
 
+/* Fix for orphaned grid items to span remaining columns instead of leaving empty space */
+/* 4 column layout */
+@media (min-width: 801px) {
+  /* 1 orphaned item (e.g. 5 total) -> spans 4 */
+  .hp-steps-grid > *:last-child:nth-child(4n + 1) {
+    grid-column: 1 / -1 !important;
+  }
+  /* 2 orphaned items (e.g. 6 total) -> span 2 each */
+  .hp-steps-grid > *:last-child:nth-child(4n + 2),
+  .hp-steps-grid > *:nth-last-child(2):nth-child(4n + 1) {
+    grid-column: span 2 !important;
+  }
+  /* 3 orphaned items (e.g. 7 total) -> last item spans 2 to fill */
+  .hp-steps-grid > *:last-child:nth-child(4n + 3) {
+    grid-column: span 2 !important;
+  }
+}
+/* 2 column layout */
+@media (max-width: 800px) and (min-width: 481px) {
+  /* 1 orphaned item -> spans 2 */
+  .hp-steps-grid > *:last-child:nth-child(2n + 1) {
+    grid-column: 1 / -1 !important;
+  }
+}
+
 .hp-step-card {
   background: var(--hp-surface);
   padding: 28px 24px;

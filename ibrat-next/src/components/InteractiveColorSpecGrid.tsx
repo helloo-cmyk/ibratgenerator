@@ -17,12 +17,12 @@ export default function InteractiveColorSpecGrid({ specs }: { specs: ColorSpec[]
   };
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-black border-4 border-black overflow-hidden shadow-[20px_20px_0px_rgba(137,204,4,0.1)]">
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-[#000] border-4 border-black overflow-hidden shadow-[20px_20px_0px_rgba(137,204,4,0.1)]">
       {specs.map((spec) => (
         <button 
           key={spec.label}
           onClick={() => handleCopy(spec.value)}
-          className="bg-white p-8 group text-left relative overflow-hidden active:bg-zinc-50 transition-all border-r border-b border-black last:border-r-0"
+          className="bg-white text-black p-8 group text-left relative overflow-hidden active:bg-zinc-50 transition-all border-r border-b border-black last:border-r-0"
         >
           <span className="text-[10px] font-black uppercase tracking-widest opacity-30 group-hover:opacity-100 block mb-4">{spec.label}</span>
           <span className={`text-xl sm:text-2xl font-black italic tracking-tighter transition-opacity ${copiedValue === spec.value ? "opacity-0" : "opacity-100"}`}>{spec.value}</span>

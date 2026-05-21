@@ -204,7 +204,7 @@ export default function BratAestheticGuidePage() {
           {/* ── WHAT TO WRITE ── */}
           <h2 className="hp-display-heading mt-32 mb-16 !text-4xl text-left tracking-tighter">What to Write</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-black border-4 border-black mb-12 overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#000] border-4 border-black mb-12 overflow-hidden">
             {[
               { category: "Basics", items: [{ h: "your name", p: "The simplest option. Personal and immediate." }, { h: "summer 2026", p: "Clean, wallpaper-ready date formats." }], color: "bg-[#89CC04]" },
               { category: "Emotions", items: [{ h: "whatever", p: "The ultimate unbothered classic." }, { h: "tired", p: "Pure unfiltered emotion." }], color: "bg-white" },

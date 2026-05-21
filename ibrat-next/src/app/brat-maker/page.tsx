@@ -6,7 +6,7 @@ import ExampleGallery from "@/components/ExampleGallery";
 
 export const metadata = {
   title: {
-    absolute: "Brat Maker – Create Brat Images & Memes Instantly",
+    absolute: "Brat Maker - Create Brat Images & Memes Instantly",
   },
   description: "Try our free brat maker to create brat images and memes instantly. Customize text and colors. No signup required.",
   alternates: {
@@ -218,18 +218,20 @@ export default function BratMakerPage() {
         </div>
       </div>
 
-      <FAQAccordion
-        title="Frequently Asked Questions"
-        intro=""
-        items={[
-          { question: "Is the brat maker free?", answer: <p>Yes, the tool is completely free to use with no hidden fees or premium features locked behind a paywall.</p> },
-          { question: "Do I need an account?", answer: <p>No, you can generate and download as many images as you want without creating an account or providing an email address.</p> },
-          { question: "What file format is exported?", answer: <p>All images are exported as high-resolution PNG files to ensure maximum quality and crisp text.</p> },
-          { question: "Can I upload my own photo?", answer: <p>Yes, you can upload any custom image to use as your background instead of a solid color.</p> },
-          { question: "Is it mobile-optimized?", answer: <p>The entire interface is built to work reliably on mobile, allowing you to drag, scale, and edit with touch controls.</p> },
-          { question: "Can I use my creations commercially?", answer: <p>Yes, you own whatever you create and can use the generated images for commercial projects, social media, or merchandise.</p> },
-        ]}
-      />
+      <section className="bg-zinc-50 py-12 px-4 overflow-hidden border-b-2 border-black/5">
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          intro="Quick answers about the official aesthetic generator."
+          items={[
+            { question: "Is the brat maker free?", answer: <p>Yes, the tool is completely free to use with no hidden fees or premium features locked behind a paywall.</p> },
+            { question: "Do I need an account?", answer: <p>No, you can generate and download as many images as you want without creating an account or providing an email address.</p> },
+            { question: "What file format is exported?", answer: <p>All images are exported as high-resolution PNG files to ensure maximum quality and crisp text.</p> },
+            { question: "Can I upload my own photo?", answer: <p>Yes, you can upload any custom image to use as your background instead of a solid color.</p> },
+            { question: "Is it mobile-optimized?", answer: <p>The entire interface is built to work reliably on mobile, allowing you to drag, scale, and edit with touch controls.</p> },
+            { question: "Can I use my creations commercially?", answer: <p>Yes, you own whatever you create and can use the generated images for commercial projects, social media, or merchandise.</p> },
+          ]}
+        />
+      </section>
 
       <HomeScrollReveal />
     </main>

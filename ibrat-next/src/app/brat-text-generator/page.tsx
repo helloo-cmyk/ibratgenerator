@@ -112,7 +112,7 @@ export const metadata = {
     canonical: "https://ibratgenerator.com/brat-text-generator/",
   },
   description:
-    "Type any text, pick your color, download clean brat PNG instantly. Free brat text generator — no signup, no watermark. Works on mobile.",
+    "Type any text, pick your color, download clean brat PNG instantly. Free brat text generator - no signup, no watermark. Works on mobile.",
 };
 
 export default function BratTextGeneratorPage() {
@@ -327,19 +327,21 @@ export default function BratTextGeneratorPage() {
         </div>
       </div>
 
-      <FAQAccordion
-        title="Frequently Asked Questions"
-        intro="Quick answers about this text tool."
-        items={[
-          { question: "Is the brat text generator free?", answer: <p>Yes. It's 100% free to use. There are no subscriptions or hidden fees.</p> },
-          { question: "Is there a limit to how much text I can add?", answer: <p>You can type as much as you like, though shorter phrases and single words tend to look best in this bold aesthetic.</p> },
-          { question: "Does it add a watermark to the text image?", answer: <p>No. All exports are completely clean and watermark-free.</p> },
-          { question: "What font does the tool use?", answer: <p>It uses a condensed, stretched sans-serif font styled to match the Charli XCX brat album typography, which is bold, lowercase, and tightly kerned.</p> },
-          { question: "Can I use the generated text commercially?", answer: <p>Yes. The images you create are yours to use for commercial projects, merchandise, or any other purpose.</p> },
-          { question: "Does it work on mobile devices?", answer: <p>Yes. It runs fully in your mobile browser with touch support. Works on iPhone, Android, and tablets, with no app required. Open the page and start typing.</p> },
-          { question: "Can I make a brat text generator transparent background image?", answer: <p>The tool exports brat text generator PNG files with your chosen background color. For a transparent background, set it to match your target surface, then remove it with any PNG editor after downloading.</p> },
-        ]}
-      />
+      <section className="bg-zinc-50 py-12 px-4 overflow-hidden border-b-2 border-black/5">
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          intro="Quick answers about this text tool."
+          items={[
+            { question: "Is the brat text generator free?", answer: <p>Yes. It's 100% free to use. There are no subscriptions or hidden fees.</p> },
+            { question: "Is there a limit to how much text I can add?", answer: <p>You can type as much as you like, though shorter phrases and single words tend to look best in this bold aesthetic.</p> },
+            { question: "Does it add a watermark to the text image?", answer: <p>No. All exports are completely clean and watermark-free.</p> },
+            { question: "What font does the tool use?", answer: <p>It uses a condensed, stretched sans-serif font styled to match the Charli XCX brat album typography, which is bold, lowercase, and tightly kerned.</p> },
+            { question: "Can I use the generated text commercially?", answer: <p>Yes. The images you create are yours to use for commercial projects, merchandise, or any other purpose.</p> },
+            { question: "Does it work on mobile devices?", answer: <p>Yes. It runs fully in your mobile browser with touch support. Works on iPhone, Android, and tablets, with no app required. Open the page and start typing.</p> },
+            { question: "Can I make a brat text generator transparent background image?", answer: <p>The tool exports brat text generator PNG files with your chosen background color. For a transparent background, set it to match your target surface, then remove it with any PNG editor after downloading.</p> },
+          ]}
+        />
+      </section>
 
       <HomeScrollReveal />
     </main>

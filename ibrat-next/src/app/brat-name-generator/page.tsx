@@ -179,18 +179,20 @@ export default function BratNameGeneratorPage() {
       </div>
 
       {/* ── FAQ ── */}
-      <FAQAccordion
-        title="Frequently Asked Questions"
-        intro=""
-        items={[
-          { question: "Is the brat name generator free?", answer: <p>Yes, completely free with no hidden charges or premium tiers.</p> },
-          { question: "Do I need to sign up?", answer: <p>No. You can generate names immediately without creating any account.</p> },
-          { question: "Can I use generated names commercially?", answer: <p>Yes. You own whatever you generate and can use it for any purpose including commercial projects.</p> },
-          { question: "Are the names unique?", answer: <p>The generator creates a wide variety of combinations. Uniqueness depends on how and where you use them, but the output avoids common generic patterns.</p> },
-          { question: "Can I generate names specifically for album titles?", answer: <p>Yes. Many results are structured to work directly as album, EP, or playlist titles.</p> },
-          { question: "Is this officially connected to Charli XCX?", answer: <p>No. This is a fan-made tool inspired by the Brat aesthetic. It has no official connection to Charli XCX or her team.</p> },
-        ]}
-      />
+      <section className="bg-zinc-50 py-12 px-4 overflow-hidden border-b-2 border-black/5">
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          intro=""
+          items={[
+            { question: "Is the brat name generator free?", answer: <p>Yes, completely free with no hidden charges or premium tiers.</p> },
+            { question: "Do I need to sign up?", answer: <p>No. You can generate names immediately without creating any account.</p> },
+            { question: "Can I use generated names commercially?", answer: <p>Yes. You own whatever you generate and can use it for any purpose including commercial projects.</p> },
+            { question: "Are the names unique?", answer: <p>The generator creates a wide variety of combinations. Uniqueness depends on how and where you use them, but the output avoids common generic patterns.</p> },
+            { question: "Can I generate names specifically for album titles?", answer: <p>Yes. Many results are structured to work directly as album, EP, or playlist titles.</p> },
+            { question: "Is this officially connected to Charli XCX?", answer: <p>No. This is a fan-made tool inspired by the Brat aesthetic. It has no official connection to Charli XCX or her team.</p> },
+          ]}
+        />
+      </section>
     </main>
   );
 }

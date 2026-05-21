@@ -18,12 +18,12 @@ export default function InteractiveCaptionGrid({ captions, hoverBg = "hover:bg-[
   };
 
   return (
-    <div className={`flex-1 grid grid-cols-2 sm:grid-cols-3 gap-px bg-black border-2 border-black transition-colors`}>
+    <div className={`flex-1 grid grid-cols-2 sm:grid-cols-3 gap-px bg-[#000] border-2 border-black transition-colors`}>
       {captions.map((cap) => (
         <button 
           key={cap} 
           onClick={() => handleCopy(cap)}
-          className={`bg-white p-6 text-[16px] font-black italic lowercase tracking-tight ${hoverBg} ${hoverText} transition-all cursor-pointer relative overflow-hidden group/btn text-left`}
+          className={`bg-white text-black p-6 text-[16px] font-black italic lowercase tracking-tight ${hoverBg} ${hoverText} transition-all cursor-pointer relative overflow-hidden group/btn text-left`}
         >
           <span className={`transition-opacity ${copiedText === cap ? "opacity-0" : "opacity-100"}`}>{cap}</span>
           <span className="absolute top-1 right-2 text-[6px] font-black uppercase tracking-widest opacity-0 group-hover/btn:opacity-30">COPY_CMD</span>
@@ -33,6 +33,9 @@ export default function InteractiveCaptionGrid({ captions, hoverBg = "hover:bg-[
             </span>
           )}
         </button>
+      ))}
+      {Array.from({ length: captions.length % 6 === 0 ? 0 : 6 - (captions.length % 6) }).map((_, i) => (
+        <div key={`empty-${i}`} className="bg-white"></div>
       ))}
     </div>
   );

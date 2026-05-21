@@ -10,7 +10,7 @@ export const metadata = {
     canonical: "https://ibratgenerator.com/blog/what-is-brat-generator/",
   },
   description:
-    "A brat generator is a free online tool to make Charli XCX-style images. Type text, pick colors, download PNG — no Photoshop, no signup needed.",
+    "A brat generator is a free online tool to make Charli XCX-style images. Type text, pick colors, download PNG - no Photoshop, no signup needed.",
 };
 
 const faqSchema = {
@@ -93,7 +93,7 @@ export default function WhatIsBratGeneratorPage() {
           </div>
 
           <h2 className="hp-display-heading mt-32 mb-12 !text-4xl text-left tracking-tighter">What Can You Make?</h2>
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-black border-4 border-black mb-32 overflow-hidden shadow-[20px_20px_0px_rgba(0,0,0,0.05)]">
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#000] border-4 border-black mb-32 overflow-hidden shadow-[20px_20px_0px_rgba(0,0,0,0.05)]">
             {[
               { category: "Viral Memes", p: "People use a brat generator online to create a massive variety of digital content. As a dedicated brat meme generator, creators build highly shareable reaction images using short, sarcastic phrases.", color: "bg-[#89CC04]" },
               { category: "Platform Content", p: "Influencers turn their random thoughts and Instagram captions into bold visuals that stand out in a feed. You will also see these graphics constantly used as TikTok thumbnails or YouTube chapter markers.", color: "bg-white" },
@@ -122,7 +122,7 @@ export default function WhatIsBratGeneratorPage() {
               <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Versus</span>
             </div>
             <div className="flex-1 space-y-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-black border-2 border-black overflow-hidden">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#000] border-2 border-black overflow-hidden">
                 <div className="bg-white p-10 group hover:bg-[#89CC04] transition-colors">
                   <h3 className="text-2xl font-black italic uppercase tracking-tighter mb-4">The Generator</h3>
                   <p className="text-[14px] opacity-70 leading-relaxed m-0 italic group-hover:text-black">

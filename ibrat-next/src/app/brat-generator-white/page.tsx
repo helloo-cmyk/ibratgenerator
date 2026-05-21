@@ -322,17 +322,19 @@ export default function BratGeneratorWhitePage() {
       </div>
 
       {/* ── FAQ ── */}
-      <FAQAccordion
-        title="Frequently Asked Questions"
-        intro="Common questions about this white brat generator."
-        items={[
-          { question: "Is the white brat generator free?", answer: <p>Yes. Unlimited use, no payment, no hidden limits.</p> },
-          { question: "Can I use my own background?", answer: <p>Yes. Upload any image and layer brat text on top.</p> },
-          { question: "What aspect ratios are available?", answer: <p>1:1 square, 9:16 vertical, 4:5 portrait, and 16:9 landscape.</p> },
-          { question: "Is it mobile-optimized?", answer: <p>Yes. Full touch controls on iOS and Android. Same features as desktop.</p> },
-          { question: "Can I use designs for commercial use?", answer: <p>Yes. Every image you create is yours to use for any purpose, including commercial projects.</p> },
-        ]}
-      />
+      <section className="bg-zinc-50 py-12 px-4 overflow-hidden border-b-2 border-black/5">
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          intro="Common questions about this white brat generator."
+          items={[
+            { question: "Is the white brat generator free?", answer: <p>Yes. Unlimited use, no payment, no hidden limits.</p> },
+            { question: "Can I use my own background?", answer: <p>Yes. Upload any image and layer brat text on top.</p> },
+            { question: "What aspect ratios are available?", answer: <p>1:1 square, 9:16 vertical, 4:5 portrait, and 16:9 landscape.</p> },
+            { question: "Is it mobile-optimized?", answer: <p>Yes. Full touch controls on iOS and Android. Same features as desktop.</p> },
+            { question: "Can I use designs for commercial use?", answer: <p>Yes. Every image you create is yours to use for any purpose, including commercial projects.</p> },
+          ]}
+        />
+      </section>
     </main>
   );
 }

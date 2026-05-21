@@ -1,6 +1,8 @@
 import Link from "next/link";
 import FAQAccordion from "@/components/FAQAccordion";
 import BlogHero from "@/components/BlogHero";
+import InteractiveCaptionGrid from "@/components/InteractiveCaptionGrid";
+import InteractivePalette from "@/components/InteractivePalette";
 
 export const metadata = {
   title: "Brat Generator for TikTok - Make Brat Images Fast",
@@ -76,118 +78,115 @@ export default function BratGeneratorForTikTokPage() {
       <article className="px-4 pt-12 max-w-[720px] mx-auto">
         <div className="prose-container">
           
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            TikTok moves fast. A brat image that takes 10 minutes to make in design software is already old news by the time you post it. The brat generator lets you go from idea to PNG in under a minute - no templates to scroll through, no account to create, no export settings to figure out. Type your text, pick your color, download. That is the whole workflow.
-          </p>
+          <div className="bg-black text-white p-10 sm:p-16 mb-24 relative overflow-hidden group">
+            <span className="absolute top-4 right-8 text-[10px] font-black uppercase tracking-[0.3em] opacity-30">The Workflow</span>
+            <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-8 leading-none">Speed is Key</h2>
+            <p className="hp-body-text !text-white !opacity-100 text-[18px] sm:text-[22px] font-medium leading-tight italic m-0">
+              TikTok moves fast. A brat image that takes 10 minutes to make in design software is already old news by the time you post it. The brat generator lets you go from idea to PNG in under a minute.
+            </p>
+          </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl text-left">Why TikTok and Brat Aesthetic Go Together</h2>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            TikTok culture rewards authenticity over polish. The <Link href="/blog/brat-aesthetic-guide/" className="hp-link">brat aesthetic</Link> is intentionally lo-fi, perfectly fitting the raw and unfiltered energy of the platform. A short block of text on a solid neon color naturally stops the scroll because it completely breaks away from hyper-edited video content. Gen Z recognizes the aesthetic instantly the moment it appears on their For You Page. The Charli XCX brat album went viral on TikTok first, making it the native home of <Link href="/blog/brat-summer-meaning/" className="hp-link">brat summer</Link> energy. The minimalist format works extraordinarily well for creators because it is loud, undeniably direct, and completely unbothered by traditional design rules. When you want to make a statement that resonates with a highly online audience, this aesthetic is your best option.
-          </p>
-
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl text-left">Best Brat Image Sizes for TikTok</h2>
-          
-          <div className="space-y-8 mb-8">
-            <div>
-              <h3 className="text-2xl font-black italic tracking-tighter uppercase mb-2">TikTok Profile Picture</h3>
-              <ul className="list-disc pl-6 hp-body-text text-[17px] opacity-80 space-y-1">
-                <li>Format: 1:1 square</li>
-                <li>Recommended size: 1024px minimum</li>
-                <li>Text tip: your name or one word only</li>
-                <li>pfps are tiny in comments - keep text bold and short</li>
-              </ul>
-              <p className="hp-body-text mt-4 text-[17px] opacity-90">
-                Because profile pictures show up incredibly small in the comment section and on the sidebar of your videos, you must use a 1:1 square format and keep your text as large and readable as possible.
-              </p>
+          <h2 className="hp-display-heading mt-24 mb-16 !text-4xl text-left tracking-tighter uppercase">Why TikTok and Brat Go Together</h2>
+          <div className="flex gap-12 mb-20 group">
+            <div className="w-12 flex-shrink-0 flex items-start pt-2">
+              <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 group-hover:text-[#89CC04] transition-all">Culture</span>
             </div>
-            
-            <div>
-              <h3 className="text-2xl font-black italic tracking-tighter uppercase mb-2">TikTok Video Overlay</h3>
-              <ul className="list-disc pl-6 hp-body-text text-[17px] opacity-80 space-y-1">
-                <li>Format: 9:16 vertical</li>
-                <li>Recommended size: 1500px</li>
-                <li>Text tip: caption, reaction, or mood phrase</li>
-                <li>Export PNG then import into CapCut</li>
-              </ul>
-              <p className="hp-body-text mt-4 text-[17px] opacity-90">
-                If you want to use a graphic as part of a video edit or as a transition slide, you need the vertical format to fill the entire screen of a modern smartphone without leaving awkward black bars.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-black italic tracking-tighter uppercase mb-2">TikTok Story / Background</h3>
-              <ul className="list-disc pl-6 hp-body-text text-[17px] opacity-80 space-y-1">
-                <li>Format: 9:16 vertical</li>
-                <li>Recommended size: 1500px</li>
-                <li>Text tip: date, year, or short lyric</li>
-                <li>Works as a standalone post too</li>
-              </ul>
-              <p className="hp-body-text mt-4 text-[17px] opacity-90">
-                Stories are the perfect place for temporary updates, random thoughts, or quick text posts. Using the vertical layout ensures your story looks natively created for the app and works perfectly as a standalone image post on your feed.
+            <div className="flex-1 border-l-4 border-black pl-12 py-2 group-hover:border-[#89CC04] transition-colors">
+              <p className="hp-body-text !opacity-100 text-[18px] sm:text-[20px] font-medium leading-relaxed italic m-0">
+                TikTok culture rewards authenticity over polish. The <Link href="/blog/brat-aesthetic-guide/" className="hp-link">brat aesthetic</Link> is intentionally lo-fi, perfectly fitting the raw and unfiltered energy of the platform. A short block of text on a solid neon color naturally stops the scroll because it completely breaks away from hyper-edited video content. Gen Z recognizes the aesthetic instantly the moment it appears on their For You Page. When you want to make a statement that resonates with a highly online audience, this aesthetic is your best option.
               </p>
             </div>
           </div>
 
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px] italic border-l-4 border-black/5 pl-6">
+          <h2 className="hp-display-heading mt-32 mb-16 !text-4xl text-left tracking-tighter uppercase">Best Brat Image Sizes for TikTok</h2>
+          
+          <div className="space-y-12 mb-32 max-w-[650px]">
+            <div className="relative group">
+               <span className="absolute -left-12 top-0 text-5xl font-serif italic opacity-10 group-hover:opacity-20 transition-opacity">01</span>
+               <h3 className="text-3xl font-black italic tracking-tighter mb-2 leading-none uppercase">Profile Picture</h3>
+               <span className="text-[12px] font-black uppercase tracking-[0.3em] mb-4 block text-[#89CC04]">1:1 Square</span>
+               <p className="text-[17px] opacity-70 leading-relaxed border-l-2 border-black/10 pl-6 py-1 group-hover:border-[#89CC04] transition-colors">
+                 Because profile pictures show up incredibly small in the comment section and on the sidebar of your videos, you must use a 1:1 square format and keep your text as large and readable as possible.
+               </p>
+            </div>
+            
+            <div className="relative group">
+               <span className="absolute -left-12 top-0 text-5xl font-serif italic opacity-10 group-hover:opacity-20 transition-opacity">02</span>
+               <h3 className="text-3xl font-black italic tracking-tighter mb-2 leading-none uppercase">Video Overlay</h3>
+               <span className="text-[12px] font-black uppercase tracking-[0.3em] mb-4 block text-[#89CC04]">9:16 Vertical</span>
+               <p className="text-[17px] opacity-70 leading-relaxed border-l-2 border-black/10 pl-6 py-1 group-hover:border-[#89CC04] transition-colors">
+                 If you want to use a graphic as part of a video edit or as a transition slide, you need the vertical format to fill the entire screen of a modern smartphone without leaving awkward black bars.
+               </p>
+            </div>
+
+            <div className="relative group">
+               <span className="absolute -left-12 top-0 text-5xl font-serif italic opacity-10 group-hover:opacity-20 transition-opacity">03</span>
+               <h3 className="text-3xl font-black italic tracking-tighter mb-2 leading-none uppercase">Story / Background</h3>
+               <span className="text-[12px] font-black uppercase tracking-[0.3em] mb-4 block text-[#89CC04]">9:16 Vertical</span>
+               <p className="text-[17px] opacity-70 leading-relaxed border-l-2 border-black/10 pl-6 py-1 group-hover:border-[#89CC04] transition-colors">
+                 Stories are the perfect place for temporary updates. Using the vertical layout ensures your story looks natively created for the app and works perfectly as a standalone post on your feed.
+               </p>
+            </div>
+          </div>
+
+          <p className="hp-body-text mb-24 text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-4 border-black/5 pl-10">
             Our free <Link href="/" className="hp-link">brat generator</Link> has both of these aspect ratio presets built right in, so you never have to guess the correct dimensions.
           </p>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl text-left">What to Write on Your Brat TikTok Image</h2>
-          <p className="hp-body-text mb-4 text-[17px] sm:text-[18px]">
-            You have a massive amount of creative freedom when deciding what to write on your graphic. A classic and highly effective choice is just your name - it feels personal, confident, and works perfectly for a custom profile picture. You could also express a relatable mood like &quot;tired&quot;, &quot;whatever&quot;, or &quot;unbothered&quot;. If you are making reaction content or responding to drama, phrases like &quot;not my problem&quot; or &quot;i said what i said&quot; hit incredibly hard.
+          <h2 className="hp-display-heading mt-32 mb-12 !text-4xl text-left tracking-tighter uppercase">What to Write</h2>
+          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
+            You have a massive amount of creative freedom. A classic and highly effective choice is just your name. You could also express a relatable mood, or if you are making reaction content, phrases like &quot;not my problem&quot; hit incredibly hard. Keep it under 4 words. If it takes more than 2 seconds to read it is too long for TikTok.
           </p>
-          <p className="hp-body-text mb-4 text-[17px] sm:text-[18px]">
-            Sometimes tying your text directly to a current TikTok trend phrase or a viral audio clip is the smartest strategy to gain algorithmic traction. Dates are also widely used, such as &quot;2026&quot; or &quot;since 2024&quot;. If you create specific niche content, claim your space with phrases like &quot;book girl&quot;, &quot;gym rat&quot;, or &quot;that girl&quot;. Or, you can choose to do the absolute most brat thing possible and write absolutely nothing, simply downloading the blank, solid brat color.
-          </p>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px] font-bold">
-            Keep it under 4 words. If it takes more than 2 seconds to read it is too long for TikTok.
-          </p>
-
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl text-left">Brat Colors That Work on TikTok</h2>
           
-          <div className="space-y-8 mb-12">
-            <div>
-              <h3 className="text-2xl font-black italic tracking-tighter uppercase mb-2">Brat Green (#89CC04)</h3>
-              <p className="hp-body-text mb-2 text-[17px] sm:text-[18px]">
-                This is the official, iconic, and most recognizable color of the entire trend. Viewers know it instantly the second it hits their screen. It is vibrant and aggressive enough to work flawlessly on both light and dark TikTok UI elements. It is absolutely the best choice for profile pictures, viral reactions, and trend-focused content.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-black italic tracking-tighter uppercase mb-2">Black (#0a0a0a)</h3>
-              <p className="hp-body-text mb-2 text-[17px] sm:text-[18px]">
-                A stark black background offers extreme high contrast, making your white text incredibly readable even in the tiniest comment sections. It works exceptionally well for dark mode TikTok users who prefer darker screens. This is best for moody content, serious announcements, or a villain era aesthetic. Try our <Link href="/brat-black-generator/" className="hp-link">black brat generator</Link> to get this exact look perfectly.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-black italic tracking-tighter uppercase mb-2">Pink (#ff90e8)</h3>
-              <p className="hp-body-text mb-2 text-[17px] sm:text-[18px]">
-                Pink offers a slightly softer, more approachable aesthetic that is excellent for lifestyle, beauty, and fashion content creators. It also stands out beautifully when you crosspost your Instagram content directly to your TikTok feed. You can try the <Link href="/brat-generator-pink/" className="hp-link">pink brat generator</Link> to see how it matches your personal brand.
-              </p>
-            </div>
+          <div className="flex gap-12 mb-32 group">
+            <InteractiveCaptionGrid 
+              captions={[
+                "tired", "whatever", "unbothered",
+                "not my problem", "i said what i said", "book girl",
+                "gym rat", "that girl", "2026"
+              ]} 
+              hoverBg="hover:bg-black"
+              hoverText="hover:text-white"
+            />
           </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl text-left">How to Make a Brat Image for TikTok</h2>
-          <p className="hp-body-text mb-6 text-[17px] sm:text-[18px]">
-            Follow these simple, straightforward steps to create your custom image in under a minute:
-          </p>
-          <ol className="list-decimal pl-6 hp-body-text text-[17px] sm:text-[18px] space-y-2 mb-8">
-            <li>Open the brat generator above on your phone or desktop.</li>
-            <li>Type your text - keep it under 4 words for maximum impact.</li>
-            <li>Pick your background color - green, black, pink, or white.</li>
-            <li>Set the aspect ratio to 1:1 for a pfp or 9:16 for a story or video overlay.</li>
-            <li>Click Save PNG and download the high-resolution file to your device.</li>
-            <li>Import the image directly into TikTok or CapCut to finish your post.</li>
-          </ol>
-          <p className="hp-body-text mb-12 text-[17px] sm:text-[18px] italic border-l-4 border-black/5 pl-6">
-            Open the <Link href="/" className="hp-link">brat generator</Link> to start creating. The whole process takes under 60 seconds.
-          </p>
-
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl text-left">TikTok Workflow - Batch Creating Brat Images</h2>
+          <h2 className="hp-display-heading mt-32 mb-12 !text-4xl text-left tracking-tighter uppercase">TikTok Colors</h2>
           <p className="hp-body-text mb-12 text-[17px] sm:text-[18px]">
-            If you want to grow your account fast and maintain an active presence, you need to batch create your content. First, lock your preferred background color and canvas size in the tool so they stay perfectly identical. Then, change only the text between exports, downloading 5 to 10 different variants back to back in one sitting. Once you have your folder of images, you can schedule them across the entire week to keep your feed constantly active without daily effort. Do not change any settings between exports - visual consistency is the entire point of maintaining this aesthetic. This is exactly how top creators batch their content fast without burning out or spending hours in complex design programs. Best of all, our dedicated <Link href="/brat-text-generator/" className="hp-link">brat text generator</Link> has absolutely no session limits, so you can download as many variations as you want completely free.
+            The exact color you pick matters. The classic green is undeniably viral, while black offers high contrast for dark mode users, and pink provides a softer edge for lifestyle creators.
           </p>
+          
+          <div className="mb-32">
+            <InteractivePalette 
+              colors={[
+                { type: "Classic", name: "brat green", hex: "#89CC04", bg: "bg-[#89CC04]", text: "text-black" },
+                { type: "Dark Mode", name: "brat black", hex: "#0A0A0A", bg: "bg-black", text: "text-white" },
+                { type: "Soft", name: "brat pink", hex: "#FF90E8", bg: "bg-[#FF90E8]", text: "text-black" }
+              ]}
+            />
+          </div>
+
+          <h2 className="hp-display-heading mt-32 mb-12 !text-4xl text-left tracking-tighter uppercase">Batch Creating</h2>
+          <div className="bg-[#89CC04] p-10 sm:p-12 mb-24 border-2 border-black/5">
+             <p className="hp-body-text !opacity-100 text-[18px] sm:text-[20px] font-medium leading-relaxed italic mb-8">
+               If you want to grow your account fast, you need to batch create your content. 
+             </p>
+             <p className="hp-body-text !opacity-90 text-[17px] leading-relaxed m-0 text-black font-medium">
+               Lock your preferred background color and canvas size in the tool so they stay perfectly identical. Then, change only the text between exports, downloading 5 to 10 different variants back to back. Once you have your folder of images, schedule them across the week to keep your feed active without daily effort. Do not change any settings between exports - visual consistency is the entire point.
+             </p>
+          </div>
+
+          <div className="py-24 sm:py-32 text-center border-t-2 border-black/5 mt-12">
+            <h3 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none">Ready to start?</h3>
+            <Link href="/" className="group inline-flex items-center text-2xl sm:text-5xl font-black italic uppercase tracking-tighter transition-all">
+              <span className="relative">
+                Open the Generator
+                <div className="absolute -bottom-2 left-0 w-full h-3 bg-[#89CC04] -z-10 group-hover:h-full transition-all duration-300 opacity-60"></div>
+              </span>
+              <svg className="ml-6 w-8 h-8 sm:w-12 sm:h-12 transform group-hover:translate-x-3 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
 
           <h2 className="hp-display-heading mt-16 mb-6 !text-3xl text-left">Frequently Asked Questions</h2>
           <FAQAccordion

@@ -78,7 +78,7 @@ export const metadata = {
     absolute: "Brat Generator - Free Brat Image Maker, No Signup [2026]"
   },
   description:
-    "Type your text, pick your color, download a clean brat PNG in seconds. Free brat generator — no signup, no watermark. Works on mobile.",
+    "Type your text, pick your color, download a clean brat PNG in seconds. Free brat generator - no signup, no watermark. Works on mobile.",
   alternates: {
     canonical: "https://ibratgenerator.com/",
   },
@@ -391,68 +391,61 @@ export default function Home() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="bg-zinc-50 py-24 px-4 overflow-hidden border-b-2 border-black/5">
-        <div className="max-w-[1200px] mx-auto flex gap-12 group">
-          <div className="w-12 flex-shrink-0 flex items-start pt-2">
-            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Support</span>
-          </div>
-          <div className="flex-1">
-            <FAQAccordion
-              title="Frequently Asked Questions"
-              intro="Quick answers about the official aesthetic generator."
-              items={[
-                {
-                  question: "Is this brat generator free?",
-                  answer: (
-                    <p>
-                      Yes. This free brat generator has no limits, no hidden fees, and no signup. Create and download as many images as you want at up to 3000 px resolution.
-                    </p>
-                  ),
-                },
-                {
-                  question: "Does it add a watermark?",
-                  answer: (
-                    <p>
-                      No. Every PNG you export is completely clean. No watermark, no branding, no fine print.
-                    </p>
-                  ),
-                },
-                {
-                  question: "What file format does it export?",
-                  answer: (
-                    <p>
-                      PNG. You pick the resolution, such as 1024, 1500, 2048, or 3000 px. No compression, no quality loss.
-                    </p>
-                  ),
-                },
-                {
-                  question: "Does it work on mobile?",
-                  answer: (
-                    <p>
-                      Yes. The editor runs in your mobile browser with full touch support. Works on iPhone, Android, iPad, and tablets. No app install needed.
-                    </p>
-                  ),
-                },
-                {
-                  question: "Can I use it as a profile picture (pfp)?",
-                  answer: (
-                    <p>
-                      Yes. Set the aspect ratio to 1:1, type your text, choose a color, and download. This brat generator online works as a pfp maker for TikTok, Instagram, Discord, X, and WhatsApp.
-                    </p>
-                  ),
-                },
-                {
-                  question: "Can I use the images commercially?",
-                  answer: (
-                    <p>
-                      Yes. Every image you create belongs to you. Use it for merch, social media, videos, print, or any commercial project. No attribution required.
-                    </p>
-                  ),
-                },
-              ]}
-            />
-          </div>
-        </div>
+      <section className="bg-zinc-50 py-12 px-4 overflow-hidden border-b-2 border-black/5">
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          intro="Quick answers about the official aesthetic generator."
+          items={[
+            {
+              question: "Is this brat generator free?",
+              answer: (
+                <p>
+                  Yes. This free brat generator has no limits, no hidden fees, and no signup. Create and download as many images as you want at up to 3000 px resolution.
+                </p>
+              ),
+            },
+            {
+              question: "Does it add a watermark?",
+              answer: (
+                <p>
+                  No. Every PNG you export is completely clean. No watermark, no branding, no fine print.
+                </p>
+              ),
+            },
+            {
+              question: "What file format does it export?",
+              answer: (
+                <p>
+                  PNG. You pick the resolution, such as 1024, 1500, 2048, or 3000 px. No compression, no quality loss.
+                </p>
+              ),
+            },
+            {
+              question: "Does it work on mobile?",
+              answer: (
+                <p>
+                  Yes. The editor runs in your mobile browser with full touch support. Works on iPhone, Android, iPad, and tablets. No app install needed.
+                </p>
+              ),
+            },
+            {
+              question: "Can I use it as a profile picture (pfp)?",
+              answer: (
+                <p>
+                  Yes. Set the aspect ratio to 1:1, type your text, choose a color, and download. This brat generator online works as a pfp maker for TikTok, Instagram, Discord, X, and WhatsApp.
+                </p>
+              ),
+            },
+            {
+              question: "Can I use the images commercially?",
+              answer: (
+                <p>
+                  Yes. Every image you create belongs to you. Use it for merch, social media, videos, print, or any commercial project. No attribution required.
+                </p>
+              ),
+            },
+          ]}
+        />
       </section>
 
       {/* Scroll reveal script */}

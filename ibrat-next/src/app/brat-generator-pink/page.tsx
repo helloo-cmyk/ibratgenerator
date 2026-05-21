@@ -280,17 +280,19 @@ export default function BratGeneratorPinkPage() {
       </div>
 
       {/* ── FAQ ── */}
-      <FAQAccordion
-        title="Frequently Asked Questions"
-        intro="Common questions about this pink brat generator."
-        items={[
-          { question: "Is the pink brat generator free?", answer: <p>Yes. Unlimited use, no payment, no hidden limits.</p> },
-          { question: "Can I choose custom pink shades?", answer: <p>Yes. The default is #FF90E8 but you can enter any hex code or use the color picker.</p> },
-          { question: "What canvas sizes are available?", answer: <p>1:1 square, 9:16 vertical, 4:5 portrait, and 16:9 landscape.</p> },
-          { question: "Can I upload my own background?", answer: <p>Yes. Upload any image and layer pink brat text on top.</p> },
-          { question: "Is it optimized for mobile?", answer: <p>Yes. Full touch controls on iOS and Android. Same features as desktop.</p> },
-        ]}
-      />
+      <section className="bg-zinc-50 py-12 px-4 overflow-hidden border-b-2 border-black/5">
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          intro="Common questions about this pink brat generator."
+          items={[
+            { question: "Is the pink brat generator free?", answer: <p>Yes. Unlimited use, no payment, no hidden limits.</p> },
+            { question: "Can I choose custom pink shades?", answer: <p>Yes. The default is #FF90E8 but you can enter any hex code or use the color picker.</p> },
+            { question: "What canvas sizes are available?", answer: <p>1:1 square, 9:16 vertical, 4:5 portrait, and 16:9 landscape.</p> },
+            { question: "Can I upload my own background?", answer: <p>Yes. Upload any image and layer pink brat text on top.</p> },
+            { question: "Is it optimized for mobile?", answer: <p>Yes. Full touch controls on iOS and Android. Same features as desktop.</p> },
+          ]}
+        />
+      </section>
     </main>
   );
 }

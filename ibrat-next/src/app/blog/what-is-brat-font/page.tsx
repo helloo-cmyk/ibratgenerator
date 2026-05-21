@@ -128,7 +128,7 @@ export default function WhatIsBratFontPage() {
                   Even if you find a brat font free download online, installing the font is only ten percent of the work. You still have to manually adjust the tracking, set up the high-contrast background, and export the file at the correct resolution. 
                 </p>
                 <p className="hp-body-text !text-white/60 text-[17px] leading-relaxed m-0 italic">
-                   If you attempt to use a standard brat font canva setup, you will likely struggle to get the letter spacing tight enough to match the authentic album style. This tool handles all of that automatically. Type your text, set the weight and spacing, and download a clean PNG. Try the <Link href="/brat-font-generator/" className="hp-link">brat font generator</Link>, which is free and requires no signup.
+                   If you attempt to use a standard brat font canva setup, you will likely struggle to get the letter spacing tight enough to match the authentic album style. This tool handles all of that automatically. Type your text, set the weight and spacing, and download a clean PNG. Try the <Link href="/brat-font-generator/" className="hp-link !text-white">brat font generator</Link>, which is free and requires no signup.
                 </p>
               </div>
             </div>

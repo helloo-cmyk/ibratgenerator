@@ -222,32 +222,34 @@ export default function BratBlackGeneratorPage() {
       </div>
 
       {/* ── SECTION 6: FAQ ── */}
-      <FAQAccordion
-        title="Frequently Asked Questions"
-        intro="Common questions about this black brat generator."
-        items={[
-          {
-            question: "What is the brat generator black background color?",
-            answer: <p>The background is locked to #0a0a0a, which is a near-pure black. This matches the dark variant of the brat aesthetic. You cannot change it on this page; it is fixed by design.</p>,
-          },
-          {
-            question: "Can I make brat text on a black background?",
-            answer: <p>Yes. This tool is built specifically for that. Type your text, and it appears as white text on a black background automatically. Download your PNG when ready.</p>,
-          },
-          {
-            question: "What is the difference between the black and green brat generator?",
-            answer: <p>The green brat generator uses the official brat green (#89CC04) from Charli XCX&apos;s album. The black version uses #0a0a0a for a darker, higher-contrast look. Same tool, different locked colors.</p>,
-          },
-          {
-            question: "Can I change the text color on the black brat generator?",
-            answer: <p>The background is locked to black but you can adjust text size and spacing. The default text color is white for maximum contrast, which is the standard black brat look.</p>,
-          },
-          {
-            question: "Is the black brat generator free?",
-            answer: <p>Yes. Completely free, no watermark, no account needed. Download as many PNGs as you want.</p>,
-          },
-        ]}
-      />
+      <section className="bg-zinc-50 py-12 px-4 overflow-hidden border-b-2 border-black/5">
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          intro="Common questions about this black brat generator."
+          items={[
+            {
+              question: "What is the brat generator black background color?",
+              answer: <p>The background is locked to #0a0a0a, which is a near-pure black. This matches the dark variant of the brat aesthetic. You cannot change it on this page; it is fixed by design.</p>,
+            },
+            {
+              question: "Can I make brat text on a black background?",
+              answer: <p>Yes. This tool is built specifically for that. Type your text, and it appears as white text on a black background automatically. Download your PNG when ready.</p>,
+            },
+            {
+              question: "What is the difference between the black and green brat generator?",
+              answer: <p>The green brat generator uses the official brat green (#89CC04) from Charli XCX&apos;s album. The black version uses #0a0a0a for a darker, higher-contrast look. Same tool, different locked colors.</p>,
+            },
+            {
+              question: "Can I change the text color on the black brat generator?",
+              answer: <p>The background is locked to black but you can adjust text size and spacing. The default text color is white for maximum contrast, which is the standard black brat look.</p>,
+            },
+            {
+              question: "Is the black brat generator free?",
+              answer: <p>Yes. Completely free, no watermark, no account needed. Download as many PNGs as you want.</p>,
+            },
+          ]}
+        />
+      </section>
 
       {/* ── SECTION 7: MORE BRAT GENERATORS ── */}
       <div className="hp-page-section hp-page-section-bordered px-4">

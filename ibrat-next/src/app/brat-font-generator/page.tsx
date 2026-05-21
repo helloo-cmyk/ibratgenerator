@@ -67,7 +67,7 @@ export const metadata = {
     canonical: "https://ibratgenerator.com/brat-font-generator/",
   },
   description:
-    "Make brat-style text with the exact font spacing and look. Free brat font generator — adjust size, spacing, download PNG. No signup, no watermark.",
+    "Make brat-style text with the exact font spacing and look. Free brat font generator - adjust size, spacing, download PNG. No signup, no watermark.",
 };
 
 export default function BratFontGeneratorPage() {
@@ -253,19 +253,20 @@ export default function BratFontGeneratorPage() {
         </div>
       </div>
 
-      {/* ── FAQ ── */}
-      <FAQAccordion
-        title="Frequently Asked Questions"
-        intro="Common questions about the brat font and this generator."
-        items={[
-          { question: "What is the brat font download alternative?", answer: <p>There is no official font file to download for the brat style. This brat font generator recreates the exact look in your browser, with the correct weight, tight spacing, and the right layout. No installation, no font file hunting required.</p> },
-          { question: "How do I get the brat font for free?", answer: <p>Use this free brat font generator. Type your text, set your colors, and export a watermark-free PNG at up to 3000px resolution. No signup, no payment, no download needed.</p> },
-          { question: "Does this recreate the Charli XCX brat font style?", answer: <p>Yes. The generator recreates the bold, minimal typography associated with Charli XCX Brat visuals, including spacing, weight, and alignment.</p> },
-          { question: "Can I export my typography as PNG?", answer: <p>Yes. Export at 1024, 1500, 2048, or 3000 px. No watermark, no compression.</p> },
-          { question: "Is this tool free?", answer: <p>Yes. Unlimited use, no signup, no payment.</p> },
-          { question: "What is the difference between brat font and regular Arial?", answer: <p>Arial is a standard system font with neutral proportions. The brat font style uses heavier weight, tighter letter spacing, and higher contrast layouts. Arial Bold gets close but lacks the deliberate spacing and compositional choices that define brat typography.</p> },
-        ]}
-      />
+      <section className="bg-zinc-50 py-12 px-4 overflow-hidden border-b-2 border-black/5">
+        <FAQAccordion
+          title="Frequently Asked Questions"
+          intro="Common questions about the brat font and this generator."
+          items={[
+            { question: "What is the brat font download alternative?", answer: <p>There is no official font file to download for the brat style. This brat font generator recreates the exact look in your browser, with the correct weight, tight spacing, and the right layout. No installation, no font file hunting required.</p> },
+            { question: "How do I get the brat font for free?", answer: <p>Use this free brat font generator. Type your text, set your colors, and export a watermark-free PNG at up to 3000px resolution. No signup, no payment, no download needed.</p> },
+            { question: "Does this recreate the Charli XCX brat font style?", answer: <p>Yes. The generator recreates the bold, minimal typography associated with Charli XCX Brat visuals, including spacing, weight, and alignment.</p> },
+            { question: "Can I export my typography as PNG?", answer: <p>Yes. Export at 1024, 1500, 2048, or 3000 px. No watermark, no compression.</p> },
+            { question: "Is this tool free?", answer: <p>Yes. Unlimited use, no signup, no payment.</p> },
+            { question: "What is the difference between brat font and regular Arial?", answer: <p>Arial is a standard system font with neutral proportions. The brat font style uses heavier weight, tighter letter spacing, and higher contrast layouts. Arial Bold gets close but lacks the deliberate spacing and compositional choices that define brat typography.</p> },
+          ]}
+        />
+      </section>
 
       {/* ── LEARN MORE ── */}
       <div className="hp-page-section hp-page-section-bordered">
