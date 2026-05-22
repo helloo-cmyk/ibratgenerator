@@ -2,14 +2,29 @@
 
 import dynamic from "next/dynamic";
 import { useRef } from "react";
+import "../app/brat-generator.css";
 
 const BratGenerator = dynamic(
   () => import("@/components/BratGenerator"),
   {
     ssr: false,
     loading: () => (
-      <div className="flex min-h-[400px] items-center justify-center text-slate-500">
-        <p>Loading generator...</p>
+      <div id="brat-widget" className="animate-pulse" style={{ pointerEvents: 'none' }}>
+        <div id="brat-wrap">
+          <div className="brat-grid">
+            <aside className="brat-card" id="brat-controls">
+              <div className="h-10 bg-slate-100 rounded-lg mb-4" />
+              <div className="h-32 bg-slate-100 rounded-lg mb-4" />
+              <div className="h-10 bg-slate-100 rounded-lg mb-4" />
+              <div className="h-10 bg-slate-100 rounded-lg mb-4 w-2/3" />
+            </aside>
+            <div id="brat-preview">
+              <div className="brat-stage">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-[#e2e8f0]/40 rounded-2xl" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     ),
   }

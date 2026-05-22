@@ -130,7 +130,7 @@ export default function Home() {
       <section className="bg-white py-24 px-4 overflow-hidden border-b-2 border-black/5">
         <div className="max-w-[1200px] mx-auto flex gap-12 group">
           <div className="w-12 flex-shrink-0 flex items-start pt-2">
-            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Trends</span>
+            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-50 group-hover:opacity-100 transition-all">Trends</span>
           </div>
           <div className="flex-1">
             <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none">What Is the<br />Brat Trend?</h2>
@@ -141,10 +141,10 @@ export default function Home() {
                 {" "}and features stretched lowercase type, saturated neon colors, and zero clutter.
               </p>
               <div className="space-y-6">
-                <p className="hp-body-text text-[17px] opacity-70 leading-relaxed m-0">
+                <p className="hp-body-text text-[17px] opacity-80 leading-relaxed m-0">
                   People use it to make memes, profile pictures, stickers, and social posts. Curious about the deeper cultural impact? Read our full guide on the <Link href="/blog/brat-summer-meaning" className="hp-link">brat summer meaning</Link>. It runs entirely in your browser with no app to install.
                 </p>
-                <p className="hp-body-text text-[17px] opacity-70 leading-relaxed m-0 italic font-bold">
+                <p className="hp-body-text text-[17px] opacity-80 leading-relaxed m-0 italic font-bold">
                   To learn more about the culture and rules behind this viral look, read our complete <Link href="/blog/brat-aesthetic-guide/" className="hp-link">brat aesthetic guide</Link>. For sticker and layered image edits, try the <Link href="/brat-maker/" className="hp-link">brat maker</Link>.
                 </p>
               </div>
@@ -157,7 +157,7 @@ export default function Home() {
       <section className="bg-zinc-50 py-24 px-4 overflow-hidden border-b-2 border-black/5">
         <div className="max-w-[1200px] mx-auto flex gap-12 group">
           <div className="w-12 flex-shrink-0 flex items-start pt-2">
-            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Typography</span>
+            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-50 group-hover:opacity-100 transition-all">Typography</span>
           </div>
           <div className="flex-1">
             <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none">What Font Is<br />the Brat Album?</h2>
@@ -166,10 +166,10 @@ export default function Home() {
                 The brat album cover uses a bold, lowercase sans-serif font. While there is no official downloadable file, it is typically recreated using Arial Bold or Helvetica Neue Bold with extremely tight letter spacing.
               </p>
               <div className="space-y-6">
-                <p className="hp-body-text text-[17px] opacity-70 leading-relaxed m-0 italic font-bold">
+                <p className="hp-body-text text-[17px] opacity-80 leading-relaxed m-0 italic font-bold">
                   For the full color palette with hex codes, see our <Link href="/blog/brat-color-code/" className="hp-link">brat color code guide →</Link>
                 </p>
-                <p className="hp-body-text text-[17px] opacity-70 leading-relaxed m-0">
+                <p className="hp-body-text text-[17px] opacity-80 leading-relaxed m-0">
                    To study the typography rules in detail, check out the <Link href="/blog/what-is-brat-font/" className="hp-link">brat font guide</Link>.
                 </p>
               </div>
@@ -198,7 +198,7 @@ export default function Home() {
                 {feat.icon}
               </div>
               <h3 className="text-xl font-black italic uppercase tracking-tighter mb-3">{feat.h}</h3>
-              <p className="text-[15px] opacity-60 leading-relaxed m-0">{feat.p}</p>
+              <p className="text-[15px] opacity-80 leading-relaxed m-0">{feat.p}</p>
             </div>
           ))}
         </div>
@@ -208,7 +208,7 @@ export default function Home() {
       <section className="bg-white py-24 px-4 overflow-hidden border-b-2 border-black/5">
         <div className="max-w-[1200px] mx-auto flex gap-12 group">
           <div className="w-12 flex-shrink-0 flex items-start pt-2">
-            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Manual</span>
+            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-50 group-hover:opacity-100 transition-all">Manual</span>
           </div>
           <div className="flex-1">
             <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-16 leading-none">How to Use the<br />Brat Creator</h2>
@@ -223,7 +223,7 @@ export default function Home() {
                   <span className="text-5xl sm:text-7xl font-black italic opacity-10 group-hover/step:opacity-100 group-hover/step:text-[#1A1A1A] transition-all duration-500">{item.step}</span>
                   <div className="pt-2 border-l-2 border-black/5 pl-8 group-hover/step:border-[#89CC04] transition-colors">
                     <h3 className="text-2xl sm:text-4xl font-black italic tracking-tighter uppercase mb-2 leading-none">{item.h}</h3>
-                    <p className="text-[17px] opacity-70 leading-relaxed m-0 max-w-xl">{item.p}</p>
+                    <p className="text-[17px] opacity-80 leading-relaxed m-0 max-w-xl">{item.p}</p>
                   </div>
                 </div>
               ))}
@@ -239,7 +239,7 @@ export default function Home() {
       <section className="bg-zinc-50 py-24 px-4 overflow-hidden border-b-2 border-black/5">
         <div className="max-w-[1200px] mx-auto flex gap-12 group">
           <div className="w-12 flex-shrink-0 flex items-start pt-2">
-            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Targets</span>
+            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-50 group-hover:opacity-100 transition-all">Targets</span>
           </div>
           <div className="flex-1">
             <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none">Who Is This For?</h2>
@@ -247,25 +247,25 @@ export default function Home() {
               <div className="space-y-10">
                 <div>
                   <h3 className="text-2xl font-black italic uppercase tracking-tighter mb-3 border-l-4 border-[#89CC04] pl-6">Social media users.</h3>
-                  <p className="hp-body-text text-[17px] opacity-70 leading-relaxed m-0">Make brat-style profile pictures, story covers, and posts for TikTok, Instagram, X, and Discord. This brat pfp maker gives you a 1:1 export sized perfectly for avatars.</p>
+                  <p className="hp-body-text text-[17px] opacity-80 leading-relaxed m-0">Make brat-style profile pictures, story covers, and posts for TikTok, Instagram, X, and Discord. This brat pfp maker gives you a 1:1 export sized perfectly for avatars.</p>
                 </div>
                 <div>
                   <h3 className="text-2xl font-black italic uppercase tracking-tighter mb-3 border-l-4 border-black pl-6">Meme creators.</h3>
-                  <p className="hp-body-text text-[17px] opacity-70 leading-relaxed m-0">Turn any phrase into a bold brat photo with one click. The brat simulator feel of typing, seeing, and saving makes reaction images fast.</p>
+                  <p className="hp-body-text text-[17px] opacity-80 leading-relaxed m-0">Turn any phrase into a bold brat photo with one click. The brat simulator feel of typing, seeing, and saving makes reaction images fast.</p>
                 </div>
                 <div>
                   <h3 className="text-2xl font-black italic uppercase tracking-tighter mb-3 border-l-4 border-pink-400 pl-6">Charli XCX fans.</h3>
-                  <p className="hp-body-text text-[17px] opacity-70 leading-relaxed m-0">Recreate the album cover look or remix it with your own words. Share your brat generator sticker edits on group chats and WhatsApp.</p>
+                  <p className="hp-body-text text-[17px] opacity-80 leading-relaxed m-0">Recreate the album cover look or remix it with your own words. Share your brat generator sticker edits on group chats and WhatsApp.</p>
                 </div>
               </div>
               <div className="space-y-10">
                 <div>
                   <h3 className="text-2xl font-black italic uppercase tracking-tighter mb-3 border-l-4 border-zinc-400 pl-6">Content creators.</h3>
-                  <p className="hp-body-text text-[17px] opacity-70 leading-relaxed m-0">Use it as a brat photo maker to build thumbnails, overlays, and text graphics for YouTube, Reels, and TikTok without opening heavyweight design software.</p>
+                  <p className="hp-body-text text-[17px] opacity-80 leading-relaxed m-0">Use it as a brat photo maker to build thumbnails, overlays, and text graphics for YouTube, Reels, and TikTok without opening heavyweight design software.</p>
                 </div>
                 <div>
                   <h3 className="text-2xl font-black italic uppercase tracking-tighter mb-3 border-l-4 border-black pl-6">Designers and marketers.</h3>
-                  <p className="hp-body-text text-[17px] opacity-70 leading-relaxed m-0">
+                  <p className="hp-body-text text-[17px] opacity-80 leading-relaxed m-0">
                     Quickly mock up brat-inspired visuals for campaigns, merch ideas, or client pitches. Export brat generator png files at print-ready resolution. Use the <Link href="/brat-album-cover-generator/" className="hp-link">brat album cover generator</Link> for full album art layouts.
                   </p>
                 </div>
@@ -286,7 +286,7 @@ export default function Home() {
               <p className="hp-body-text !text-[18px] sm:!text-[21px] font-medium leading-tight italic border-l-4 border-black pl-8">
                 Canva and Photoshop are general-purpose tools. You open a blank canvas, search for fonts, and scroll through menus for one output.
               </p>
-              <p className="hp-body-text text-[17px] opacity-60 leading-relaxed pl-9">
+              <p className="hp-body-text text-[17px] opacity-80 leading-relaxed pl-9">
                 That makes sense for a complex brand deck or a professional photo edit. <span className="font-bold text-black italic">It does not make sense for a brat meme.</span> Every second you spend in a menu is a second you aren&apos;t posting.
               </p>
             </div>
@@ -307,7 +307,7 @@ export default function Home() {
                 ))}
               </ul>
               <div className="mt-8 pt-8 border-t border-black/5">
-                <p className="text-sm opacity-50 m-0">
+                <p className="text-sm opacity-70 m-0">
                   For deeper typography work, try the <Link href="/brat-font-generator/" className="hp-link">brat font generator</Link>.
                 </p>
               </div>
@@ -321,7 +321,7 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto">
           <span className="hp-eyebrow !text-black/40">More tools</span>
           <h2 className="hp-display-heading !mb-4">Explore All Brat Tools</h2>
-          <p className="hp-body-text !mb-16 opacity-60">
+          <p className="hp-body-text !mb-16 opacity-80">
             Each tool targets a specific workflow. Pick the one that fits what you need.
           </p>
           
@@ -334,7 +334,7 @@ export default function Home() {
               <Link key={tool.h} href={tool.link} className="group block bg-white border-2 border-black/5 p-8 hover:border-black transition-all relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-2 h-full transition-all group-hover:w-4" style={{ backgroundColor: tool.color }} />
                 <h3 className="text-2xl font-black italic uppercase tracking-tighter mb-2 group-hover:text-black transition-colors">{tool.h}</h3>
-                <p className="text-sm opacity-50 mb-8 uppercase font-bold tracking-widest">{tool.p}</p>
+                <p className="text-sm opacity-70 mb-8 uppercase font-bold tracking-widest">{tool.p}</p>
                 <div className="flex items-center gap-2 font-black italic uppercase text-sm group-hover:gap-4 transition-all">
                   Try Tool <span className="text-xl">→</span>
                 </div>
@@ -348,7 +348,7 @@ export default function Home() {
       <section className="bg-zinc-50 py-24 px-4 overflow-hidden">
         <div className="max-w-[1200px] mx-auto flex gap-12 group">
           <div className="w-12 flex-shrink-0 flex items-start pt-2">
-            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Archives</span>
+            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-50 group-hover:opacity-100 transition-all">Archives</span>
           </div>
           <div className="flex-1">
             <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none">Color Variants</h2>
@@ -364,7 +364,7 @@ export default function Home() {
                     {variant.h.split(' ')[1]}
                   </div>
                   <h3 className="text-xl font-black italic uppercase tracking-tighter mb-1">{variant.h}</h3>
-                  <p className="text-[12px] opacity-50 m-0 uppercase font-bold tracking-widest">{variant.p}</p>
+                  <p className="text-[12px] opacity-70 m-0 uppercase font-bold tracking-widest">{variant.p}</p>
                 </Link>
               ))}
             </div>
@@ -376,7 +376,7 @@ export default function Home() {
       <section className="bg-white py-24 px-4 overflow-hidden border-b-2 border-black/5" id="examples">
         <div className="max-w-[1200px] mx-auto flex gap-12 group">
           <div className="w-12 flex-shrink-0 flex items-start pt-2">
-            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Gallery</span>
+            <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-50 group-hover:opacity-100 transition-all">Gallery</span>
           </div>
           <div className="flex-1">
             <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none">Real Examples</h2>

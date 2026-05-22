@@ -15,7 +15,7 @@
   --border-color: #E8E6E0;
   --text-heading: #1a1a1a;
   --text-body: #3d3d3a;
-  --text-muted: #888880;
+  --text-muted: #666660;
   --radius-tool: 16px;
   --radius-card: 12px;
   --radius-btn: 8px;
@@ -23,7 +23,7 @@
   /* Home page design tokens */
   --hp-ink: #111111;
   --hp-ink-soft: #444444;
-  --hp-ink-muted: #888888;
+  --hp-ink-muted: #666666;
   --hp-surface: #ffffff;
   --hp-surface-off: #FAF9F6;
   --hp-surface-warm: #F4F2EC;
