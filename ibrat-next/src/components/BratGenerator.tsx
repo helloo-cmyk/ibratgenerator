@@ -42,6 +42,7 @@ export default function BratGenerator({
   const rootRef = useRef<HTMLDivElement>(null);
   const cleanupRef = useRef<(() => void) | null>(null);
   const [blurAmount, setBlurAmount] = useState(defaultBlur ?? 1.5);
+  const [bgFilename, setBgFilename] = useState<string | null>(null);
 
   useEffect(() => {
     if (rootRef.current) {
@@ -103,10 +104,11 @@ export default function BratGenerator({
                     Text
                   </button>
                   <div className="brat-acc-b">
-                    <div className="brat-controls-inner" style={{ padding: 10 }}>
+                    <div className="brat-controls-inner" style={{ padding: '12px 10px' }}>
                       <textarea
                         id="brat-text"
                         rows={4}
+                        className="brat-modern-textarea"
                         placeholder={defaultPlaceholder ?? 'brat'}
                         defaultValue={defaultPlaceholder ?? 'brat'}
                       />
@@ -118,8 +120,7 @@ export default function BratGenerator({
                           className="brat-btn"
                           style={{ 
                             width: '100%', 
-                            marginTop: 10, 
-                            marginBottom: 10, 
+                            margin: '8px 0', 
                             background: '#CCFF00', 
                             color: '#000', 
                             fontWeight: 'bold',
@@ -130,32 +131,85 @@ export default function BratGenerator({
                         </button>
                       )}
 
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-                        <div>
-                          <label className="brat-label" htmlFor="brat-fontSize">
-                            Font size
-                          </label>
-                          <input type="range" id="brat-fontSize" min={24} max={220} defaultValue={180} />
-                        </div>
-                        <div>
-                          <label className="brat-label" htmlFor="brat-lineHeight">
-                            Line spacing
-                          </label>
-                          <input type="range" id="brat-lineHeight" min={0.8} max={1.6} defaultValue={1} step={0.05} />
-                        </div>
+                      <div className="brat-control-card" style={{ padding: '10px 12px' }}>
+                        <label className="brat-control-label" htmlFor="brat-fontSelect" style={{ marginBottom: 6 }}>
+                          Font
+                        </label>
+                        <select id="brat-fontSelect" defaultValue="'Inter', sans-serif" className="brat-modern-select">
+                          <option value="'Inter', sans-serif">Inter</option>
+                          <option value="'Poppins', sans-serif">Poppins</option>
+                          <option value="'Montserrat', sans-serif">Montserrat</option>
+                          <option value="'Bebas Neue', sans-serif">Bebas Neue</option>
+                          <option value="'Anton', sans-serif">Anton</option>
+                          <option value="'Playfair Display', serif">Playfair Display</option>
+                        </select>
                       </div>
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-                        <div>
-                          <label className="brat-label" htmlFor="brat-letterSpacing">
-                            Letter spacing
-                          </label>
-                          <input type="range" id="brat-letterSpacing" min={-4} max={10} defaultValue={0} step={0.5} />
+
+                      <div className="brat-typography-grid">
+                        <div className="brat-control-card">
+                          <div className="brat-control-header">
+                            <label className="brat-control-label" htmlFor="brat-fontSize">Font size</label>
+                            <span className="brat-control-value" id="fontSizeVal">180</span>
+                          </div>
+                          <input type="range" id="brat-fontSize" className="brat-modern-slider" min={24} max={220} defaultValue={180} onInput={(e) => {
+                            const valEl = document.getElementById('fontSizeVal');
+                            if (valEl) valEl.innerText = e.currentTarget.value;
+                          }} />
                         </div>
-                        <div>
-                          <label className="brat-label" htmlFor="brat-align">
-                            Align
-                          </label>
-                          <select id="brat-align" defaultValue="center">
+
+                        <div className="brat-control-card">
+                          <div className="brat-control-header">
+                            <label className="brat-control-label" htmlFor="brat-lineHeight">Line spacing</label>
+                            <span className="brat-control-value" id="lineHeightVal">1.00</span>
+                          </div>
+                          <input type="range" id="brat-lineHeight" className="brat-modern-slider" min={0.8} max={1.6} defaultValue={1} step={0.05} onInput={(e) => {
+                            const valEl = document.getElementById('lineHeightVal');
+                            if (valEl) valEl.innerText = Number(e.currentTarget.value).toFixed(2);
+                          }}/>
+                        </div>
+
+                        <div className="brat-control-card">
+                          <div className="brat-control-header">
+                            <label className="brat-control-label" htmlFor="brat-letterSpacing">Letter spacing</label>
+                            <span className="brat-control-value" id="letterSpacingVal">0.0</span>
+                          </div>
+                          <input type="range" id="brat-letterSpacing" className="brat-modern-slider" min={-4} max={10} defaultValue={0} step={0.5} onInput={(e) => {
+                            const valEl = document.getElementById('letterSpacingVal');
+                            if (valEl) valEl.innerText = Number(e.currentTarget.value).toFixed(1);
+                          }}/>
+                        </div>
+
+                        <div className="brat-control-card">
+                          <div className="brat-control-header">
+                            <label className="brat-control-label">Align</label>
+                          </div>
+                          <div className="brat-segmented-control">
+                            <button type="button" className="brat-segment-btn" onClick={(e) => {
+                              e.currentTarget.parentElement?.querySelectorAll('.brat-segment-btn').forEach(b => b.classList.remove('active'));
+                              e.currentTarget.classList.add('active');
+                              const select = document.getElementById('brat-align') as HTMLSelectElement;
+                              if (select) { select.value = 'left'; select.dispatchEvent(new Event('change', { bubbles: true })); }
+                            }}>
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="21" y1="6" x2="3" y2="6"></line><line x1="15" y1="12" x2="3" y2="12"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg>
+                            </button>
+                            <button type="button" className="brat-segment-btn active" onClick={(e) => {
+                              e.currentTarget.parentElement?.querySelectorAll('.brat-segment-btn').forEach(b => b.classList.remove('active'));
+                              e.currentTarget.classList.add('active');
+                              const select = document.getElementById('brat-align') as HTMLSelectElement;
+                              if (select) { select.value = 'center'; select.dispatchEvent(new Event('change', { bubbles: true })); }
+                            }}>
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="21" y1="6" x2="3" y2="6"></line><line x1="19" y1="12" x2="5" y2="12"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
+                            </button>
+                            <button type="button" className="brat-segment-btn" onClick={(e) => {
+                              e.currentTarget.parentElement?.querySelectorAll('.brat-segment-btn').forEach(b => b.classList.remove('active'));
+                              e.currentTarget.classList.add('active');
+                              const select = document.getElementById('brat-align') as HTMLSelectElement;
+                              if (select) { select.value = 'right'; select.dispatchEvent(new Event('change', { bubbles: true })); }
+                            }}>
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="12" x2="9" y2="12"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
+                            </button>
+                          </div>
+                          <select id="brat-align" defaultValue="center" style={{ display: 'none' }}>
                             <option value="left">left</option>
                             <option value="center">center</option>
                             <option value="right">right</option>
@@ -225,34 +279,45 @@ export default function BratGenerator({
                           }}>Heavy</span>
                         </div>
                       </div>
-                      <div>
-                        <label className="brat-label" htmlFor="brat-fontSelect">
-                          Font
-                        </label>
-                        <select id="brat-fontSelect" defaultValue="'Inter', sans-serif">
-                          <option value="'Inter', sans-serif">Inter</option>
-                          <option value="'Poppins', sans-serif">Poppins</option>
-                          <option value="'Montserrat', sans-serif">Montserrat</option>
-                          <option value="'Bebas Neue', sans-serif">Bebas Neue</option>
-                          <option value="'Anton', sans-serif">Anton</option>
-                          <option value="'Playfair Display', serif">Playfair Display</option>
-                        </select>
+                      <div className="brat-section-divider">
+                        <span className="brat-section-label">EFFECTS</span>
                       </div>
-                      <div className="brat-row" style={{ alignItems: "center" }}>
-                        <label>
-                          <input type="checkbox" id="brat-outlineToggle" /> outline
-                        </label>
-                        <div id="brat-outlineColorContainer" style={{ display: "none", marginLeft: 8, gap: 12, alignItems: "center" }}>
-                          <span className="tag">Outline color</span>
-                          <input type="color" id="brat-outlineColor" defaultValue="#ffffff" />
+                      <div className="brat-effects-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+                        
+                        {/* Outline Effect Card */}
+                        <div className="brat-effect-card">
+                          <div className="brat-effect-header">
+                            <span className="brat-effect-title">Outline</span>
+                            <label className="brat-toggle" htmlFor="brat-outlineToggle">
+                              <input type="checkbox" id="brat-outlineToggle" />
+                              <span className="brat-toggle-slider"></span>
+                            </label>
+                          </div>
+                          <div id="brat-outlineColorContainer" className="brat-effect-color-row" style={{ display: "none" }}>
+                            <span className="brat-effect-label">Color</span>
+                            <div className="brat-color-picker-wrapper">
+                              <input type="color" id="brat-outlineColor" defaultValue="#ffffff" />
+                            </div>
+                          </div>
                         </div>
-                        <label style={{ marginLeft: 8 }}>
-                          <input type="checkbox" id="brat-shadowToggle" /> soft shadow
-                        </label>
-                        <div id="brat-shadowColorContainer" style={{ display: "none", marginLeft: 8, gap: 12, alignItems: "center" }}>
-                          <span className="tag">Shadow color</span>
-                          <input type="color" id="brat-shadowColor" defaultValue="#000000" />
+
+                        {/* Shadow Effect Card */}
+                        <div className="brat-effect-card">
+                          <div className="brat-effect-header">
+                            <span className="brat-effect-title">Soft shadow</span>
+                            <label className="brat-toggle" htmlFor="brat-shadowToggle">
+                              <input type="checkbox" id="brat-shadowToggle" />
+                              <span className="brat-toggle-slider"></span>
+                            </label>
+                          </div>
+                          <div id="brat-shadowColorContainer" className="brat-effect-color-row" style={{ display: "none" }}>
+                            <span className="brat-effect-label">Color</span>
+                            <div className="brat-color-picker-wrapper">
+                              <input type="color" id="brat-shadowColor" defaultValue="#000000" />
+                            </div>
+                          </div>
                         </div>
+
                       </div>
                     </div>
                   </div>
@@ -317,24 +382,28 @@ export default function BratGenerator({
                           white
                         </div>
                       </div>
-                      <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
-                        <div style={{ opacity: lockBg ? 0.4 : 1, pointerEvents: lockBg ? 'none' : 'auto' }}>
-                          <label className="brat-label" htmlFor="brat-bgColor">
-                            Background {lockBg && <span style={{ fontSize: '10px', color: '#666', textTransform: 'lowercase' }}>(locked)</span>}
-                          </label>
-                          <input type="color" id="brat-bgColor" defaultValue="#89cc04" disabled={lockBg} />
+                      <div className="brat-color-controls">
+                        <div className="brat-color-card" style={{ opacity: lockBg ? 0.5 : 1, pointerEvents: lockBg ? 'none' : 'auto' }}>
+                          <span className="brat-color-card-title">
+                            Background {lockBg && <span className="brat-locked-badge">Locked</span>}
+                          </span>
+                          <div className="brat-color-picker-wrapper">
+                            <input type="color" id="brat-bgColor" defaultValue="#89cc04" disabled={lockBg} />
+                          </div>
                         </div>
-                        <div style={{ opacity: lockFg ? 0.4 : 1, pointerEvents: lockFg ? 'none' : 'auto' }}>
-                          <label className="brat-label" htmlFor="brat-fgColor">
-                            Text {lockFg && <span style={{ fontSize: '10px', color: '#666', textTransform: 'lowercase' }}>(locked)</span>}
-                          </label>
-                          <input type="color" id="brat-fgColor" defaultValue="#0a0a0a" disabled={lockFg} />
+
+                        <div className="brat-color-card" style={{ opacity: lockFg ? 0.5 : 1, pointerEvents: lockFg ? 'none' : 'auto' }}>
+                          <span className="brat-color-card-title">
+                            Text {lockFg && <span className="brat-locked-badge">Locked</span>}
+                          </span>
+                          <div className="brat-color-picker-wrapper">
+                            <input type="color" id="brat-fgColor" defaultValue="#0a0a0a" disabled={lockFg} />
+                          </div>
                         </div>
                       </div>
-                      <div className="brat-row">
-                        <div className="brat-help">
-                          Contrast check: <span id="brat-contrastLabel">-</span>
-                        </div>
+                      <div className="brat-contrast-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        <span>Contrast: <span id="brat-contrastLabel" style={{ fontWeight: 600 }}>-</span></span>
                       </div>
                     </div>
                   </div>
@@ -344,24 +413,24 @@ export default function BratGenerator({
                     Canvas
                   </button>
                   <div className="brat-acc-b" style={{ display: hideAspectRatio ? "none" : undefined }}>
-                    <div className="brat-controls-inner" style={{ padding: 10 }}>
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-                        <div>
-                          <label className="brat-label" htmlFor="brat-ratio">
+                    <div className="brat-controls-inner" style={{ padding: '12px 10px' }}>
+                      <div className="brat-typography-grid" style={{ marginBottom: '12px' }}>
+                        <div className="brat-control-card" style={{ padding: '10px 12px' }}>
+                          <label className="brat-control-label" htmlFor="brat-ratio">
                             Aspect Ratio
                           </label>
-                          <select id="brat-ratio" defaultValue="1:1">
+                          <select id="brat-ratio" defaultValue="1:1" className="brat-modern-select">
                             <option value="1:1">Square 1:1</option>
                             <option value="4:5">Instagram 4:5</option>
                             <option value="9:16">Story/Reel 9:16</option>
                             <option value="16:9">Wide 16:9</option>
                           </select>
                         </div>
-                        <div>
-                          <label className="brat-label" htmlFor="brat-res">
+                        <div className="brat-control-card" style={{ padding: '10px 12px' }}>
+                          <label className="brat-control-label" htmlFor="brat-res">
                             Resolution
                           </label>
-                          <select id="brat-res" defaultValue="1500">
+                          <select id="brat-res" defaultValue="1500" className="brat-modern-select">
                             <option value="1024">1024 px</option>
                             <option value="1500">1500 px</option>
                             <option value="2048">2048 px</option>
@@ -369,28 +438,68 @@ export default function BratGenerator({
                           </select>
                         </div>
                       </div>
-                      <div className="brat-row">
-                        <label>
-                          <input type="checkbox" id="brat-safeToggle" /> show safe margins
-                        </label>
+
+                      <div className="brat-effect-card">
+                        <div className="brat-effect-header">
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
+                            <span className="brat-effect-title">Show safe margins</span>
+                          </div>
+                          <label className="brat-toggle" htmlFor="brat-safeToggle">
+                            <input type="checkbox" id="brat-safeToggle" />
+                            <span className="brat-toggle-slider"></span>
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </section>
                 <section className="brat-acc" id="brat-acc-selfie">
                   <button type="button" className="brat-acc-h" data-acc="selfie">
-                    Selfie Mode
+                    Background Image
                   </button>
                   <div className="brat-acc-b" style={{ display: hideSelfieMode ? "none" : undefined }}>
                     <div className="brat-controls-inner" style={{ padding: 10 }}>
-                      <div className="brat-row">
-                        <input type="file" id="brat-bgUpload" accept="image/*" />
-                        <button type="button" className="brat-btn" id="brat-clearBg">
+                      <div 
+                        className="brat-upload-area" 
+                        id="brat-upload-trigger"
+                        onClick={() => {
+                          document.getElementById('brat-bgUpload')?.click();
+                        }}
+                        style={{ display: bgFilename ? 'none' : 'block' }}
+                      >
+                        <div className="brat-upload-icon">↑</div>
+                        <div className="brat-upload-text">Upload Background Image</div>
+                        <div className="brat-upload-hint">JPG, PNG or WebP. Image fills canvas. Text stays on top.</div>
+                      </div>
+                      <input 
+                        type="file" 
+                        id="brat-bgUpload" 
+                        accept="image/*" 
+                        style={{ display: "none" }} 
+                        onChange={(e) => {
+                          const file = e.target.files?.[0];
+                          if (file) setBgFilename(file.name);
+                        }}
+                      />
+                      <div 
+                        className="brat-upload-preview" 
+                        id="brat-upload-preview" 
+                        style={{ display: bgFilename ? 'flex' : 'none' }}
+                      >
+                        <span id="brat-upload-filename">{bgFilename || 'filename.jpg'}</span>
+                        <button 
+                          type="button" 
+                          id="brat-clearBg" 
+                          className="brat-remove-btn"
+                          onClick={() => {
+                            setBgFilename(null);
+                            const input = document.getElementById('brat-bgUpload') as HTMLInputElement;
+                            if (input) input.value = '';
+                          }}
+                        >
                           Remove
                         </button>
-                      </div>
-                      <div style={{ fontSize: 13, color: "#6b7280", marginTop: 6 }}>
-                        Upload a photo as background (auto cover). Text stays on top.
                       </div>
                     </div>
                   </div>
@@ -423,30 +532,32 @@ export default function BratGenerator({
               </div>
             </aside>
             <main className="brat-card" id="brat-preview">
-              <div className="brat-preview-header">
-                <div className="brat-undo-redo">
-                  <button type="button" id="brat-undo" className="brat-btn" disabled>
-                    Undo
+              <div className="brat-preview-header-modern">
+                <div className="brat-history-controls">
+                  <button type="button" id="brat-undo" className="brat-icon-btn" disabled aria-label="Undo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 7v6h6"></path><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"></path></svg>
                   </button>
-                  <button type="button" id="brat-redo" className="brat-btn" disabled>
-                    Redo
+                  <button type="button" id="brat-redo" className="brat-icon-btn" disabled aria-label="Redo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 7v6h-6"></path><path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"></path></svg>
                   </button>
                 </div>
-                <div className="brat-preview-actions">
-                  <button type="button" id="brat-copy-desktop" className="brat-btn">
-                    Copy Image
+                <div className="brat-export-controls">
+                  <button type="button" id="brat-copy-desktop" className="brat-export-btn secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span>Copy</span>
                   </button>
-                  <button type="button" id="brat-download-desktop" className="brat-btn">
-                    Save PNG
+                  <button type="button" id="brat-download-desktop" className="brat-export-btn primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span>Save PNG</span>
                   </button>
                 </div>
               </div>
-              <div className="brat-toolbar">
-                <span>Canvas preview</span>
-                <span style={{ marginLeft: "auto", color: "#6b7280" }}>
-                  Tips: <span className="brat-kbd">Shift</span> + scroll = zoom text · Double-click a sticker to delete
-                  · Drag text to move
-                </span>
+              <div className="brat-toolbar-modern">
+                <div className="brat-toolbar-title">Canvas Preview</div>
+                <div className="brat-toolbar-tips">
+                  <span className="brat-tip-icon">💡</span>
+                  <span><kbd>Shift</kbd> + scroll to zoom · Double-click sticker to delete</span>
+                </div>
               </div>
               <div className="brat-stage">
                 <canvas

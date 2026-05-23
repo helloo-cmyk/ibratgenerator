@@ -1329,31 +1329,71 @@ export function initBratGenerator(options?: {
     btn.addEventListener("click", () => switchTab((btn as HTMLElement).dataset.tab || "text"));
   });
 
+  let textInputActive = false;
   textEl.addEventListener("input", () => {
+    if (!textInputActive) {
+      textInputActive = true;
+      pushHistory();
+    }
     state.text = textEl.value;
     requestDraw();
   });
+  textEl.addEventListener("blur", () => {
+    textInputActive = false;
+  });
+
+  let fontSizeInputActive = false;
   fontSizeEl.addEventListener("input", () => {
-    pushHistory();
+    if (!fontSizeInputActive) {
+      fontSizeInputActive = true;
+      pushHistory();
+    }
     state.fontSize = Number(fontSizeEl.value);
     requestDraw();
   });
+  fontSizeEl.addEventListener("change", () => {
+    fontSizeInputActive = false;
+  });
+
+  let lineHeightInputActive = false;
   lineHeightEl.addEventListener("input", () => {
-    pushHistory();
+    if (!lineHeightInputActive) {
+      lineHeightInputActive = true;
+      pushHistory();
+    }
     state.lineHeight = Number(lineHeightEl.value);
     requestDraw();
   });
+  lineHeightEl.addEventListener("change", () => {
+    lineHeightInputActive = false;
+  });
+
+  let letterSpacingInputActive = false;
   letterSpacingEl.addEventListener("input", () => {
-    pushHistory();
+    if (!letterSpacingInputActive) {
+      letterSpacingInputActive = true;
+      pushHistory();
+    }
     state.letterSpacing = Number(letterSpacingEl.value);
     requestDraw();
   });
+  letterSpacingEl.addEventListener("change", () => {
+    letterSpacingInputActive = false;
+  });
+
   const blurEl = document.getElementById("brat-blur") as HTMLInputElement | null;
   if (blurEl) {
+    let blurInputActive = false;
     blurEl.addEventListener("input", () => {
-      pushHistory();
+      if (!blurInputActive) {
+        blurInputActive = true;
+        pushHistory();
+      }
       state.blurAmount = Number(blurEl.value);
       requestDraw();
+    });
+    blurEl.addEventListener("change", () => {
+      blurInputActive = false;
     });
   }
   alignEl.addEventListener("change", () => {
@@ -1440,6 +1480,11 @@ export function initBratGenerator(options?: {
     pushHistory();
     state.fontFamily = fontSelectEl.value;
     requestDraw();
+    if (document.fonts) {
+      document.fonts.load(`bold ${state.fontSize}px ${state.fontFamily}`).then(() => {
+        requestDraw();
+      });
+    }
   });
 
   document.querySelectorAll(".brat-pill").forEach((p) => {
@@ -1673,6 +1718,14 @@ export function initBratGenerator(options?: {
   setTimeout(() => {
     syncInputsFromState();
     requestDraw();
+    if (document.fonts) {
+      document.fonts.ready.then(() => {
+        requestDraw();
+      });
+      document.fonts.onloadingdone = () => {
+        requestDraw();
+      };
+    }
   }, 100);
   setCanvasSize();
   switchTab(options?.defaultTab || "text");

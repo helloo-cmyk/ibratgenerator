@@ -3,7 +3,7 @@
   all: initial;
   display: block;
   width: 100%;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
   box-sizing: border-box;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -181,12 +181,13 @@
 /* ===== TYPOGRAPHY ===== */
 .brat-label {
   font-size: 11px;
-  font-weight: 600;
-  color: var(--muted);
+  font-weight: 500;
+  color: #888880;
   display: block;
   margin-bottom: 8px;
   text-transform: uppercase;
-  letter-spacing: .05em;
+  letter-spacing: .08em;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 /* ===== FORM CONTROLS ===== */
@@ -221,7 +222,7 @@
   border: 2px solid rgba(0, 0, 0, .08);
   background: transparent;
   padding: 3px;
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: border-color var(--transition);
 }
@@ -236,6 +237,53 @@
     padding: 4px;
     box-sizing: border-box;
   }
+}
+
+/* ===== CUSTOM CHECKBOXES ===== */
+.brat-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.brat-checkbox-wrapper input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  background: #f8fafc;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.1s;
+}
+
+.brat-checkbox-wrapper input[type="checkbox"]:checked {
+  background: #000;
+  border-color: #000;
+}
+
+.brat-checkbox-wrapper input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #ffffff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.brat-checkbox-wrapper span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #3d3d3a;
+  user-select: none;
 }
 
 /* ===== RANGE SLIDER ===== */
@@ -254,8 +302,8 @@
 #brat-embed-root input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background: #fff;
   border: 3px solid #000;
@@ -288,12 +336,12 @@
 
 @media (pointer: coarse) {
   #brat-embed-root input[type="range"]::-webkit-slider-thumb {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
   }
   #brat-embed-root input[type="range"]::-moz-range-thumb {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -579,6 +627,110 @@
 #brat-canvas.sticker-resize { cursor: nwse-resize; }
 #brat-canvas.sticker-rotate { cursor: grab; }
 
+/* ===== EFFECTS ROW ===== */
+.brat-section-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 12px;
+}
+
+.brat-section-divider::before,
+.brat-section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(0,0,0,0.08);
+}
+
+.brat-section-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  color: #aaa;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.brat-effects-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* ===== CANVAS GRID ===== */
+.brat-canvas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* ===== UPLOAD UI ===== */
+.brat-upload-area {
+  border: 1.5px dashed rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: #fafaf7;
+}
+
+.brat-upload-area:hover {
+  border-color: #0a0a0a;
+  background: #f0f0ec;
+}
+
+.brat-upload-icon {
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #888;
+}
+
+.brat-upload-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3d3d3a;
+  margin-bottom: 4px;
+}
+
+.brat-upload-hint {
+  font-size: 11px;
+  color: #888880;
+  line-height: 1.4;
+}
+
+.brat-upload-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: #f0f0ec;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+#brat-upload-filename {
+  font-size: 12px;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 140px;
+}
+
+.brat-remove-btn {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ff4444;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 6px;
+  flex-shrink: 0;
+}
+
 .brat-tab-panel { display: none; }
 .brat-tab-panel.active { display: block; }
 .brat-bottom-nav { display: none; }
@@ -677,9 +829,10 @@
   background: transparent;
   color: var(--muted);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: .08em;
   cursor: pointer;
-  font-family: inherit;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -751,7 +904,7 @@
 
 .brat-sticker-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
   gap: 4px;
   max-height: 220px;
   overflow-y: auto;
@@ -1214,4 +1367,458 @@
   font-weight: 500;
   margin-top: -6px;
   padding: 0 4px;
+}
+
+/* ===== EFFECTS CARDS (MODERN REDESIGN) ===== */
+.brat-effect-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.brat-effect-card:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.brat-effect-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brat-effect-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.brat-effect-color-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(0,0,0,0.06);
+  animation: fadeInDown 0.2s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.brat-effect-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Modern Apple-like Toggle */
+.brat-toggle {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.brat-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.brat-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e2e8f0;
+  transition: .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  border-radius: 20px;
+}
+
+.brat-toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.brat-toggle input:checked + .brat-toggle-slider {
+  background-color: #CCFF00;
+}
+
+.brat-toggle input:checked + .brat-toggle-slider:before {
+  transform: translateX(16px);
+}
+
+.brat-toggle input:focus-visible + .brat-toggle-slider {
+  box-shadow: 0 0 0 2px #000;
+}
+
+/* Premium Color Picker Wrapper */
+.brat-color-picker-wrapper {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.brat-color-picker-wrapper:hover {
+  transform: scale(1.05);
+  border-color: rgba(0,0,0,0.3);
+}
+
+#brat-embed-root .brat-color-picker-wrapper input[type="color"] {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== TYPOGRAPHY CONTROLS (MODERN REDESIGN) ===== */
+.brat-typography-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.brat-control-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.brat-control-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brat-control-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.brat-control-value {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0f172a;
+  background: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Modern Slider overrides */
+#brat-embed-root input[type="range"].brat-modern-slider {
+  height: 6px;
+  margin: 8px 0 4px;
+  background: #cbd5e1;
+}
+
+#brat-embed-root input[type="range"].brat-modern-slider::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #0f172a;
+}
+#brat-embed-root input[type="range"].brat-modern-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  border-color: #CCFF00;
+}
+
+/* Segmented Control for Alignment */
+.brat-segmented-control {
+  display: flex;
+  background: #e2e8f0;
+  border-radius: 8px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.brat-segment-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 0;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.brat-segment-btn:hover {
+  color: #0f172a;
+}
+
+.brat-segment-btn.active {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-weight: 600;
+}
+
+/* ===== COLOR PICKER CARDS & CONTRAST (MODERN REDESIGN) ===== */
+.brat-color-controls {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.brat-color-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.brat-color-card:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.brat-color-card-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.brat-locked-badge {
+  background: #f1f5f9;
+  color: #64748b;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.brat-contrast-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.brat-contrast-badge svg {
+  color: #64748b;
+  flex-shrink: 0;
+}
+
+/* Modern Select overrides */
+#brat-embed-root select.brat-modern-select {
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #ffffff;
+  margin-top: 4px;
+}
+
+#brat-embed-root select.brat-modern-select:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* Modern Textarea overrides */
+#brat-embed-root textarea.brat-modern-textarea {
+  width: 100%;
+  background: #f8fafc;
+  color: #0f172a;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  resize: vertical;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
+}
+
+#brat-embed-root textarea.brat-modern-textarea:focus {
+  outline: none;
+  border-color: #000;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+}
+
+/* ===== PREVIEW HEADER & TOOLBAR (MODERN REDESIGN) ===== */
+#brat-embed-root .brat-preview-header-modern {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+#brat-embed-root .brat-history-controls {
+  display: flex;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+#brat-embed-root .brat-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: #475569;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#brat-embed-root .brat-icon-btn:hover:not(:disabled) {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+#brat-embed-root .brat-icon-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+#brat-embed-root .brat-export-controls {
+  display: flex;
+  gap: 12px;
+}
+
+#brat-embed-root #brat-copy-desktop.brat-export-btn,
+#brat-embed-root #brat-download-desktop.brat-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+#brat-embed-root #brat-copy-desktop.brat-export-btn.secondary {
+  background: #ffffff;
+  color: #1e293b;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+#brat-embed-root #brat-copy-desktop.brat-export-btn.secondary:hover {
+  background: #f8fafc;
+  border-color: rgba(0,0,0,0.15);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#brat-embed-root #brat-download-desktop.brat-export-btn.primary {
+  background: #CCFF00;
+  color: #0a0a0a;
+  box-shadow: 0 2px 8px rgba(204, 255, 0, 0.3);
+}
+
+#brat-embed-root #brat-download-desktop.brat-export-btn.primary:hover {
+  background: #bce500;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(204, 255, 0, 0.4);
+}
+
+#brat-embed-root #brat-download-desktop.brat-export-btn.primary:active {
+  transform: translateY(0);
+}
+
+#brat-embed-root .brat-toolbar-modern {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+#brat-embed-root .brat-toolbar-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+#brat-embed-root .brat-toolbar-tips {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
+  background: #f8fafc;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+#brat-embed-root .brat-toolbar-tips kbd {
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #334155;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05);
 }
