@@ -73,6 +73,7 @@ export default function BratGeneratorForTikTokPage() {
         subtitle=""
         readTime="5 MIN READ"
         publishDate="May 2026"
+        imageSrc="/blog-images/tiktok-hero-v3.png"
       />
 
       <article className="px-4 pt-12 max-w-[720px] mx-auto">

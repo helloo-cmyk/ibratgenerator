@@ -8,7 +8,7 @@ import BLOG_POSTS from "@/lib/blogPosts.json";
 
 export default function BlogList() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [visibleCount, setVisibleCount] = useState(20);
+  const [visibleCount, setVisibleCount] = useState(20); 
 
   const filteredPosts = BLOG_POSTS.filter((post) =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -50,13 +50,19 @@ export default function BlogList() {
                 className="group flex flex-col"
               >
                 {/* Card Image */}
-                <div className="w-full aspect-[16/9] relative mb-8 overflow-hidden border border-black/5 bg-zinc-50">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                <div className="w-full aspect-[16/9] relative mb-8 overflow-hidden border border-black/5 bg-zinc-50 flex items-center justify-center">
+                  {post.image ? (
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <span className="text-4xl font-bold tracking-tight text-black opacity-10 lowercase" style={{fontFamily: 'Arial, Helvetica, sans-serif'}}>
+                      brat
+                    </span>
+                  )}
                 </div>
 
                 {/* Card Content */}
