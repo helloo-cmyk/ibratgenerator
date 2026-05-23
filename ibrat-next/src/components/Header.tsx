@@ -6,11 +6,11 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "/", label: "Home" },
   { href: "/brat-maker/", label: "Brat Maker" },
   { href: "/brat-text-generator/", label: "Brat Text Generator" },
   { href: "/brat-font-generator/", label: "Brat Font Generator" },
-  { href: "/blog", label: "Blog" },
+  { href: "/brat-name-generator/", label: "Brat Name Generator" },
+  { href: "/blog/", label: "Blog" },
 ];
 
 export default function Header() {

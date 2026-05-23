@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const toolLinks = [
-  { href: "/brat-maker/", label: "brat maker" },
-  { href: "/brat-text-generator/", label: "brat text generator" },
+  { href: "/brat-maker/", label: "Brat Maker" },
+  { href: "/brat-text-generator/", label: "Brat Text Generator" },
   { href: "/brat-name-generator", label: "Brat Name Generator" },
   { href: "/brat-font-generator/", label: "Brat Font Generator" },
 
@@ -12,7 +12,10 @@ const toolLinks = [
 ];
 
 const styleLinks = [
+  { href: "/brat-green-generator/", label: "Brat Green Generator" },
   { href: "/brat-generator-pink/", label: "Pink Brat Generator" },
+  { href: "/brat-black-generator/", label: "Black Brat Generator" },
+  { href: "/brat-generator-white/", label: "White Brat Generator" },
 ];
 
 const supportLinks = [
