@@ -128,6 +128,36 @@ export default function HowToMakeBratTextPage() {
             </div>
           </div>
 
+          {/* ── NEW SECTION: Choosing the Right Words ── */}
+          <h2 className="hp-display-heading mt-32 mb-12 !text-4xl uppercase tracking-tighter">Choosing the Right Words for Brat Text</h2>
+          <div className="space-y-6 mb-16">
+            <p className="hp-body-text text-[17px] sm:text-[18px] opacity-70 leading-relaxed">
+              The secret to creating impactful brat text lies not just in the visual presentation, but in the curation of the words themselves. The most successful examples of this aesthetic share a common linguistic thread: they are blunt, slightly ironic, and intensely specific. When you open the brat text generator, resist the urge to write a full sentence. The format demands brevity. A single, well-chosen noun or a sharp two-word phrase will always outperform a longer, explanatory caption.
+            </p>
+            <p className="hp-body-text text-[17px] sm:text-[18px] opacity-70 leading-relaxed">
+              For instance, replacing a lengthy complaint with a single word like &quot;exhausted&quot; or &quot;delusional&quot; instantly elevates the sentiment into a piece of pop art. The lowercase formatting further strips the text of formality, giving it a casual, off-the-cuff energy that feels inherently relatable. This is why the brat aesthetic works so well for reaction images and personal status updates. It mimics the cadence of a text message sent at 3 AM: unfiltered, uncapitalized, and completely honest.
+            </p>
+            <p className="hp-body-text text-[17px] sm:text-[18px] opacity-70 leading-relaxed">
+              Furthermore, the juxtaposition of a very mundane or serious word against the aggressively loud neon green background creates a built-in comedic tension. It forces the viewer to treat a passing thought with the gravity of an album cover. When making your own, think about the punchline of your joke or the core emotion you are feeling, and try to distill it down to its absolute minimum. The fewer words you use, the larger they will appear on the canvas, and the louder they will visually &quot;scream&quot; at the viewer.
+            </p>
+          </div>
+
+          {/* ── NEW SECTION: Advanced Brat Text Techniques ── */}
+          <div className="flex gap-12 mb-32 group">
+            <div className="w-12 flex-shrink-0 flex items-start pt-2">
+               <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-20 group-hover:opacity-100 transition-all">Pro Tips</span>
+            </div>
+            <div className="flex-1 bg-zinc-50 p-10 sm:p-16 border-2 border-black/5">
+              <h2 className="text-3xl sm:text-5xl font-black italic tracking-tighter uppercase mb-8 leading-none">Advanced Brat Text Techniques</h2>
+              <p className="hp-body-text mb-8 text-[18px] font-medium italic">
+                While the process of typing and downloading is simple, mastering the aesthetic requires a deeper understanding of digital layout and negative space.
+              </p>
+              <p className="hp-body-text text-[17px] opacity-70 leading-relaxed m-0">
+                Once you are comfortable with the basic generation process, you can start experimenting with advanced techniques to make your text stand out even more. One powerful method is manipulating the letter spacing (kerning) to extreme degrees. While the default setting mimics the tight, condensed look of the original album, intentionally widening the spacing can create a more airy, fashion-forward editorial look, while crushing the letters together until they overlap creates a chaotic, claustrophobic energy perfect for expressing anxiety or overwhelm. Similarly, playing with the aspect ratio changes the context of the image. While a 1:1 square is standard for Instagram, generating a 9:16 vertical image with the text forced entirely to the bottom edge creates massive amounts of heavy, empty green space above it, forcing the viewer's eye to travel down the screen and building visual suspense. You can also experiment with line breaks. Instead of letting the text auto-wrap, force manual line breaks to stack words in unnatural, blocky formations. This breaks the standard rules of typography and leans heavily into the anti-design philosophy that the brat aesthetic celebrates. By understanding these subtle layout tricks, you can push the brat text generator beyond simple meme-making and into genuine digital art creation.
+              </p>
+            </div>
+          </div>
+
           {/* ── NEW SECTION: Why Brat Text Works on Social Media ── */}
           <div className="flex gap-12 mb-32 group">
             <div className="w-12 flex-shrink-0 flex items-start pt-2">

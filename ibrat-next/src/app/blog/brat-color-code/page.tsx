@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: "https://ibratgenerator.com/blog/brat-color-code/",
   },
   description:
-    "The definitive guide to the official Charli XCX Brat green. Get the hex, RGB, HSL, and CMYK values for the 2024 aesthetic.",
+    "The brat green color code is #89CC04. Get every brat color hex, RGB, and CSS value — copy and use instantly. Free color palette.",
 };
 
 const faqSchema = {
