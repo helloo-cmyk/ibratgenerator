@@ -184,7 +184,7 @@ export default function BratGenerator({
                             <label className="brat-control-label">Align</label>
                           </div>
                           <div className="brat-segmented-control">
-                            <button type="button" className="brat-segment-btn" onClick={(e) => {
+                            <button type="button" className="brat-segment-btn" aria-label="Align left" onClick={(e) => {
                               e.currentTarget.parentElement?.querySelectorAll('.brat-segment-btn').forEach(b => b.classList.remove('active'));
                               e.currentTarget.classList.add('active');
                               const select = document.getElementById('brat-align') as HTMLSelectElement;
@@ -192,7 +192,7 @@ export default function BratGenerator({
                             }}>
                               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="21" y1="6" x2="3" y2="6"></line><line x1="15" y1="12" x2="3" y2="12"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg>
                             </button>
-                            <button type="button" className="brat-segment-btn active" onClick={(e) => {
+                            <button type="button" className="brat-segment-btn active" aria-label="Align center" onClick={(e) => {
                               e.currentTarget.parentElement?.querySelectorAll('.brat-segment-btn').forEach(b => b.classList.remove('active'));
                               e.currentTarget.classList.add('active');
                               const select = document.getElementById('brat-align') as HTMLSelectElement;
@@ -200,7 +200,7 @@ export default function BratGenerator({
                             }}>
                               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="21" y1="6" x2="3" y2="6"></line><line x1="19" y1="12" x2="5" y2="12"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
                             </button>
-                            <button type="button" className="brat-segment-btn" onClick={(e) => {
+                            <button type="button" className="brat-segment-btn" aria-label="Align right" onClick={(e) => {
                               e.currentTarget.parentElement?.querySelectorAll('.brat-segment-btn').forEach(b => b.classList.remove('active'));
                               e.currentTarget.classList.add('active');
                               const select = document.getElementById('brat-align') as HTMLSelectElement;
@@ -218,7 +218,7 @@ export default function BratGenerator({
                       </div>
 
                       <div className="blur-control">
-                        <label className="brat-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <label className="brat-label" htmlFor="brat-blur" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                           Softness
                           <span className="blur-value">{blurAmount}px</span>
                         </label>

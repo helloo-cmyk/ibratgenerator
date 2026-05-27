@@ -1081,7 +1081,9 @@ export function initBratGenerator(options?: {
     if (handleAction !== null || draggingText || resizingText || rotatingText) {
       e.preventDefault();
     }
-    pointerMove(e.clientX, e.clientY);
+    requestAnimationFrame(() => {
+      pointerMove(e.clientX, e.clientY);
+    });
   };
   const onPointerUp = (e: PointerEvent) => {
     if (capturedPointerId === e.pointerId) {
@@ -1092,7 +1094,9 @@ export function initBratGenerator(options?: {
       }
       capturedPointerId = null;
     }
-    pointerUp();
+    requestAnimationFrame(() => {
+      pointerUp();
+    });
   };
   const onKeyDown = (e: KeyboardEvent) => {
     const tag = (e.target as HTMLElement).tagName?.toLowerCase() || "";

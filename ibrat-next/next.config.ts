@@ -42,6 +42,13 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
+  experimental: {
+    optimizePackageImports: [
+      'react',
+      'react-dom'
+    ],
+    optimizeCss: true,
+  },
   images: {
     formats: ['image/webp'],
     minimumCacheTTL: 60,
