@@ -129,7 +129,7 @@ export default function Home() {
             <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-50 group-hover:opacity-100 transition-all">Trends</span>
           </div>
           <div className="flex-1">
-            <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none">What Is the<br />Brat Trend?</h2>
+            <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none">What Is the <br /> Brat Trend?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
               <p className="hp-body-text !text-[18px] sm:!text-[20px] font-medium leading-tight italic border-l-4 border-[#89CC04] pl-8 m-0">
                 A brat image generator turns any word or phrase into bold, minimal text on a solid-color background. The style comes from{" "}
@@ -156,7 +156,7 @@ export default function Home() {
             <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-50 group-hover:opacity-100 transition-all">Typography</span>
           </div>
           <div className="flex-1">
-            <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none">What Font Is<br />the Brat Album?</h2>
+            <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-12 leading-none">What Font Is <br /> the Brat Album?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
               <p className="hp-body-text !text-[18px] sm:!text-[20px] font-medium leading-tight italic border-l-4 border-black pl-8 m-0">
                 The brat album cover uses a bold, lowercase sans-serif font. While there is no official downloadable file, it is typically recreated using Arial Bold or Helvetica Neue Bold with extremely tight letter spacing.
@@ -207,7 +207,7 @@ export default function Home() {
             <span className="text-[12px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-50 group-hover:opacity-100 transition-all">Manual</span>
           </div>
           <div className="flex-1">
-            <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-16 leading-none">How to Use the<br />Brat Creator</h2>
+            <h2 className="text-4xl sm:text-7xl font-black italic uppercase tracking-tighter mb-16 leading-none">How to Use the <br /> Brat Creator</h2>
             <div className="space-y-12">
               {[
                 { step: "01", h: "Type your text", p: "Open the tool above and type any word or phrase. The canvas renders it live in the brat style." },

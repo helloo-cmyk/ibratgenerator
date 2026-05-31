@@ -15,11 +15,11 @@ const svgContent = `<?xml version="1.0" encoding="UTF-8"?>
     dominant-baseline="middle"
     letter-spacing="-0.05em"
   >
-    tiktok
+    wallpaper
   </text>
 </svg>`;
 
-const outputPath = path.join(__dirname, 'public', 'blog-images', 'tiktok-hero.svg');
+const outputPath = path.join(__dirname, 'public', 'blog-images', 'wallpaper-hero.svg');
 
 fs.writeFileSync(outputPath, svgContent);
 console.log(`Successfully generated SVG at ${outputPath}`);

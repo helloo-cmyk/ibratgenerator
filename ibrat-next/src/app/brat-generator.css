@@ -181,8 +181,8 @@
 /* ===== TYPOGRAPHY ===== */
 .brat-label {
   font-size: 11px;
-  font-weight: 500;
-  color: #888880;
+  font-weight: 600;
+  color: #0f172a;
   display: block;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -245,6 +245,8 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  min-height: 44px;
+  padding: 8px 0;
 }
 
 .brat-checkbox-wrapper input[type="checkbox"] {
@@ -938,7 +940,8 @@
 
 #brat-embed-root label {
   font-size: 13px;
-  color: #475569;
+  font-weight: 600;
+  color: #0f172a;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -1116,7 +1119,7 @@
     cursor: pointer;
     transition: all 0.18s cubic-bezier(.4,0,.2,1);
     color: #9ca3af;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0;
     position: relative;
@@ -1194,7 +1197,7 @@
   }
 
   .brat-btn { min-height: 44px; }
-  .brat-acc-h { min-height: 48px; }
+  .brat-acc-h { min-height: 48px; pointer-events: auto !important; }
   .brat-pill { min-height: 44px; }
   .brat-export-sticky {
     position: sticky;
@@ -1212,7 +1215,22 @@
   }
   .brat-acc+.brat-acc { border-top: none; }
   .brat-acc-h { padding: 16px; }
-  .brat-acc-b>div { padding: 16px !important; }
+  .brat-acc-b>div { padding: 12px 8px !important; }
+  .brat-control-card { padding: 10px 10px; }
+  .brat-typography-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .brat-effects-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 480px) {
+    #brat-controls {
+      width: 100% !important;
+    }
+  }
   .brat-sticker-grid {
     grid-template-columns: repeat(4, 1fr);
     max-height: 180px;
@@ -1306,30 +1324,7 @@
     display: flex;
     gap: 8px;
   }
-  .brat-tab-panel.active .brat-acc .brat-acc-b { max-height: 1200px; }
-  .brat-tab-panel.active .brat-acc {
-    border: none;
-    background: transparent;
-    margin-bottom: 0;
-    box-shadow: none;
-  }
-  .brat-tab-panel.active .brat-acc:hover { box-shadow: none; }
-  .brat-tab-panel.active .brat-acc-h {
-    cursor: default;
-    pointer-events: none;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: var(--muted);
-    font-weight: 800;
-    padding: 24px 0 12px 0;
-    background: transparent;
-    min-height: auto;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    margin-bottom: 16px;
-  }
-  .brat-tab-panel.active .brat-acc-h::after { display: none; }
-  .brat-tab-panel .brat-acc:only-child .brat-acc-h { display: flex; }
+
 }
 
 /* ===== BLUR CONTROL STYLES ===== */
@@ -1369,6 +1364,12 @@
   padding: 0 4px;
 }
 
+.brat-effects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
 /* ===== EFFECTS CARDS (MODERN REDESIGN) ===== */
 .brat-effect-card {
   background: #ffffff;
@@ -1391,6 +1392,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 44px;
 }
 
 .brat-effect-title {
@@ -1415,16 +1417,16 @@
 
 .brat-effect-label {
   font-size: 12px;
-  color: #666;
-  font-weight: 500;
+  color: #0f172a;
+  font-weight: 600;
 }
 
 /* Modern Apple-like Toggle */
 .brat-toggle {
   position: relative;
   display: inline-block;
-  width: 36px;
-  height: 20px;
+  width: 44px;
+  height: 26px;
 }
 
 .brat-toggle input {
@@ -1442,16 +1444,16 @@
   bottom: 0;
   background-color: #e2e8f0;
   transition: .3s cubic-bezier(0.4, 0.0, 0.2, 1);
-  border-radius: 20px;
+  border-radius: 26px;
 }
 
 .brat-toggle-slider:before {
   position: absolute;
   content: "";
-  height: 16px;
-  width: 16px;
-  left: 2px;
-  bottom: 2px;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
   background-color: white;
   transition: .3s cubic-bezier(0.4, 0.0, 0.2, 1);
   border-radius: 50%;
@@ -1463,7 +1465,7 @@
 }
 
 .brat-toggle input:checked + .brat-toggle-slider:before {
-  transform: translateX(16px);
+  transform: translateX(18px);
 }
 
 .brat-toggle input:focus-visible + .brat-toggle-slider {
@@ -1473,8 +1475,10 @@
 /* Premium Color Picker Wrapper */
 .brat-color-picker-wrapper {
   position: relative;
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid rgba(0,0,0,0.1);
@@ -1489,8 +1493,8 @@
 
 #brat-embed-root .brat-color-picker-wrapper input[type="color"] {
   position: absolute;
-  top: -10px;
-  left: -10px;
+  top: -5px;
+  left: -5px;
   width: 50px;
   height: 50px;
   padding: 0;
@@ -1524,8 +1528,8 @@
 
 .brat-control-label {
   font-size: 11px;
-  font-weight: 600;
-  color: #64748b;
+  font-weight: 700;
+  color: #0f172a;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -1554,6 +1558,17 @@
 #brat-embed-root input[type="range"].brat-modern-slider::-webkit-slider-thumb:hover {
   transform: scale(1.2);
   border-color: #CCFF00;
+}
+
+@media (pointer: coarse) {
+  #brat-embed-root input[type="range"].brat-modern-slider::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+  }
+  #brat-embed-root input[type="range"].brat-modern-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /* Segmented Control for Alignment */
@@ -1657,7 +1672,7 @@
 
 /* Modern Select overrides */
 #brat-embed-root select.brat-modern-select {
-  padding: 8px 12px;
+  padding: 12px 12px;
   font-size: 13px;
   font-weight: 600;
   border-radius: 6px;
@@ -1821,4 +1836,10 @@
   font-weight: 600;
   color: #334155;
   box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+
+@media (max-width: 999px) {
+  #brat-embed-root #brat-download-desktop {
+    display: none !important;
+  }
 }

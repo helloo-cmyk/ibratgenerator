@@ -74,7 +74,7 @@ export default function FeedbackPage() {
                     <div>
                       <h3 className="text-[13px] font-black uppercase tracking-widest mb-2 opacity-100">Technical Diagnostics</h3>
                       <p className="text-[15px] opacity-60 leading-relaxed">
-                        If you encounter a bug—especially with image rendering or download triggers—please specify if you are on iOS, Android, or Desktop. Mentioning your browser (Chrome, Safari, etc.) helps us replicate and squash bugs in minutes.
+                        If you encounter a bug - especially with image rendering or download triggers - please specify if you are on iOS, Android, or Desktop. Mentioning your browser (Chrome, Safari, etc.) helps us replicate and squash bugs in minutes.
                       </p>
                     </div>
 

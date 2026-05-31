@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: "https://ibratgenerator.com/blog/brat-color-code/",
   },
   description:
-    "The brat green color code is #89CC04. Get every brat color hex, RGB, and CSS value — copy and use instantly. Free color palette.",
+    "The brat green color code is #89CC04. Get every brat color hex, RGB, and CSS value - copy and use instantly. Free color palette.",
 };
 
 const faqSchema = {

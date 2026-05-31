@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/brat-maker/", label: "Brat Maker" },
@@ -20,6 +20,29 @@ export default function Header() {
   const closeMenu = () => setIsMenuOpen(false);
   const normalizePath = (path: string) =>
     path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const handleOutsideClick = (e: MouseEvent | TouchEvent) => {
+      const nav = document.getElementById('mobile-nav');
+      const hamburger = document.getElementById('hamburger-btn');
+      if (
+        nav && !nav.contains(e.target as Node) &&
+        hamburger && !hamburger.contains(e.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+    document.addEventListener('touchstart', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener('touchstart', handleOutsideClick);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header
@@ -64,8 +87,9 @@ export default function Header() {
 
         {/* Mobile: hamburger button */}
         <button
+          id="hamburger-btn"
           type="button"
-          className="md:hidden flex items-center justify-center w-10 h-10 -mr-2 text-foreground hover:opacity-70 transition-opacity"
+          className="md:hidden flex items-center justify-center w-11 h-11 -mr-2 text-foreground hover:opacity-70 transition-opacity"
           onClick={() => setIsMenuOpen((prev) => !prev)}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}

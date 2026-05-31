@@ -10,7 +10,7 @@ const PartnerBadges = () => {
             Featured On <span className="text-[#89CC04]">&</span> Partnerships
           </h2>
           
-          <div className="flex flex-wrap items-center justify-center gap-8 max-w-[1000px] mx-auto">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-8 sm:gap-8 max-w-[1000px] mx-auto">
             {/* Startup Fame */}
             <a 
               href="https://startupfa.me/s/ibrat?utm_source=ibratgenerator.com" 
@@ -85,43 +85,45 @@ const PartnerBadges = () => {
               />
             </a>
 
-            {/* BacklinkLog */}
-            <a 
-              href="https://backlinklog.com/listing/ibratgenerator.com?utm_source=backlinklog&utm_medium=badge"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-all duration-300"
-            >
-              <Image 
-                src="https://backlinklog.com/badge/ibratgenerator.com.svg" 
-                alt="Listed on BacklinkLog"
-                width={160}
-                height={40}
-                style={{ 
-                  height: '40px', 
-                  width: 'auto'
-                }}
-              />
-            </a>
+            <div className="flex flex-row items-center justify-center gap-4 sm:contents">
+              {/* BacklinkLog */}
+              <a 
+                href="https://backlinklog.com/listing/ibratgenerator.com?utm_source=backlinklog&utm_medium=badge"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-3 bg-white border border-gray-300 rounded hover:bg-gray-50 transition-all duration-300"
+                style={{ height: '40px' }}
+                title="Listed on BacklinkLog"
+              >
+                <span className="text-gray-500 text-[13px] italic">Listed on</span>
+                <div className="flex items-center gap-1">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+                  <span className="text-gray-800 text-[14px] font-bold tracking-tight">BacklinkLog</span>
+                </div>
+              </a>
 
-            {/* Dang.ai */}
-            <a 
-              href="https://dang.ai/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="transition-all duration-300"
-            >
-              <Image 
-                src="https://cdn.prod.website-files.com/63d8afd87da01fb58ea3fbcb/6487e2868c6c8f93b4828827_dang-badge.png" 
-                alt="Dang.ai" 
-                width={160}
-                height={40}
-                style={{ 
-                  height: '40px', 
-                  width: 'auto'
-                }}
-              />
-            </a>
+              {/* Dang.ai */}
+              <a 
+                href="https://dang.ai/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transition-all duration-300"
+              >
+                <Image 
+                  src="https://cdn.prod.website-files.com/63d8afd87da01fb58ea3fbcb/6487e2868c6c8f93b4828827_dang-badge.png" 
+                  alt="Dang.ai" 
+                  width={160}
+                  height={40}
+                  style={{ 
+                    height: '40px', 
+                    width: 'auto'
+                  }}
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>

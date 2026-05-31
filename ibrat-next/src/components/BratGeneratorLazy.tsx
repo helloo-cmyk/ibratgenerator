@@ -9,13 +9,70 @@ const BratGenerator = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div style={{ 
+      <div style={{
         minHeight: '520px',
         position: 'relative',
         width: '100%',
         background: '#f8f8f5',
-        borderRadius: '12px'
-      }} />
+        borderRadius: '16px',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '12px',
+        padding: '16px'
+      }}>
+        {/* Toolbar skeleton */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          gap: '8px'
+        }}>
+          <div style={{
+            width: '80px', height: '36px',
+            background: '#e8e6e0',
+            borderRadius: '8px'
+          }} />
+          <div style={{
+            width: '100px', height: '36px',
+            background: '#0a0a0a',
+            borderRadius: '8px'
+          }} />
+        </div>
+        {/* Canvas skeleton */}
+        <div style={{
+          flex: 1,
+          minHeight: '320px',
+          background: '#c1ff00',
+          borderRadius: '12px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
+          <div style={{
+            width: '120px',
+            height: '32px',
+            background: 'rgba(0,0,0,0.15)',
+            borderRadius: '6px'
+          }} />
+        </div>
+        {/* Tab bar skeleton */}
+        <div style={{
+          display: 'flex',
+          gap: '8px',
+          justifyContent: 'center'
+        }}>
+          {['Text', 'Style', 'Stickers'].map(tab => (
+            <div key={tab} style={{
+              padding: '8px 20px',
+              background: tab === 'Text' ? '#0a0a0a' : '#e8e6e0',
+              borderRadius: '100px',
+              color: tab === 'Text' ? '#fff' : 'transparent',
+              fontSize: '13px',
+              fontWeight: 500
+            }}>{tab}</div>
+          ))}
+        </div>
+      </div>
     ),
   }
 );

@@ -44,7 +44,21 @@ export default function BratGenerator({
   const [blurAmount, setBlurAmount] = useState(defaultBlur ?? 1.5);
   const [bgFilename, setBgFilename] = useState<string | null>(null);
 
+  const handleAccordionClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const h = e.currentTarget;
+    const parent = h.parentElement;
+    const panel = parent?.closest(".brat-tab-panel");
+    const scope = panel || document;
+    scope.querySelectorAll(".brat-acc").forEach((a) => {
+      if (a !== parent) a.classList.remove("open");
+    });
+    parent?.classList.toggle("open");
+  };
+
   useEffect(() => {
+    if (typeof window !== "undefined" && window.innerWidth >= 1000) {
+      document.getElementById("brat-acc-font")?.classList.add("open");
+    }
     if (rootRef.current) {
       cleanupRef.current = initBratGenerator({ 
         defaultBg, 
@@ -100,7 +114,7 @@ export default function BratGenerator({
               </div>
               <div className="brat-tab-panel active" data-tab="text">
                 <section className="brat-acc open" id="brat-acc-text">
-                  <button type="button" className="brat-acc-h" data-acc="text">
+                  <button type="button" className="brat-acc-h" data-acc="text" onClick={handleAccordionClick}>
                     Text
                   </button>
                   <div className="brat-acc-b">
@@ -130,6 +144,16 @@ export default function BratGenerator({
                           Generate Random Name
                         </button>
                       )}
+                    </div>
+                  </div>
+                </section>
+
+                <section className="brat-acc" id="brat-acc-font">
+                  <button type="button" className="brat-acc-h" data-acc="font" onClick={handleAccordionClick}>
+                    Font
+                  </button>
+                  <div className="brat-acc-b">
+                    <div className="brat-controls-inner" style={{ padding: '12px 10px' }}>
 
                       <div className="brat-control-card" style={{ padding: '10px 12px' }}>
                         <label className="brat-control-label" htmlFor="brat-fontSelect" style={{ marginBottom: 6 }}>
@@ -279,10 +303,17 @@ export default function BratGenerator({
                           }}>Heavy</span>
                         </div>
                       </div>
-                      <div className="brat-section-divider">
-                        <span className="brat-section-label">EFFECTS</span>
-                      </div>
-                      <div className="brat-effects-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="brat-acc" id="brat-acc-effects">
+                  <button type="button" className="brat-acc-h" data-acc="effects" onClick={handleAccordionClick}>
+                    Effects
+                  </button>
+                  <div className="brat-acc-b">
+                    <div className="brat-controls-inner" style={{ padding: '12px 10px' }}>
+                      <div className="brat-effects-grid">
                         
                         {/* Outline Effect Card */}
                         <div className="brat-effect-card">
@@ -325,7 +356,7 @@ export default function BratGenerator({
               </div>
               <div className="brat-tab-panel" data-tab="style">
                 <section className="brat-acc" id="brat-acc-colors">
-                  <button type="button" className="brat-acc-h" data-acc="colors">
+                  <button type="button" className="brat-acc-h" data-acc="colors" onClick={handleAccordionClick}>
                     Colors
                   </button>
                   <div className="brat-acc-b">
@@ -409,7 +440,7 @@ export default function BratGenerator({
                   </div>
                 </section>
                 <section className="brat-acc" id="brat-acc-canvas">
-                  <button type="button" className="brat-acc-h" data-acc="canvas">
+                  <button type="button" className="brat-acc-h" data-acc="canvas" onClick={handleAccordionClick}>
                     Canvas
                   </button>
                   <div className="brat-acc-b" style={{ display: hideAspectRatio ? "none" : undefined }}>
@@ -455,7 +486,7 @@ export default function BratGenerator({
                   </div>
                 </section>
                 <section className="brat-acc" id="brat-acc-selfie">
-                  <button type="button" className="brat-acc-h" data-acc="selfie">
+                  <button type="button" className="brat-acc-h" data-acc="selfie" onClick={handleAccordionClick}>
                     Background Image
                   </button>
                   <div className="brat-acc-b" style={{ display: hideSelfieMode ? "none" : undefined }}>
@@ -507,7 +538,7 @@ export default function BratGenerator({
               </div>
               <div className="brat-tab-panel" data-tab="stickers">
                 <section className="brat-acc" id="brat-acc-stickers">
-                  <button type="button" className="brat-acc-h" data-acc="stickers">
+                  <button type="button" className="brat-acc-h" data-acc="stickers" onClick={handleAccordionClick}>
                     Stickers
                   </button>
                   <div className="brat-acc-b">

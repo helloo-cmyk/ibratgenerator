@@ -297,6 +297,8 @@ button {
   line-height: 1.65;
 }
 
+
+
 .hp-hero-actions {
   display: flex;
   align-items: center;
@@ -387,7 +389,6 @@ button {
   padding: 28px 32px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
   margin-bottom: 16px;
-  overflow: hidden;
 }
 
 @media (max-width: 640px) {
@@ -841,3 +842,22 @@ button {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ── RESPONSIVE GLOBAL SIDEBAR LAYOUT ── */
+@media (max-width: 768px) {
+  /* Hide the vertical writing-mode sidebar wrapper on mobile */
+  .w-12.flex-shrink-0:has(span[class*="writing-mode"]),
+  .w-12.flex-shrink-0:has(span[style*="writing-mode"]),
+  div:has(> span[class*="writing-mode"]) {
+    display: none !important;
+  }
+
+  /* Make the parent flex container stacked vertically with a smaller gap */
+  .max-w-\[1200px\].mx-auto.flex.gap-12.group,
+  .flex.gap-12.mb-32.group,
+  .flex.gap-12.group {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+}
+

@@ -418,6 +418,13 @@ export function initBratGenerator(options?: {
     const lines = splitLines(txt, boxW);
     ctx.save();
     ctx.font = fontSpec();
+    
+    let maxW = 0;
+    for (const line of lines) {
+      const w = totalLineWidth(line);
+      if (w > maxW) maxW = w;
+    }
+
     ctx.textBaseline = "top";
     ctx.fillStyle = state.fg;
     ctx.textAlign = "left";
@@ -443,8 +450,8 @@ export function initBratGenerator(options?: {
       const chars = [...line];
       const lineWidth = totalLineWidth(line);
       let lineX: number;
-      if (state.align === "left") lineX = -boxW / 2;
-      else if (state.align === "right") lineX = boxW / 2 - lineWidth;
+      if (state.align === "left") lineX = -maxW / 2;
+      else if (state.align === "right") lineX = maxW / 2 - lineWidth;
       else lineX = -lineWidth / 2;
       const lineY = -totalTextH / 2 + i * LH;
       for (const ch of chars) {
@@ -1294,17 +1301,6 @@ export function initBratGenerator(options?: {
     }, ms);
   }
 
-  document.querySelectorAll(".brat-acc-h").forEach((h) => {
-    h.addEventListener("click", () => {
-      const parent = h.parentElement;
-      const panel = parent?.closest(".brat-tab-panel");
-      const scope = panel || document;
-      scope.querySelectorAll(".brat-acc").forEach((a) => {
-        if (a !== parent) a.classList.remove("open");
-      });
-      parent?.classList.toggle("open");
-    });
-  });
 
   const tabBtns = document.querySelectorAll(".brat-tab-btn");
   let activeTab: string | null = null;

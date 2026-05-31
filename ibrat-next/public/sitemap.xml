@@ -211,4 +211,11 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <url>
+    <loc>https://ibratgenerator.com/blog/brat-wallpaper/</loc>
+    <lastmod>2026-05-29</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>
