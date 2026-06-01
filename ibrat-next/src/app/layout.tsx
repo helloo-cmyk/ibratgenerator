@@ -94,6 +94,11 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-4083132987699578" />
         <meta name="_foundr" content="7e5ad995c34295ce18501b53df488dd6" />
         <meta name="monetag" content="924225d43418bfc49a697c7cc97bbfe7" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(s){s.dataset.zone='11086895',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`
+          }}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <Script
           id="schema"
