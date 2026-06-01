@@ -3,6 +3,7 @@ import Image from "next/image";
 import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
 import HomeScrollReveal from "@/components/HomeScrollReveal";
+import AdBanner from "@/components/AdBanner";
 
 const BRAT_TEXT_EXAMPLES = [
   { src: "/examples/brat-text-ex-1-v5.png", phrase: "typography", alt: "brat text generator example, green background with classic lowercase text" },
@@ -135,6 +136,16 @@ export default function BratTextGeneratorPage() {
         </p>
       </section>
 
+      {/* ── ADS (Top) ── */}
+      <div className="w-full flex flex-col items-center justify-center mb-8 px-4 gap-4">
+        <div className="hidden sm:block">
+          <AdBanner adKey="d800cb66922d3aade44d6334e34e8f54" format="iframe" height={90} width={728} />
+        </div>
+        <div className="block sm:hidden">
+          <AdBanner adKey="acddc0424b8d37bee4ab81ffd01274e4" format="iframe" height={50} width={320} />
+        </div>
+      </div>
+
       {/* ── GENERATOR ── */}
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-2 mb-16">
         <div style={{ minHeight: '520px', position: 'relative', width: '100%' }}>
@@ -147,6 +158,11 @@ export default function BratTextGeneratorPage() {
             hidePresets={false}
           />
         </div>
+      </div>
+
+      {/* ── ADS (Middle) ── */}
+      <div className="w-full flex justify-center my-12 px-4">
+        <AdBanner adKey="c08f3c01b8d75d9f5c29d292ee34c7e2" format="iframe" height={250} width={300} />
       </div>
 
       {/* ── ABOUT SECTION ── */}

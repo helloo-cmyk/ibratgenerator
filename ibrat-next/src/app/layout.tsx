@@ -80,6 +80,7 @@ export const metadata: Metadata = {
 };
 
 import PartnerBadges from "@/components/PartnerBadges";
+import AdBanner from "@/components/AdBanner";
 
 export default function RootLayout({
   children,
@@ -107,9 +108,29 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <Header />
-        <main className="mx-auto flex-1 w-full max-w-screen-2xl px-4 sm:px-6">
-          {children}
+
+        <main className="mx-auto flex-1 w-full max-w-[1600px] px-4 sm:px-6 pt-6 flex gap-6 items-start justify-center">
+          {/* ── LEFT STICKY SIDEBAR (Hidden on smaller screens) ── */}
+          <div className="hidden 2xl:block sticky top-24 w-[160px] h-[600px] flex-shrink-0 bg-zinc-50/50 rounded-xl overflow-hidden border border-black/5">
+            <AdBanner adKey="8de6210c1ae641f84c374fb95d531f5f" format="iframe" height={600} width={160} />
+          </div>
+
+          {/* ── MAIN PAGE CONTENT ── */}
+          <div className="flex-1 w-full min-w-0 max-w-[1200px]">
+            {children}
+          </div>
+
+          {/* ── RIGHT STICKY SIDEBAR (Hidden on smaller screens) ── */}
+          <div className="hidden 2xl:block sticky top-24 w-[160px] h-[600px] flex-shrink-0 bg-zinc-50/50 rounded-xl overflow-hidden border border-black/5">
+            <AdBanner adKey="8de6210c1ae641f84c374fb95d531f5f" format="iframe" height={600} width={160} />
+          </div>
         </main>
+
+        {/* ── GLOBAL BOTTOM AD (All Pages) ── */}
+        <div className="w-full flex justify-center py-8 bg-zinc-50/50 border-t border-black/5 mt-auto">
+          <AdBanner adKey="c08f3c01b8d75d9f5c29d292ee34c7e2" format="iframe" height={250} width={300} />
+        </div>
+
         <PartnerBadges />
         <Footer />
         <CookieConsentBanner />

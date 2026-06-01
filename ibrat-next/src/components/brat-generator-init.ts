@@ -1524,7 +1524,13 @@ export function initBratGenerator(options?: {
   if (undoBtn) undoBtn.addEventListener("click", () => undo());
   if (redoBtn) redoBtn.addEventListener("click", () => redo());
 
+  // Trigger interstitial modal first
   downloadBtn.addEventListener("click", () => {
+    window.dispatchEvent(new CustomEvent("showBratInterstitial"));
+  });
+
+  // Proceed with download when the user clicks 'Download Now' in the interstitial
+  const handleProceedDownload = () => {
     const wasSelected = state.textTransform.selected;
     state.textTransform.selected = false;
     draw();
@@ -1544,7 +1550,9 @@ export function initBratGenerator(options?: {
       state.textTransform.selected = wasSelected;
       requestDraw();
     }, "image/png");
-  });
+  };
+
+  window.addEventListener("proceedBratDownload", handleProceedDownload);
 
   async function safeCopyText(text: string) {
     try {
@@ -1755,6 +1763,7 @@ export function initBratGenerator(options?: {
     window.removeEventListener("pointercancel", onPointerUp);
     window.removeEventListener("keydown", onKeyDown);
     window.removeEventListener("resize", onResize);
+    window.removeEventListener("proceedBratDownload", handleProceedDownload);
     // Reset __bratInit so HMR / re-mount can re-initialize
     if (root) {
       (root as HTMLElement & { __bratInit?: boolean }).__bratInit = false;

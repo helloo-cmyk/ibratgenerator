@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { initBratGenerator } from "./brat-generator-init";
+import DownloadInterstitial from "./DownloadInterstitial";
 
 
 type BratGeneratorMode = 'full' | 'text-only' | 'font-only' | 'album' | 'name' | 'color-variant';
@@ -43,6 +44,7 @@ export default function BratGenerator({
   const cleanupRef = useRef<(() => void) | null>(null);
   const [blurAmount, setBlurAmount] = useState(defaultBlur ?? 1.5);
   const [bgFilename, setBgFilename] = useState<string | null>(null);
+  const [showInterstitial, setShowInterstitial] = useState(false);
 
   const handleAccordionClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const h = e.currentTarget;
@@ -70,7 +72,13 @@ export default function BratGenerator({
         defaultBlur: defaultBlur ?? 1.5
       });
     }
+    
+    // Listen for custom event from init script
+    const handleShowInterstitial = () => setShowInterstitial(true);
+    window.addEventListener('showBratInterstitial', handleShowInterstitial);
+
     return () => {
+      window.removeEventListener('showBratInterstitial', handleShowInterstitial);
       if (cleanupRef.current) {
         cleanupRef.current();
         cleanupRef.current = null;
@@ -622,6 +630,15 @@ export default function BratGenerator({
           <span>Save PNG</span>
         </button>
       </nav>
+
+      {showInterstitial && (
+        <DownloadInterstitial 
+          onClose={() => setShowInterstitial(false)}
+          onDownload={() => {
+            window.dispatchEvent(new CustomEvent('proceedBratDownload'));
+          }}
+        />
+      )}
     </div>
   );
 }

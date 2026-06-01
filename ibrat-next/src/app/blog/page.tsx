@@ -1,6 +1,7 @@
 import Link from "next/link";
 import HomeScrollReveal from "@/components/HomeScrollReveal";
 import BlogList from "@/components/BlogList";
+import AdBanner from "@/components/AdBanner";
 
 export const metadata = {
   title: {
@@ -27,6 +28,11 @@ export default function BlogIndexPage() {
           </p>
         </div>
       </section>
+
+      {/* ── BLOG ADS ── */}
+      <div className="w-full flex justify-center mt-8 mb-4 px-4">
+        <AdBanner adKey="c08f3c01b8d75d9f5c29d292ee34c7e2" format="iframe" height={250} width={300} />
+      </div>
 
       {/* ── ARTICLES GRID & SEARCH ── */}
       <BlogList />
