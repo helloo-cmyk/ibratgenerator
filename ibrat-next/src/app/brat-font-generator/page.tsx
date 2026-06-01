@@ -3,6 +3,7 @@ import BratGeneratorLazy from "@/components/BratGeneratorLazy";
 import FAQAccordion from "@/components/FAQAccordion";
 import ExampleGallery from "@/components/ExampleGallery";
 import HomeScrollReveal from "@/components/HomeScrollReveal";
+import AdBanner from "@/components/AdBanner";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -87,6 +88,19 @@ export default function BratFontGeneratorPage() {
       </section>
 
       {/* ── GENERATOR ── */}
+      
+      {/* ── ADS (Top) ── */}
+      <div className="w-full flex flex-col items-center justify-center mb-8 px-4 gap-4">
+        {/* Desktop Leaderboard */}
+        <div className="hidden sm:block">
+          <AdBanner adKey="d800cb66922d3aade44d6334e34e8f54" format="iframe" height={90} width={728} />
+        </div>
+        {/* Mobile Banner */}
+        <div className="block sm:hidden">
+          <AdBanner adKey="acddc0424b8d37bee4ab81ffd01274e4" format="iframe" height={50} width={320} />
+        </div>
+      </div>
+
       <div className="hp-gen-section">
         <div className="hp-gen-card">
           <div className="hp-gen-label">
@@ -104,6 +118,11 @@ export default function BratFontGeneratorPage() {
             />
           </div>
         </div>
+      </div>
+
+      {/* ── ADS (Middle) ── */}
+      <div className="w-full flex justify-center my-12 px-4">
+        <AdBanner adKey="c08f3c01b8d75d9f5c29d292ee34c7e2" format="iframe" height={250} width={300} />
       </div>
 
       <section className="text-center mb-10 -mt-2">
