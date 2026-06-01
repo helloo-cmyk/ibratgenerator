@@ -94,6 +94,7 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-4083132987699578" />
         <meta name="_foundr" content="7e5ad995c34295ce18501b53df488dd6" />
         <meta name="monetag" content="924225d43418bfc49a697c7cc97bbfe7" />
+        <script src="https://quge5.com/88/tag.min.js" data-zone="245179" async data-cfasync="false"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <Script
           id="schema"
