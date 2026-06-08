@@ -1,51 +1,27 @@
 const fs = require('fs');
+const path = require('path');
 
-const svgContent = `<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+const svgContent = `<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="blur">
-      <feGaussianBlur stdDeviation="3.5" />
-    </filter>
-    <filter id="blur-sm">
-      <feGaussianBlur stdDeviation="2" />
-    </filter>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#000000" flood-opacity="0.04" />
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
     </filter>
   </defs>
-
-  <!-- Background -->
-  <rect width="100%" height="100%" fill="#FAF9F6" />
-
-  <!-- Main Panel (Brat Lime) -->
-  <g filter="url(#soft-shadow)">
-    <rect x="50" y="50" width="700" height="530" rx="40" fill="#CCFF00" stroke="#111111" stroke-width="2" />
-    <g transform="translate(400, 315) scale(0.65, 1)">
-      <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="160" letter-spacing="-0.04em" fill="#111111" text-anchor="middle" dominant-baseline="central" filter="url(#blur)">
-        best tools
-      </text>
-    </g>
-  </g>
-
-  <!-- Top Right Panel (Black) -->
-  <g filter="url(#soft-shadow)">
-    <rect x="780" y="50" width="370" height="250" rx="32" fill="#111111" />
-    <g transform="translate(965, 175) scale(0.65, 0.95)">
-      <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="90" letter-spacing="-0.04em" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" filter="url(#blur-sm)">
-        no signup
-      </text>
-    </g>
-  </g>
-
-  <!-- Bottom Right Panel (White / Surface) -->
-  <g filter="url(#soft-shadow)">
-    <rect x="780" y="330" width="370" height="250" rx="32" fill="#FFFFFF" stroke="#E8E6E0" stroke-width="2" />
-    <g transform="translate(965, 455) scale(0.65, 0.95)">
-      <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="90" letter-spacing="-0.04em" fill="#111111" text-anchor="middle" dominant-baseline="central" filter="url(#blur-sm)">
-        100% free
-      </text>
-    </g>
-  </g>
+  <rect width="1200" height="630" fill="#8ACE00"/>
+  <text 
+    x="50%" 
+    y="50%" 
+    font-family="Arial, Helvetica, sans-serif" 
+    font-size="200" 
+    font-weight="bold" 
+    fill="black" 
+    text-anchor="middle" 
+    dominant-baseline="central" 
+    letter-spacing="-0.05em"
+    filter="url(#blur)"
+  >names</text>
 </svg>`;
 
-fs.writeFileSync('public/blog-images/best-tools-hero.svg', svgContent);
-console.log('SVG generated successfully!');
+const outPath = path.join(__dirname, 'public', 'blog-images', 'brat-names-hero.svg');
+fs.writeFileSync(outPath, svgContent);
+console.log('SVG generated at:', outPath);

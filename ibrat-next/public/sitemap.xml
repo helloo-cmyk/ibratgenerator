@@ -217,5 +217,11 @@
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://ibratgenerator.com/blog/brat-names-list/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
 </urlset>

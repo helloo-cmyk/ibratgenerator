@@ -8,14 +8,15 @@ import InteractiveColorSpecGrid from "@/components/InteractiveColorSpecGrid";
 import InteractivePalette from "@/components/InteractivePalette";
 
 export const metadata: Metadata = {
-  title: {
-    absolute: "Brat Color Code - The Official Brat Green Hex Code (#89CC04)",
-  },
+  title: "Brat Color Code - Green Hex, RGB & Color Palette [2026]",
+  description: "The official brat green hex code is #8ACE00. Get the full brat color code, RGB values, and palette to use in Canva, Photoshop, or any design tool. Copy instantly.",
   alternates: {
     canonical: "https://ibratgenerator.com/blog/brat-color-code/",
   },
-  description:
-    "The brat green color code is #89CC04. Get every brat color hex, RGB, and CSS value - copy and use instantly. Free color palette.",
+  openGraph: {
+    title: "Brat Color Code - Green Hex, RGB & Color Palette [2026]",
+    description: "The official brat green hex code is #8ACE00. Get the full brat color code, RGB values, and palette to use in Canva, Photoshop, or any design tool. Copy instantly.",
+  }
 };
 
 const faqSchema = {
@@ -62,6 +63,22 @@ const faqSchema = {
         text: "The brat album cover uses Arial in bold weight, set in lowercase with tight letter spacing. The combination of #89CC04 background and bold Arial text is what creates the complete brat visual identity.",
       },
     },
+    {
+      "@type": "Question",
+      name: "What is the brat green hex code?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The brat green hex code is #8ACE00. This is the exact color Charli XCX used for the brat album cover and all official brat visual assets. In RGB values it is 138, 206, 0.",
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is the brat color code for Canva?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In Canva, open the color picker and type #8ACE00 in the hex field. This gives you the exact brat green color. You can use it for backgrounds, text highlights, or any brat-style design element.",
+      }
+    }
   ],
 };
 
@@ -98,6 +115,33 @@ export default function BratColorCodePage() {
 
           <p className="hp-body-text mb-24 text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-4 border-[#89CC04] pl-10">
             Read about the full <Link href="/blog/brat-summer-meaning" className="hp-link">brat summer meaning</Link> here. This post contains the exact hex, RGB, and HSL values plus how to use them anywhere.
+          </p>
+
+          <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">What Is the Brat Color Code?</h2>
+          <p className="hp-body-text text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-4 border-black/5 pl-8 mb-12">
+            The official brat color is a yellow-green with hex code #8ACE00. Charli XCX used this specific shade for the brat album cover, merchandise, and all official brat visual assets (use the <Link href="/">brat generator</Link>). In RGB values it is 138, 206, 0. In CMYK it is 33, 0, 100, 19. The color sits between lime green and chartreuse - intentionally loud and slightly unsettling. If you want to use it in your own designs, copy the hex code directly: #8ACE00. Every design tool accepts this format.
+          </p>
+
+          <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">Brat Color Code for Every Design Tool</h2>
+          <p className="hp-body-text text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-4 border-black/5 pl-8 mb-6">
+            Different tools use different color formats. Here are the brat color values for each:
+          </p>
+          <ul className="list-disc pl-14 mb-6 opacity-70 text-[17px] sm:text-[18px] italic leading-relaxed">
+            <li>Canva: search "#8ACE00" in the color picker</li>
+            <li>Photoshop: Hex #8ACE00 or RGB 138, 206, 0</li>
+            <li>Illustrator: same as Photoshop</li>
+            <li>Figma: paste #8ACE00 in the fill field</li>
+            <li>CSS: color: #8ACE00; or rgb(138, 206, 0);</li>
+            <li>Procreate: enter RGB values 138 / 206 / 0</li>
+            <li>PowerPoint: custom color, hex value 8ACE00</li>
+          </ul>
+          <p className="hp-body-text text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-4 border-black/5 pl-8 mb-24">
+            The brat green hex code works identically across all platforms. The only difference is whether the tool uses a # prefix or not - Canva and Figma need it, PowerPoint does not.
+          </p>
+
+          <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">Brat Color Palette - All Shades</h2>
+          <p className="hp-body-text text-[17px] sm:text-[18px] opacity-70 leading-relaxed italic border-l-4 border-black/5 pl-8 mb-24">
+            The core brat palette uses three colors. Primary: brat green #8ACE00 - used for backgrounds and main visuals. Secondary: off-white #F5F5F0 - used for text on dark backgrounds. Accent: pure black #000000 - used for the blurred Arial font text. The brat color combination works because of maximum contrast. Neon green against black text creates the intentionally cheap, photocopied aesthetic that defines the brat visual identity. Use all three together for an authentic brat-style design.
           </p>
 
           <h2 className="hp-display-heading mt-24 mb-12 !text-4xl text-left tracking-tighter uppercase">The Official Swatch</h2>
@@ -217,9 +261,8 @@ export default function BratColorCodePage() {
             <p className="mt-12 text-lg opacity-40 font-medium italic tracking-widest uppercase">The definitive #89CC04 guide.</p>
           </div>
 
-          <h2 className="hp-display-heading mt-16 mb-6 !text-3xl">Frequently Asked Questions</h2>
           <FAQAccordion
-            title=""
+            title="Frequently Asked Questions"
             intro=""
             items={[
               { 
@@ -241,12 +284,20 @@ export default function BratColorCodePage() {
               {
                 question: "What font does Charli XCX use with the brat green color?",
                 answer: <p>The brat album cover uses Arial in bold weight, set in lowercase with tight letter spacing. The combination of #89CC04 background and bold Arial text is what creates the complete brat visual identity.</p>
+              },
+              {
+                question: "What is the brat green hex code?",
+                answer: <p>The brat green hex code is #8ACE00. This is the exact color Charli XCX used for the brat album cover and all official brat visual assets. In RGB values it is 138, 206, 0.</p>
+              },
+              {
+                question: "What is the brat color code for Canva?",
+                answer: <p>In Canva, open the color picker and type #8ACE00 in the hex field. This gives you the exact brat green color. You can use it for backgrounds, text highlights, or any brat-style design element.</p>
               }
             ]}
           />
 
           <p className="hp-body-text mt-16 text-[14px] text-zinc-500 italic">
-            Written by the ibratgenerator.com team | Updated: May 2026
+            Written by iBrat Generator Team | Updated: June 2026
           </p>
 
         </div>
